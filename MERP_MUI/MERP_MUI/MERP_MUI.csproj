@@ -1,0 +1,428 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{746A2B7F-9A9C-4A74-A6A3-C05686D8A5B2}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>MERP_MUI</RootNamespace>
+    <AssemblyName>MERP_MUI</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>merp_sHq_icon.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="MetroFramework, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
+      <HintPath>..\packages\MetroModernUI.1.4.0.0\lib\net\MetroFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="MetroFramework.Design, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
+      <HintPath>..\packages\MetroModernUI.1.4.0.0\lib\net\MetroFramework.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="MetroFramework.Fonts, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
+      <HintPath>..\packages\MetroModernUI.1.4.0.0\lib\net\MetroFramework.Fonts.dll</HintPath>
+    </Reference>
+    <Reference Include="MySql.Data, Version=6.9.9.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\MERP_MetroUI\MERP_MetroUI\bin\Debug\MySql.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Acil-NormalIsler.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Acil-NormalIsler.Designer.cs">
+      <DependentUpon>Acil-NormalIsler.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AktiviteDuzenle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AktiviteDuzenle.Designer.cs">
+      <DependentUpon>AktiviteDuzenle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AktiviteGiris.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AktiviteGiris.Designer.cs">
+      <DependentUpon>AktiviteGiris.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DBConnect.cs" />
+    <Compile Include="DigerIsler.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DigerIsler.Designer.cs">
+      <DependentUpon>DigerIsler.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FaturaDuzenle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FaturaDuzenle.Designer.cs">
+      <DependentUpon>FaturaDuzenle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FaturaGiris.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FaturaGiris.Designer.cs">
+      <DependentUpon>FaturaGiris.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Faturalar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Faturalar.Designer.cs">
+      <DependentUpon>Faturalar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Hakkinda.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Hakkinda.Designer.cs">
+      <DependentUpon>Hakkinda.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HarcamaOngorusu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HarcamaOngorusu.Designer.cs">
+      <DependentUpon>HarcamaOngorusu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HelperFunctions.cs" />
+    <Compile Include="KullanıcıGirisi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="KullanıcıGirisi.Designer.cs">
+      <DependentUpon>KullanıcıGirisi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LoginScreen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LoginScreen.Designer.cs">
+      <DependentUpon>LoginScreen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MessageBox.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MessageBox.Designer.cs">
+      <DependentUpon>MessageBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OdenecekFaturalar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OdenecekFaturalar.Designer.cs">
+      <DependentUpon>OdenecekFaturalar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="ProjeDuzenle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ProjeDuzenle.Designer.cs">
+      <DependentUpon>ProjeDuzenle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProjeGiris.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ProjeGiris.Designer.cs">
+      <DependentUpon>ProjeGiris.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Projeler.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Projeler.Designer.cs">
+      <DependentUpon>Projeler.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProjeyeGoreRapor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ProjeyeGoreRapor.Designer.cs">
+      <DependentUpon>ProjeyeGoreRapor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SiparisEmirleri.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SiparisEmirleri.Designer.cs">
+      <DependentUpon>SiparisEmirleri.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SiparisEmriDuzenle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SiparisEmriDuzenle.Designer.cs">
+      <DependentUpon>SiparisEmriDuzenle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SiparisEmriGiris.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SiparisEmriGiris.Designer.cs">
+      <DependentUpon>SiparisEmriGiris.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Acil-NormalIsler.resx">
+      <DependentUpon>Acil-NormalIsler.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AktiviteDuzenle.resx">
+      <DependentUpon>AktiviteDuzenle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AktiviteGiris.resx">
+      <DependentUpon>AktiviteGiris.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DigerIsler.resx">
+      <DependentUpon>DigerIsler.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FaturaDuzenle.resx">
+      <DependentUpon>FaturaDuzenle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FaturaGiris.resx">
+      <DependentUpon>FaturaGiris.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Faturalar.resx">
+      <DependentUpon>Faturalar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Hakkinda.resx">
+      <DependentUpon>Hakkinda.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HarcamaOngorusu.resx">
+      <DependentUpon>HarcamaOngorusu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="KullanıcıGirisi.resx">
+      <DependentUpon>KullanıcıGirisi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LoginScreen.resx">
+      <DependentUpon>LoginScreen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MessageBox.resx">
+      <DependentUpon>MessageBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OdenecekFaturalar.resx">
+      <DependentUpon>OdenecekFaturalar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProjeDuzenle.resx">
+      <DependentUpon>ProjeDuzenle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProjeGiris.resx">
+      <DependentUpon>ProjeGiris.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Projeler.resx">
+      <DependentUpon>Projeler.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProjeyeGoreRapor.resx">
+      <DependentUpon>ProjeyeGoreRapor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="SiparisEmirleri.resx">
+      <DependentUpon>SiparisEmirleri.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SiparisEmriDuzenle.resx">
+      <DependentUpon>SiparisEmriDuzenle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SiparisEmriGiris.resx">
+      <DependentUpon>SiparisEmriGiris.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\aa.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\altinay.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\appbar.arrow.left.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\appbar.arrow.right.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\appbar.cabinet.files.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\appbar.checkmark.pencil.top.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\appbar.chevron.left.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\appbar.chevron.right.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\appbar.fingerprint.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\appbar.graph.line.up.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\appbar.lightbulb.hue.on.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\appbar.lines.horizontal.4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\appbar.question.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\appbar.refresh.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\appbar.rocket.rotated.45.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\appbar.save.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\appbar.transit.connection.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\if_disc-list_1954536.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\if_download_1954524.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\if_enter_1894659.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\if_exit_1894665.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\if_hamburger_1954554.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\if_info_1954527.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\if_Login_73221.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\if_Safety01_928417.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\if_upload_1954528.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\if_user-avatar-human-admin-login_2203549.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Picture1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Picture1_colorchange.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Picture2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\merp_ZEy_icon.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\merp_sHq_icon.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\merp_42s_icon.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\merp_3Of_icon.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\merp_3UP_icon.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="merp_sHq_icon.ico" />
+    <None Include="Resources\malvefat.png" />
+    <None Include="Resources\appbar.paperclip.rotated.png" />
+    <None Include="Resources\appbar.clock.png" />
+    <None Include="Resources\GrafikFilterTxt.png" />
+    <None Include="Resources\cokacilislerTxt.png" />
+    <None Include="Resources\maaliyetlerTxt.png" />
+    <None Include="Resources\ALTINAY_LOGO_NEW_LOW2.jpg" />
+    <None Include="Resources\download.png" />
+    <None Include="Resources\appbar.arrow.right_dark.png" />
+    <None Include="Resources\appbar.arrow.left_dark.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.6.1">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.6.1 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

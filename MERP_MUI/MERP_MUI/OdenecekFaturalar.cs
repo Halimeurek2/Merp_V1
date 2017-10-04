@@ -52,6 +52,7 @@ namespace MERP_MUI
         public int i, j, index = 0;
         int state = 0;
         Boolean processDone = false;
+        Boolean processDone1 = false;
 
         private void pbClose_Click(object sender, EventArgs e)
         {
@@ -240,6 +241,53 @@ namespace MERP_MUI
             metroGrid1.Rows[0].Cells[0].Value = Convert.ToString("Verilecek Siparişler");
             metroGrid1.Rows[1].Cells[0].Value = Convert.ToString("Tedarikçilere Yapılacak Ödemeler");
             metroGrid1.Rows[2].Cells[0].Value = Convert.ToString("Alınacak Ödemeler");
+
+            Firmalar("Elektronik", lbl_el1.Text, lbl_el2.Text, lbl_el3.Text);
+        }
+
+        public void Firmalar(string Cins, string firma1, string firma2, string firma3)
+        {
+            myConnection.Open();
+
+            komut = "SELECT fatura_firma,sum(fatura_euro) from db_faturalar where fatura_cinsi='" + Cins + "' group by fatura_firma order by sum(fatura_euro) DESC";
+            da = new MySqlDataAdapter(komut, connection);
+            myCommand = new MySqlCommand(komut, myConnection);
+            MySqlDataReader myReader;
+            myReader = myCommand.ExecuteReader();
+            while (myReader.Read())
+            {
+                if (processDone1 == false)
+                {
+                    switch (state)
+                    {
+                        case 0:
+                            {
+                                firma1 = Convert.ToString(myReader.GetString(0));
+                                //lbl_tutar1.Text = string.Format(new CultureInfo("de-DE"), "{0:C2}", Convert.ToDecimal(myReader.GetString(1)));
+                                state = 1;
+                                break;
+                            }
+                        case 1:
+                            {
+                                firma2 = Convert.ToString(myReader.GetString(0));
+                                //lbl_tutar2.Text = string.Format(new CultureInfo("de-DE"), "{0:C2}", Convert.ToDecimal(myReader.GetString(1)));
+                                state = 2;
+                                break;
+                            }
+                        case 2:
+                            {
+                                firma3 = Convert.ToString(myReader.GetString(0));
+                                //lbl_tutar3.Text = string.Format(new CultureInfo("de-DE"), "{0:C2}", Convert.ToDecimal(myReader.GetString(1)));
+                                state = 0;
+                                processDone1 = true;
+                                break;
+                            }
+                    }
+                }
+            }
+
+            myReader.Close();
+            myConnection.Close();
         }
     }
 }

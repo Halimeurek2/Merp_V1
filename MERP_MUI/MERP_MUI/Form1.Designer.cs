@@ -261,9 +261,18 @@
             // chart1
             // 
             chartArea1.Name = "ChartArea1";
+            chartArea1.Position.Auto = false;
+            chartArea1.Position.Height = 92F;
+            chartArea1.Position.Width = 94F;
+            chartArea1.Position.X = 3F;
             this.chart1.ChartAreas.Add(chartArea1);
             this.chart1.Dock = System.Windows.Forms.DockStyle.Fill;
             legend1.Name = "Legend1";
+            legend1.Position.Auto = false;
+            legend1.Position.Height = 7.439199F;
+            legend1.Position.Width = 50F;
+            legend1.Position.X = 50F;
+            legend1.Position.Y = 90F;
             this.chart1.Legends.Add(legend1);
             this.chart1.Location = new System.Drawing.Point(0, 0);
             this.chart1.Name = "chart1";
@@ -807,14 +816,14 @@
             // gELENFATURAToolStripMenuItem
             // 
             this.gELENFATURAToolStripMenuItem.Name = "gELENFATURAToolStripMenuItem";
-            this.gELENFATURAToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.gELENFATURAToolStripMenuItem.Size = new System.Drawing.Size(151, 22);
             this.gELENFATURAToolStripMenuItem.Text = "FATURA GİRİŞİ";
             this.gELENFATURAToolStripMenuItem.Click += new System.EventHandler(this.gELENFATURAToolStripMenuItem_Click);
             // 
             // lİSTELEToolStripMenuItem
             // 
             this.lİSTELEToolStripMenuItem.Name = "lİSTELEToolStripMenuItem";
-            this.lİSTELEToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.lİSTELEToolStripMenuItem.Size = new System.Drawing.Size(151, 22);
             this.lİSTELEToolStripMenuItem.Text = "LİSTELE";
             this.lİSTELEToolStripMenuItem.Click += new System.EventHandler(this.lİSTELEToolStripMenuItem_Click);
             // 

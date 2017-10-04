@@ -361,21 +361,21 @@ namespace MERP_MUI
 
         public void InsertKullaniciGiris(string kullaniciAdi,
                                          string password,
-                                         string mail,
+                                         string kullanici_mail,
                                          DateTime guvenlikCevap)
         {
 
             MySqlCommand cmd = new MySqlCommand("INSERT INTO db_kullanıcılar (kullanici_adi," +
            "password," +
-           "mail," +
+           "kullanici_mail," +
            "guvenlikcevap) VALUES (@kullaniciAdi," +
            "@password," +
-           "@mail," +
+           "@kullanici_mail," +
            "@guvenlikCevap)", connection);
 
             cmd.Parameters.AddWithValue("@kullaniciAdi", kullaniciAdi);
             cmd.Parameters.AddWithValue("@password", password);
-            cmd.Parameters.AddWithValue("@mail", mail);
+            cmd.Parameters.AddWithValue("@kullanici_mail", kullanici_mail);
             cmd.Parameters.AddWithValue("@guvenlikCevap", guvenlikCevap);
 
 

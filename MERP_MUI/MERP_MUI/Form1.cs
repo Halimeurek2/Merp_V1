@@ -36,20 +36,23 @@ namespace MERP_MUI
         public int fatura_id;
         int index = 0;
 
-        public static float[] sumG = new float[12];
-        public static DateTime[] monthG = new DateTime[12];
+        public static float[] sumG = new float[2000];
+        public static DateTime[] monthG = new DateTime[2000];
 
-        public static float[] sumK = new float[12];
-        public static DateTime[] monthK = new DateTime[12];
+        public static float[] sumK = new float[2000];
+        public static DateTime[] monthK = new DateTime[2000];
 
-        public static float[] odemeler = new float[12];
-        public static DateTime[] monthOdemeler = new DateTime[12];
+        public static float[] odemeler = new float[7];
+        public static DateTime[] monthOdemeler = new DateTime[7];
+
+        public static float[] NewsumG = new float[12];
+        public static float[] NewsumK = new float[12];
+        public static float[] Newodemeler = new float[12];
 
         public int Connected;
 
         int elemanSayisiG = 0;
         int elemanSayisiK = 0;
-        int elemanSayisi = 0;
 
 
         public MainForm()
@@ -67,17 +70,6 @@ namespace MERP_MUI
             connectionString = "SERVER=" + server + ";" + "DATABASE=" + database + ";" + "UID=" + uid + ";" + "PASSWORD=" + password + ";";
             myConnection = new MySqlConnection(connectionString);
             myConnection.Open();
-
-            //LoginScreen frmLogin = new LoginScreen();
-            ////if (Connected == 1)
-            ////{
-            ////    this.Visible = true;
-            ////}
-            ////else
-            ////{
-            //    frmLogin.Show();
-            ////    this.Visible = false;
-            ////}
 
             try
             {
@@ -132,8 +124,6 @@ namespace MERP_MUI
         {
             if (btn1_Flag == 0)
             {
-                //pnlDGW.Left = btnDGW.Location.X;
-                //pnlDGW.Top = btnDGW.Location.Y;
                 pnlDGW.Dock = DockStyle.Fill;
                 pnlDGW.Visible = true;
 
@@ -217,34 +207,33 @@ namespace MERP_MUI
 
         public void ChartControl()
         {
-            Array.Clear(monthG, 0, 12);
-            Array.Clear(sumG, 0, 12);
-            Array.Clear(monthK, 0, 12);
-            Array.Clear(sumK, 0, 12);
-            Array.Clear(odemeler, 0, 12);
-            Array.Clear(monthOdemeler, 0, 12);
+            Array.Clear(monthG, 0, 2000);
+            Array.Clear(sumG, 0, 2000);
+            Array.Clear(monthK, 0, 2000);
+            Array.Clear(sumK, 0, 2000);
+            Array.Clear(odemeler, 0, 7);
+            Array.Clear(monthOdemeler, 0, 7);
+            Array.Clear(NewsumG, 0, 12);
+            Array.Clear(NewsumK, 0, 12);
+            Array.Clear(Newodemeler, 0, 12);
 
             index = 0;
             elemanSayisiG = 0;
             elemanSayisiK = 0;
-            elemanSayisi = 0;
 
             myConnection.Open();
             try
             {
-                komut = "SELECT DATE_FORMAT(fatura_tarih,'%m-%Y') AS Month, SUM(fatura_euro) FROM db_faturalar WHERE fatura_tipi='G' and fatura_proje_no ='" + cmb_proje.Text + "' GROUP BY DATE_FORMAT(fatura_tarih, '%m-%Y')";
+                komut = "SELECT fatura_tarih AS Month, fatura_euro AS EURO FROM db_faturalar WHERE fatura_tipi='G' and fatura_proje_no ='" + cmb_proje.Text + "'";
                 da = new MySqlDataAdapter(komut, connection);
                 myCommand = new MySqlCommand(komut, myConnection);
                 myReader = myCommand.ExecuteReader();
                 while (myReader.Read())
                 {
-                    if(Convert.ToDateTime(myReader.GetString(0)).Year == Convert.ToInt32(cmb_yil.Text))
-                    {
-                        monthG[index] = Convert.ToDateTime(myReader.GetString(0));
-                        sumG[index] = (float)Convert.ToDouble(myReader.GetString(1));
-                        index++;
-                        elemanSayisiG++;
-                    }
+                    monthG[index] = Convert.ToDateTime(myReader.GetString(0));
+                    sumG[index] = (float)Convert.ToDouble(myReader.GetString(1));
+                    index++;
+                    elemanSayisiG++;
                 }
                 myReader.Close();
             }
@@ -256,19 +245,16 @@ namespace MERP_MUI
             try
             {
                 index = 0;
-                komut = "SELECT DATE_FORMAT(fatura_tarih,'%m-%Y') AS Month, SUM(fatura_euro) FROM db_faturalar WHERE fatura_tipi='K' and fatura_proje_no ='" + cmb_proje.Text + "' GROUP BY DATE_FORMAT(fatura_tarih, '%m-%Y')";
+                komut = "SELECT fatura_tarih AS Month, fatura_euro AS EURO FROM db_faturalar WHERE fatura_tipi='K' and fatura_proje_no ='" + cmb_proje.Text + "'";
                 da = new MySqlDataAdapter(komut, connection);
                 myCommand = new MySqlCommand(komut, myConnection);
                 myReader = myCommand.ExecuteReader();
                 while (myReader.Read())
                 {
-                    if (Convert.ToDateTime(myReader.GetString(0)).Year == Convert.ToInt32(cmb_yil.Text))
-                    {
-                        monthK[index] = Convert.ToDateTime(myReader.GetString(0));
-                        sumK[index] = (float)Convert.ToDouble(myReader.GetString(1));
-                        index++;
-                        elemanSayisiK++;
-                    }
+                    monthK[index] = Convert.ToDateTime(myReader.GetString(0));
+                    sumK[index] = (float)Convert.ToDouble(myReader.GetString(1));
+                    index++;
+                    elemanSayisiK++;
                 }
                 myReader.Close();
             }
@@ -299,19 +285,58 @@ namespace MERP_MUI
                     monthOdemeler[4] = Convert.ToDateTime(myReader.GetString(26));
                     odemeler[5] = (float)Convert.ToDouble(myReader.GetString(27));
                     monthOdemeler[5] = Convert.ToDateTime(myReader.GetString(28));
-                    elemanSayisi++;
+                    odemeler[6] = (float)Convert.ToDouble(myReader.GetString(29));
+                    monthOdemeler[6] = Convert.ToDateTime(myReader.GetString(30));
                 }
 
 
                 myReader.Close();
 
-
-
+           /*
+            * Bubble Sort
+            */
+                UInt32 row = 0, column = 0;
                 DateTime tempDate = new DateTime();
                 float tempBill = 0;
+                for (row = 0; row < elemanSayisiG; row++)
+                    for (column = 0; column < elemanSayisiG - 1; column++)
+                    {
+                        if (Int32.Parse(monthG[column].ToString("yyyyMMdd")) > Int32.Parse(monthG[column + 1].ToString("yyyyMMdd")))
+                        {
+                            tempDate = monthG[column];
+                            tempBill = sumG[column];
 
-                for (int row = 0; row < odemeler.Length; row++)
-                    for (int column = 0; column < odemeler.Length - 1; column++)
+                            monthG[column] = monthG[column + 1];
+                            monthG[column + 1] = tempDate;
+
+                            sumG[column] = sumG[column + 1];
+                            sumG[column + 1] = tempBill;
+                        }
+                    }
+                tempBill = 0;
+                for (row = 0; row < elemanSayisiK; row++)
+                    for (column = 0; column < elemanSayisiK - 1; column++)
+                    {
+                        if (Int32.Parse(monthK[column].ToString("yyyyMMdd")) > Int32.Parse(monthK[column + 1].ToString("yyyyMMdd")))
+                        {
+                            tempDate = monthK[column];
+                            tempBill = sumK[column];
+
+                            monthK[column] = monthK[column + 1];
+                            monthK[column + 1] = tempDate;
+
+                            sumK[column] = sumK[column + 1];
+                            sumK[column + 1] = tempBill;
+                        }
+                    }
+
+
+
+                 tempDate = new DateTime();
+                 tempBill = 0;
+
+                for (row = 0; row < odemeler.Length; row++)
+                    for (column = 0; column < odemeler.Length - 1; column++)
                     {
                         if (Int32.Parse(monthOdemeler[column].ToString("yyyyMMdd")) > Int32.Parse(monthOdemeler[column + 1].ToString("yyyyMMdd")))
                         {
@@ -331,6 +356,25 @@ namespace MERP_MUI
                 myReader.Close();
             }
 
+            Int32 month;
+            for (month = 0; month < elemanSayisiG; month++)
+            {
+                if (Int32.Parse(monthG[month].ToString("yyyy")) == Int32.Parse(cmb_yil.Text))
+                    NewsumG[Int32.Parse(monthG[month].ToString("MM")) - 1] += sumG[month];
+            }
+
+            for (month = 0; month < elemanSayisiK; month++)
+            {
+                if (Int32.Parse(monthK[month].ToString("yyyy")) == Convert.ToInt32(cmb_yil.Text))
+                    NewsumK[Int32.Parse(monthK[month].ToString("MM")) - 1] += sumK[month];
+            }
+
+            for (month = 0; month < odemeler.Length; month++)
+            {
+                if (Int32.Parse(monthOdemeler[month].ToString("yyyy")) == Convert.ToInt32(cmb_yil.Text))
+                    Newodemeler[Int32.Parse(monthOdemeler[month].ToString("MM")) - 1] += odemeler[month];
+            }
+
             myConnection.Close();
 
             chart1.Series["Gelen Faturalar"].Points.Clear();
@@ -339,20 +383,20 @@ namespace MERP_MUI
 
          
 
-            for (int Month=0;Month<elemanSayisiG;Month++)
+            for (int Month = 0; Month < 12 ; Month++)
             {
-                chart1.Series["Gelen Faturalar"].Points.AddXY(Convert.ToString(monthG[Month].Month), sumG[Month]);
-                chart1.Series["Gelen Faturalar"].Points[Month].Label = string.Format(new CultureInfo("de-DE"), "{0:C2}", Convert.ToDecimal(sumG[Month]));
-            }
-            for (int Month = 0; Month < elemanSayisiK; Month++)
-            {
-                chart1.Series["Kesilen Faturalar"].Points.AddXY(Convert.ToString(monthK[Month].Month), sumK[Month]);
-                chart1.Series["Kesilen Faturalar"].Points[Month].Label = string.Format(new CultureInfo("de-DE"), "{0:C2}", Convert.ToDecimal(sumK[Month]));
+                chart1.Series["Gelen Faturalar"].Points.AddXY(Convert.ToString((Month + 1) + ". ay"), NewsumG[Month]);
+                chart1.Series["Gelen Faturalar"].Points[Month].Label = string.Format(new CultureInfo("de-DE"), "{0:C2}", Convert.ToDecimal(NewsumG[Month]));
             }
             for (int Month = 0; Month < 12; Month++)
             {
-                chart1.Series["Öngörülen Ödemeler"].Points.AddXY(Convert.ToString(monthOdemeler[Month].Month), odemeler[Month]);
-                chart1.Series["Öngörülen Ödemeler"].Points[Month].Label = string.Format(new CultureInfo("de-DE"), "{0:C2}", Convert.ToDecimal(odemeler[Month]));
+                chart1.Series["Kesilen Faturalar"].Points.AddXY(Convert.ToString((Month + 1) + ". ay"), NewsumK[Month]);
+                chart1.Series["Kesilen Faturalar"].Points[Month].Label = string.Format(new CultureInfo("de-DE"), "{0:C2}", Convert.ToDecimal(NewsumK[Month]));
+            }
+            for (int Month = 0; Month < 12; Month++)
+            {
+                chart1.Series["Öngörülen Ödemeler"].Points.AddXY(Convert.ToString((Month + 1) + ". ay"), Newodemeler[Month]);
+                chart1.Series["Öngörülen Ödemeler"].Points[Month].Label = string.Format(new CultureInfo("de-DE"), "{0:C2}", Convert.ToDecimal(Newodemeler[Month]));
             }
 
         }
@@ -361,8 +405,6 @@ namespace MERP_MUI
         {
             if(btn2_Flag==0)
             {
-                //pnlAcil.Left = this.Location.X;
-                //pnlAcil.Top = this.Height/3;
                 pnlAcil.Dock = DockStyle.Fill;
                 pnlAcil.Visible = true;
                 btn2_Flag = 1;

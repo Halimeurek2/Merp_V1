@@ -100,6 +100,7 @@
             this.splitContainer8 = new System.Windows.Forms.SplitContainer();
             this.cmb_proje = new MetroFramework.Controls.MetroComboBox();
             this.cmb_yil = new MetroFramework.Controls.MetroComboBox();
+            this.pbClose = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer2)).BeginInit();
             this.splitContainer2.Panel1.SuspendLayout();
             this.splitContainer2.Panel2.SuspendLayout();
@@ -158,6 +159,7 @@
             this.splitContainer8.Panel1.SuspendLayout();
             this.splitContainer8.Panel2.SuspendLayout();
             this.splitContainer8.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbClose)).BeginInit();
             this.SuspendLayout();
             // 
             // splitContainer2
@@ -1063,11 +1065,26 @@
             this.cmb_yil.UseSelectable = true;
             this.cmb_yil.SelectedIndexChanged += new System.EventHandler(this.cmb_yil_SelectedIndexChanged);
             // 
+            // pbClose
+            // 
+            this.pbClose.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.pbClose.BackColor = System.Drawing.Color.Transparent;
+            this.pbClose.Image = global::MERP_MUI.Properties.Resources.appbar_arrow_left_dark;
+            this.pbClose.Location = new System.Drawing.Point(1166, 12);
+            this.pbClose.Name = "pbClose";
+            this.pbClose.Size = new System.Drawing.Size(46, 42);
+            this.pbClose.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbClose.TabIndex = 24;
+            this.pbClose.TabStop = false;
+            this.pbClose.Click += new System.EventHandler(this.pbClose_Click);
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1235, 780);
+            this.ControlBox = false;
+            this.Controls.Add(this.pbClose);
             this.Controls.Add(this.splitContainer1);
             this.Controls.Add(this.splitContainer2);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -1142,6 +1159,7 @@
             this.splitContainer8.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer8)).EndInit();
             this.splitContainer8.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pbClose)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1204,6 +1222,7 @@
         private System.Windows.Forms.SplitContainer splitContainer8;
         private MetroFramework.Controls.MetroComboBox cmb_proje;
         private MetroFramework.Controls.MetroComboBox cmb_yil;
+        private System.Windows.Forms.PictureBox pbClose;
     }
 }
 

@@ -35,7 +35,8 @@
             this.pbLogin = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.txtPassword = new MetroFramework.Controls.MetroTextBox();
-            this.txtKullanıcıAdı = new MetroFramework.Controls.MetroTextBox();
+            this.txtKullaniciAdi = new MetroFramework.Controls.MetroTextBox();
+            this.cb_animsa = new MetroFramework.Controls.MetroCheckBox();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbLogin)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -59,11 +60,12 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.Transparent;
+            this.panel2.Controls.Add(this.cb_animsa);
             this.panel2.Controls.Add(this.lblgetPassword);
             this.panel2.Controls.Add(this.pbLogin);
             this.panel2.Controls.Add(this.pictureBox1);
             this.panel2.Controls.Add(this.txtPassword);
-            this.panel2.Controls.Add(this.txtKullanıcıAdı);
+            this.panel2.Controls.Add(this.txtKullaniciAdi);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel2.Location = new System.Drawing.Point(20, 60);
             this.panel2.Name = "panel2";
@@ -143,45 +145,63 @@
             this.txtPassword.WaterMark = "Şifre";
             this.txtPassword.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.txtPassword.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            this.txtPassword.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtPassword_KeyPress);
             // 
-            // txtKullanıcıAdı
+            // txtKullaniciAdi
             // 
             // 
             // 
             // 
-            this.txtKullanıcıAdı.CustomButton.Image = null;
-            this.txtKullanıcıAdı.CustomButton.Location = new System.Drawing.Point(141, 1);
-            this.txtKullanıcıAdı.CustomButton.Name = "";
-            this.txtKullanıcıAdı.CustomButton.Size = new System.Drawing.Size(21, 21);
-            this.txtKullanıcıAdı.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
-            this.txtKullanıcıAdı.CustomButton.TabIndex = 1;
-            this.txtKullanıcıAdı.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
-            this.txtKullanıcıAdı.CustomButton.UseSelectable = true;
-            this.txtKullanıcıAdı.CustomButton.Visible = false;
-            this.txtKullanıcıAdı.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.txtKullanıcıAdı.Icon = ((System.Drawing.Image)(resources.GetObject("txtKullanıcıAdı.Icon")));
-            this.txtKullanıcıAdı.Lines = new string[0];
-            this.txtKullanıcıAdı.Location = new System.Drawing.Point(21, 137);
-            this.txtKullanıcıAdı.MaxLength = 32767;
-            this.txtKullanıcıAdı.Name = "txtKullanıcıAdı";
-            this.txtKullanıcıAdı.PasswordChar = '\0';
-            this.txtKullanıcıAdı.PromptText = "Kullanıcı Adı";
-            this.txtKullanıcıAdı.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.txtKullanıcıAdı.SelectedText = "";
-            this.txtKullanıcıAdı.SelectionLength = 0;
-            this.txtKullanıcıAdı.SelectionStart = 0;
-            this.txtKullanıcıAdı.ShortcutsEnabled = true;
-            this.txtKullanıcıAdı.Size = new System.Drawing.Size(163, 23);
-            this.txtKullanıcıAdı.Style = MetroFramework.MetroColorStyle.Red;
-            this.txtKullanıcıAdı.TabIndex = 0;
-            this.txtKullanıcıAdı.Theme = MetroFramework.MetroThemeStyle.Dark;
-            this.txtKullanıcıAdı.UseCustomBackColor = true;
-            this.txtKullanıcıAdı.UseCustomForeColor = true;
-            this.txtKullanıcıAdı.UseSelectable = true;
-            this.txtKullanıcıAdı.UseStyleColors = true;
-            this.txtKullanıcıAdı.WaterMark = "Kullanıcı Adı";
-            this.txtKullanıcıAdı.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.txtKullanıcıAdı.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            this.txtKullaniciAdi.CustomButton.Image = null;
+            this.txtKullaniciAdi.CustomButton.Location = new System.Drawing.Point(141, 1);
+            this.txtKullaniciAdi.CustomButton.Name = "";
+            this.txtKullaniciAdi.CustomButton.Size = new System.Drawing.Size(21, 21);
+            this.txtKullaniciAdi.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
+            this.txtKullaniciAdi.CustomButton.TabIndex = 1;
+            this.txtKullaniciAdi.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.txtKullaniciAdi.CustomButton.UseSelectable = true;
+            this.txtKullaniciAdi.CustomButton.Visible = false;
+            this.txtKullaniciAdi.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.txtKullaniciAdi.Icon = ((System.Drawing.Image)(resources.GetObject("txtKullaniciAdi.Icon")));
+            this.txtKullaniciAdi.Lines = new string[0];
+            this.txtKullaniciAdi.Location = new System.Drawing.Point(21, 137);
+            this.txtKullaniciAdi.MaxLength = 32767;
+            this.txtKullaniciAdi.Name = "txtKullaniciAdi";
+            this.txtKullaniciAdi.PasswordChar = '\0';
+            this.txtKullaniciAdi.PromptText = "Kullanıcı Adı";
+            this.txtKullaniciAdi.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.txtKullaniciAdi.SelectedText = "";
+            this.txtKullaniciAdi.SelectionLength = 0;
+            this.txtKullaniciAdi.SelectionStart = 0;
+            this.txtKullaniciAdi.ShortcutsEnabled = true;
+            this.txtKullaniciAdi.Size = new System.Drawing.Size(163, 23);
+            this.txtKullaniciAdi.Style = MetroFramework.MetroColorStyle.Red;
+            this.txtKullaniciAdi.TabIndex = 0;
+            this.txtKullaniciAdi.Theme = MetroFramework.MetroThemeStyle.Dark;
+            this.txtKullaniciAdi.UseCustomBackColor = true;
+            this.txtKullaniciAdi.UseCustomForeColor = true;
+            this.txtKullaniciAdi.UseSelectable = true;
+            this.txtKullaniciAdi.UseStyleColors = true;
+            this.txtKullaniciAdi.WaterMark = "Kullanıcı Adı";
+            this.txtKullaniciAdi.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.txtKullaniciAdi.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            this.txtKullaniciAdi.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtPassword_KeyPress);
+            // 
+            // cb_animsa
+            // 
+            this.cb_animsa.AutoSize = true;
+            this.cb_animsa.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.cb_animsa.Location = new System.Drawing.Point(21, 206);
+            this.cb_animsa.Name = "cb_animsa";
+            this.cb_animsa.Size = new System.Drawing.Size(63, 15);
+            this.cb_animsa.Style = MetroFramework.MetroColorStyle.Red;
+            this.cb_animsa.TabIndex = 28;
+            this.cb_animsa.Text = "Anımsa";
+            this.cb_animsa.Theme = MetroFramework.MetroThemeStyle.Dark;
+            this.cb_animsa.UseCustomBackColor = true;
+            this.cb_animsa.UseCustomForeColor = true;
+            this.cb_animsa.UseSelectable = true;
+            this.cb_animsa.UseStyleColors = true;
             // 
             // LoginScreen
             // 
@@ -200,6 +220,7 @@
             this.Theme = MetroFramework.MetroThemeStyle.Dark;
             this.Load += new System.EventHandler(this.LoginScreen_Load);
             this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbLogin)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
@@ -214,6 +235,7 @@
         private System.Windows.Forms.PictureBox pbLogin;
         private System.Windows.Forms.PictureBox pictureBox1;
         private MetroFramework.Controls.MetroTextBox txtPassword;
-        private MetroFramework.Controls.MetroTextBox txtKullanıcıAdı;
+        private MetroFramework.Controls.MetroTextBox txtKullaniciAdi;
+        private MetroFramework.Controls.MetroCheckBox cb_animsa;
     }
 }

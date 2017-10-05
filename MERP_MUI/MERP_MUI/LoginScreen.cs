@@ -1,6 +1,7 @@
 ﻿using MySql.Data.MySqlClient;
 using System;
 using System.Data;
+using System.Windows.Forms;
 
 namespace MERP_MUI
 {
@@ -18,7 +19,12 @@ namespace MERP_MUI
         MySqlConnection myConnection;
         DataTable dt = new DataTable();
 
-        public int Connected;
+        DBConnect db;
+
+        Boolean Connected;
+        public int check;
+        public int kullanici_id;
+        public DateTime giris_tarihi;
 
         public LoginScreen()
         {
@@ -45,28 +51,167 @@ namespace MERP_MUI
 
         private void pbLogin_Click(object sender, EventArgs e)
         {
-            try
+            komut = "SELECT kullanicigirisi_id FROM db_kullanicilar where kullanici_adi='" + txtKullaniciAdi.Text + "';";
+            da = new MySqlDataAdapter(komut, connection);
+            myCommand = new MySqlCommand(komut, myConnection);
+            MySqlDataReader myReader;
+            myReader = myCommand.ExecuteReader();
+            while (myReader.Read())
             {
-                komut = "SELECT * FROM db_kullanıcılar where kullanici_adi='" + txtKullanıcıAdı.Text + "' and password='" + txtPassword.Text + "';";
+                kullanici_id = Convert.ToInt16(myReader.GetString(0));
+            }
+            myReader.Close();
+
+            if (txtKullaniciAdi.Text!="")
+            {
+                komut = "SELECT animsaCheck FROM db_kullanicigirisi where kullanici_id='" + kullanici_id + "';";
+                da = new MySqlDataAdapter(komut, connection);
+                myCommand = new MySqlCommand(komut, myConnection);
+                myReader = myCommand.ExecuteReader();
+                while (myReader.Read())
+                {
+                    check = Convert.ToInt16(myReader.GetString(0));
+                }
+                myReader.Close();
+
+                if(check==1)
+                {
+                    DialogResult = System.Windows.Forms.DialogResult.OK;
+                    this.Close();
+
+                    MainForm frmMain = new MainForm();
+                    frmMain.kullanici_id = kullanici_id;
+                    frmMain.animsaCheck = check;
+                }
+                else
+                {
+                    MessageBoxx frmMessage = new MessageBoxx();
+                    frmMessage.txtMessage.Text = "Lütfen şifre ile giriş yapınız";
+                    frmMessage.Show();
+                }
+            }
+            else
+            {
+                MessageBoxx frmMessage = new MessageBoxx();
+                frmMessage.txtMessage.Text = "Lütfen kullanıcı adını giriniz";
+                frmMessage.Show();
+            }
+
+            if(txtKullaniciAdi.Text != "" && txtPassword.Text != "")
+            {
+                try
+                {
+                    komut = "SELECT * FROM db_kullanicilar where kullanici_adi='" + txtKullaniciAdi.Text + "' and password='" + txtPassword.Text + "';";
+                    da = new MySqlDataAdapter(komut, connection);
+                    myCommand = new MySqlCommand(komut, myConnection);
+                    myReader = myCommand.ExecuteReader();
+                    while (myReader.Read())
+                    {
+                        Connected = true;
+                    }
+
+                    myReader.Close();
+
+                    if (Connected == false)
+                    {
+                        MessageBoxx frmMessage = new MessageBoxx();
+                        frmMessage.txtMessage.Text = "Kullanıcı Adı veya Şifre Hatalı";
+                        frmMessage.Show();
+                    }
+                    else
+                    {
+                        DialogResult = System.Windows.Forms.DialogResult.OK;
+                        this.Close();
+                    }
+                }
+                catch
+                {
+
+                }
+            }
+
+
+        }
+
+        private void txtPassword_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == (char)Keys.Enter)
+            {
+                komut = "SELECT kullanicigirisi_id FROM db_kullanicilar where kullanici_adi='" + txtKullaniciAdi.Text + "';";
                 da = new MySqlDataAdapter(komut, connection);
                 myCommand = new MySqlCommand(komut, myConnection);
                 MySqlDataReader myReader;
                 myReader = myCommand.ExecuteReader();
                 while (myReader.Read())
                 {
-                    
+                    kullanici_id = Convert.ToInt16(myReader.GetString(0));
+                }
+                myReader.Close();
+
+                if (txtKullaniciAdi.Text != "")
+                {
+                    komut = "SELECT animsaCheck FROM db_kullanicigirisi where kullanici_id='" + kullanici_id + "';";
+                    da = new MySqlDataAdapter(komut, connection);
+                    myCommand = new MySqlCommand(komut, myConnection);
+                    myReader = myCommand.ExecuteReader();
+                    while (myReader.Read())
+                    {
+                        check = Convert.ToInt16(myReader.GetString(0));
+                    }
+                    myReader.Close();
+
+                    if (check == 1)
+                    {
+                        DialogResult = System.Windows.Forms.DialogResult.OK;
+                        this.Close();
+                    }
+                    else
+                    {
+                        MessageBoxx frmMessage = new MessageBoxx();
+                        frmMessage.txtMessage.Text = "Lütfen şifre ile giriş yapınız";
+                        frmMessage.Show();
+                    }
+                }
+                else
+                {
+                    MessageBoxx frmMessage = new MessageBoxx();
+                    frmMessage.txtMessage.Text = "Lütfen kullanıcı adını giriniz";
+                    frmMessage.Show();
                 }
 
-                //MainForm frmMain = new MainForm();
-                //frmMain.Connected = 1;
-                //frmMain.Show();
-               
+                if (txtKullaniciAdi.Text != "" && txtPassword.Text != "")
+                {
+                    try
+                    {
+                        komut = "SELECT * FROM db_kullanicilar where kullanici_adi='" + txtKullaniciAdi.Text + "' and password='" + txtPassword.Text + "';";
+                        da = new MySqlDataAdapter(komut, connection);
+                        myCommand = new MySqlCommand(komut, myConnection);
+                        myReader = myCommand.ExecuteReader();
+                        while (myReader.Read())
+                        {
+                            Connected = true;
+                        }
 
-                myReader.Close();
-                DialogResult = System.Windows.Forms.DialogResult.OK;
-                this.Close();
+                        myReader.Close();
+
+                        if (Connected == false)
+                        {
+                            MessageBoxx frmMessage = new MessageBoxx();
+                            frmMessage.txtMessage.Text = "Kullanıcı Adı veya Şifre Hatalı";
+                            frmMessage.Show();
+                        }
+                        else
+                        {
+                            DialogResult = System.Windows.Forms.DialogResult.OK;
+                            this.Close();
+                        }
+                    }
+                    catch
+                    {
+
+                    }
+                }
             }
-            catch {  }
         }
     }
 }

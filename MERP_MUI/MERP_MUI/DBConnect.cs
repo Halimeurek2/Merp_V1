@@ -365,7 +365,7 @@ namespace MERP_MUI
                                          DateTime guvenlikCevap)
         {
 
-            MySqlCommand cmd = new MySqlCommand("INSERT INTO db_kullanıcılar (kullanici_adi," +
+            MySqlCommand cmd = new MySqlCommand("INSERT INTO db_kullanicilar (kullanici_adi," +
            "password," +
            "kullanici_mail," +
            "guvenlikcevap) VALUES (@kullaniciAdi," +
@@ -377,6 +377,38 @@ namespace MERP_MUI
             cmd.Parameters.AddWithValue("@password", password);
             cmd.Parameters.AddWithValue("@kullanici_mail", kullanici_mail);
             cmd.Parameters.AddWithValue("@guvenlikCevap", guvenlikCevap);
+
+
+            //open connection
+            if (this.OpenConnection() == true)
+            {
+
+                //Execute command
+                cmd.ExecuteNonQuery();
+
+                //close connection
+                this.CloseConnection();
+            }
+        }
+
+        public void InsertKullanicilar(int kullanici_id,
+                                       DateTime giris_tarihi,
+                                       DateTime cikis_tarihi,
+                                       int animsaCheck)
+        {
+
+            MySqlCommand cmd = new MySqlCommand("INSERT INTO db_kullanicigirisi (kullanici_id," +
+           "giris_tarihi," +
+           "cikis_tarihi," +
+           "animsaCheck) VALUES (@kullanici_id," +
+           "@giris_tarihi," +
+           "@cikis_tarihi," +
+           "@animsaCheck)", connection);
+
+            cmd.Parameters.AddWithValue("@kullanici_id", kullanici_id);
+            cmd.Parameters.AddWithValue("@giris_tarihi", giris_tarihi);
+            cmd.Parameters.AddWithValue("@cikis_tarihi", cikis_tarihi);
+            cmd.Parameters.AddWithValue("@animsaCheck", animsaCheck);
 
 
             //open connection

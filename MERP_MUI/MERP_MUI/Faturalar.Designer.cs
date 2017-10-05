@@ -49,9 +49,11 @@
             this.txt_tip = new MetroFramework.Controls.MetroTextBox();
             this.metroLabel3 = new MetroFramework.Controls.MetroLabel();
             this.dgw_ftr_list = new MetroFramework.Controls.MetroGrid();
+            this.pbClose = new System.Windows.Forms.PictureBox();
+            this.splitContainer7 = new System.Windows.Forms.SplitContainer();
+            this.splitContainer8 = new System.Windows.Forms.SplitContainer();
             this.btn_ftr_sil = new MetroFramework.Controls.MetroButton();
             this.btn_ftr_duzenle = new MetroFramework.Controls.MetroButton();
-            this.pbClose = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -78,6 +80,13 @@
             this.splitContainer6.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgw_ftr_list)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbClose)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainer7)).BeginInit();
+            this.splitContainer7.Panel2.SuspendLayout();
+            this.splitContainer7.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainer8)).BeginInit();
+            this.splitContainer8.Panel1.SuspendLayout();
+            this.splitContainer8.Panel2.SuspendLayout();
+            this.splitContainer8.SuspendLayout();
             this.SuspendLayout();
             // 
             // splitContainer1
@@ -93,8 +102,7 @@
             // 
             // splitContainer1.Panel2
             // 
-            this.splitContainer1.Panel2.Controls.Add(this.btn_ftr_sil);
-            this.splitContainer1.Panel2.Controls.Add(this.btn_ftr_duzenle);
+            this.splitContainer1.Panel2.Controls.Add(this.splitContainer7);
             this.splitContainer1.Size = new System.Drawing.Size(1277, 566);
             this.splitContainer1.SplitterDistance = 520;
             this.splitContainer1.TabIndex = 0;
@@ -440,38 +448,6 @@
             this.dgw_ftr_list.UseStyleColors = true;
             this.dgw_ftr_list.RowHeaderMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgw_ftr_list_RowHeaderMouseClick);
             // 
-            // btn_ftr_sil
-            // 
-            this.btn_ftr_sil.Highlight = true;
-            this.btn_ftr_sil.Location = new System.Drawing.Point(641, 3);
-            this.btn_ftr_sil.Name = "btn_ftr_sil";
-            this.btn_ftr_sil.Size = new System.Drawing.Size(116, 36);
-            this.btn_ftr_sil.Style = MetroFramework.MetroColorStyle.Red;
-            this.btn_ftr_sil.TabIndex = 56;
-            this.btn_ftr_sil.Text = "SİL";
-            this.btn_ftr_sil.Theme = MetroFramework.MetroThemeStyle.Dark;
-            this.btn_ftr_sil.UseCustomBackColor = true;
-            this.btn_ftr_sil.UseCustomForeColor = true;
-            this.btn_ftr_sil.UseSelectable = true;
-            this.btn_ftr_sil.UseStyleColors = true;
-            this.btn_ftr_sil.Click += new System.EventHandler(this.btn_ftr_sil_Click);
-            // 
-            // btn_ftr_duzenle
-            // 
-            this.btn_ftr_duzenle.Highlight = true;
-            this.btn_ftr_duzenle.Location = new System.Drawing.Point(519, 3);
-            this.btn_ftr_duzenle.Name = "btn_ftr_duzenle";
-            this.btn_ftr_duzenle.Size = new System.Drawing.Size(116, 36);
-            this.btn_ftr_duzenle.Style = MetroFramework.MetroColorStyle.Red;
-            this.btn_ftr_duzenle.TabIndex = 55;
-            this.btn_ftr_duzenle.Text = "DÜZENLE";
-            this.btn_ftr_duzenle.Theme = MetroFramework.MetroThemeStyle.Dark;
-            this.btn_ftr_duzenle.UseCustomBackColor = true;
-            this.btn_ftr_duzenle.UseCustomForeColor = true;
-            this.btn_ftr_duzenle.UseSelectable = true;
-            this.btn_ftr_duzenle.UseStyleColors = true;
-            this.btn_ftr_duzenle.Click += new System.EventHandler(this.btn_ftr_duzenle_Click);
-            // 
             // pbClose
             // 
             this.pbClose.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
@@ -484,6 +460,68 @@
             this.pbClose.TabIndex = 26;
             this.pbClose.TabStop = false;
             this.pbClose.Click += new System.EventHandler(this.pbClose_Click);
+            // 
+            // splitContainer7
+            // 
+            this.splitContainer7.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.splitContainer7.Location = new System.Drawing.Point(0, 0);
+            this.splitContainer7.Name = "splitContainer7";
+            // 
+            // splitContainer7.Panel2
+            // 
+            this.splitContainer7.Panel2.Controls.Add(this.splitContainer8);
+            this.splitContainer7.Size = new System.Drawing.Size(1277, 42);
+            this.splitContainer7.SplitterDistance = 982;
+            this.splitContainer7.TabIndex = 0;
+            // 
+            // splitContainer8
+            // 
+            this.splitContainer8.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.splitContainer8.Location = new System.Drawing.Point(0, 0);
+            this.splitContainer8.Name = "splitContainer8";
+            // 
+            // splitContainer8.Panel1
+            // 
+            this.splitContainer8.Panel1.Controls.Add(this.btn_ftr_duzenle);
+            // 
+            // splitContainer8.Panel2
+            // 
+            this.splitContainer8.Panel2.Controls.Add(this.btn_ftr_sil);
+            this.splitContainer8.Size = new System.Drawing.Size(291, 42);
+            this.splitContainer8.SplitterDistance = 146;
+            this.splitContainer8.TabIndex = 0;
+            // 
+            // btn_ftr_sil
+            // 
+            this.btn_ftr_sil.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btn_ftr_sil.Highlight = true;
+            this.btn_ftr_sil.Location = new System.Drawing.Point(0, 0);
+            this.btn_ftr_sil.Name = "btn_ftr_sil";
+            this.btn_ftr_sil.Size = new System.Drawing.Size(141, 42);
+            this.btn_ftr_sil.Style = MetroFramework.MetroColorStyle.Red;
+            this.btn_ftr_sil.TabIndex = 58;
+            this.btn_ftr_sil.Text = "SİL";
+            this.btn_ftr_sil.Theme = MetroFramework.MetroThemeStyle.Dark;
+            this.btn_ftr_sil.UseCustomBackColor = true;
+            this.btn_ftr_sil.UseCustomForeColor = true;
+            this.btn_ftr_sil.UseSelectable = true;
+            this.btn_ftr_sil.UseStyleColors = true;
+            // 
+            // btn_ftr_duzenle
+            // 
+            this.btn_ftr_duzenle.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btn_ftr_duzenle.Highlight = true;
+            this.btn_ftr_duzenle.Location = new System.Drawing.Point(0, 0);
+            this.btn_ftr_duzenle.Name = "btn_ftr_duzenle";
+            this.btn_ftr_duzenle.Size = new System.Drawing.Size(146, 42);
+            this.btn_ftr_duzenle.Style = MetroFramework.MetroColorStyle.Red;
+            this.btn_ftr_duzenle.TabIndex = 57;
+            this.btn_ftr_duzenle.Text = "DÜZENLE";
+            this.btn_ftr_duzenle.Theme = MetroFramework.MetroThemeStyle.Dark;
+            this.btn_ftr_duzenle.UseCustomBackColor = true;
+            this.btn_ftr_duzenle.UseCustomForeColor = true;
+            this.btn_ftr_duzenle.UseSelectable = true;
+            this.btn_ftr_duzenle.UseStyleColors = true;
             // 
             // Faturalar
             // 
@@ -532,6 +570,13 @@
             this.splitContainer6.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgw_ftr_list)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbClose)).EndInit();
+            this.splitContainer7.Panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainer7)).EndInit();
+            this.splitContainer7.ResumeLayout(false);
+            this.splitContainer8.Panel1.ResumeLayout(false);
+            this.splitContainer8.Panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainer8)).EndInit();
+            this.splitContainer8.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -540,8 +585,6 @@
 
         private System.Windows.Forms.SplitContainer splitContainer1;
         private System.Windows.Forms.SplitContainer splitContainer2;
-        private MetroFramework.Controls.MetroButton btn_ftr_sil;
-        private MetroFramework.Controls.MetroButton btn_ftr_duzenle;
         private System.Windows.Forms.SplitContainer splitContainer3;
         private System.Windows.Forms.SplitContainer splitContainer4;
         private System.Windows.Forms.SplitContainer splitContainer5;
@@ -558,5 +601,9 @@
         private MetroFramework.Controls.MetroLabel metroLabel3;
         private MetroFramework.Controls.MetroGrid dgw_ftr_list;
         public System.Windows.Forms.ComboBox cmb_firma;
+        private System.Windows.Forms.SplitContainer splitContainer7;
+        private System.Windows.Forms.SplitContainer splitContainer8;
+        private MetroFramework.Controls.MetroButton btn_ftr_duzenle;
+        private MetroFramework.Controls.MetroButton btn_ftr_sil;
     }
 }

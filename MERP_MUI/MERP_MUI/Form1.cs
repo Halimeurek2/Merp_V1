@@ -54,6 +54,11 @@ namespace MERP_MUI
         int elemanSayisiG = 0;
         int elemanSayisiK = 0;
 
+        public int kullanici_id;
+        public int animsaCheck;
+        public static DateTime giris_tarihi;
+
+        DBConnect db;
 
         public MainForm()
         {
@@ -62,6 +67,8 @@ namespace MERP_MUI
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            giris_tarihi = DateTime.Now;
+
             server = "localhost";
             database = "uretimplanlama_2";
             uid = "root";
@@ -552,6 +559,14 @@ namespace MERP_MUI
         {
             Faturalar frmFaturalar = new Faturalar();
             frmFaturalar.Show();
+        }
+
+        private void pbClose_Click(object sender, EventArgs e)
+        {
+            //db = new DBConnect();
+            //db.InsertKullanicilar(kullanici_id, giris_tarihi, DateTime.Now, animsaCheck);
+
+            //this.Close();
         }
     }
 }

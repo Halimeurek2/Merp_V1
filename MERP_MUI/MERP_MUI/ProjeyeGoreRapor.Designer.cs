@@ -210,10 +210,11 @@
             // metroLabel14
             // 
             this.metroLabel14.AutoSize = true;
+            this.metroLabel14.FontWeight = MetroFramework.MetroLabelWeight.Bold;
             this.metroLabel14.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
             this.metroLabel14.Location = new System.Drawing.Point(3, 13);
             this.metroLabel14.Name = "metroLabel14";
-            this.metroLabel14.Size = new System.Drawing.Size(69, 19);
+            this.metroLabel14.Size = new System.Drawing.Size(77, 19);
             this.metroLabel14.Style = MetroFramework.MetroColorStyle.Red;
             this.metroLabel14.TabIndex = 115;
             this.metroLabel14.Text = "Proje No :";
@@ -243,10 +244,11 @@
             // lbl_prj_butce
             // 
             this.lbl_prj_butce.AutoSize = true;
+            this.lbl_prj_butce.FontWeight = MetroFramework.MetroLabelWeight.Bold;
             this.lbl_prj_butce.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
             this.lbl_prj_butce.Location = new System.Drawing.Point(93, 13);
             this.lbl_prj_butce.Name = "lbl_prj_butce";
-            this.lbl_prj_butce.Size = new System.Drawing.Size(16, 19);
+            this.lbl_prj_butce.Size = new System.Drawing.Size(17, 19);
             this.lbl_prj_butce.Style = MetroFramework.MetroColorStyle.Red;
             this.lbl_prj_butce.TabIndex = 116;
             this.lbl_prj_butce.Text = "0";
@@ -258,10 +260,11 @@
             // metroLabel12
             // 
             this.metroLabel12.AutoSize = true;
+            this.metroLabel12.FontWeight = MetroFramework.MetroLabelWeight.Bold;
             this.metroLabel12.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
             this.metroLabel12.Location = new System.Drawing.Point(3, 13);
             this.metroLabel12.Name = "metroLabel12";
-            this.metroLabel12.Size = new System.Drawing.Size(83, 19);
+            this.metroLabel12.Size = new System.Drawing.Size(94, 19);
             this.metroLabel12.Style = MetroFramework.MetroColorStyle.Red;
             this.metroLabel12.TabIndex = 115;
             this.metroLabel12.Text = "Proje Bütçe :";
@@ -292,10 +295,11 @@
             // lbl_prjEuro
             // 
             this.lbl_prjEuro.AutoSize = true;
+            this.lbl_prjEuro.FontWeight = MetroFramework.MetroLabelWeight.Bold;
             this.lbl_prjEuro.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.lbl_prjEuro.Location = new System.Drawing.Point(137, 13);
+            this.lbl_prjEuro.Location = new System.Drawing.Point(148, 13);
             this.lbl_prjEuro.Name = "lbl_prjEuro";
-            this.lbl_prjEuro.Size = new System.Drawing.Size(16, 19);
+            this.lbl_prjEuro.Size = new System.Drawing.Size(17, 19);
             this.lbl_prjEuro.Style = MetroFramework.MetroColorStyle.Red;
             this.lbl_prjEuro.TabIndex = 116;
             this.lbl_prjEuro.Text = "0";
@@ -307,10 +311,11 @@
             // metroLabel10
             // 
             this.metroLabel10.AutoSize = true;
+            this.metroLabel10.FontWeight = MetroFramework.MetroLabelWeight.Bold;
             this.metroLabel10.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
             this.metroLabel10.Location = new System.Drawing.Point(3, 13);
             this.metroLabel10.Name = "metroLabel10";
-            this.metroLabel10.Size = new System.Drawing.Size(130, 19);
+            this.metroLabel10.Size = new System.Drawing.Size(145, 19);
             this.metroLabel10.Style = MetroFramework.MetroColorStyle.Red;
             this.metroLabel10.TabIndex = 115;
             this.metroLabel10.Text = "Proje Bütçe (EURO) :";
@@ -322,10 +327,11 @@
             // lbl_top_maliyet
             // 
             this.lbl_top_maliyet.AutoSize = true;
+            this.lbl_top_maliyet.FontWeight = MetroFramework.MetroLabelWeight.Bold;
             this.lbl_top_maliyet.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.lbl_top_maliyet.Location = new System.Drawing.Point(112, 13);
+            this.lbl_top_maliyet.Location = new System.Drawing.Point(126, 13);
             this.lbl_top_maliyet.Name = "lbl_top_maliyet";
-            this.lbl_top_maliyet.Size = new System.Drawing.Size(16, 19);
+            this.lbl_top_maliyet.Size = new System.Drawing.Size(17, 19);
             this.lbl_top_maliyet.Style = MetroFramework.MetroColorStyle.Red;
             this.lbl_top_maliyet.TabIndex = 116;
             this.lbl_top_maliyet.Text = "0";
@@ -337,10 +343,11 @@
             // metroLabel8
             // 
             this.metroLabel8.AutoSize = true;
+            this.metroLabel8.FontWeight = MetroFramework.MetroLabelWeight.Bold;
             this.metroLabel8.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
             this.metroLabel8.Location = new System.Drawing.Point(3, 13);
             this.metroLabel8.Name = "metroLabel8";
-            this.metroLabel8.Size = new System.Drawing.Size(107, 19);
+            this.metroLabel8.Size = new System.Drawing.Size(122, 19);
             this.metroLabel8.Style = MetroFramework.MetroColorStyle.Red;
             this.metroLabel8.TabIndex = 115;
             this.metroLabel8.Text = "Toplam Maliyet :";
@@ -482,7 +489,7 @@
             this.splitContainer7.Panel2.Controls.Add(this.groupBox3);
             this.splitContainer7.Panel2.Controls.Add(this.btn_ozet);
             this.splitContainer7.Size = new System.Drawing.Size(1338, 308);
-            this.splitContainer7.SplitterDistance = 1051;
+            this.splitContainer7.SplitterDistance = 1000;
             this.splitContainer7.TabIndex = 0;
             // 
             // groupBox1
@@ -493,7 +500,7 @@
             this.groupBox1.ForeColor = System.Drawing.Color.Crimson;
             this.groupBox1.Location = new System.Drawing.Point(0, 0);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(1051, 308);
+            this.groupBox1.Size = new System.Drawing.Size(1000, 308);
             this.groupBox1.TabIndex = 5;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "GRAFİKLER";
@@ -511,8 +518,8 @@
             // splitContainer8.Panel2
             // 
             this.splitContainer8.Panel2.Controls.Add(this.splitContainer12);
-            this.splitContainer8.Size = new System.Drawing.Size(1045, 289);
-            this.splitContainer8.SplitterDistance = 257;
+            this.splitContainer8.Size = new System.Drawing.Size(994, 289);
+            this.splitContainer8.SplitterDistance = 244;
             this.splitContainer8.TabIndex = 0;
             // 
             // chart1
@@ -542,7 +549,7 @@
             series1.Points.Add(dataPoint2);
             series1.Points.Add(dataPoint3);
             this.chart1.Series.Add(series1);
-            this.chart1.Size = new System.Drawing.Size(257, 289);
+            this.chart1.Size = new System.Drawing.Size(244, 289);
             this.chart1.TabIndex = 1;
             this.chart1.Text = "chart_maliyet";
             // 
@@ -559,8 +566,8 @@
             // splitContainer12.Panel2
             // 
             this.splitContainer12.Panel2.Controls.Add(this.splitContainer13);
-            this.splitContainer12.Size = new System.Drawing.Size(784, 289);
-            this.splitContainer12.SplitterDistance = 261;
+            this.splitContainer12.Size = new System.Drawing.Size(746, 289);
+            this.splitContainer12.SplitterDistance = 248;
             this.splitContainer12.TabIndex = 0;
             // 
             // chart2
@@ -582,7 +589,7 @@
             series2.Points.Add(dataPoint4);
             series2.Points.Add(dataPoint5);
             this.chart2.Series.Add(series2);
-            this.chart2.Size = new System.Drawing.Size(261, 289);
+            this.chart2.Size = new System.Drawing.Size(248, 289);
             this.chart2.TabIndex = 5;
             this.chart2.Text = "chart2";
             // 
@@ -599,8 +606,8 @@
             // splitContainer13.Panel2
             // 
             this.splitContainer13.Panel2.Controls.Add(this.chart4);
-            this.splitContainer13.Size = new System.Drawing.Size(519, 289);
-            this.splitContainer13.SplitterDistance = 258;
+            this.splitContainer13.Size = new System.Drawing.Size(494, 289);
+            this.splitContainer13.SplitterDistance = 245;
             this.splitContainer13.TabIndex = 0;
             // 
             // chart3
@@ -622,7 +629,7 @@
             series3.Points.Add(dataPoint6);
             series3.Points.Add(dataPoint7);
             this.chart3.Series.Add(series3);
-            this.chart3.Size = new System.Drawing.Size(258, 289);
+            this.chart3.Size = new System.Drawing.Size(245, 289);
             this.chart3.TabIndex = 3;
             this.chart3.Text = "chart3";
             // 
@@ -645,7 +652,7 @@
             series4.Points.Add(dataPoint8);
             series4.Points.Add(dataPoint9);
             this.chart4.Series.Add(series4);
-            this.chart4.Size = new System.Drawing.Size(257, 289);
+            this.chart4.Size = new System.Drawing.Size(245, 289);
             this.chart4.TabIndex = 4;
             this.chart4.Text = "chart4";
             // 
@@ -664,17 +671,18 @@
             this.groupBox3.Controls.Add(this.metroLabel3);
             this.groupBox3.Location = new System.Drawing.Point(3, 12);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(277, 260);
+            this.groupBox3.Size = new System.Drawing.Size(328, 260);
             this.groupBox3.TabIndex = 0;
             this.groupBox3.TabStop = false;
             // 
             // lbl_odenmemisGelen
             // 
             this.lbl_odenmemisGelen.AutoSize = true;
+            this.lbl_odenmemisGelen.FontWeight = MetroFramework.MetroLabelWeight.Bold;
             this.lbl_odenmemisGelen.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.lbl_odenmemisGelen.Location = new System.Drawing.Point(166, 188);
+            this.lbl_odenmemisGelen.Location = new System.Drawing.Point(191, 188);
             this.lbl_odenmemisGelen.Name = "lbl_odenmemisGelen";
-            this.lbl_odenmemisGelen.Size = new System.Drawing.Size(16, 19);
+            this.lbl_odenmemisGelen.Size = new System.Drawing.Size(17, 19);
             this.lbl_odenmemisGelen.Style = MetroFramework.MetroColorStyle.Red;
             this.lbl_odenmemisGelen.TabIndex = 117;
             this.lbl_odenmemisGelen.Text = "0";
@@ -686,10 +694,11 @@
             // lbl_odenmemisKesilen
             // 
             this.lbl_odenmemisKesilen.AutoSize = true;
+            this.lbl_odenmemisKesilen.FontWeight = MetroFramework.MetroLabelWeight.Bold;
             this.lbl_odenmemisKesilen.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.lbl_odenmemisKesilen.Location = new System.Drawing.Point(172, 140);
+            this.lbl_odenmemisKesilen.Location = new System.Drawing.Point(197, 140);
             this.lbl_odenmemisKesilen.Name = "lbl_odenmemisKesilen";
-            this.lbl_odenmemisKesilen.Size = new System.Drawing.Size(16, 19);
+            this.lbl_odenmemisKesilen.Size = new System.Drawing.Size(17, 19);
             this.lbl_odenmemisKesilen.Style = MetroFramework.MetroColorStyle.Red;
             this.lbl_odenmemisKesilen.TabIndex = 116;
             this.lbl_odenmemisKesilen.Text = "0";
@@ -701,10 +710,11 @@
             // lbl_odenmisG
             // 
             this.lbl_odenmisG.AutoSize = true;
+            this.lbl_odenmisG.FontWeight = MetroFramework.MetroLabelWeight.Bold;
             this.lbl_odenmisG.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.lbl_odenmisG.Location = new System.Drawing.Point(147, 92);
+            this.lbl_odenmisG.Location = new System.Drawing.Point(172, 92);
             this.lbl_odenmisG.Name = "lbl_odenmisG";
-            this.lbl_odenmisG.Size = new System.Drawing.Size(16, 19);
+            this.lbl_odenmisG.Size = new System.Drawing.Size(17, 19);
             this.lbl_odenmisG.Style = MetroFramework.MetroColorStyle.Red;
             this.lbl_odenmisG.TabIndex = 115;
             this.lbl_odenmisG.Text = "0";
@@ -716,10 +726,11 @@
             // lbl_odenmisK
             // 
             this.lbl_odenmisK.AutoSize = true;
+            this.lbl_odenmisK.FontWeight = MetroFramework.MetroLabelWeight.Bold;
             this.lbl_odenmisK.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.lbl_odenmisK.Location = new System.Drawing.Point(153, 44);
+            this.lbl_odenmisK.Location = new System.Drawing.Point(178, 44);
             this.lbl_odenmisK.Name = "lbl_odenmisK";
-            this.lbl_odenmisK.Size = new System.Drawing.Size(16, 19);
+            this.lbl_odenmisK.Size = new System.Drawing.Size(17, 19);
             this.lbl_odenmisK.Style = MetroFramework.MetroColorStyle.Red;
             this.lbl_odenmisK.TabIndex = 114;
             this.lbl_odenmisK.Text = "0";
@@ -731,10 +742,11 @@
             // metroLabel5
             // 
             this.metroLabel5.AutoSize = true;
+            this.metroLabel5.FontWeight = MetroFramework.MetroLabelWeight.Bold;
             this.metroLabel5.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
             this.metroLabel5.Location = new System.Drawing.Point(2, 188);
             this.metroLabel5.Name = "metroLabel5";
-            this.metroLabel5.Size = new System.Drawing.Size(166, 19);
+            this.metroLabel5.Size = new System.Drawing.Size(185, 19);
             this.metroLabel5.Style = MetroFramework.MetroColorStyle.Red;
             this.metroLabel5.TabIndex = 106;
             this.metroLabel5.Text = "Ödenmemiş Gelen Fatura :";
@@ -746,10 +758,11 @@
             // metroLabel4
             // 
             this.metroLabel4.AutoSize = true;
+            this.metroLabel4.FontWeight = MetroFramework.MetroLabelWeight.Bold;
             this.metroLabel4.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
             this.metroLabel4.Location = new System.Drawing.Point(2, 140);
             this.metroLabel4.Name = "metroLabel4";
-            this.metroLabel4.Size = new System.Drawing.Size(172, 19);
+            this.metroLabel4.Size = new System.Drawing.Size(194, 19);
             this.metroLabel4.Style = MetroFramework.MetroColorStyle.Red;
             this.metroLabel4.TabIndex = 105;
             this.metroLabel4.Text = "Ödenmemiş Kesilen Fatura :";
@@ -761,10 +774,11 @@
             // metroLabel2
             // 
             this.metroLabel2.AutoSize = true;
+            this.metroLabel2.FontWeight = MetroFramework.MetroLabelWeight.Bold;
             this.metroLabel2.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
             this.metroLabel2.Location = new System.Drawing.Point(2, 92);
             this.metroLabel2.Name = "metroLabel2";
-            this.metroLabel2.Size = new System.Drawing.Size(147, 19);
+            this.metroLabel2.Size = new System.Drawing.Size(164, 19);
             this.metroLabel2.Style = MetroFramework.MetroColorStyle.Red;
             this.metroLabel2.TabIndex = 104;
             this.metroLabel2.Text = "Ödenmiş Gelen Fatura :";
@@ -776,10 +790,11 @@
             // metroLabel3
             // 
             this.metroLabel3.AutoSize = true;
+            this.metroLabel3.FontWeight = MetroFramework.MetroLabelWeight.Bold;
             this.metroLabel3.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
             this.metroLabel3.Location = new System.Drawing.Point(2, 44);
             this.metroLabel3.Name = "metroLabel3";
-            this.metroLabel3.Size = new System.Drawing.Size(153, 19);
+            this.metroLabel3.Size = new System.Drawing.Size(173, 19);
             this.metroLabel3.Style = MetroFramework.MetroColorStyle.Red;
             this.metroLabel3.TabIndex = 103;
             this.metroLabel3.Text = "Ödenmiş Kesilen Fatura :";
@@ -795,7 +810,7 @@
             this.btn_ozet.Highlight = true;
             this.btn_ozet.Location = new System.Drawing.Point(0, 278);
             this.btn_ozet.Name = "btn_ozet";
-            this.btn_ozet.Size = new System.Drawing.Size(283, 30);
+            this.btn_ozet.Size = new System.Drawing.Size(334, 30);
             this.btn_ozet.Style = MetroFramework.MetroColorStyle.Red;
             this.btn_ozet.TabIndex = 113;
             this.btn_ozet.Text = "ÖZET";

@@ -43,11 +43,12 @@
             this.txt_prjAdi = new MetroFramework.Controls.MetroTextBox();
             this.metroLabel2 = new MetroFramework.Controls.MetroLabel();
             this.dgw_prj_list = new MetroFramework.Controls.MetroGrid();
-            this.pbClose = new System.Windows.Forms.PictureBox();
             this.splitContainer5 = new System.Windows.Forms.SplitContainer();
+            this.btnClear = new MetroFramework.Controls.MetroButton();
             this.splitContainer6 = new System.Windows.Forms.SplitContainer();
-            this.btn_prj_sil = new MetroFramework.Controls.MetroButton();
             this.btn_prj_duzenle = new MetroFramework.Controls.MetroButton();
+            this.btn_prj_sil = new MetroFramework.Controls.MetroButton();
+            this.pbClose = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -65,14 +66,15 @@
             this.splitContainer4.Panel2.SuspendLayout();
             this.splitContainer4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgw_prj_list)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbClose)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer5)).BeginInit();
+            this.splitContainer5.Panel1.SuspendLayout();
             this.splitContainer5.Panel2.SuspendLayout();
             this.splitContainer5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer6)).BeginInit();
             this.splitContainer6.Panel1.SuspendLayout();
             this.splitContainer6.Panel2.SuspendLayout();
             this.splitContainer6.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbClose)).BeginInit();
             this.SuspendLayout();
             // 
             // splitContainer1
@@ -89,8 +91,8 @@
             // splitContainer1.Panel2
             // 
             this.splitContainer1.Panel2.Controls.Add(this.splitContainer5);
-            this.splitContainer1.Size = new System.Drawing.Size(1296, 624);
-            this.splitContainer1.SplitterDistance = 576;
+            this.splitContainer1.Size = new System.Drawing.Size(1783, 775);
+            this.splitContainer1.SplitterDistance = 735;
             this.splitContainer1.TabIndex = 0;
             // 
             // splitContainer2
@@ -107,9 +109,9 @@
             // splitContainer2.Panel2
             // 
             this.splitContainer2.Panel2.Controls.Add(this.dgw_prj_list);
-            this.splitContainer2.Size = new System.Drawing.Size(1296, 576);
-            this.splitContainer2.SplitterDistance = 90;
-            this.splitContainer2.SplitterWidth = 20;
+            this.splitContainer2.Size = new System.Drawing.Size(1783, 735);
+            this.splitContainer2.SplitterDistance = 89;
+            this.splitContainer2.SplitterWidth = 10;
             this.splitContainer2.TabIndex = 0;
             // 
             // splitContainer3
@@ -127,17 +129,18 @@
             // splitContainer3.Panel2
             // 
             this.splitContainer3.Panel2.Controls.Add(this.splitContainer4);
-            this.splitContainer3.Size = new System.Drawing.Size(1296, 90);
-            this.splitContainer3.SplitterDistance = 430;
+            this.splitContainer3.Size = new System.Drawing.Size(1783, 89);
+            this.splitContainer3.SplitterDistance = 591;
             this.splitContainer3.TabIndex = 0;
             // 
             // lbl_toplam
             // 
             this.lbl_toplam.AutoSize = true;
+            this.lbl_toplam.FontWeight = MetroFramework.MetroLabelWeight.Bold;
             this.lbl_toplam.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
             this.lbl_toplam.Location = new System.Drawing.Point(19, 43);
             this.lbl_toplam.Name = "lbl_toplam";
-            this.lbl_toplam.Size = new System.Drawing.Size(16, 19);
+            this.lbl_toplam.Size = new System.Drawing.Size(17, 19);
             this.lbl_toplam.Style = MetroFramework.MetroColorStyle.Red;
             this.lbl_toplam.TabIndex = 53;
             this.lbl_toplam.Text = "0";
@@ -179,8 +182,8 @@
             // 
             this.splitContainer4.Panel2.Controls.Add(this.txt_prjAdi);
             this.splitContainer4.Panel2.Controls.Add(this.metroLabel2);
-            this.splitContainer4.Size = new System.Drawing.Size(862, 90);
-            this.splitContainer4.SplitterDistance = 427;
+            this.splitContainer4.Size = new System.Drawing.Size(1188, 89);
+            this.splitContainer4.SplitterDistance = 588;
             this.splitContainer4.TabIndex = 0;
             // 
             // cmb_projeNo
@@ -204,10 +207,11 @@
             // 
             this.metroLabel1.AutoSize = true;
             this.metroLabel1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.metroLabel1.FontWeight = MetroFramework.MetroLabelWeight.Bold;
             this.metroLabel1.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
             this.metroLabel1.Location = new System.Drawing.Point(0, 0);
             this.metroLabel1.Name = "metroLabel1";
-            this.metroLabel1.Size = new System.Drawing.Size(69, 19);
+            this.metroLabel1.Size = new System.Drawing.Size(77, 19);
             this.metroLabel1.Style = MetroFramework.MetroColorStyle.Red;
             this.metroLabel1.TabIndex = 48;
             this.metroLabel1.Text = "Proje No :";
@@ -256,10 +260,11 @@
             // 
             this.metroLabel2.AutoSize = true;
             this.metroLabel2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.metroLabel2.FontWeight = MetroFramework.MetroLabelWeight.Bold;
             this.metroLabel2.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
             this.metroLabel2.Location = new System.Drawing.Point(0, 0);
             this.metroLabel2.Name = "metroLabel2";
-            this.metroLabel2.Size = new System.Drawing.Size(71, 19);
+            this.metroLabel2.Size = new System.Drawing.Size(80, 19);
             this.metroLabel2.Style = MetroFramework.MetroColorStyle.Red;
             this.metroLabel2.TabIndex = 49;
             this.metroLabel2.Text = "Proje Adı :";
@@ -309,7 +314,7 @@
             this.dgw_prj_list.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.dgw_prj_list.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.dgw_prj_list.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgw_prj_list.Size = new System.Drawing.Size(1296, 466);
+            this.dgw_prj_list.Size = new System.Drawing.Size(1783, 636);
             this.dgw_prj_list.Style = MetroFramework.MetroColorStyle.Silver;
             this.dgw_prj_list.TabIndex = 1;
             this.dgw_prj_list.UseCustomBackColor = true;
@@ -317,31 +322,38 @@
             this.dgw_prj_list.UseStyleColors = true;
             this.dgw_prj_list.RowHeaderMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgw_prj_list_RowHeaderMouseClick);
             // 
-            // pbClose
-            // 
-            this.pbClose.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.pbClose.BackColor = System.Drawing.Color.Transparent;
-            this.pbClose.Image = global::MERP_MUI.Properties.Resources.appbar_arrow_left_dark;
-            this.pbClose.Location = new System.Drawing.Point(1270, 12);
-            this.pbClose.Name = "pbClose";
-            this.pbClose.Size = new System.Drawing.Size(46, 42);
-            this.pbClose.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pbClose.TabIndex = 26;
-            this.pbClose.TabStop = false;
-            this.pbClose.Click += new System.EventHandler(this.pbClose_Click);
-            // 
             // splitContainer5
             // 
             this.splitContainer5.Dock = System.Windows.Forms.DockStyle.Fill;
             this.splitContainer5.Location = new System.Drawing.Point(0, 0);
             this.splitContainer5.Name = "splitContainer5";
             // 
+            // splitContainer5.Panel1
+            // 
+            this.splitContainer5.Panel1.Controls.Add(this.btnClear);
+            // 
             // splitContainer5.Panel2
             // 
             this.splitContainer5.Panel2.Controls.Add(this.splitContainer6);
-            this.splitContainer5.Size = new System.Drawing.Size(1296, 44);
-            this.splitContainer5.SplitterDistance = 1029;
+            this.splitContainer5.Size = new System.Drawing.Size(1783, 36);
+            this.splitContainer5.SplitterDistance = 1415;
             this.splitContainer5.TabIndex = 0;
+            // 
+            // btnClear
+            // 
+            this.btnClear.Dock = System.Windows.Forms.DockStyle.Left;
+            this.btnClear.Highlight = true;
+            this.btnClear.Location = new System.Drawing.Point(0, 0);
+            this.btnClear.Name = "btnClear";
+            this.btnClear.Size = new System.Drawing.Size(141, 36);
+            this.btnClear.Style = MetroFramework.MetroColorStyle.Red;
+            this.btnClear.TabIndex = 60;
+            this.btnClear.Text = "Clear";
+            this.btnClear.Theme = MetroFramework.MetroThemeStyle.Dark;
+            this.btnClear.UseCustomBackColor = true;
+            this.btnClear.UseCustomForeColor = true;
+            this.btnClear.UseSelectable = true;
+            this.btnClear.UseStyleColors = true;
             // 
             // splitContainer6
             // 
@@ -356,25 +368,9 @@
             // splitContainer6.Panel2
             // 
             this.splitContainer6.Panel2.Controls.Add(this.btn_prj_sil);
-            this.splitContainer6.Size = new System.Drawing.Size(263, 44);
-            this.splitContainer6.SplitterDistance = 132;
+            this.splitContainer6.Size = new System.Drawing.Size(364, 36);
+            this.splitContainer6.SplitterDistance = 182;
             this.splitContainer6.TabIndex = 0;
-            // 
-            // btn_prj_sil
-            // 
-            this.btn_prj_sil.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btn_prj_sil.Highlight = true;
-            this.btn_prj_sil.Location = new System.Drawing.Point(0, 0);
-            this.btn_prj_sil.Name = "btn_prj_sil";
-            this.btn_prj_sil.Size = new System.Drawing.Size(127, 44);
-            this.btn_prj_sil.Style = MetroFramework.MetroColorStyle.Red;
-            this.btn_prj_sil.TabIndex = 58;
-            this.btn_prj_sil.Text = "SİL";
-            this.btn_prj_sil.Theme = MetroFramework.MetroThemeStyle.Dark;
-            this.btn_prj_sil.UseCustomBackColor = true;
-            this.btn_prj_sil.UseCustomForeColor = true;
-            this.btn_prj_sil.UseSelectable = true;
-            this.btn_prj_sil.UseStyleColors = true;
             // 
             // btn_prj_duzenle
             // 
@@ -382,7 +378,7 @@
             this.btn_prj_duzenle.Highlight = true;
             this.btn_prj_duzenle.Location = new System.Drawing.Point(0, 0);
             this.btn_prj_duzenle.Name = "btn_prj_duzenle";
-            this.btn_prj_duzenle.Size = new System.Drawing.Size(132, 44);
+            this.btn_prj_duzenle.Size = new System.Drawing.Size(182, 36);
             this.btn_prj_duzenle.Style = MetroFramework.MetroColorStyle.Red;
             this.btn_prj_duzenle.TabIndex = 57;
             this.btn_prj_duzenle.Text = "DÜZENLE";
@@ -392,11 +388,40 @@
             this.btn_prj_duzenle.UseSelectable = true;
             this.btn_prj_duzenle.UseStyleColors = true;
             // 
+            // btn_prj_sil
+            // 
+            this.btn_prj_sil.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btn_prj_sil.Highlight = true;
+            this.btn_prj_sil.Location = new System.Drawing.Point(0, 0);
+            this.btn_prj_sil.Name = "btn_prj_sil";
+            this.btn_prj_sil.Size = new System.Drawing.Size(178, 36);
+            this.btn_prj_sil.Style = MetroFramework.MetroColorStyle.Red;
+            this.btn_prj_sil.TabIndex = 58;
+            this.btn_prj_sil.Text = "SİL";
+            this.btn_prj_sil.Theme = MetroFramework.MetroThemeStyle.Dark;
+            this.btn_prj_sil.UseCustomBackColor = true;
+            this.btn_prj_sil.UseCustomForeColor = true;
+            this.btn_prj_sil.UseSelectable = true;
+            this.btn_prj_sil.UseStyleColors = true;
+            // 
+            // pbClose
+            // 
+            this.pbClose.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.pbClose.BackColor = System.Drawing.Color.Transparent;
+            this.pbClose.Image = global::MERP_MUI.Properties.Resources.appbar_arrow_left_dark;
+            this.pbClose.Location = new System.Drawing.Point(1757, 12);
+            this.pbClose.Name = "pbClose";
+            this.pbClose.Size = new System.Drawing.Size(46, 42);
+            this.pbClose.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbClose.TabIndex = 26;
+            this.pbClose.TabStop = false;
+            this.pbClose.Click += new System.EventHandler(this.pbClose_Click);
+            // 
             // Projeler
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1336, 704);
+            this.ClientSize = new System.Drawing.Size(1823, 855);
             this.ControlBox = false;
             this.Controls.Add(this.pbClose);
             this.Controls.Add(this.splitContainer1);
@@ -428,7 +453,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer4)).EndInit();
             this.splitContainer4.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgw_prj_list)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbClose)).EndInit();
+            this.splitContainer5.Panel1.ResumeLayout(false);
             this.splitContainer5.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer5)).EndInit();
             this.splitContainer5.ResumeLayout(false);
@@ -436,6 +461,7 @@
             this.splitContainer6.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer6)).EndInit();
             this.splitContainer6.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pbClose)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -458,5 +484,6 @@
         private System.Windows.Forms.SplitContainer splitContainer6;
         private MetroFramework.Controls.MetroButton btn_prj_duzenle;
         private MetroFramework.Controls.MetroButton btn_prj_sil;
+        private MetroFramework.Controls.MetroButton btnClear;
     }
 }

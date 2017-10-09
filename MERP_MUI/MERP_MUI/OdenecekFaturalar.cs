@@ -242,14 +242,14 @@ namespace MERP_MUI
             metroGrid1.Rows[1].Cells[0].Value = Convert.ToString("Tedarikçilere Yapılacak Ödemeler");
             metroGrid1.Rows[2].Cells[0].Value = Convert.ToString("Alınacak Ödemeler");
 
-            Firmalar("Elektronik", lbl_el1.Text, lbl_el2.Text, lbl_el3.Text);
+            Firmalar();
         }
 
-        public void Firmalar(string Cins, string firma1, string firma2, string firma3)
+        public void Firmalar()
         {
             myConnection.Open();
 
-            komut = "SELECT fatura_firma,sum(fatura_euro) from db_faturalar where fatura_cinsi='" + Cins + "' group by fatura_firma order by sum(fatura_euro) DESC";
+            komut = "SELECT fatura_firma,sum(fatura_euro) from db_faturalar where fatura_cinsi='Elektronik' group by fatura_firma order by sum(fatura_euro) DESC";
             da = new MySqlDataAdapter(komut, connection);
             myCommand = new MySqlCommand(komut, myConnection);
             MySqlDataReader myReader;
@@ -262,21 +262,59 @@ namespace MERP_MUI
                     {
                         case 0:
                             {
-                                firma1 = Convert.ToString(myReader.GetString(0));
-                                //lbl_tutar1.Text = string.Format(new CultureInfo("de-DE"), "{0:C2}", Convert.ToDecimal(myReader.GetString(1)));
+                                lbl_elfirma1.Text = Convert.ToString(myReader.GetString(0));
+                                lbl_el1.Text = string.Format(new CultureInfo("de-DE"), "{0:C2}", Convert.ToDecimal(myReader.GetString(1)));
                                 state = 1;
                                 break;
                             }
                         case 1:
                             {
-                                firma2 = Convert.ToString(myReader.GetString(0));
+                                lbl_el2.Text = Convert.ToString(myReader.GetString(0));
                                 //lbl_tutar2.Text = string.Format(new CultureInfo("de-DE"), "{0:C2}", Convert.ToDecimal(myReader.GetString(1)));
                                 state = 2;
                                 break;
                             }
                         case 2:
                             {
-                                firma3 = Convert.ToString(myReader.GetString(0));
+                                lbl_el3.Text = Convert.ToString(myReader.GetString(0));
+                                //lbl_tutar3.Text = string.Format(new CultureInfo("de-DE"), "{0:C2}", Convert.ToDecimal(myReader.GetString(1)));
+                                state = 0;
+                                processDone1 = true;
+                                break;
+                            }
+                    }
+                }
+            }
+            myReader.Close();
+            processDone1 = false;
+
+            komut = "SELECT fatura_firma,sum(fatura_euro) from db_faturalar where fatura_cinsi='Mekanik' group by fatura_firma order by sum(fatura_euro) DESC";
+            da = new MySqlDataAdapter(komut, connection);
+            myCommand = new MySqlCommand(komut, myConnection);
+            myReader = myCommand.ExecuteReader();
+            while (myReader.Read())
+            {
+                if (processDone1 == false)
+                {
+                    switch (state)
+                    {
+                        case 0:
+                            {
+                                lbl_mek1.Text = Convert.ToString(myReader.GetString(0));
+                                //lbl.Text = string.Format(new CultureInfo("de-DE"), "{0:C2}", Convert.ToDecimal(myReader.GetString(1)));
+                                state = 1;
+                                break;
+                            }
+                        case 1:
+                            {
+                                lbl_mek2.Text = Convert.ToString(myReader.GetString(0));
+                                //lbl_tutar2.Text = string.Format(new CultureInfo("de-DE"), "{0:C2}", Convert.ToDecimal(myReader.GetString(1)));
+                                state = 2;
+                                break;
+                            }
+                        case 2:
+                            {
+                                lbl_mek3.Text = Convert.ToString(myReader.GetString(0));
                                 //lbl_tutar3.Text = string.Format(new CultureInfo("de-DE"), "{0:C2}", Convert.ToDecimal(myReader.GetString(1)));
                                 state = 0;
                                 processDone1 = true;
@@ -286,6 +324,44 @@ namespace MERP_MUI
                 }
             }
 
+            myReader.Close();
+            processDone1 = false;
+
+            komut = "SELECT fatura_firma,sum(fatura_euro) from db_faturalar where fatura_cinsi='Genel Giderler' group by fatura_firma order by sum(fatura_euro) DESC";
+            da = new MySqlDataAdapter(komut, connection);
+            myCommand = new MySqlCommand(komut, myConnection);
+            myReader = myCommand.ExecuteReader();
+            while (myReader.Read())
+            {
+                if (processDone1 == false)
+                {
+                    switch (state)
+                    {
+                        case 0:
+                            {
+                                lbl_gnl1.Text = Convert.ToString(myReader.GetString(0));
+                                //lbl.Text = string.Format(new CultureInfo("de-DE"), "{0:C2}", Convert.ToDecimal(myReader.GetString(1)));
+                                state = 1;
+                                break;
+                            }
+                        case 1:
+                            {
+                                lbl_gnl2.Text = Convert.ToString(myReader.GetString(0));
+                                //lbl_tutar2.Text = string.Format(new CultureInfo("de-DE"), "{0:C2}", Convert.ToDecimal(myReader.GetString(1)));
+                                state = 2;
+                                break;
+                            }
+                        case 2:
+                            {
+                                lbl_gnl3.Text = Convert.ToString(myReader.GetString(0));
+                                //lbl_tutar3.Text = string.Format(new CultureInfo("de-DE"), "{0:C2}", Convert.ToDecimal(myReader.GetString(1)));
+                                state = 0;
+                                processDone1 = true;
+                                break;
+                            }
+                    }
+                }
+            }
             myReader.Close();
             myConnection.Close();
         }

@@ -705,26 +705,40 @@ namespace MERP_MUI
                 {
                     if (Convert.ToDateTime(dgw_odenmemisG.Rows[i].Cells[3].Value).Date < DateTime.Now)
                     {
-                        dgw_odenmemisG.Rows[i].DefaultCellStyle.BackColor = Color.Red;
+                        dgw_odenmemisG.Rows[i].DefaultCellStyle.BackColor = Color.LightSalmon;
                     }
                     else if (Convert.ToDateTime(dgw_odenmemisG.Rows[i].Cells[3].Value).Date > DateTime.Now && Convert.ToDateTime(dgw_odenmemisG.Rows[i].Cells[3].Value).Date < DateTime.Now.AddDays(5))
                     {
-                        dgw_odenmemisG.Rows[i].DefaultCellStyle.BackColor = Color.Orange;
+                        dgw_odenmemisG.Rows[i].DefaultCellStyle.BackColor = Color.Tan;
                     }
                 }
             }
             catch { }
+
+            try
+            {
+                for (int i=0;i<dgw_odenmemisK.Rows.Count;i++)
+                {
+                    dgw_odenmemisK.Rows[i].DefaultCellStyle.ForeColor = Color.Black;
+                }
+                for (int i = 0; i < dgw_odenmemisG.Rows.Count; i++)
+                {
+                    dgw_odenmemisG.Rows[i].DefaultCellStyle.ForeColor = Color.Black;
+                }
+            }
+            catch { }
+
             try
             {
                 for (int i = 0; i < dgw_odenmemisK.Rows.Count; i++)
                 {
                     if (Convert.ToDateTime(dgw_odenmemisK.Rows[i].Cells[3].Value).Date < DateTime.Now)
                     {
-                        dgw_odenmemisK.Rows[i].DefaultCellStyle.BackColor = Color.Red;
+                        dgw_odenmemisK.Rows[i].DefaultCellStyle.BackColor = Color.LightSalmon;
                     }
                     else if (Convert.ToDateTime(dgw_odenmemisK.Rows[i].Cells[3].Value).Date > DateTime.Now && Convert.ToDateTime(dgw_odenmemisK.Rows[i].Cells[3].Value).Date < DateTime.Now.AddDays(5))
                     {
-                        dgw_odenmemisK.Rows[i].DefaultCellStyle.BackColor = Color.Orange;
+                        dgw_odenmemisK.Rows[i].DefaultCellStyle.BackColor = Color.Tan;
                     }
                 }
             }

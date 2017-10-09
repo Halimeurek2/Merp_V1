@@ -566,7 +566,7 @@ namespace MERP_MUI
             //db = new DBConnect();
             //db.InsertKullanicilar(kullanici_id, giris_tarihi, DateTime.Now, animsaCheck);
 
-            //this.Close();
+            this.Close();
         }
     }
 }

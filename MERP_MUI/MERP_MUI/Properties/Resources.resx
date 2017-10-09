@@ -232,14 +232,8 @@
   <data name="appbar_arrow_right_dark" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\appbar.arrow.right_dark.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="cokacilislerTxt" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\cokacilislerTxt.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="download" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\download.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="GrafikFilterTxt" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\GrafikFilterTxt.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="appbar_clock" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\appbar.clock.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -247,10 +241,10 @@
   <data name="appbar_paperclip_rotated" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\appbar.paperclip.rotated.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="maaliyetlerTxt" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\maaliyetlerTxt.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="cokaciil" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\cokaciil.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="malvefat" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\malvefat.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="malvefatu" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\malvefatu.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

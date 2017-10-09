@@ -72,8 +72,8 @@
             // splitContainer1.Panel2
             // 
             this.splitContainer1.Panel2.Controls.Add(this.splitContainer2);
-            this.splitContainer1.Size = new System.Drawing.Size(806, 466);
-            this.splitContainer1.SplitterDistance = 217;
+            this.splitContainer1.Size = new System.Drawing.Size(1569, 772);
+            this.splitContainer1.SplitterDistance = 371;
             this.splitContainer1.TabIndex = 0;
             // 
             // groupBox2
@@ -83,7 +83,7 @@
             this.groupBox2.ForeColor = System.Drawing.Color.Red;
             this.groupBox2.Location = new System.Drawing.Point(0, 0);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(806, 217);
+            this.groupBox2.Size = new System.Drawing.Size(1569, 371);
             this.groupBox2.TabIndex = 1;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "ACİL İŞLER";
@@ -129,7 +129,7 @@
             this.dg_acil.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.dg_acil.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.dg_acil.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dg_acil.Size = new System.Drawing.Size(800, 198);
+            this.dg_acil.Size = new System.Drawing.Size(1563, 352);
             this.dg_acil.Style = MetroFramework.MetroColorStyle.Silver;
             this.dg_acil.TabIndex = 1;
             this.dg_acil.UseCustomBackColor = true;
@@ -151,8 +151,8 @@
             // splitContainer2.Panel2
             // 
             this.splitContainer2.Panel2.Controls.Add(this.btn_sil);
-            this.splitContainer2.Size = new System.Drawing.Size(806, 245);
-            this.splitContainer2.SplitterDistance = 199;
+            this.splitContainer2.Size = new System.Drawing.Size(1569, 397);
+            this.splitContainer2.SplitterDistance = 353;
             this.splitContainer2.TabIndex = 0;
             // 
             // groupBox1
@@ -162,7 +162,7 @@
             this.groupBox1.ForeColor = System.Drawing.Color.Green;
             this.groupBox1.Location = new System.Drawing.Point(0, 0);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(806, 199);
+            this.groupBox1.Size = new System.Drawing.Size(1569, 353);
             this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "NORMAL İŞLER";
@@ -208,7 +208,7 @@
             this.dg_normal.RowHeadersDefaultCellStyle = dataGridViewCellStyle6;
             this.dg_normal.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.dg_normal.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dg_normal.Size = new System.Drawing.Size(800, 180);
+            this.dg_normal.Size = new System.Drawing.Size(1563, 334);
             this.dg_normal.Style = MetroFramework.MetroColorStyle.Silver;
             this.dg_normal.TabIndex = 1;
             this.dg_normal.UseCustomBackColor = true;
@@ -218,11 +218,11 @@
             // 
             // btn_sil
             // 
-            this.btn_sil.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.btn_sil.Dock = System.Windows.Forms.DockStyle.Right;
             this.btn_sil.Highlight = true;
-            this.btn_sil.Location = new System.Drawing.Point(343, 0);
+            this.btn_sil.Location = new System.Drawing.Point(1449, 0);
             this.btn_sil.Name = "btn_sil";
-            this.btn_sil.Size = new System.Drawing.Size(120, 42);
+            this.btn_sil.Size = new System.Drawing.Size(120, 40);
             this.btn_sil.Style = MetroFramework.MetroColorStyle.Red;
             this.btn_sil.TabIndex = 112;
             this.btn_sil.Text = "SİL";
@@ -238,7 +238,7 @@
             this.pbClose.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.pbClose.BackColor = System.Drawing.Color.Transparent;
             this.pbClose.Image = global::MERP_MUI.Properties.Resources.appbar_arrow_left_dark;
-            this.pbClose.Location = new System.Drawing.Point(780, 12);
+            this.pbClose.Location = new System.Drawing.Point(1543, 12);
             this.pbClose.Name = "pbClose";
             this.pbClose.Size = new System.Drawing.Size(46, 42);
             this.pbClose.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -250,7 +250,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(846, 546);
+            this.ClientSize = new System.Drawing.Size(1609, 852);
             this.ControlBox = false;
             this.Controls.Add(this.pbClose);
             this.Controls.Add(this.splitContainer1);

@@ -62,7 +62,7 @@ namespace MERP_MUI
             }
             myReader.Close();
 
-            if (txtKullaniciAdi.Text!="")
+            if (txtKullaniciAdi.Text!="" && txtPassword.Text=="")
             {
                 komut = "SELECT animsaCheck FROM db_kullanicigirisi where kullanici_id='" + kullanici_id + "';";
                 da = new MySqlDataAdapter(komut, connection);
@@ -90,7 +90,7 @@ namespace MERP_MUI
                     frmMessage.Show();
                 }
             }
-            else
+            else if(txtKullaniciAdi.Text == "")
             {
                 MessageBoxx frmMessage = new MessageBoxx();
                 frmMessage.txtMessage.Text = "Lütfen kullanıcı adını giriniz";
@@ -148,7 +148,7 @@ namespace MERP_MUI
                 }
                 myReader.Close();
 
-                if (txtKullaniciAdi.Text != "")
+                if (txtKullaniciAdi.Text != "" && txtPassword.Text == "")
                 {
                     komut = "SELECT animsaCheck FROM db_kullanicigirisi where kullanici_id='" + kullanici_id + "';";
                     da = new MySqlDataAdapter(komut, connection);
@@ -164,6 +164,10 @@ namespace MERP_MUI
                     {
                         DialogResult = System.Windows.Forms.DialogResult.OK;
                         this.Close();
+
+                        MainForm frmMain = new MainForm();
+                        frmMain.kullanici_id = kullanici_id;
+                        frmMain.animsaCheck = check;
                     }
                     else
                     {
@@ -172,7 +176,7 @@ namespace MERP_MUI
                         frmMessage.Show();
                     }
                 }
-                else
+                else if (txtKullaniciAdi.Text == "")
                 {
                     MessageBoxx frmMessage = new MessageBoxx();
                     frmMessage.txtMessage.Text = "Lütfen kullanıcı adını giriniz";

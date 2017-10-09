@@ -177,16 +177,16 @@
             // splitContainer2.Panel2
             // 
             this.splitContainer2.Panel2.Controls.Add(this.splitContainer3);
-            this.splitContainer2.Size = new System.Drawing.Size(36, 700);
-            this.splitContainer2.SplitterDistance = 231;
+            this.splitContainer2.Size = new System.Drawing.Size(36, 869);
+            this.splitContainer2.SplitterDistance = 286;
             this.splitContainer2.TabIndex = 2;
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Image = global::MERP_MUI.Properties.Resources.malvefatu;
             this.pictureBox1.Location = new System.Drawing.Point(3, 60);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(30, 148);
+            this.pictureBox1.Size = new System.Drawing.Size(30, 155);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 1;
             this.pictureBox1.TabStop = false;
@@ -200,7 +200,7 @@
             this.btnDGW.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.btnDGW.Location = new System.Drawing.Point(0, 0);
             this.btnDGW.Name = "btnDGW";
-            this.btnDGW.Size = new System.Drawing.Size(36, 231);
+            this.btnDGW.Size = new System.Drawing.Size(36, 286);
             this.btnDGW.TabIndex = 0;
             this.btnDGW.UseVisualStyleBackColor = true;
             this.btnDGW.Click += new System.EventHandler(this.button1_Click);
@@ -220,16 +220,16 @@
             // splitContainer3.Panel2
             // 
             this.splitContainer3.Panel2.Controls.Add(this.btnFilter);
-            this.splitContainer3.Size = new System.Drawing.Size(36, 465);
-            this.splitContainer3.SplitterDistance = 232;
+            this.splitContainer3.Size = new System.Drawing.Size(36, 579);
+            this.splitContainer3.SplitterDistance = 288;
             this.splitContainer3.TabIndex = 0;
             // 
             // pictureBox2
             // 
-            this.pictureBox2.Image = global::MERP_MUI.Properties.Resources.cokacilislerTxt;
-            this.pictureBox2.Location = new System.Drawing.Point(3, 94);
+            this.pictureBox2.Image = global::MERP_MUI.Properties.Resources.cokaciil;
+            this.pictureBox2.Location = new System.Drawing.Point(3, 89);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(30, 109);
+            this.pictureBox2.Size = new System.Drawing.Size(30, 114);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox2.TabIndex = 2;
             this.pictureBox2.TabStop = false;
@@ -243,7 +243,7 @@
             this.btnAktivite.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.btnAktivite.Location = new System.Drawing.Point(0, 0);
             this.btnAktivite.Name = "btnAktivite";
-            this.btnAktivite.Size = new System.Drawing.Size(36, 232);
+            this.btnAktivite.Size = new System.Drawing.Size(36, 288);
             this.btnAktivite.TabIndex = 1;
             this.btnAktivite.UseVisualStyleBackColor = true;
             this.btnAktivite.Click += new System.EventHandler(this.btnAktivite_Click);
@@ -255,7 +255,7 @@
             this.btnFilter.Image = ((System.Drawing.Image)(resources.GetObject("btnFilter.Image")));
             this.btnFilter.Location = new System.Drawing.Point(0, 0);
             this.btnFilter.Name = "btnFilter";
-            this.btnFilter.Size = new System.Drawing.Size(36, 229);
+            this.btnFilter.Size = new System.Drawing.Size(36, 287);
             this.btnFilter.TabIndex = 1;
             this.btnFilter.UseVisualStyleBackColor = true;
             this.btnFilter.Click += new System.EventHandler(this.btnFilter_Click);
@@ -271,10 +271,10 @@
             this.chart1.Dock = System.Windows.Forms.DockStyle.Fill;
             legend1.Name = "Legend1";
             legend1.Position.Auto = false;
-            legend1.Position.Height = 7.439199F;
+            legend1.Position.Height = 5F;
             legend1.Position.Width = 50F;
             legend1.Position.X = 50F;
-            legend1.Position.Y = 90F;
+            legend1.Position.Y = 93F;
             this.chart1.Legends.Add(legend1);
             this.chart1.Location = new System.Drawing.Point(0, 0);
             this.chart1.Name = "chart1";
@@ -295,7 +295,7 @@
             this.chart1.Series.Add(series1);
             this.chart1.Series.Add(series2);
             this.chart1.Series.Add(series3);
-            this.chart1.Size = new System.Drawing.Size(976, 700);
+            this.chart1.Size = new System.Drawing.Size(1557, 869);
             this.chart1.TabIndex = 3;
             this.chart1.Text = "chart1";
             // 
@@ -316,17 +316,17 @@
             // splitContainer1.Panel2
             // 
             this.splitContainer1.Panel2.Controls.Add(this.splitContainer4);
-            this.splitContainer1.Size = new System.Drawing.Size(1159, 700);
-            this.splitContainer1.SplitterDistance = 976;
+            this.splitContainer1.Size = new System.Drawing.Size(1751, 869);
+            this.splitContainer1.SplitterDistance = 1557;
             this.splitContainer1.TabIndex = 4;
             // 
             // panel1
             // 
             this.panel1.Controls.Add(this.splitContainer9);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel1.Location = new System.Drawing.Point(0, 675);
+            this.panel1.Location = new System.Drawing.Point(0, 844);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(976, 25);
+            this.panel1.Size = new System.Drawing.Size(1557, 25);
             this.panel1.TabIndex = 5;
             // 
             // splitContainer9
@@ -342,8 +342,8 @@
             // splitContainer9.Panel2
             // 
             this.splitContainer9.Panel2.Controls.Add(this.splitContainer10);
-            this.splitContainer9.Size = new System.Drawing.Size(976, 25);
-            this.splitContainer9.SplitterDistance = 188;
+            this.splitContainer9.Size = new System.Drawing.Size(1557, 25);
+            this.splitContainer9.SplitterDistance = 299;
             this.splitContainer9.TabIndex = 0;
             // 
             // metroLabel4
@@ -375,8 +375,8 @@
             // splitContainer10.Panel2
             // 
             this.splitContainer10.Panel2.Controls.Add(this.splitContainer11);
-            this.splitContainer10.Size = new System.Drawing.Size(784, 25);
-            this.splitContainer10.SplitterDistance = 261;
+            this.splitContainer10.Size = new System.Drawing.Size(1254, 25);
+            this.splitContainer10.SplitterDistance = 417;
             this.splitContainer10.TabIndex = 0;
             // 
             // metroLabel1
@@ -424,8 +424,8 @@
             // 
             this.splitContainer11.Panel2.Controls.Add(this.lbl_gbp);
             this.splitContainer11.Panel2.Controls.Add(this.metroLabel3);
-            this.splitContainer11.Size = new System.Drawing.Size(519, 25);
-            this.splitContainer11.SplitterDistance = 252;
+            this.splitContainer11.Size = new System.Drawing.Size(833, 25);
+            this.splitContainer11.SplitterDistance = 404;
             this.splitContainer11.TabIndex = 0;
             // 
             // metroLabel2
@@ -757,8 +757,8 @@
             // splitContainer4.Panel2
             // 
             this.splitContainer4.Panel2.Controls.Add(this.groupBox3);
-            this.splitContainer4.Size = new System.Drawing.Size(179, 700);
-            this.splitContainer4.SplitterDistance = 515;
+            this.splitContainer4.Size = new System.Drawing.Size(190, 869);
+            this.splitContainer4.SplitterDistance = 639;
             this.splitContainer4.TabIndex = 0;
             // 
             // menuStrip1
@@ -778,7 +778,7 @@
             this.menuStrip1.LayoutStyle = System.Windows.Forms.ToolStripLayoutStyle.Table;
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(179, 515);
+            this.menuStrip1.Size = new System.Drawing.Size(190, 639);
             this.menuStrip1.TabIndex = 2;
             this.menuStrip1.Text = "menuStrip1";
             this.menuStrip1.TextDirection = System.Windows.Forms.ToolStripTextDirection.Vertical270;
@@ -942,7 +942,7 @@
             this.groupBox3.ForeColor = System.Drawing.Color.Red;
             this.groupBox3.Location = new System.Drawing.Point(0, 0);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(179, 181);
+            this.groupBox3.Size = new System.Drawing.Size(190, 226);
             this.groupBox3.TabIndex = 7;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Grafik Filtre";
@@ -960,8 +960,8 @@
             // splitContainer6.Panel2
             // 
             this.splitContainer6.Panel2.Controls.Add(this.splitContainer8);
-            this.splitContainer6.Size = new System.Drawing.Size(173, 162);
-            this.splitContainer6.SplitterDistance = 57;
+            this.splitContainer6.Size = new System.Drawing.Size(184, 207);
+            this.splitContainer6.SplitterDistance = 60;
             this.splitContainer6.TabIndex = 0;
             // 
             // splitContainer7
@@ -978,8 +978,8 @@
             // splitContainer7.Panel2
             // 
             this.splitContainer7.Panel2.Controls.Add(this.metroLabel5);
-            this.splitContainer7.Size = new System.Drawing.Size(57, 162);
-            this.splitContainer7.SplitterDistance = 77;
+            this.splitContainer7.Size = new System.Drawing.Size(60, 207);
+            this.splitContainer7.SplitterDistance = 98;
             this.splitContainer7.TabIndex = 0;
             // 
             // metroLabel6
@@ -1028,8 +1028,8 @@
             // splitContainer8.Panel2
             // 
             this.splitContainer8.Panel2.Controls.Add(this.cmb_yil);
-            this.splitContainer8.Size = new System.Drawing.Size(112, 162);
-            this.splitContainer8.SplitterDistance = 77;
+            this.splitContainer8.Size = new System.Drawing.Size(120, 207);
+            this.splitContainer8.SplitterDistance = 98;
             this.splitContainer8.TabIndex = 0;
             // 
             // cmb_proje
@@ -1041,7 +1041,7 @@
             this.cmb_proje.ItemHeight = 23;
             this.cmb_proje.Location = new System.Drawing.Point(12, 19);
             this.cmb_proje.Name = "cmb_proje";
-            this.cmb_proje.Size = new System.Drawing.Size(83, 29);
+            this.cmb_proje.Size = new System.Drawing.Size(91, 29);
             this.cmb_proje.TabIndex = 0;
             this.cmb_proje.UseSelectable = true;
             this.cmb_proje.SelectedIndexChanged += new System.EventHandler(this.cmb_proje_SelectedIndexChanged);
@@ -1060,7 +1060,7 @@
             "2018"});
             this.cmb_yil.Location = new System.Drawing.Point(12, 19);
             this.cmb_yil.Name = "cmb_yil";
-            this.cmb_yil.Size = new System.Drawing.Size(83, 29);
+            this.cmb_yil.Size = new System.Drawing.Size(91, 29);
             this.cmb_yil.TabIndex = 1;
             this.cmb_yil.UseSelectable = true;
             this.cmb_yil.SelectedIndexChanged += new System.EventHandler(this.cmb_yil_SelectedIndexChanged);
@@ -1070,7 +1070,7 @@
             this.pbClose.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.pbClose.BackColor = System.Drawing.Color.Transparent;
             this.pbClose.Image = global::MERP_MUI.Properties.Resources.appbar_arrow_left_dark;
-            this.pbClose.Location = new System.Drawing.Point(1166, 12);
+            this.pbClose.Location = new System.Drawing.Point(1758, 12);
             this.pbClose.Name = "pbClose";
             this.pbClose.Size = new System.Drawing.Size(46, 42);
             this.pbClose.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -1082,7 +1082,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1235, 780);
+            this.ClientSize = new System.Drawing.Size(1827, 949);
             this.ControlBox = false;
             this.Controls.Add(this.pbClose);
             this.Controls.Add(this.splitContainer1);

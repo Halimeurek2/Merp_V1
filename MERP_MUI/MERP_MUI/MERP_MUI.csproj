@@ -401,6 +401,10 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="merp_sHq_icon.ico" />
+    <None Include="Resources\cokaciil.png" />
+    <None Include="Resources\cokacil.png" />
+    <None Include="Resources\malvefatu.png" />
+    <None Include="Resources\malvefaturalar.png" />
     <None Include="Resources\malvefat.png" />
     <None Include="Resources\appbar.paperclip.rotated.png" />
     <None Include="Resources\appbar.clock.png" />

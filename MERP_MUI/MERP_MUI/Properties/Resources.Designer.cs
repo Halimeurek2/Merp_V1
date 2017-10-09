@@ -283,9 +283,9 @@ namespace MERP_MUI.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap cokacilislerTxt {
+        internal static System.Drawing.Bitmap cokaciil {
             get {
-                object obj = ResourceManager.GetObject("cokacilislerTxt", resourceCulture);
+                object obj = ResourceManager.GetObject("cokaciil", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -296,16 +296,6 @@ namespace MERP_MUI.Properties {
         internal static System.Drawing.Bitmap download {
             get {
                 object obj = ResourceManager.GetObject("download", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap GrafikFilterTxt {
-            get {
-                object obj = ResourceManager.GetObject("GrafikFilterTxt", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -413,19 +403,9 @@ namespace MERP_MUI.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap maaliyetlerTxt {
+        internal static System.Drawing.Bitmap malvefatu {
             get {
-                object obj = ResourceManager.GetObject("maaliyetlerTxt", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap malvefat {
-            get {
-                object obj = ResourceManager.GetObject("malvefat", resourceCulture);
+                object obj = ResourceManager.GetObject("malvefatu", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

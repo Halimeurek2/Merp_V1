@@ -267,6 +267,10 @@ namespace MERP_MUI
                            DataGridViewAutoSizeColumnsMode.Fill;
 
                 myConnection.Close();
+
+                cmb_firma.Text = "";
+                txt_ftr_no.Text = "";
+                txt_tip.Text = "";
             }
             else
             {
@@ -285,6 +289,14 @@ namespace MERP_MUI
         private void pbClose_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void btnClear_Click(object sender, EventArgs e)
+        {
+            cmb_firma.Text = "";
+            cmb_projeNo.Text = "";
+            txt_ftr_no.Text = "";
+            txt_tip.Text = "";
         }
     }
 }

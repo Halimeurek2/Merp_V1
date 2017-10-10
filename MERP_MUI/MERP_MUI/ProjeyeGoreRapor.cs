@@ -220,7 +220,7 @@ namespace MERP_MUI
             chart1.Series[0]["PieLabelStyle"] = "Outside";
 
             chart1.Series[0].BorderWidth = 1;
-            chart1.Series[0].BorderColor = Color.FromArgb(26, 59, 105);
+            chart1.Series[0].BorderColor = Color.FromArgb(224,224,224);//FromArgb(26, 59, 105);
 
             myConnection.Close();
 
@@ -287,7 +287,7 @@ namespace MERP_MUI
             chart2.Series[0]["PieLabelStyle"] = "Outside";
 
             chart2.Series[0].BorderWidth = 1;
-            chart2.Series[0].BorderColor = Color.FromArgb(26, 59, 105);
+            chart2.Series[0].BorderColor = Color.FromArgb(224,224,224);
 
             myConnection.Close();
         }
@@ -354,7 +354,7 @@ namespace MERP_MUI
             chart3.Series[0]["PieLabelStyle"] = "Outside";
 
             chart3.Series[0].BorderWidth = 1;
-            chart3.Series[0].BorderColor = Color.FromArgb(26, 59, 105);
+            chart3.Series[0].BorderColor = Color.FromArgb(224,224,224);
 
             myConnection.Close();
         }
@@ -421,7 +421,7 @@ namespace MERP_MUI
             chart4.Series[0]["PieLabelStyle"] = "Outside";
 
             chart4.Series[0].BorderWidth = 1;
-            chart4.Series[0].BorderColor = Color.FromArgb(26, 59, 105);
+            chart4.Series[0].BorderColor = Color.FromArgb(224,224,224);
 
             myConnection.Close();
         }
@@ -705,11 +705,11 @@ namespace MERP_MUI
                 {
                     if (Convert.ToDateTime(dgw_odenmemisG.Rows[i].Cells[3].Value).Date < DateTime.Now)
                     {
-                        dgw_odenmemisG.Rows[i].DefaultCellStyle.BackColor = Color.LightSalmon;
+                        dgw_odenmemisG.Rows[i].DefaultCellStyle.BackColor = Color.Tomato;
                     }
                     else if (Convert.ToDateTime(dgw_odenmemisG.Rows[i].Cells[3].Value).Date > DateTime.Now && Convert.ToDateTime(dgw_odenmemisG.Rows[i].Cells[3].Value).Date < DateTime.Now.AddDays(5))
                     {
-                        dgw_odenmemisG.Rows[i].DefaultCellStyle.BackColor = Color.Tan;
+                        dgw_odenmemisG.Rows[i].DefaultCellStyle.BackColor = Color.Gold;
                     }
                 }
             }
@@ -734,11 +734,11 @@ namespace MERP_MUI
                 {
                     if (Convert.ToDateTime(dgw_odenmemisK.Rows[i].Cells[3].Value).Date < DateTime.Now)
                     {
-                        dgw_odenmemisK.Rows[i].DefaultCellStyle.BackColor = Color.LightSalmon;
+                        dgw_odenmemisK.Rows[i].DefaultCellStyle.BackColor = Color.Tomato;
                     }
                     else if (Convert.ToDateTime(dgw_odenmemisK.Rows[i].Cells[3].Value).Date > DateTime.Now && Convert.ToDateTime(dgw_odenmemisK.Rows[i].Cells[3].Value).Date < DateTime.Now.AddDays(5))
                     {
-                        dgw_odenmemisK.Rows[i].DefaultCellStyle.BackColor = Color.Tan;
+                        dgw_odenmemisK.Rows[i].DefaultCellStyle.BackColor = Color.Gold;
                     }
                 }
             }

@@ -96,6 +96,12 @@
       <DependentUpon>AktiviteGiris.cs</DependentUpon>
     </Compile>
     <Compile Include="DBConnect.cs" />
+    <Compile Include="deneme.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="deneme.Designer.cs">
+      <DependentUpon>deneme.cs</DependentUpon>
+    </Compile>
     <Compile Include="DigerIsler.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -215,6 +221,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="AktiviteGiris.resx">
       <DependentUpon>AktiviteGiris.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="deneme.resx">
+      <DependentUpon>deneme.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="DigerIsler.resx">
       <DependentUpon>DigerIsler.cs</DependentUpon>

@@ -46,52 +46,6 @@
             this.chart2 = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.splitContainer2 = new System.Windows.Forms.SplitContainer();
             this.splitContainer3 = new System.Windows.Forms.SplitContainer();
-            this.lbl_prjNo = new MetroFramework.Controls.MetroLabel();
-            this.metroLabel6 = new MetroFramework.Controls.MetroLabel();
-            this.splitContainer4 = new System.Windows.Forms.SplitContainer();
-            this.splitContainer6 = new System.Windows.Forms.SplitContainer();
-            this.lbl_tutar1 = new MetroFramework.Controls.MetroLabel();
-            this.metroLabel2 = new MetroFramework.Controls.MetroLabel();
-            this.lbl_firma1 = new MetroFramework.Controls.MetroLabel();
-            this.splitContainer9 = new System.Windows.Forms.SplitContainer();
-            this.lbl_elfirma1 = new MetroFramework.Controls.MetroLabel();
-            this.metroLabel9 = new MetroFramework.Controls.MetroLabel();
-            this.lbl_el1 = new MetroFramework.Controls.MetroLabel();
-            this.splitContainer10 = new System.Windows.Forms.SplitContainer();
-            this.metroLabel8 = new MetroFramework.Controls.MetroLabel();
-            this.lbl_el2 = new MetroFramework.Controls.MetroLabel();
-            this.metroLabel12 = new MetroFramework.Controls.MetroLabel();
-            this.metroLabel18 = new MetroFramework.Controls.MetroLabel();
-            this.lbl_el3 = new MetroFramework.Controls.MetroLabel();
-            this.metroLabel13 = new MetroFramework.Controls.MetroLabel();
-            this.metroLabel1 = new MetroFramework.Controls.MetroLabel();
-            this.splitContainer5 = new System.Windows.Forms.SplitContainer();
-            this.splitContainer7 = new System.Windows.Forms.SplitContainer();
-            this.lbl_tutar2 = new MetroFramework.Controls.MetroLabel();
-            this.metroLabel4 = new MetroFramework.Controls.MetroLabel();
-            this.lbl_firma2 = new MetroFramework.Controls.MetroLabel();
-            this.splitContainer11 = new System.Windows.Forms.SplitContainer();
-            this.lbl_mek1 = new MetroFramework.Controls.MetroLabel();
-            this.metroLabel10 = new MetroFramework.Controls.MetroLabel();
-            this.splitContainer12 = new System.Windows.Forms.SplitContainer();
-            this.lbl_mek2 = new MetroFramework.Controls.MetroLabel();
-            this.metroLabel14 = new MetroFramework.Controls.MetroLabel();
-            this.lbl_mek3 = new MetroFramework.Controls.MetroLabel();
-            this.metroLabel16 = new MetroFramework.Controls.MetroLabel();
-            this.metroLabel3 = new MetroFramework.Controls.MetroLabel();
-            this.splitContainer8 = new System.Windows.Forms.SplitContainer();
-            this.lbl_tutar3 = new MetroFramework.Controls.MetroLabel();
-            this.metroLabel7 = new MetroFramework.Controls.MetroLabel();
-            this.lbl_firma3 = new MetroFramework.Controls.MetroLabel();
-            this.splitContainer13 = new System.Windows.Forms.SplitContainer();
-            this.lbl_gnl1 = new MetroFramework.Controls.MetroLabel();
-            this.metroLabel11 = new MetroFramework.Controls.MetroLabel();
-            this.splitContainer14 = new System.Windows.Forms.SplitContainer();
-            this.lbl_gnl2 = new MetroFramework.Controls.MetroLabel();
-            this.metroLabel15 = new MetroFramework.Controls.MetroLabel();
-            this.lbl_gnl3 = new MetroFramework.Controls.MetroLabel();
-            this.metroLabel17 = new MetroFramework.Controls.MetroLabel();
-            this.metroLabel5 = new MetroFramework.Controls.MetroLabel();
             this.metroGrid1 = new MetroFramework.Controls.MetroGrid();
             this.Tanım = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ocak = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -106,7 +60,62 @@
             this.ekim = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.kasim = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.aralik = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.lbl_prjNo = new MetroFramework.Controls.MetroLabel();
+            this.metroLabel6 = new MetroFramework.Controls.MetroLabel();
             this.pbClose = new System.Windows.Forms.PictureBox();
+            this.splitContainer4 = new System.Windows.Forms.SplitContainer();
+            this.splitContainer12 = new System.Windows.Forms.SplitContainer();
+            this.metroTabControl2 = new MetroFramework.Controls.MetroTabControl();
+            this.metroTabPage5 = new MetroFramework.Controls.MetroTabPage();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.splitContainer5 = new System.Windows.Forms.SplitContainer();
+            this.splitContainer16 = new System.Windows.Forms.SplitContainer();
+            this.lbl_tutar1 = new MetroFramework.Controls.MetroLabel();
+            this.lbl_firma1 = new MetroFramework.Controls.MetroLabel();
+            this.splitContainer6 = new System.Windows.Forms.SplitContainer();
+            this.splitContainer17 = new System.Windows.Forms.SplitContainer();
+            this.lbl_tutar2 = new MetroFramework.Controls.MetroLabel();
+            this.lbl_firma2 = new MetroFramework.Controls.MetroLabel();
+            this.splitContainer18 = new System.Windows.Forms.SplitContainer();
+            this.lbl_tutar3 = new MetroFramework.Controls.MetroLabel();
+            this.lbl_firma3 = new MetroFramework.Controls.MetroLabel();
+            this.metroTabControl1 = new MetroFramework.Controls.MetroTabControl();
+            this.metroTabPage1 = new MetroFramework.Controls.MetroTabPage();
+            this.splitContainer7 = new System.Windows.Forms.SplitContainer();
+            this.splitContainer13 = new System.Windows.Forms.SplitContainer();
+            this.lbl_el1 = new MetroFramework.Controls.MetroLabel();
+            this.lbl_elfrm1 = new MetroFramework.Controls.MetroLabel();
+            this.splitContainer8 = new System.Windows.Forms.SplitContainer();
+            this.splitContainer14 = new System.Windows.Forms.SplitContainer();
+            this.lbl_el2 = new MetroFramework.Controls.MetroLabel();
+            this.lbl_elfrm2 = new MetroFramework.Controls.MetroLabel();
+            this.splitContainer15 = new System.Windows.Forms.SplitContainer();
+            this.lbl_el3 = new MetroFramework.Controls.MetroLabel();
+            this.lbl_elfrm3 = new MetroFramework.Controls.MetroLabel();
+            this.metroTabPage2 = new MetroFramework.Controls.MetroTabPage();
+            this.splitContainer9 = new System.Windows.Forms.SplitContainer();
+            this.splitContainer19 = new System.Windows.Forms.SplitContainer();
+            this.lbl_mek1 = new MetroFramework.Controls.MetroLabel();
+            this.lbl_mekfrm1 = new MetroFramework.Controls.MetroLabel();
+            this.splitContainer10 = new System.Windows.Forms.SplitContainer();
+            this.splitContainer20 = new System.Windows.Forms.SplitContainer();
+            this.lbl_mek2 = new MetroFramework.Controls.MetroLabel();
+            this.lbl_mekfrm2 = new MetroFramework.Controls.MetroLabel();
+            this.splitContainer21 = new System.Windows.Forms.SplitContainer();
+            this.lbl_mek3 = new MetroFramework.Controls.MetroLabel();
+            this.lbl_mekfrm3 = new MetroFramework.Controls.MetroLabel();
+            this.metroTabPage3 = new MetroFramework.Controls.MetroTabPage();
+            this.splitContainer11 = new System.Windows.Forms.SplitContainer();
+            this.splitContainer22 = new System.Windows.Forms.SplitContainer();
+            this.lbl_gnl1 = new MetroFramework.Controls.MetroLabel();
+            this.lbl_gnlfrm1 = new MetroFramework.Controls.MetroLabel();
+            this.splitContainer23 = new System.Windows.Forms.SplitContainer();
+            this.splitContainer24 = new System.Windows.Forms.SplitContainer();
+            this.lbl_gnl2 = new MetroFramework.Controls.MetroLabel();
+            this.lbl_gnlfrm2 = new MetroFramework.Controls.MetroLabel();
+            this.splitContainer25 = new System.Windows.Forms.SplitContainer();
+            this.lbl_gnl3 = new MetroFramework.Controls.MetroLabel();
+            this.lbl_gnlfrm3 = new MetroFramework.Controls.MetroLabel();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -121,54 +130,103 @@
             this.splitContainer2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer3)).BeginInit();
             this.splitContainer3.Panel1.SuspendLayout();
-            this.splitContainer3.Panel2.SuspendLayout();
             this.splitContainer3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.metroGrid1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbClose)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer4)).BeginInit();
-            this.splitContainer4.Panel1.SuspendLayout();
             this.splitContainer4.Panel2.SuspendLayout();
             this.splitContainer4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.splitContainer6)).BeginInit();
-            this.splitContainer6.Panel1.SuspendLayout();
-            this.splitContainer6.Panel2.SuspendLayout();
-            this.splitContainer6.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.splitContainer9)).BeginInit();
-            this.splitContainer9.Panel1.SuspendLayout();
-            this.splitContainer9.Panel2.SuspendLayout();
-            this.splitContainer9.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.splitContainer10)).BeginInit();
-            this.splitContainer10.Panel1.SuspendLayout();
-            this.splitContainer10.Panel2.SuspendLayout();
-            this.splitContainer10.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.splitContainer5)).BeginInit();
-            this.splitContainer5.Panel1.SuspendLayout();
-            this.splitContainer5.Panel2.SuspendLayout();
-            this.splitContainer5.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.splitContainer7)).BeginInit();
-            this.splitContainer7.Panel1.SuspendLayout();
-            this.splitContainer7.Panel2.SuspendLayout();
-            this.splitContainer7.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.splitContainer11)).BeginInit();
-            this.splitContainer11.Panel1.SuspendLayout();
-            this.splitContainer11.Panel2.SuspendLayout();
-            this.splitContainer11.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer12)).BeginInit();
             this.splitContainer12.Panel1.SuspendLayout();
             this.splitContainer12.Panel2.SuspendLayout();
             this.splitContainer12.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.splitContainer8)).BeginInit();
-            this.splitContainer8.Panel1.SuspendLayout();
-            this.splitContainer8.Panel2.SuspendLayout();
-            this.splitContainer8.SuspendLayout();
+            this.metroTabControl2.SuspendLayout();
+            this.metroTabPage5.SuspendLayout();
+            this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainer5)).BeginInit();
+            this.splitContainer5.Panel1.SuspendLayout();
+            this.splitContainer5.Panel2.SuspendLayout();
+            this.splitContainer5.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainer16)).BeginInit();
+            this.splitContainer16.Panel1.SuspendLayout();
+            this.splitContainer16.Panel2.SuspendLayout();
+            this.splitContainer16.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainer6)).BeginInit();
+            this.splitContainer6.Panel1.SuspendLayout();
+            this.splitContainer6.Panel2.SuspendLayout();
+            this.splitContainer6.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainer17)).BeginInit();
+            this.splitContainer17.Panel1.SuspendLayout();
+            this.splitContainer17.Panel2.SuspendLayout();
+            this.splitContainer17.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainer18)).BeginInit();
+            this.splitContainer18.Panel1.SuspendLayout();
+            this.splitContainer18.Panel2.SuspendLayout();
+            this.splitContainer18.SuspendLayout();
+            this.metroTabControl1.SuspendLayout();
+            this.metroTabPage1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainer7)).BeginInit();
+            this.splitContainer7.Panel1.SuspendLayout();
+            this.splitContainer7.Panel2.SuspendLayout();
+            this.splitContainer7.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer13)).BeginInit();
             this.splitContainer13.Panel1.SuspendLayout();
             this.splitContainer13.Panel2.SuspendLayout();
             this.splitContainer13.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainer8)).BeginInit();
+            this.splitContainer8.Panel1.SuspendLayout();
+            this.splitContainer8.Panel2.SuspendLayout();
+            this.splitContainer8.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer14)).BeginInit();
             this.splitContainer14.Panel1.SuspendLayout();
             this.splitContainer14.Panel2.SuspendLayout();
             this.splitContainer14.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.metroGrid1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbClose)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainer15)).BeginInit();
+            this.splitContainer15.Panel1.SuspendLayout();
+            this.splitContainer15.Panel2.SuspendLayout();
+            this.splitContainer15.SuspendLayout();
+            this.metroTabPage2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainer9)).BeginInit();
+            this.splitContainer9.Panel1.SuspendLayout();
+            this.splitContainer9.Panel2.SuspendLayout();
+            this.splitContainer9.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainer19)).BeginInit();
+            this.splitContainer19.Panel1.SuspendLayout();
+            this.splitContainer19.Panel2.SuspendLayout();
+            this.splitContainer19.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainer10)).BeginInit();
+            this.splitContainer10.Panel1.SuspendLayout();
+            this.splitContainer10.Panel2.SuspendLayout();
+            this.splitContainer10.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainer20)).BeginInit();
+            this.splitContainer20.Panel1.SuspendLayout();
+            this.splitContainer20.Panel2.SuspendLayout();
+            this.splitContainer20.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainer21)).BeginInit();
+            this.splitContainer21.Panel1.SuspendLayout();
+            this.splitContainer21.Panel2.SuspendLayout();
+            this.splitContainer21.SuspendLayout();
+            this.metroTabPage3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainer11)).BeginInit();
+            this.splitContainer11.Panel1.SuspendLayout();
+            this.splitContainer11.Panel2.SuspendLayout();
+            this.splitContainer11.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainer22)).BeginInit();
+            this.splitContainer22.Panel1.SuspendLayout();
+            this.splitContainer22.Panel2.SuspendLayout();
+            this.splitContainer22.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainer23)).BeginInit();
+            this.splitContainer23.Panel1.SuspendLayout();
+            this.splitContainer23.Panel2.SuspendLayout();
+            this.splitContainer23.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainer24)).BeginInit();
+            this.splitContainer24.Panel1.SuspendLayout();
+            this.splitContainer24.Panel2.SuspendLayout();
+            this.splitContainer24.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainer25)).BeginInit();
+            this.splitContainer25.Panel1.SuspendLayout();
+            this.splitContainer25.Panel2.SuspendLayout();
+            this.splitContainer25.SuspendLayout();
             this.SuspendLayout();
             // 
             // splitContainer1
@@ -184,8 +242,8 @@
             // splitContainer1.Panel2
             // 
             this.splitContainer1.Panel2.Controls.Add(this.groupBox2);
-            this.splitContainer1.Size = new System.Drawing.Size(1758, 306);
-            this.splitContainer1.SplitterDistance = 879;
+            this.splitContainer1.Size = new System.Drawing.Size(1676, 306);
+            this.splitContainer1.SplitterDistance = 837;
             this.splitContainer1.TabIndex = 0;
             // 
             // groupBox1
@@ -196,7 +254,7 @@
             this.groupBox1.ForeColor = System.Drawing.Color.Crimson;
             this.groupBox1.Location = new System.Drawing.Point(0, 0);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(879, 306);
+            this.groupBox1.Size = new System.Drawing.Size(837, 306);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Ödenmemiş Gelen Faturalar";
@@ -220,7 +278,7 @@
             series1.Legend = "Legend1";
             series1.Name = "Gelen";
             this.chart1.Series.Add(series1);
-            this.chart1.Size = new System.Drawing.Size(873, 285);
+            this.chart1.Size = new System.Drawing.Size(831, 285);
             this.chart1.TabIndex = 1;
             this.chart1.Text = "chart1";
             // 
@@ -232,7 +290,7 @@
             this.groupBox2.ForeColor = System.Drawing.Color.Crimson;
             this.groupBox2.Location = new System.Drawing.Point(0, 0);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(875, 306);
+            this.groupBox2.Size = new System.Drawing.Size(835, 306);
             this.groupBox2.TabIndex = 1;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Ödenmemiş Kesilen Faturalar";
@@ -255,7 +313,7 @@
             series2.Legend = "Legend1";
             series2.Name = "Kesilen";
             this.chart2.Series.Add(series2);
-            this.chart2.Size = new System.Drawing.Size(869, 285);
+            this.chart2.Size = new System.Drawing.Size(829, 285);
             this.chart2.TabIndex = 2;
             this.chart2.Text = "chart2";
             // 
@@ -273,8 +331,8 @@
             // splitContainer2.Panel2
             // 
             this.splitContainer2.Panel2.Controls.Add(this.metroGrid1);
-            this.splitContainer2.Size = new System.Drawing.Size(1758, 467);
-            this.splitContainer2.SplitterDistance = 324;
+            this.splitContainer2.Size = new System.Drawing.Size(1676, 666);
+            this.splitContainer2.SplitterDistance = 540;
             this.splitContainer2.TabIndex = 1;
             // 
             // splitContainer3
@@ -282,820 +340,14 @@
             this.splitContainer3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.splitContainer3.Location = new System.Drawing.Point(0, 0);
             this.splitContainer3.Name = "splitContainer3";
+            this.splitContainer3.Orientation = System.Windows.Forms.Orientation.Horizontal;
             // 
             // splitContainer3.Panel1
             // 
-            this.splitContainer3.Panel1.Controls.Add(this.lbl_prjNo);
-            this.splitContainer3.Panel1.Controls.Add(this.metroLabel6);
-            // 
-            // splitContainer3.Panel2
-            // 
-            this.splitContainer3.Panel2.Controls.Add(this.splitContainer4);
-            this.splitContainer3.Size = new System.Drawing.Size(1758, 324);
-            this.splitContainer3.SplitterDistance = 240;
+            this.splitContainer3.Panel1.Controls.Add(this.splitContainer4);
+            this.splitContainer3.Size = new System.Drawing.Size(1676, 540);
+            this.splitContainer3.SplitterDistance = 335;
             this.splitContainer3.TabIndex = 0;
-            // 
-            // lbl_prjNo
-            // 
-            this.lbl_prjNo.AutoSize = true;
-            this.lbl_prjNo.FontWeight = MetroFramework.MetroLabelWeight.Regular;
-            this.lbl_prjNo.ForeColor = System.Drawing.Color.Red;
-            this.lbl_prjNo.Location = new System.Drawing.Point(65, 17);
-            this.lbl_prjNo.Name = "lbl_prjNo";
-            this.lbl_prjNo.Size = new System.Drawing.Size(17, 19);
-            this.lbl_prjNo.Style = MetroFramework.MetroColorStyle.Red;
-            this.lbl_prjNo.TabIndex = 8;
-            this.lbl_prjNo.Text = "0";
-            this.lbl_prjNo.Theme = MetroFramework.MetroThemeStyle.Dark;
-            this.lbl_prjNo.UseCustomBackColor = true;
-            this.lbl_prjNo.UseCustomForeColor = true;
-            this.lbl_prjNo.UseStyleColors = true;
-            // 
-            // metroLabel6
-            // 
-            this.metroLabel6.AutoSize = true;
-            this.metroLabel6.FontWeight = MetroFramework.MetroLabelWeight.Regular;
-            this.metroLabel6.ForeColor = System.Drawing.Color.Red;
-            this.metroLabel6.Location = new System.Drawing.Point(12, 17);
-            this.metroLabel6.Name = "metroLabel6";
-            this.metroLabel6.Size = new System.Drawing.Size(47, 19);
-            this.metroLabel6.Style = MetroFramework.MetroColorStyle.Red;
-            this.metroLabel6.TabIndex = 7;
-            this.metroLabel6.Text = "Proje :";
-            this.metroLabel6.Theme = MetroFramework.MetroThemeStyle.Dark;
-            this.metroLabel6.UseCustomBackColor = true;
-            this.metroLabel6.UseCustomForeColor = true;
-            this.metroLabel6.UseStyleColors = true;
-            // 
-            // splitContainer4
-            // 
-            this.splitContainer4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.splitContainer4.Location = new System.Drawing.Point(0, 0);
-            this.splitContainer4.Name = "splitContainer4";
-            // 
-            // splitContainer4.Panel1
-            // 
-            this.splitContainer4.Panel1.Controls.Add(this.splitContainer6);
-            // 
-            // splitContainer4.Panel2
-            // 
-            this.splitContainer4.Panel2.Controls.Add(this.splitContainer5);
-            this.splitContainer4.Size = new System.Drawing.Size(1514, 324);
-            this.splitContainer4.SplitterDistance = 504;
-            this.splitContainer4.TabIndex = 0;
-            // 
-            // splitContainer6
-            // 
-            this.splitContainer6.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.splitContainer6.Location = new System.Drawing.Point(0, 0);
-            this.splitContainer6.Name = "splitContainer6";
-            this.splitContainer6.Orientation = System.Windows.Forms.Orientation.Horizontal;
-            // 
-            // splitContainer6.Panel1
-            // 
-            this.splitContainer6.Panel1.Controls.Add(this.lbl_tutar1);
-            this.splitContainer6.Panel1.Controls.Add(this.metroLabel2);
-            this.splitContainer6.Panel1.Controls.Add(this.lbl_firma1);
-            // 
-            // splitContainer6.Panel2
-            // 
-            this.splitContainer6.Panel2.Controls.Add(this.splitContainer9);
-            this.splitContainer6.Panel2.Controls.Add(this.metroLabel1);
-            this.splitContainer6.Size = new System.Drawing.Size(504, 324);
-            this.splitContainer6.SplitterDistance = 112;
-            this.splitContainer6.TabIndex = 12;
-            // 
-            // lbl_tutar1
-            // 
-            this.lbl_tutar1.AutoSize = true;
-            this.lbl_tutar1.FontWeight = MetroFramework.MetroLabelWeight.Bold;
-            this.lbl_tutar1.ForeColor = System.Drawing.Color.Black;
-            this.lbl_tutar1.Location = new System.Drawing.Point(9, 54);
-            this.lbl_tutar1.Name = "lbl_tutar1";
-            this.lbl_tutar1.Size = new System.Drawing.Size(17, 19);
-            this.lbl_tutar1.Style = MetroFramework.MetroColorStyle.Red;
-            this.lbl_tutar1.TabIndex = 14;
-            this.lbl_tutar1.Text = "0";
-            this.lbl_tutar1.Theme = MetroFramework.MetroThemeStyle.Dark;
-            this.lbl_tutar1.UseCustomBackColor = true;
-            this.lbl_tutar1.UseCustomForeColor = true;
-            this.lbl_tutar1.UseStyleColors = true;
-            // 
-            // metroLabel2
-            // 
-            this.metroLabel2.AutoSize = true;
-            this.metroLabel2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.metroLabel2.FontSize = MetroFramework.MetroLabelSize.Tall;
-            this.metroLabel2.FontWeight = MetroFramework.MetroLabelWeight.Regular;
-            this.metroLabel2.ForeColor = System.Drawing.Color.Red;
-            this.metroLabel2.Location = new System.Drawing.Point(0, 0);
-            this.metroLabel2.Name = "metroLabel2";
-            this.metroLabel2.Size = new System.Drawing.Size(26, 25);
-            this.metroLabel2.Style = MetroFramework.MetroColorStyle.Red;
-            this.metroLabel2.TabIndex = 13;
-            this.metroLabel2.Text = "1.";
-            this.metroLabel2.Theme = MetroFramework.MetroThemeStyle.Dark;
-            this.metroLabel2.UseCustomBackColor = true;
-            this.metroLabel2.UseCustomForeColor = true;
-            this.metroLabel2.UseStyleColors = true;
-            // 
-            // lbl_firma1
-            // 
-            this.lbl_firma1.AutoSize = true;
-            this.lbl_firma1.FontWeight = MetroFramework.MetroLabelWeight.Regular;
-            this.lbl_firma1.ForeColor = System.Drawing.Color.Black;
-            this.lbl_firma1.Location = new System.Drawing.Point(9, 25);
-            this.lbl_firma1.Name = "lbl_firma1";
-            this.lbl_firma1.Size = new System.Drawing.Size(17, 19);
-            this.lbl_firma1.Style = MetroFramework.MetroColorStyle.Red;
-            this.lbl_firma1.TabIndex = 12;
-            this.lbl_firma1.Text = "0";
-            this.lbl_firma1.Theme = MetroFramework.MetroThemeStyle.Dark;
-            this.lbl_firma1.UseCustomBackColor = true;
-            this.lbl_firma1.UseCustomForeColor = true;
-            this.lbl_firma1.UseStyleColors = true;
-            // 
-            // splitContainer9
-            // 
-            this.splitContainer9.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.splitContainer9.Location = new System.Drawing.Point(0, 25);
-            this.splitContainer9.Name = "splitContainer9";
-            this.splitContainer9.Orientation = System.Windows.Forms.Orientation.Horizontal;
-            // 
-            // splitContainer9.Panel1
-            // 
-            this.splitContainer9.Panel1.Controls.Add(this.lbl_elfirma1);
-            this.splitContainer9.Panel1.Controls.Add(this.metroLabel9);
-            this.splitContainer9.Panel1.Controls.Add(this.lbl_el1);
-            // 
-            // splitContainer9.Panel2
-            // 
-            this.splitContainer9.Panel2.Controls.Add(this.splitContainer10);
-            this.splitContainer9.Size = new System.Drawing.Size(504, 183);
-            this.splitContainer9.SplitterDistance = 91;
-            this.splitContainer9.TabIndex = 15;
-            // 
-            // lbl_elfirma1
-            // 
-            this.lbl_elfirma1.AutoSize = true;
-            this.lbl_elfirma1.Dock = System.Windows.Forms.DockStyle.Left;
-            this.lbl_elfirma1.FontWeight = MetroFramework.MetroLabelWeight.Regular;
-            this.lbl_elfirma1.ForeColor = System.Drawing.Color.Black;
-            this.lbl_elfirma1.Location = new System.Drawing.Point(0, 19);
-            this.lbl_elfirma1.Name = "lbl_elfirma1";
-            this.lbl_elfirma1.Size = new System.Drawing.Size(17, 19);
-            this.lbl_elfirma1.Style = MetroFramework.MetroColorStyle.Red;
-            this.lbl_elfirma1.TabIndex = 16;
-            this.lbl_elfirma1.Text = "0";
-            this.lbl_elfirma1.Theme = MetroFramework.MetroThemeStyle.Dark;
-            this.lbl_elfirma1.UseCustomBackColor = true;
-            this.lbl_elfirma1.UseCustomForeColor = true;
-            this.lbl_elfirma1.UseStyleColors = true;
-            // 
-            // metroLabel9
-            // 
-            this.metroLabel9.AutoSize = true;
-            this.metroLabel9.Dock = System.Windows.Forms.DockStyle.Top;
-            this.metroLabel9.FontWeight = MetroFramework.MetroLabelWeight.Bold;
-            this.metroLabel9.ForeColor = System.Drawing.Color.Black;
-            this.metroLabel9.Location = new System.Drawing.Point(0, 0);
-            this.metroLabel9.Name = "metroLabel9";
-            this.metroLabel9.Size = new System.Drawing.Size(21, 19);
-            this.metroLabel9.Style = MetroFramework.MetroColorStyle.Red;
-            this.metroLabel9.TabIndex = 15;
-            this.metroLabel9.Text = "1.";
-            this.metroLabel9.Theme = MetroFramework.MetroThemeStyle.Dark;
-            this.metroLabel9.UseCustomBackColor = true;
-            this.metroLabel9.UseCustomForeColor = true;
-            this.metroLabel9.UseStyleColors = true;
-            // 
-            // lbl_el1
-            // 
-            this.lbl_el1.AutoSize = true;
-            this.lbl_el1.Dock = System.Windows.Forms.DockStyle.Right;
-            this.lbl_el1.FontWeight = MetroFramework.MetroLabelWeight.Regular;
-            this.lbl_el1.ForeColor = System.Drawing.Color.Black;
-            this.lbl_el1.Location = new System.Drawing.Point(487, 0);
-            this.lbl_el1.Name = "lbl_el1";
-            this.lbl_el1.Size = new System.Drawing.Size(17, 19);
-            this.lbl_el1.Style = MetroFramework.MetroColorStyle.Red;
-            this.lbl_el1.TabIndex = 13;
-            this.lbl_el1.Text = "0";
-            this.lbl_el1.Theme = MetroFramework.MetroThemeStyle.Dark;
-            this.lbl_el1.UseCustomBackColor = true;
-            this.lbl_el1.UseCustomForeColor = true;
-            this.lbl_el1.UseStyleColors = true;
-            // 
-            // splitContainer10
-            // 
-            this.splitContainer10.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.splitContainer10.Location = new System.Drawing.Point(0, 0);
-            this.splitContainer10.Name = "splitContainer10";
-            this.splitContainer10.Orientation = System.Windows.Forms.Orientation.Horizontal;
-            // 
-            // splitContainer10.Panel1
-            // 
-            this.splitContainer10.Panel1.Controls.Add(this.metroLabel8);
-            this.splitContainer10.Panel1.Controls.Add(this.lbl_el2);
-            this.splitContainer10.Panel1.Controls.Add(this.metroLabel12);
-            // 
-            // splitContainer10.Panel2
-            // 
-            this.splitContainer10.Panel2.Controls.Add(this.metroLabel18);
-            this.splitContainer10.Panel2.Controls.Add(this.lbl_el3);
-            this.splitContainer10.Panel2.Controls.Add(this.metroLabel13);
-            this.splitContainer10.Size = new System.Drawing.Size(504, 88);
-            this.splitContainer10.SplitterDistance = 39;
-            this.splitContainer10.TabIndex = 0;
-            // 
-            // metroLabel8
-            // 
-            this.metroLabel8.AutoSize = true;
-            this.metroLabel8.Dock = System.Windows.Forms.DockStyle.Left;
-            this.metroLabel8.FontWeight = MetroFramework.MetroLabelWeight.Regular;
-            this.metroLabel8.ForeColor = System.Drawing.Color.Black;
-            this.metroLabel8.Location = new System.Drawing.Point(0, 19);
-            this.metroLabel8.Name = "metroLabel8";
-            this.metroLabel8.Size = new System.Drawing.Size(17, 19);
-            this.metroLabel8.Style = MetroFramework.MetroColorStyle.Red;
-            this.metroLabel8.TabIndex = 18;
-            this.metroLabel8.Text = "0";
-            this.metroLabel8.Theme = MetroFramework.MetroThemeStyle.Dark;
-            this.metroLabel8.UseCustomBackColor = true;
-            this.metroLabel8.UseCustomForeColor = true;
-            this.metroLabel8.UseStyleColors = true;
-            // 
-            // lbl_el2
-            // 
-            this.lbl_el2.AutoSize = true;
-            this.lbl_el2.FontWeight = MetroFramework.MetroLabelWeight.Regular;
-            this.lbl_el2.ForeColor = System.Drawing.Color.Black;
-            this.lbl_el2.Location = new System.Drawing.Point(341, 0);
-            this.lbl_el2.Name = "lbl_el2";
-            this.lbl_el2.Size = new System.Drawing.Size(17, 19);
-            this.lbl_el2.Style = MetroFramework.MetroColorStyle.Red;
-            this.lbl_el2.TabIndex = 17;
-            this.lbl_el2.Text = "0";
-            this.lbl_el2.Theme = MetroFramework.MetroThemeStyle.Dark;
-            this.lbl_el2.UseCustomBackColor = true;
-            this.lbl_el2.UseCustomForeColor = true;
-            this.lbl_el2.UseStyleColors = true;
-            // 
-            // metroLabel12
-            // 
-            this.metroLabel12.AutoSize = true;
-            this.metroLabel12.Dock = System.Windows.Forms.DockStyle.Top;
-            this.metroLabel12.FontWeight = MetroFramework.MetroLabelWeight.Bold;
-            this.metroLabel12.ForeColor = System.Drawing.Color.Black;
-            this.metroLabel12.Location = new System.Drawing.Point(0, 0);
-            this.metroLabel12.Name = "metroLabel12";
-            this.metroLabel12.Size = new System.Drawing.Size(21, 19);
-            this.metroLabel12.Style = MetroFramework.MetroColorStyle.Red;
-            this.metroLabel12.TabIndex = 16;
-            this.metroLabel12.Text = "2.";
-            this.metroLabel12.Theme = MetroFramework.MetroThemeStyle.Dark;
-            this.metroLabel12.UseCustomBackColor = true;
-            this.metroLabel12.UseCustomForeColor = true;
-            this.metroLabel12.UseStyleColors = true;
-            // 
-            // metroLabel18
-            // 
-            this.metroLabel18.AutoSize = true;
-            this.metroLabel18.Dock = System.Windows.Forms.DockStyle.Left;
-            this.metroLabel18.FontWeight = MetroFramework.MetroLabelWeight.Regular;
-            this.metroLabel18.ForeColor = System.Drawing.Color.Black;
-            this.metroLabel18.Location = new System.Drawing.Point(0, 19);
-            this.metroLabel18.Name = "metroLabel18";
-            this.metroLabel18.Size = new System.Drawing.Size(17, 19);
-            this.metroLabel18.Style = MetroFramework.MetroColorStyle.Red;
-            this.metroLabel18.TabIndex = 18;
-            this.metroLabel18.Text = "0";
-            this.metroLabel18.Theme = MetroFramework.MetroThemeStyle.Dark;
-            this.metroLabel18.UseCustomBackColor = true;
-            this.metroLabel18.UseCustomForeColor = true;
-            this.metroLabel18.UseStyleColors = true;
-            // 
-            // lbl_el3
-            // 
-            this.lbl_el3.AutoSize = true;
-            this.lbl_el3.FontWeight = MetroFramework.MetroLabelWeight.Regular;
-            this.lbl_el3.ForeColor = System.Drawing.Color.Black;
-            this.lbl_el3.Location = new System.Drawing.Point(341, 0);
-            this.lbl_el3.Name = "lbl_el3";
-            this.lbl_el3.Size = new System.Drawing.Size(17, 19);
-            this.lbl_el3.Style = MetroFramework.MetroColorStyle.Red;
-            this.lbl_el3.TabIndex = 17;
-            this.lbl_el3.Text = "0";
-            this.lbl_el3.Theme = MetroFramework.MetroThemeStyle.Dark;
-            this.lbl_el3.UseCustomBackColor = true;
-            this.lbl_el3.UseCustomForeColor = true;
-            this.lbl_el3.UseStyleColors = true;
-            // 
-            // metroLabel13
-            // 
-            this.metroLabel13.AutoSize = true;
-            this.metroLabel13.Dock = System.Windows.Forms.DockStyle.Top;
-            this.metroLabel13.FontWeight = MetroFramework.MetroLabelWeight.Bold;
-            this.metroLabel13.ForeColor = System.Drawing.Color.Black;
-            this.metroLabel13.Location = new System.Drawing.Point(0, 0);
-            this.metroLabel13.Name = "metroLabel13";
-            this.metroLabel13.Size = new System.Drawing.Size(21, 19);
-            this.metroLabel13.Style = MetroFramework.MetroColorStyle.Red;
-            this.metroLabel13.TabIndex = 16;
-            this.metroLabel13.Text = "3.";
-            this.metroLabel13.Theme = MetroFramework.MetroThemeStyle.Dark;
-            this.metroLabel13.UseCustomBackColor = true;
-            this.metroLabel13.UseCustomForeColor = true;
-            this.metroLabel13.UseStyleColors = true;
-            // 
-            // metroLabel1
-            // 
-            this.metroLabel1.AutoSize = true;
-            this.metroLabel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.metroLabel1.FontSize = MetroFramework.MetroLabelSize.Tall;
-            this.metroLabel1.FontWeight = MetroFramework.MetroLabelWeight.Regular;
-            this.metroLabel1.ForeColor = System.Drawing.Color.Red;
-            this.metroLabel1.Location = new System.Drawing.Point(0, 0);
-            this.metroLabel1.Name = "metroLabel1";
-            this.metroLabel1.Size = new System.Drawing.Size(89, 25);
-            this.metroLabel1.Style = MetroFramework.MetroColorStyle.Red;
-            this.metroLabel1.TabIndex = 14;
-            this.metroLabel1.Text = "Elektronik";
-            this.metroLabel1.Theme = MetroFramework.MetroThemeStyle.Dark;
-            this.metroLabel1.UseCustomBackColor = true;
-            this.metroLabel1.UseCustomForeColor = true;
-            this.metroLabel1.UseStyleColors = true;
-            // 
-            // splitContainer5
-            // 
-            this.splitContainer5.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.splitContainer5.Location = new System.Drawing.Point(0, 0);
-            this.splitContainer5.Name = "splitContainer5";
-            // 
-            // splitContainer5.Panel1
-            // 
-            this.splitContainer5.Panel1.Controls.Add(this.splitContainer7);
-            // 
-            // splitContainer5.Panel2
-            // 
-            this.splitContainer5.Panel2.Controls.Add(this.splitContainer8);
-            this.splitContainer5.Size = new System.Drawing.Size(1006, 324);
-            this.splitContainer5.SplitterDistance = 503;
-            this.splitContainer5.TabIndex = 0;
-            // 
-            // splitContainer7
-            // 
-            this.splitContainer7.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.splitContainer7.Location = new System.Drawing.Point(0, 0);
-            this.splitContainer7.Name = "splitContainer7";
-            this.splitContainer7.Orientation = System.Windows.Forms.Orientation.Horizontal;
-            // 
-            // splitContainer7.Panel1
-            // 
-            this.splitContainer7.Panel1.Controls.Add(this.lbl_tutar2);
-            this.splitContainer7.Panel1.Controls.Add(this.metroLabel4);
-            this.splitContainer7.Panel1.Controls.Add(this.lbl_firma2);
-            // 
-            // splitContainer7.Panel2
-            // 
-            this.splitContainer7.Panel2.Controls.Add(this.splitContainer11);
-            this.splitContainer7.Panel2.Controls.Add(this.metroLabel3);
-            this.splitContainer7.Size = new System.Drawing.Size(503, 324);
-            this.splitContainer7.SplitterDistance = 112;
-            this.splitContainer7.TabIndex = 13;
-            // 
-            // lbl_tutar2
-            // 
-            this.lbl_tutar2.AutoSize = true;
-            this.lbl_tutar2.FontWeight = MetroFramework.MetroLabelWeight.Bold;
-            this.lbl_tutar2.ForeColor = System.Drawing.Color.Black;
-            this.lbl_tutar2.Location = new System.Drawing.Point(10, 54);
-            this.lbl_tutar2.Name = "lbl_tutar2";
-            this.lbl_tutar2.Size = new System.Drawing.Size(17, 19);
-            this.lbl_tutar2.Style = MetroFramework.MetroColorStyle.Red;
-            this.lbl_tutar2.TabIndex = 15;
-            this.lbl_tutar2.Text = "0";
-            this.lbl_tutar2.Theme = MetroFramework.MetroThemeStyle.Dark;
-            this.lbl_tutar2.UseCustomBackColor = true;
-            this.lbl_tutar2.UseCustomForeColor = true;
-            this.lbl_tutar2.UseStyleColors = true;
-            // 
-            // metroLabel4
-            // 
-            this.metroLabel4.AutoSize = true;
-            this.metroLabel4.Dock = System.Windows.Forms.DockStyle.Top;
-            this.metroLabel4.FontSize = MetroFramework.MetroLabelSize.Tall;
-            this.metroLabel4.FontWeight = MetroFramework.MetroLabelWeight.Regular;
-            this.metroLabel4.ForeColor = System.Drawing.Color.Red;
-            this.metroLabel4.Location = new System.Drawing.Point(0, 0);
-            this.metroLabel4.Name = "metroLabel4";
-            this.metroLabel4.Size = new System.Drawing.Size(26, 25);
-            this.metroLabel4.Style = MetroFramework.MetroColorStyle.Red;
-            this.metroLabel4.TabIndex = 14;
-            this.metroLabel4.Text = "2.";
-            this.metroLabel4.Theme = MetroFramework.MetroThemeStyle.Dark;
-            this.metroLabel4.UseCustomBackColor = true;
-            this.metroLabel4.UseCustomForeColor = true;
-            this.metroLabel4.UseStyleColors = true;
-            // 
-            // lbl_firma2
-            // 
-            this.lbl_firma2.AutoSize = true;
-            this.lbl_firma2.FontWeight = MetroFramework.MetroLabelWeight.Regular;
-            this.lbl_firma2.ForeColor = System.Drawing.Color.Black;
-            this.lbl_firma2.Location = new System.Drawing.Point(10, 25);
-            this.lbl_firma2.Name = "lbl_firma2";
-            this.lbl_firma2.Size = new System.Drawing.Size(17, 19);
-            this.lbl_firma2.Style = MetroFramework.MetroColorStyle.Red;
-            this.lbl_firma2.TabIndex = 13;
-            this.lbl_firma2.Text = "0";
-            this.lbl_firma2.Theme = MetroFramework.MetroThemeStyle.Dark;
-            this.lbl_firma2.UseCustomBackColor = true;
-            this.lbl_firma2.UseCustomForeColor = true;
-            this.lbl_firma2.UseStyleColors = true;
-            // 
-            // splitContainer11
-            // 
-            this.splitContainer11.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.splitContainer11.Location = new System.Drawing.Point(0, 25);
-            this.splitContainer11.Name = "splitContainer11";
-            this.splitContainer11.Orientation = System.Windows.Forms.Orientation.Horizontal;
-            // 
-            // splitContainer11.Panel1
-            // 
-            this.splitContainer11.Panel1.Controls.Add(this.lbl_mek1);
-            this.splitContainer11.Panel1.Controls.Add(this.metroLabel10);
-            // 
-            // splitContainer11.Panel2
-            // 
-            this.splitContainer11.Panel2.Controls.Add(this.splitContainer12);
-            this.splitContainer11.Size = new System.Drawing.Size(503, 183);
-            this.splitContainer11.SplitterDistance = 63;
-            this.splitContainer11.TabIndex = 16;
-            // 
-            // lbl_mek1
-            // 
-            this.lbl_mek1.AutoSize = true;
-            this.lbl_mek1.FontWeight = MetroFramework.MetroLabelWeight.Regular;
-            this.lbl_mek1.ForeColor = System.Drawing.Color.Black;
-            this.lbl_mek1.Location = new System.Drawing.Point(10, 19);
-            this.lbl_mek1.Name = "lbl_mek1";
-            this.lbl_mek1.Size = new System.Drawing.Size(17, 19);
-            this.lbl_mek1.Style = MetroFramework.MetroColorStyle.Red;
-            this.lbl_mek1.TabIndex = 17;
-            this.lbl_mek1.Text = "0";
-            this.lbl_mek1.Theme = MetroFramework.MetroThemeStyle.Dark;
-            this.lbl_mek1.UseCustomBackColor = true;
-            this.lbl_mek1.UseCustomForeColor = true;
-            this.lbl_mek1.UseStyleColors = true;
-            // 
-            // metroLabel10
-            // 
-            this.metroLabel10.AutoSize = true;
-            this.metroLabel10.Dock = System.Windows.Forms.DockStyle.Top;
-            this.metroLabel10.FontWeight = MetroFramework.MetroLabelWeight.Bold;
-            this.metroLabel10.ForeColor = System.Drawing.Color.Black;
-            this.metroLabel10.Location = new System.Drawing.Point(0, 0);
-            this.metroLabel10.Name = "metroLabel10";
-            this.metroLabel10.Size = new System.Drawing.Size(21, 19);
-            this.metroLabel10.Style = MetroFramework.MetroColorStyle.Red;
-            this.metroLabel10.TabIndex = 16;
-            this.metroLabel10.Text = "1.";
-            this.metroLabel10.Theme = MetroFramework.MetroThemeStyle.Dark;
-            this.metroLabel10.UseCustomBackColor = true;
-            this.metroLabel10.UseCustomForeColor = true;
-            this.metroLabel10.UseStyleColors = true;
-            // 
-            // splitContainer12
-            // 
-            this.splitContainer12.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.splitContainer12.Location = new System.Drawing.Point(0, 0);
-            this.splitContainer12.Name = "splitContainer12";
-            this.splitContainer12.Orientation = System.Windows.Forms.Orientation.Horizontal;
-            // 
-            // splitContainer12.Panel1
-            // 
-            this.splitContainer12.Panel1.Controls.Add(this.lbl_mek2);
-            this.splitContainer12.Panel1.Controls.Add(this.metroLabel14);
-            // 
-            // splitContainer12.Panel2
-            // 
-            this.splitContainer12.Panel2.Controls.Add(this.lbl_mek3);
-            this.splitContainer12.Panel2.Controls.Add(this.metroLabel16);
-            this.splitContainer12.Size = new System.Drawing.Size(503, 116);
-            this.splitContainer12.SplitterDistance = 59;
-            this.splitContainer12.TabIndex = 0;
-            // 
-            // lbl_mek2
-            // 
-            this.lbl_mek2.AutoSize = true;
-            this.lbl_mek2.FontWeight = MetroFramework.MetroLabelWeight.Regular;
-            this.lbl_mek2.ForeColor = System.Drawing.Color.Black;
-            this.lbl_mek2.Location = new System.Drawing.Point(10, 17);
-            this.lbl_mek2.Name = "lbl_mek2";
-            this.lbl_mek2.Size = new System.Drawing.Size(17, 19);
-            this.lbl_mek2.Style = MetroFramework.MetroColorStyle.Red;
-            this.lbl_mek2.TabIndex = 18;
-            this.lbl_mek2.Text = "0";
-            this.lbl_mek2.Theme = MetroFramework.MetroThemeStyle.Dark;
-            this.lbl_mek2.UseCustomBackColor = true;
-            this.lbl_mek2.UseCustomForeColor = true;
-            this.lbl_mek2.UseStyleColors = true;
-            // 
-            // metroLabel14
-            // 
-            this.metroLabel14.AutoSize = true;
-            this.metroLabel14.Dock = System.Windows.Forms.DockStyle.Top;
-            this.metroLabel14.FontWeight = MetroFramework.MetroLabelWeight.Bold;
-            this.metroLabel14.ForeColor = System.Drawing.Color.Black;
-            this.metroLabel14.Location = new System.Drawing.Point(0, 0);
-            this.metroLabel14.Name = "metroLabel14";
-            this.metroLabel14.Size = new System.Drawing.Size(21, 19);
-            this.metroLabel14.Style = MetroFramework.MetroColorStyle.Red;
-            this.metroLabel14.TabIndex = 17;
-            this.metroLabel14.Text = "2.";
-            this.metroLabel14.Theme = MetroFramework.MetroThemeStyle.Dark;
-            this.metroLabel14.UseCustomBackColor = true;
-            this.metroLabel14.UseCustomForeColor = true;
-            this.metroLabel14.UseStyleColors = true;
-            // 
-            // lbl_mek3
-            // 
-            this.lbl_mek3.AutoSize = true;
-            this.lbl_mek3.FontWeight = MetroFramework.MetroLabelWeight.Regular;
-            this.lbl_mek3.ForeColor = System.Drawing.Color.Black;
-            this.lbl_mek3.Location = new System.Drawing.Point(10, 18);
-            this.lbl_mek3.Name = "lbl_mek3";
-            this.lbl_mek3.Size = new System.Drawing.Size(17, 19);
-            this.lbl_mek3.Style = MetroFramework.MetroColorStyle.Red;
-            this.lbl_mek3.TabIndex = 18;
-            this.lbl_mek3.Text = "0";
-            this.lbl_mek3.Theme = MetroFramework.MetroThemeStyle.Dark;
-            this.lbl_mek3.UseCustomBackColor = true;
-            this.lbl_mek3.UseCustomForeColor = true;
-            this.lbl_mek3.UseStyleColors = true;
-            // 
-            // metroLabel16
-            // 
-            this.metroLabel16.AutoSize = true;
-            this.metroLabel16.Dock = System.Windows.Forms.DockStyle.Top;
-            this.metroLabel16.FontWeight = MetroFramework.MetroLabelWeight.Bold;
-            this.metroLabel16.ForeColor = System.Drawing.Color.Black;
-            this.metroLabel16.Location = new System.Drawing.Point(0, 0);
-            this.metroLabel16.Name = "metroLabel16";
-            this.metroLabel16.Size = new System.Drawing.Size(21, 19);
-            this.metroLabel16.Style = MetroFramework.MetroColorStyle.Red;
-            this.metroLabel16.TabIndex = 17;
-            this.metroLabel16.Text = "3.";
-            this.metroLabel16.Theme = MetroFramework.MetroThemeStyle.Dark;
-            this.metroLabel16.UseCustomBackColor = true;
-            this.metroLabel16.UseCustomForeColor = true;
-            this.metroLabel16.UseStyleColors = true;
-            // 
-            // metroLabel3
-            // 
-            this.metroLabel3.AutoSize = true;
-            this.metroLabel3.Dock = System.Windows.Forms.DockStyle.Top;
-            this.metroLabel3.FontSize = MetroFramework.MetroLabelSize.Tall;
-            this.metroLabel3.FontWeight = MetroFramework.MetroLabelWeight.Regular;
-            this.metroLabel3.ForeColor = System.Drawing.Color.Red;
-            this.metroLabel3.Location = new System.Drawing.Point(0, 0);
-            this.metroLabel3.Name = "metroLabel3";
-            this.metroLabel3.Size = new System.Drawing.Size(78, 25);
-            this.metroLabel3.Style = MetroFramework.MetroColorStyle.Red;
-            this.metroLabel3.TabIndex = 15;
-            this.metroLabel3.Text = "Mekanik";
-            this.metroLabel3.Theme = MetroFramework.MetroThemeStyle.Dark;
-            this.metroLabel3.UseCustomBackColor = true;
-            this.metroLabel3.UseCustomForeColor = true;
-            this.metroLabel3.UseStyleColors = true;
-            // 
-            // splitContainer8
-            // 
-            this.splitContainer8.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.splitContainer8.Location = new System.Drawing.Point(0, 0);
-            this.splitContainer8.Name = "splitContainer8";
-            this.splitContainer8.Orientation = System.Windows.Forms.Orientation.Horizontal;
-            // 
-            // splitContainer8.Panel1
-            // 
-            this.splitContainer8.Panel1.Controls.Add(this.lbl_tutar3);
-            this.splitContainer8.Panel1.Controls.Add(this.metroLabel7);
-            this.splitContainer8.Panel1.Controls.Add(this.lbl_firma3);
-            // 
-            // splitContainer8.Panel2
-            // 
-            this.splitContainer8.Panel2.Controls.Add(this.splitContainer13);
-            this.splitContainer8.Panel2.Controls.Add(this.metroLabel5);
-            this.splitContainer8.Size = new System.Drawing.Size(499, 324);
-            this.splitContainer8.SplitterDistance = 112;
-            this.splitContainer8.TabIndex = 14;
-            // 
-            // lbl_tutar3
-            // 
-            this.lbl_tutar3.AutoSize = true;
-            this.lbl_tutar3.FontWeight = MetroFramework.MetroLabelWeight.Bold;
-            this.lbl_tutar3.ForeColor = System.Drawing.Color.Black;
-            this.lbl_tutar3.Location = new System.Drawing.Point(9, 54);
-            this.lbl_tutar3.Name = "lbl_tutar3";
-            this.lbl_tutar3.Size = new System.Drawing.Size(17, 19);
-            this.lbl_tutar3.Style = MetroFramework.MetroColorStyle.Red;
-            this.lbl_tutar3.TabIndex = 16;
-            this.lbl_tutar3.Text = "0";
-            this.lbl_tutar3.Theme = MetroFramework.MetroThemeStyle.Dark;
-            this.lbl_tutar3.UseCustomBackColor = true;
-            this.lbl_tutar3.UseCustomForeColor = true;
-            this.lbl_tutar3.UseStyleColors = true;
-            // 
-            // metroLabel7
-            // 
-            this.metroLabel7.AutoSize = true;
-            this.metroLabel7.Dock = System.Windows.Forms.DockStyle.Top;
-            this.metroLabel7.FontSize = MetroFramework.MetroLabelSize.Tall;
-            this.metroLabel7.FontWeight = MetroFramework.MetroLabelWeight.Regular;
-            this.metroLabel7.ForeColor = System.Drawing.Color.Red;
-            this.metroLabel7.Location = new System.Drawing.Point(0, 0);
-            this.metroLabel7.Name = "metroLabel7";
-            this.metroLabel7.Size = new System.Drawing.Size(26, 25);
-            this.metroLabel7.Style = MetroFramework.MetroColorStyle.Red;
-            this.metroLabel7.TabIndex = 15;
-            this.metroLabel7.Text = "3.";
-            this.metroLabel7.Theme = MetroFramework.MetroThemeStyle.Dark;
-            this.metroLabel7.UseCustomBackColor = true;
-            this.metroLabel7.UseCustomForeColor = true;
-            this.metroLabel7.UseStyleColors = true;
-            // 
-            // lbl_firma3
-            // 
-            this.lbl_firma3.AutoSize = true;
-            this.lbl_firma3.FontWeight = MetroFramework.MetroLabelWeight.Regular;
-            this.lbl_firma3.ForeColor = System.Drawing.Color.Black;
-            this.lbl_firma3.Location = new System.Drawing.Point(9, 25);
-            this.lbl_firma3.Name = "lbl_firma3";
-            this.lbl_firma3.Size = new System.Drawing.Size(17, 19);
-            this.lbl_firma3.Style = MetroFramework.MetroColorStyle.Red;
-            this.lbl_firma3.TabIndex = 14;
-            this.lbl_firma3.Text = "0";
-            this.lbl_firma3.Theme = MetroFramework.MetroThemeStyle.Dark;
-            this.lbl_firma3.UseCustomBackColor = true;
-            this.lbl_firma3.UseCustomForeColor = true;
-            this.lbl_firma3.UseStyleColors = true;
-            // 
-            // splitContainer13
-            // 
-            this.splitContainer13.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.splitContainer13.Location = new System.Drawing.Point(0, 25);
-            this.splitContainer13.Name = "splitContainer13";
-            this.splitContainer13.Orientation = System.Windows.Forms.Orientation.Horizontal;
-            // 
-            // splitContainer13.Panel1
-            // 
-            this.splitContainer13.Panel1.Controls.Add(this.lbl_gnl1);
-            this.splitContainer13.Panel1.Controls.Add(this.metroLabel11);
-            // 
-            // splitContainer13.Panel2
-            // 
-            this.splitContainer13.Panel2.Controls.Add(this.splitContainer14);
-            this.splitContainer13.Size = new System.Drawing.Size(499, 183);
-            this.splitContainer13.SplitterDistance = 63;
-            this.splitContainer13.TabIndex = 16;
-            // 
-            // lbl_gnl1
-            // 
-            this.lbl_gnl1.AutoSize = true;
-            this.lbl_gnl1.FontWeight = MetroFramework.MetroLabelWeight.Regular;
-            this.lbl_gnl1.ForeColor = System.Drawing.Color.Black;
-            this.lbl_gnl1.Location = new System.Drawing.Point(9, 19);
-            this.lbl_gnl1.Name = "lbl_gnl1";
-            this.lbl_gnl1.Size = new System.Drawing.Size(17, 19);
-            this.lbl_gnl1.Style = MetroFramework.MetroColorStyle.Red;
-            this.lbl_gnl1.TabIndex = 17;
-            this.lbl_gnl1.Text = "0";
-            this.lbl_gnl1.Theme = MetroFramework.MetroThemeStyle.Dark;
-            this.lbl_gnl1.UseCustomBackColor = true;
-            this.lbl_gnl1.UseCustomForeColor = true;
-            this.lbl_gnl1.UseStyleColors = true;
-            // 
-            // metroLabel11
-            // 
-            this.metroLabel11.AutoSize = true;
-            this.metroLabel11.Dock = System.Windows.Forms.DockStyle.Top;
-            this.metroLabel11.FontWeight = MetroFramework.MetroLabelWeight.Bold;
-            this.metroLabel11.ForeColor = System.Drawing.Color.Black;
-            this.metroLabel11.Location = new System.Drawing.Point(0, 0);
-            this.metroLabel11.Name = "metroLabel11";
-            this.metroLabel11.Size = new System.Drawing.Size(21, 19);
-            this.metroLabel11.Style = MetroFramework.MetroColorStyle.Red;
-            this.metroLabel11.TabIndex = 16;
-            this.metroLabel11.Text = "1.";
-            this.metroLabel11.Theme = MetroFramework.MetroThemeStyle.Dark;
-            this.metroLabel11.UseCustomBackColor = true;
-            this.metroLabel11.UseCustomForeColor = true;
-            this.metroLabel11.UseStyleColors = true;
-            // 
-            // splitContainer14
-            // 
-            this.splitContainer14.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.splitContainer14.Location = new System.Drawing.Point(0, 0);
-            this.splitContainer14.Name = "splitContainer14";
-            this.splitContainer14.Orientation = System.Windows.Forms.Orientation.Horizontal;
-            // 
-            // splitContainer14.Panel1
-            // 
-            this.splitContainer14.Panel1.Controls.Add(this.lbl_gnl2);
-            this.splitContainer14.Panel1.Controls.Add(this.metroLabel15);
-            // 
-            // splitContainer14.Panel2
-            // 
-            this.splitContainer14.Panel2.Controls.Add(this.lbl_gnl3);
-            this.splitContainer14.Panel2.Controls.Add(this.metroLabel17);
-            this.splitContainer14.Size = new System.Drawing.Size(499, 116);
-            this.splitContainer14.SplitterDistance = 59;
-            this.splitContainer14.TabIndex = 0;
-            // 
-            // lbl_gnl2
-            // 
-            this.lbl_gnl2.AutoSize = true;
-            this.lbl_gnl2.FontWeight = MetroFramework.MetroLabelWeight.Regular;
-            this.lbl_gnl2.ForeColor = System.Drawing.Color.Black;
-            this.lbl_gnl2.Location = new System.Drawing.Point(9, 17);
-            this.lbl_gnl2.Name = "lbl_gnl2";
-            this.lbl_gnl2.Size = new System.Drawing.Size(17, 19);
-            this.lbl_gnl2.Style = MetroFramework.MetroColorStyle.Red;
-            this.lbl_gnl2.TabIndex = 18;
-            this.lbl_gnl2.Text = "0";
-            this.lbl_gnl2.Theme = MetroFramework.MetroThemeStyle.Dark;
-            this.lbl_gnl2.UseCustomBackColor = true;
-            this.lbl_gnl2.UseCustomForeColor = true;
-            this.lbl_gnl2.UseStyleColors = true;
-            // 
-            // metroLabel15
-            // 
-            this.metroLabel15.AutoSize = true;
-            this.metroLabel15.Dock = System.Windows.Forms.DockStyle.Top;
-            this.metroLabel15.FontWeight = MetroFramework.MetroLabelWeight.Bold;
-            this.metroLabel15.ForeColor = System.Drawing.Color.Black;
-            this.metroLabel15.Location = new System.Drawing.Point(0, 0);
-            this.metroLabel15.Name = "metroLabel15";
-            this.metroLabel15.Size = new System.Drawing.Size(21, 19);
-            this.metroLabel15.Style = MetroFramework.MetroColorStyle.Red;
-            this.metroLabel15.TabIndex = 17;
-            this.metroLabel15.Text = "2.";
-            this.metroLabel15.Theme = MetroFramework.MetroThemeStyle.Dark;
-            this.metroLabel15.UseCustomBackColor = true;
-            this.metroLabel15.UseCustomForeColor = true;
-            this.metroLabel15.UseStyleColors = true;
-            // 
-            // lbl_gnl3
-            // 
-            this.lbl_gnl3.AutoSize = true;
-            this.lbl_gnl3.FontWeight = MetroFramework.MetroLabelWeight.Regular;
-            this.lbl_gnl3.ForeColor = System.Drawing.Color.Black;
-            this.lbl_gnl3.Location = new System.Drawing.Point(9, 18);
-            this.lbl_gnl3.Name = "lbl_gnl3";
-            this.lbl_gnl3.Size = new System.Drawing.Size(17, 19);
-            this.lbl_gnl3.Style = MetroFramework.MetroColorStyle.Red;
-            this.lbl_gnl3.TabIndex = 18;
-            this.lbl_gnl3.Text = "0";
-            this.lbl_gnl3.Theme = MetroFramework.MetroThemeStyle.Dark;
-            this.lbl_gnl3.UseCustomBackColor = true;
-            this.lbl_gnl3.UseCustomForeColor = true;
-            this.lbl_gnl3.UseStyleColors = true;
-            // 
-            // metroLabel17
-            // 
-            this.metroLabel17.AutoSize = true;
-            this.metroLabel17.Dock = System.Windows.Forms.DockStyle.Top;
-            this.metroLabel17.FontWeight = MetroFramework.MetroLabelWeight.Bold;
-            this.metroLabel17.ForeColor = System.Drawing.Color.Black;
-            this.metroLabel17.Location = new System.Drawing.Point(0, 0);
-            this.metroLabel17.Name = "metroLabel17";
-            this.metroLabel17.Size = new System.Drawing.Size(21, 19);
-            this.metroLabel17.Style = MetroFramework.MetroColorStyle.Red;
-            this.metroLabel17.TabIndex = 17;
-            this.metroLabel17.Text = "3.";
-            this.metroLabel17.Theme = MetroFramework.MetroThemeStyle.Dark;
-            this.metroLabel17.UseCustomBackColor = true;
-            this.metroLabel17.UseCustomForeColor = true;
-            this.metroLabel17.UseStyleColors = true;
-            // 
-            // metroLabel5
-            // 
-            this.metroLabel5.AutoSize = true;
-            this.metroLabel5.Dock = System.Windows.Forms.DockStyle.Top;
-            this.metroLabel5.FontSize = MetroFramework.MetroLabelSize.Tall;
-            this.metroLabel5.FontWeight = MetroFramework.MetroLabelWeight.Regular;
-            this.metroLabel5.ForeColor = System.Drawing.Color.Red;
-            this.metroLabel5.Location = new System.Drawing.Point(0, 0);
-            this.metroLabel5.Name = "metroLabel5";
-            this.metroLabel5.Size = new System.Drawing.Size(122, 25);
-            this.metroLabel5.Style = MetroFramework.MetroColorStyle.Red;
-            this.metroLabel5.TabIndex = 15;
-            this.metroLabel5.Text = "Genel Giderler";
-            this.metroLabel5.Theme = MetroFramework.MetroThemeStyle.Dark;
-            this.metroLabel5.UseCustomBackColor = true;
-            this.metroLabel5.UseCustomForeColor = true;
-            this.metroLabel5.UseStyleColors = true;
             // 
             // metroGrid1
             // 
@@ -1152,7 +404,7 @@
             this.metroGrid1.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
             this.metroGrid1.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.metroGrid1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.metroGrid1.Size = new System.Drawing.Size(1758, 139);
+            this.metroGrid1.Size = new System.Drawing.Size(1676, 122);
             this.metroGrid1.Style = MetroFramework.MetroColorStyle.Silver;
             this.metroGrid1.TabIndex = 0;
             this.metroGrid1.Theme = MetroFramework.MetroThemeStyle.Light;
@@ -1162,10 +414,13 @@
             // 
             // Tanım
             // 
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Red;
             this.Tanım.DefaultCellStyle = dataGridViewCellStyle2;
             this.Tanım.HeaderText = "Tanım";
             this.Tanım.Name = "Tanım";
+            this.Tanım.Width = 200;
             // 
             // ocak
             // 
@@ -1227,12 +482,44 @@
             this.aralik.HeaderText = "ARALIK";
             this.aralik.Name = "aralik";
             // 
+            // lbl_prjNo
+            // 
+            this.lbl_prjNo.AutoSize = true;
+            this.lbl_prjNo.FontWeight = MetroFramework.MetroLabelWeight.Regular;
+            this.lbl_prjNo.ForeColor = System.Drawing.Color.Red;
+            this.lbl_prjNo.Location = new System.Drawing.Point(308, 31);
+            this.lbl_prjNo.Name = "lbl_prjNo";
+            this.lbl_prjNo.Size = new System.Drawing.Size(17, 19);
+            this.lbl_prjNo.Style = MetroFramework.MetroColorStyle.Red;
+            this.lbl_prjNo.TabIndex = 8;
+            this.lbl_prjNo.Text = "0";
+            this.lbl_prjNo.Theme = MetroFramework.MetroThemeStyle.Dark;
+            this.lbl_prjNo.UseCustomBackColor = true;
+            this.lbl_prjNo.UseCustomForeColor = true;
+            this.lbl_prjNo.UseStyleColors = true;
+            // 
+            // metroLabel6
+            // 
+            this.metroLabel6.AutoSize = true;
+            this.metroLabel6.FontWeight = MetroFramework.MetroLabelWeight.Regular;
+            this.metroLabel6.ForeColor = System.Drawing.Color.Red;
+            this.metroLabel6.Location = new System.Drawing.Point(255, 31);
+            this.metroLabel6.Name = "metroLabel6";
+            this.metroLabel6.Size = new System.Drawing.Size(47, 19);
+            this.metroLabel6.Style = MetroFramework.MetroColorStyle.Red;
+            this.metroLabel6.TabIndex = 7;
+            this.metroLabel6.Text = "Proje :";
+            this.metroLabel6.Theme = MetroFramework.MetroThemeStyle.Dark;
+            this.metroLabel6.UseCustomBackColor = true;
+            this.metroLabel6.UseCustomForeColor = true;
+            this.metroLabel6.UseStyleColors = true;
+            // 
             // pbClose
             // 
             this.pbClose.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.pbClose.BackColor = System.Drawing.Color.Transparent;
             this.pbClose.Image = global::MERP_MUI.Properties.Resources.appbar_arrow_left_dark;
-            this.pbClose.Location = new System.Drawing.Point(1732, 12);
+            this.pbClose.Location = new System.Drawing.Point(1650, 12);
             this.pbClose.Name = "pbClose";
             this.pbClose.Size = new System.Drawing.Size(46, 42);
             this.pbClose.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -1240,15 +527,921 @@
             this.pbClose.TabStop = false;
             this.pbClose.Click += new System.EventHandler(this.pbClose_Click);
             // 
+            // splitContainer4
+            // 
+            this.splitContainer4.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.splitContainer4.Location = new System.Drawing.Point(0, 0);
+            this.splitContainer4.Name = "splitContainer4";
+            this.splitContainer4.Orientation = System.Windows.Forms.Orientation.Horizontal;
+            // 
+            // splitContainer4.Panel2
+            // 
+            this.splitContainer4.Panel2.Controls.Add(this.splitContainer12);
+            this.splitContainer4.Size = new System.Drawing.Size(1676, 335);
+            this.splitContainer4.SplitterDistance = 59;
+            this.splitContainer4.TabIndex = 0;
+            // 
+            // splitContainer12
+            // 
+            this.splitContainer12.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.splitContainer12.Location = new System.Drawing.Point(0, 0);
+            this.splitContainer12.Name = "splitContainer12";
+            // 
+            // splitContainer12.Panel1
+            // 
+            this.splitContainer12.Panel1.Controls.Add(this.metroTabControl2);
+            // 
+            // splitContainer12.Panel2
+            // 
+            this.splitContainer12.Panel2.Controls.Add(this.metroTabControl1);
+            this.splitContainer12.Size = new System.Drawing.Size(1676, 272);
+            this.splitContainer12.SplitterDistance = 836;
+            this.splitContainer12.TabIndex = 1;
+            // 
+            // metroTabControl2
+            // 
+            this.metroTabControl2.Appearance = System.Windows.Forms.TabAppearance.FlatButtons;
+            this.metroTabControl2.Controls.Add(this.metroTabPage5);
+            this.metroTabControl2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.metroTabControl2.FontWeight = MetroFramework.MetroTabControlWeight.Regular;
+            this.metroTabControl2.Location = new System.Drawing.Point(0, 0);
+            this.metroTabControl2.Name = "metroTabControl2";
+            this.metroTabControl2.SelectedIndex = 0;
+            this.metroTabControl2.Size = new System.Drawing.Size(836, 272);
+            this.metroTabControl2.Style = MetroFramework.MetroColorStyle.Red;
+            this.metroTabControl2.TabIndex = 6;
+            this.metroTabControl2.Theme = MetroFramework.MetroThemeStyle.Dark;
+            this.metroTabControl2.UseCustomBackColor = true;
+            this.metroTabControl2.UseCustomForeColor = true;
+            this.metroTabControl2.UseSelectable = true;
+            this.metroTabControl2.UseStyleColors = true;
+            // 
+            // metroTabPage5
+            // 
+            this.metroTabPage5.Controls.Add(this.panel1);
+            this.metroTabPage5.HorizontalScrollbarBarColor = true;
+            this.metroTabPage5.HorizontalScrollbarHighlightOnWheel = false;
+            this.metroTabPage5.HorizontalScrollbarSize = 10;
+            this.metroTabPage5.Location = new System.Drawing.Point(4, 41);
+            this.metroTabPage5.Name = "metroTabPage5";
+            this.metroTabPage5.Size = new System.Drawing.Size(828, 227);
+            this.metroTabPage5.Style = MetroFramework.MetroColorStyle.Red;
+            this.metroTabPage5.TabIndex = 1;
+            this.metroTabPage5.Text = "FİRMALAR";
+            this.metroTabPage5.VerticalScrollbarBarColor = true;
+            this.metroTabPage5.VerticalScrollbarHighlightOnWheel = false;
+            this.metroTabPage5.VerticalScrollbarSize = 10;
+            // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.splitContainer5);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(828, 227);
+            this.panel1.TabIndex = 2;
+            // 
+            // splitContainer5
+            // 
+            this.splitContainer5.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.splitContainer5.Location = new System.Drawing.Point(0, 0);
+            this.splitContainer5.Name = "splitContainer5";
+            this.splitContainer5.Orientation = System.Windows.Forms.Orientation.Horizontal;
+            // 
+            // splitContainer5.Panel1
+            // 
+            this.splitContainer5.Panel1.Controls.Add(this.splitContainer16);
+            // 
+            // splitContainer5.Panel2
+            // 
+            this.splitContainer5.Panel2.Controls.Add(this.splitContainer6);
+            this.splitContainer5.Size = new System.Drawing.Size(828, 227);
+            this.splitContainer5.SplitterDistance = 77;
+            this.splitContainer5.TabIndex = 4;
+            // 
+            // splitContainer16
+            // 
+            this.splitContainer16.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.splitContainer16.Location = new System.Drawing.Point(0, 0);
+            this.splitContainer16.Name = "splitContainer16";
+            // 
+            // splitContainer16.Panel1
+            // 
+            this.splitContainer16.Panel1.Controls.Add(this.lbl_tutar1);
+            // 
+            // splitContainer16.Panel2
+            // 
+            this.splitContainer16.Panel2.Controls.Add(this.lbl_firma1);
+            this.splitContainer16.Size = new System.Drawing.Size(828, 77);
+            this.splitContainer16.SplitterDistance = 327;
+            this.splitContainer16.TabIndex = 0;
+            // 
+            // lbl_tutar1
+            // 
+            this.lbl_tutar1.AutoSize = true;
+            this.lbl_tutar1.Dock = System.Windows.Forms.DockStyle.Right;
+            this.lbl_tutar1.FontWeight = MetroFramework.MetroLabelWeight.Bold;
+            this.lbl_tutar1.ForeColor = System.Drawing.Color.Black;
+            this.lbl_tutar1.Location = new System.Drawing.Point(310, 0);
+            this.lbl_tutar1.Name = "lbl_tutar1";
+            this.lbl_tutar1.Size = new System.Drawing.Size(17, 19);
+            this.lbl_tutar1.Style = MetroFramework.MetroColorStyle.Red;
+            this.lbl_tutar1.TabIndex = 46;
+            this.lbl_tutar1.Text = "0";
+            this.lbl_tutar1.Theme = MetroFramework.MetroThemeStyle.Dark;
+            this.lbl_tutar1.UseCustomBackColor = true;
+            this.lbl_tutar1.UseCustomForeColor = true;
+            this.lbl_tutar1.UseStyleColors = true;
+            // 
+            // lbl_firma1
+            // 
+            this.lbl_firma1.AutoSize = true;
+            this.lbl_firma1.Dock = System.Windows.Forms.DockStyle.Right;
+            this.lbl_firma1.FontWeight = MetroFramework.MetroLabelWeight.Regular;
+            this.lbl_firma1.ForeColor = System.Drawing.Color.Black;
+            this.lbl_firma1.Location = new System.Drawing.Point(480, 0);
+            this.lbl_firma1.Name = "lbl_firma1";
+            this.lbl_firma1.Size = new System.Drawing.Size(17, 19);
+            this.lbl_firma1.Style = MetroFramework.MetroColorStyle.Red;
+            this.lbl_firma1.TabIndex = 44;
+            this.lbl_firma1.Text = "0";
+            this.lbl_firma1.Theme = MetroFramework.MetroThemeStyle.Dark;
+            this.lbl_firma1.UseCustomBackColor = true;
+            this.lbl_firma1.UseCustomForeColor = true;
+            this.lbl_firma1.UseStyleColors = true;
+            // 
+            // splitContainer6
+            // 
+            this.splitContainer6.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.splitContainer6.Location = new System.Drawing.Point(0, 0);
+            this.splitContainer6.Name = "splitContainer6";
+            this.splitContainer6.Orientation = System.Windows.Forms.Orientation.Horizontal;
+            // 
+            // splitContainer6.Panel1
+            // 
+            this.splitContainer6.Panel1.Controls.Add(this.splitContainer17);
+            // 
+            // splitContainer6.Panel2
+            // 
+            this.splitContainer6.Panel2.Controls.Add(this.splitContainer18);
+            this.splitContainer6.Size = new System.Drawing.Size(828, 146);
+            this.splitContainer6.SplitterDistance = 71;
+            this.splitContainer6.TabIndex = 0;
+            // 
+            // splitContainer17
+            // 
+            this.splitContainer17.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.splitContainer17.Location = new System.Drawing.Point(0, 0);
+            this.splitContainer17.Name = "splitContainer17";
+            // 
+            // splitContainer17.Panel1
+            // 
+            this.splitContainer17.Panel1.Controls.Add(this.lbl_tutar2);
+            // 
+            // splitContainer17.Panel2
+            // 
+            this.splitContainer17.Panel2.Controls.Add(this.lbl_firma2);
+            this.splitContainer17.Size = new System.Drawing.Size(828, 71);
+            this.splitContainer17.SplitterDistance = 328;
+            this.splitContainer17.TabIndex = 0;
+            // 
+            // lbl_tutar2
+            // 
+            this.lbl_tutar2.AutoSize = true;
+            this.lbl_tutar2.Dock = System.Windows.Forms.DockStyle.Right;
+            this.lbl_tutar2.FontWeight = MetroFramework.MetroLabelWeight.Bold;
+            this.lbl_tutar2.ForeColor = System.Drawing.Color.Black;
+            this.lbl_tutar2.Location = new System.Drawing.Point(311, 0);
+            this.lbl_tutar2.Name = "lbl_tutar2";
+            this.lbl_tutar2.Size = new System.Drawing.Size(17, 19);
+            this.lbl_tutar2.Style = MetroFramework.MetroColorStyle.Red;
+            this.lbl_tutar2.TabIndex = 48;
+            this.lbl_tutar2.Text = "0";
+            this.lbl_tutar2.Theme = MetroFramework.MetroThemeStyle.Dark;
+            this.lbl_tutar2.UseCustomBackColor = true;
+            this.lbl_tutar2.UseCustomForeColor = true;
+            this.lbl_tutar2.UseStyleColors = true;
+            // 
+            // lbl_firma2
+            // 
+            this.lbl_firma2.AutoSize = true;
+            this.lbl_firma2.Dock = System.Windows.Forms.DockStyle.Right;
+            this.lbl_firma2.FontWeight = MetroFramework.MetroLabelWeight.Regular;
+            this.lbl_firma2.ForeColor = System.Drawing.Color.Black;
+            this.lbl_firma2.Location = new System.Drawing.Point(479, 0);
+            this.lbl_firma2.Name = "lbl_firma2";
+            this.lbl_firma2.Size = new System.Drawing.Size(17, 19);
+            this.lbl_firma2.Style = MetroFramework.MetroColorStyle.Red;
+            this.lbl_firma2.TabIndex = 45;
+            this.lbl_firma2.Text = "0";
+            this.lbl_firma2.Theme = MetroFramework.MetroThemeStyle.Dark;
+            this.lbl_firma2.UseCustomBackColor = true;
+            this.lbl_firma2.UseCustomForeColor = true;
+            this.lbl_firma2.UseStyleColors = true;
+            // 
+            // splitContainer18
+            // 
+            this.splitContainer18.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.splitContainer18.Location = new System.Drawing.Point(0, 0);
+            this.splitContainer18.Name = "splitContainer18";
+            // 
+            // splitContainer18.Panel1
+            // 
+            this.splitContainer18.Panel1.Controls.Add(this.lbl_tutar3);
+            // 
+            // splitContainer18.Panel2
+            // 
+            this.splitContainer18.Panel2.Controls.Add(this.lbl_firma3);
+            this.splitContainer18.Size = new System.Drawing.Size(828, 71);
+            this.splitContainer18.SplitterDistance = 328;
+            this.splitContainer18.TabIndex = 0;
+            // 
+            // lbl_tutar3
+            // 
+            this.lbl_tutar3.AutoSize = true;
+            this.lbl_tutar3.Dock = System.Windows.Forms.DockStyle.Right;
+            this.lbl_tutar3.FontWeight = MetroFramework.MetroLabelWeight.Bold;
+            this.lbl_tutar3.ForeColor = System.Drawing.Color.Black;
+            this.lbl_tutar3.Location = new System.Drawing.Point(311, 0);
+            this.lbl_tutar3.Name = "lbl_tutar3";
+            this.lbl_tutar3.Size = new System.Drawing.Size(17, 19);
+            this.lbl_tutar3.Style = MetroFramework.MetroColorStyle.Red;
+            this.lbl_tutar3.TabIndex = 49;
+            this.lbl_tutar3.Text = "0";
+            this.lbl_tutar3.Theme = MetroFramework.MetroThemeStyle.Dark;
+            this.lbl_tutar3.UseCustomBackColor = true;
+            this.lbl_tutar3.UseCustomForeColor = true;
+            this.lbl_tutar3.UseStyleColors = true;
+            // 
+            // lbl_firma3
+            // 
+            this.lbl_firma3.AutoSize = true;
+            this.lbl_firma3.Dock = System.Windows.Forms.DockStyle.Right;
+            this.lbl_firma3.FontWeight = MetroFramework.MetroLabelWeight.Regular;
+            this.lbl_firma3.ForeColor = System.Drawing.Color.Black;
+            this.lbl_firma3.Location = new System.Drawing.Point(479, 0);
+            this.lbl_firma3.Name = "lbl_firma3";
+            this.lbl_firma3.Size = new System.Drawing.Size(17, 19);
+            this.lbl_firma3.Style = MetroFramework.MetroColorStyle.Red;
+            this.lbl_firma3.TabIndex = 47;
+            this.lbl_firma3.Text = "0";
+            this.lbl_firma3.Theme = MetroFramework.MetroThemeStyle.Dark;
+            this.lbl_firma3.UseCustomBackColor = true;
+            this.lbl_firma3.UseCustomForeColor = true;
+            this.lbl_firma3.UseStyleColors = true;
+            // 
+            // metroTabControl1
+            // 
+            this.metroTabControl1.Appearance = System.Windows.Forms.TabAppearance.FlatButtons;
+            this.metroTabControl1.Controls.Add(this.metroTabPage1);
+            this.metroTabControl1.Controls.Add(this.metroTabPage2);
+            this.metroTabControl1.Controls.Add(this.metroTabPage3);
+            this.metroTabControl1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.metroTabControl1.FontWeight = MetroFramework.MetroTabControlWeight.Regular;
+            this.metroTabControl1.Location = new System.Drawing.Point(0, 0);
+            this.metroTabControl1.Name = "metroTabControl1";
+            this.metroTabControl1.SelectedIndex = 0;
+            this.metroTabControl1.Size = new System.Drawing.Size(836, 272);
+            this.metroTabControl1.Style = MetroFramework.MetroColorStyle.Red;
+            this.metroTabControl1.TabIndex = 5;
+            this.metroTabControl1.TabStop = false;
+            this.metroTabControl1.Theme = MetroFramework.MetroThemeStyle.Dark;
+            this.metroTabControl1.UseCustomBackColor = true;
+            this.metroTabControl1.UseCustomForeColor = true;
+            this.metroTabControl1.UseSelectable = true;
+            this.metroTabControl1.UseStyleColors = true;
+            // 
+            // metroTabPage1
+            // 
+            this.metroTabPage1.Controls.Add(this.splitContainer7);
+            this.metroTabPage1.HorizontalScrollbarBarColor = true;
+            this.metroTabPage1.HorizontalScrollbarHighlightOnWheel = false;
+            this.metroTabPage1.HorizontalScrollbarSize = 10;
+            this.metroTabPage1.Location = new System.Drawing.Point(4, 41);
+            this.metroTabPage1.Name = "metroTabPage1";
+            this.metroTabPage1.Size = new System.Drawing.Size(828, 227);
+            this.metroTabPage1.TabIndex = 0;
+            this.metroTabPage1.Text = "ELEKTRONİK";
+            this.metroTabPage1.VerticalScrollbarBarColor = true;
+            this.metroTabPage1.VerticalScrollbarHighlightOnWheel = false;
+            this.metroTabPage1.VerticalScrollbarSize = 10;
+            // 
+            // splitContainer7
+            // 
+            this.splitContainer7.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.splitContainer7.Location = new System.Drawing.Point(0, 0);
+            this.splitContainer7.Name = "splitContainer7";
+            this.splitContainer7.Orientation = System.Windows.Forms.Orientation.Horizontal;
+            // 
+            // splitContainer7.Panel1
+            // 
+            this.splitContainer7.Panel1.Controls.Add(this.splitContainer13);
+            // 
+            // splitContainer7.Panel2
+            // 
+            this.splitContainer7.Panel2.Controls.Add(this.splitContainer8);
+            this.splitContainer7.Size = new System.Drawing.Size(828, 227);
+            this.splitContainer7.SplitterDistance = 75;
+            this.splitContainer7.TabIndex = 3;
+            // 
+            // splitContainer13
+            // 
+            this.splitContainer13.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.splitContainer13.Location = new System.Drawing.Point(0, 0);
+            this.splitContainer13.Name = "splitContainer13";
+            // 
+            // splitContainer13.Panel1
+            // 
+            this.splitContainer13.Panel1.Controls.Add(this.lbl_el1);
+            // 
+            // splitContainer13.Panel2
+            // 
+            this.splitContainer13.Panel2.Controls.Add(this.lbl_elfrm1);
+            this.splitContainer13.Size = new System.Drawing.Size(828, 75);
+            this.splitContainer13.SplitterDistance = 347;
+            this.splitContainer13.TabIndex = 36;
+            // 
+            // lbl_el1
+            // 
+            this.lbl_el1.AutoSize = true;
+            this.lbl_el1.Dock = System.Windows.Forms.DockStyle.Right;
+            this.lbl_el1.FontWeight = MetroFramework.MetroLabelWeight.Bold;
+            this.lbl_el1.ForeColor = System.Drawing.Color.Black;
+            this.lbl_el1.Location = new System.Drawing.Point(330, 0);
+            this.lbl_el1.Name = "lbl_el1";
+            this.lbl_el1.Size = new System.Drawing.Size(17, 19);
+            this.lbl_el1.Style = MetroFramework.MetroColorStyle.Red;
+            this.lbl_el1.TabIndex = 33;
+            this.lbl_el1.Text = "0";
+            this.lbl_el1.Theme = MetroFramework.MetroThemeStyle.Dark;
+            this.lbl_el1.UseCustomBackColor = true;
+            this.lbl_el1.UseCustomForeColor = true;
+            this.lbl_el1.UseStyleColors = true;
+            // 
+            // lbl_elfrm1
+            // 
+            this.lbl_elfrm1.AutoSize = true;
+            this.lbl_elfrm1.Dock = System.Windows.Forms.DockStyle.Right;
+            this.lbl_elfrm1.FontWeight = MetroFramework.MetroLabelWeight.Regular;
+            this.lbl_elfrm1.ForeColor = System.Drawing.Color.Black;
+            this.lbl_elfrm1.Location = new System.Drawing.Point(460, 0);
+            this.lbl_elfrm1.Name = "lbl_elfrm1";
+            this.lbl_elfrm1.Size = new System.Drawing.Size(17, 19);
+            this.lbl_elfrm1.Style = MetroFramework.MetroColorStyle.Red;
+            this.lbl_elfrm1.TabIndex = 36;
+            this.lbl_elfrm1.Text = "0";
+            this.lbl_elfrm1.Theme = MetroFramework.MetroThemeStyle.Dark;
+            this.lbl_elfrm1.UseCustomBackColor = true;
+            this.lbl_elfrm1.UseCustomForeColor = true;
+            this.lbl_elfrm1.UseStyleColors = true;
+            // 
+            // splitContainer8
+            // 
+            this.splitContainer8.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.splitContainer8.Location = new System.Drawing.Point(0, 0);
+            this.splitContainer8.Name = "splitContainer8";
+            this.splitContainer8.Orientation = System.Windows.Forms.Orientation.Horizontal;
+            // 
+            // splitContainer8.Panel1
+            // 
+            this.splitContainer8.Panel1.Controls.Add(this.splitContainer14);
+            // 
+            // splitContainer8.Panel2
+            // 
+            this.splitContainer8.Panel2.Controls.Add(this.splitContainer15);
+            this.splitContainer8.Size = new System.Drawing.Size(828, 148);
+            this.splitContainer8.SplitterDistance = 74;
+            this.splitContainer8.TabIndex = 0;
+            // 
+            // splitContainer14
+            // 
+            this.splitContainer14.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.splitContainer14.Location = new System.Drawing.Point(0, 0);
+            this.splitContainer14.Name = "splitContainer14";
+            // 
+            // splitContainer14.Panel1
+            // 
+            this.splitContainer14.Panel1.Controls.Add(this.lbl_el2);
+            // 
+            // splitContainer14.Panel2
+            // 
+            this.splitContainer14.Panel2.Controls.Add(this.lbl_elfrm2);
+            this.splitContainer14.Size = new System.Drawing.Size(828, 74);
+            this.splitContainer14.SplitterDistance = 348;
+            this.splitContainer14.TabIndex = 0;
+            // 
+            // lbl_el2
+            // 
+            this.lbl_el2.AutoSize = true;
+            this.lbl_el2.Dock = System.Windows.Forms.DockStyle.Right;
+            this.lbl_el2.FontWeight = MetroFramework.MetroLabelWeight.Bold;
+            this.lbl_el2.ForeColor = System.Drawing.Color.Black;
+            this.lbl_el2.Location = new System.Drawing.Point(331, 0);
+            this.lbl_el2.Name = "lbl_el2";
+            this.lbl_el2.Size = new System.Drawing.Size(17, 19);
+            this.lbl_el2.Style = MetroFramework.MetroColorStyle.Red;
+            this.lbl_el2.TabIndex = 30;
+            this.lbl_el2.Text = "0";
+            this.lbl_el2.Theme = MetroFramework.MetroThemeStyle.Dark;
+            this.lbl_el2.UseCustomBackColor = true;
+            this.lbl_el2.UseCustomForeColor = true;
+            this.lbl_el2.UseStyleColors = true;
+            // 
+            // lbl_elfrm2
+            // 
+            this.lbl_elfrm2.AutoSize = true;
+            this.lbl_elfrm2.Dock = System.Windows.Forms.DockStyle.Right;
+            this.lbl_elfrm2.FontWeight = MetroFramework.MetroLabelWeight.Regular;
+            this.lbl_elfrm2.ForeColor = System.Drawing.Color.Black;
+            this.lbl_elfrm2.Location = new System.Drawing.Point(459, 0);
+            this.lbl_elfrm2.Name = "lbl_elfrm2";
+            this.lbl_elfrm2.Size = new System.Drawing.Size(17, 19);
+            this.lbl_elfrm2.Style = MetroFramework.MetroColorStyle.Red;
+            this.lbl_elfrm2.TabIndex = 33;
+            this.lbl_elfrm2.Text = "0";
+            this.lbl_elfrm2.Theme = MetroFramework.MetroThemeStyle.Dark;
+            this.lbl_elfrm2.UseCustomBackColor = true;
+            this.lbl_elfrm2.UseCustomForeColor = true;
+            this.lbl_elfrm2.UseStyleColors = true;
+            // 
+            // splitContainer15
+            // 
+            this.splitContainer15.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.splitContainer15.Location = new System.Drawing.Point(0, 0);
+            this.splitContainer15.Name = "splitContainer15";
+            // 
+            // splitContainer15.Panel1
+            // 
+            this.splitContainer15.Panel1.Controls.Add(this.lbl_el3);
+            // 
+            // splitContainer15.Panel2
+            // 
+            this.splitContainer15.Panel2.Controls.Add(this.lbl_elfrm3);
+            this.splitContainer15.Size = new System.Drawing.Size(828, 70);
+            this.splitContainer15.SplitterDistance = 349;
+            this.splitContainer15.TabIndex = 0;
+            // 
+            // lbl_el3
+            // 
+            this.lbl_el3.AutoSize = true;
+            this.lbl_el3.Dock = System.Windows.Forms.DockStyle.Right;
+            this.lbl_el3.FontWeight = MetroFramework.MetroLabelWeight.Bold;
+            this.lbl_el3.ForeColor = System.Drawing.Color.Black;
+            this.lbl_el3.Location = new System.Drawing.Point(332, 0);
+            this.lbl_el3.Name = "lbl_el3";
+            this.lbl_el3.Size = new System.Drawing.Size(17, 19);
+            this.lbl_el3.Style = MetroFramework.MetroColorStyle.Red;
+            this.lbl_el3.TabIndex = 31;
+            this.lbl_el3.Text = "0";
+            this.lbl_el3.Theme = MetroFramework.MetroThemeStyle.Dark;
+            this.lbl_el3.UseCustomBackColor = true;
+            this.lbl_el3.UseCustomForeColor = true;
+            this.lbl_el3.UseStyleColors = true;
+            // 
+            // lbl_elfrm3
+            // 
+            this.lbl_elfrm3.AutoSize = true;
+            this.lbl_elfrm3.Dock = System.Windows.Forms.DockStyle.Right;
+            this.lbl_elfrm3.FontWeight = MetroFramework.MetroLabelWeight.Regular;
+            this.lbl_elfrm3.ForeColor = System.Drawing.Color.Black;
+            this.lbl_elfrm3.Location = new System.Drawing.Point(458, 0);
+            this.lbl_elfrm3.Name = "lbl_elfrm3";
+            this.lbl_elfrm3.Size = new System.Drawing.Size(17, 19);
+            this.lbl_elfrm3.Style = MetroFramework.MetroColorStyle.Red;
+            this.lbl_elfrm3.TabIndex = 34;
+            this.lbl_elfrm3.Text = "0";
+            this.lbl_elfrm3.Theme = MetroFramework.MetroThemeStyle.Dark;
+            this.lbl_elfrm3.UseCustomBackColor = true;
+            this.lbl_elfrm3.UseCustomForeColor = true;
+            this.lbl_elfrm3.UseStyleColors = true;
+            // 
+            // metroTabPage2
+            // 
+            this.metroTabPage2.Controls.Add(this.splitContainer9);
+            this.metroTabPage2.HorizontalScrollbarBarColor = true;
+            this.metroTabPage2.HorizontalScrollbarHighlightOnWheel = false;
+            this.metroTabPage2.HorizontalScrollbarSize = 10;
+            this.metroTabPage2.Location = new System.Drawing.Point(4, 38);
+            this.metroTabPage2.Name = "metroTabPage2";
+            this.metroTabPage2.Size = new System.Drawing.Size(859, 216);
+            this.metroTabPage2.TabIndex = 1;
+            this.metroTabPage2.Text = "MEKANİK";
+            this.metroTabPage2.VerticalScrollbarBarColor = true;
+            this.metroTabPage2.VerticalScrollbarHighlightOnWheel = false;
+            this.metroTabPage2.VerticalScrollbarSize = 10;
+            // 
+            // splitContainer9
+            // 
+            this.splitContainer9.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.splitContainer9.Location = new System.Drawing.Point(0, 0);
+            this.splitContainer9.Name = "splitContainer9";
+            this.splitContainer9.Orientation = System.Windows.Forms.Orientation.Horizontal;
+            // 
+            // splitContainer9.Panel1
+            // 
+            this.splitContainer9.Panel1.Controls.Add(this.splitContainer19);
+            // 
+            // splitContainer9.Panel2
+            // 
+            this.splitContainer9.Panel2.Controls.Add(this.splitContainer10);
+            this.splitContainer9.Size = new System.Drawing.Size(859, 216);
+            this.splitContainer9.SplitterDistance = 67;
+            this.splitContainer9.TabIndex = 3;
+            // 
+            // splitContainer19
+            // 
+            this.splitContainer19.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.splitContainer19.Location = new System.Drawing.Point(0, 0);
+            this.splitContainer19.Name = "splitContainer19";
+            // 
+            // splitContainer19.Panel1
+            // 
+            this.splitContainer19.Panel1.Controls.Add(this.lbl_mek1);
+            // 
+            // splitContainer19.Panel2
+            // 
+            this.splitContainer19.Panel2.Controls.Add(this.lbl_mekfrm1);
+            this.splitContainer19.Size = new System.Drawing.Size(859, 67);
+            this.splitContainer19.SplitterDistance = 339;
+            this.splitContainer19.TabIndex = 0;
+            // 
+            // lbl_mek1
+            // 
+            this.lbl_mek1.AutoSize = true;
+            this.lbl_mek1.Dock = System.Windows.Forms.DockStyle.Right;
+            this.lbl_mek1.FontWeight = MetroFramework.MetroLabelWeight.Bold;
+            this.lbl_mek1.ForeColor = System.Drawing.Color.Black;
+            this.lbl_mek1.Location = new System.Drawing.Point(322, 0);
+            this.lbl_mek1.Name = "lbl_mek1";
+            this.lbl_mek1.Size = new System.Drawing.Size(17, 19);
+            this.lbl_mek1.Style = MetroFramework.MetroColorStyle.Red;
+            this.lbl_mek1.TabIndex = 39;
+            this.lbl_mek1.Text = "0";
+            this.lbl_mek1.Theme = MetroFramework.MetroThemeStyle.Dark;
+            this.lbl_mek1.UseCustomBackColor = true;
+            this.lbl_mek1.UseCustomForeColor = true;
+            this.lbl_mek1.UseStyleColors = true;
+            // 
+            // lbl_mekfrm1
+            // 
+            this.lbl_mekfrm1.AutoSize = true;
+            this.lbl_mekfrm1.Dock = System.Windows.Forms.DockStyle.Right;
+            this.lbl_mekfrm1.FontWeight = MetroFramework.MetroLabelWeight.Regular;
+            this.lbl_mekfrm1.ForeColor = System.Drawing.Color.Black;
+            this.lbl_mekfrm1.Location = new System.Drawing.Point(499, 0);
+            this.lbl_mekfrm1.Name = "lbl_mekfrm1";
+            this.lbl_mekfrm1.Size = new System.Drawing.Size(17, 19);
+            this.lbl_mekfrm1.Style = MetroFramework.MetroColorStyle.Red;
+            this.lbl_mekfrm1.TabIndex = 36;
+            this.lbl_mekfrm1.Text = "0";
+            this.lbl_mekfrm1.Theme = MetroFramework.MetroThemeStyle.Dark;
+            this.lbl_mekfrm1.UseCustomBackColor = true;
+            this.lbl_mekfrm1.UseCustomForeColor = true;
+            this.lbl_mekfrm1.UseStyleColors = true;
+            // 
+            // splitContainer10
+            // 
+            this.splitContainer10.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.splitContainer10.Location = new System.Drawing.Point(0, 0);
+            this.splitContainer10.Name = "splitContainer10";
+            this.splitContainer10.Orientation = System.Windows.Forms.Orientation.Horizontal;
+            // 
+            // splitContainer10.Panel1
+            // 
+            this.splitContainer10.Panel1.Controls.Add(this.splitContainer20);
+            // 
+            // splitContainer10.Panel2
+            // 
+            this.splitContainer10.Panel2.Controls.Add(this.splitContainer21);
+            this.splitContainer10.Size = new System.Drawing.Size(859, 145);
+            this.splitContainer10.SplitterDistance = 73;
+            this.splitContainer10.TabIndex = 0;
+            // 
+            // splitContainer20
+            // 
+            this.splitContainer20.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.splitContainer20.Location = new System.Drawing.Point(0, 0);
+            this.splitContainer20.Name = "splitContainer20";
+            // 
+            // splitContainer20.Panel1
+            // 
+            this.splitContainer20.Panel1.Controls.Add(this.lbl_mek2);
+            // 
+            // splitContainer20.Panel2
+            // 
+            this.splitContainer20.Panel2.Controls.Add(this.lbl_mekfrm2);
+            this.splitContainer20.Size = new System.Drawing.Size(859, 73);
+            this.splitContainer20.SplitterDistance = 339;
+            this.splitContainer20.TabIndex = 0;
+            // 
+            // lbl_mek2
+            // 
+            this.lbl_mek2.AutoSize = true;
+            this.lbl_mek2.Dock = System.Windows.Forms.DockStyle.Right;
+            this.lbl_mek2.FontWeight = MetroFramework.MetroLabelWeight.Bold;
+            this.lbl_mek2.ForeColor = System.Drawing.Color.Black;
+            this.lbl_mek2.Location = new System.Drawing.Point(322, 0);
+            this.lbl_mek2.Name = "lbl_mek2";
+            this.lbl_mek2.Size = new System.Drawing.Size(17, 19);
+            this.lbl_mek2.Style = MetroFramework.MetroColorStyle.Red;
+            this.lbl_mek2.TabIndex = 40;
+            this.lbl_mek2.Text = "0";
+            this.lbl_mek2.Theme = MetroFramework.MetroThemeStyle.Dark;
+            this.lbl_mek2.UseCustomBackColor = true;
+            this.lbl_mek2.UseCustomForeColor = true;
+            this.lbl_mek2.UseStyleColors = true;
+            // 
+            // lbl_mekfrm2
+            // 
+            this.lbl_mekfrm2.AutoSize = true;
+            this.lbl_mekfrm2.Dock = System.Windows.Forms.DockStyle.Right;
+            this.lbl_mekfrm2.FontWeight = MetroFramework.MetroLabelWeight.Regular;
+            this.lbl_mekfrm2.ForeColor = System.Drawing.Color.Black;
+            this.lbl_mekfrm2.Location = new System.Drawing.Point(499, 0);
+            this.lbl_mekfrm2.Name = "lbl_mekfrm2";
+            this.lbl_mekfrm2.Size = new System.Drawing.Size(17, 19);
+            this.lbl_mekfrm2.Style = MetroFramework.MetroColorStyle.Red;
+            this.lbl_mekfrm2.TabIndex = 38;
+            this.lbl_mekfrm2.Text = "0";
+            this.lbl_mekfrm2.Theme = MetroFramework.MetroThemeStyle.Dark;
+            this.lbl_mekfrm2.UseCustomBackColor = true;
+            this.lbl_mekfrm2.UseCustomForeColor = true;
+            this.lbl_mekfrm2.UseStyleColors = true;
+            // 
+            // splitContainer21
+            // 
+            this.splitContainer21.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.splitContainer21.Location = new System.Drawing.Point(0, 0);
+            this.splitContainer21.Name = "splitContainer21";
+            // 
+            // splitContainer21.Panel1
+            // 
+            this.splitContainer21.Panel1.Controls.Add(this.lbl_mek3);
+            // 
+            // splitContainer21.Panel2
+            // 
+            this.splitContainer21.Panel2.Controls.Add(this.lbl_mekfrm3);
+            this.splitContainer21.Size = new System.Drawing.Size(859, 68);
+            this.splitContainer21.SplitterDistance = 339;
+            this.splitContainer21.TabIndex = 0;
+            // 
+            // lbl_mek3
+            // 
+            this.lbl_mek3.AutoSize = true;
+            this.lbl_mek3.Dock = System.Windows.Forms.DockStyle.Right;
+            this.lbl_mek3.FontWeight = MetroFramework.MetroLabelWeight.Bold;
+            this.lbl_mek3.ForeColor = System.Drawing.Color.Black;
+            this.lbl_mek3.Location = new System.Drawing.Point(322, 0);
+            this.lbl_mek3.Name = "lbl_mek3";
+            this.lbl_mek3.Size = new System.Drawing.Size(17, 19);
+            this.lbl_mek3.Style = MetroFramework.MetroColorStyle.Red;
+            this.lbl_mek3.TabIndex = 41;
+            this.lbl_mek3.Text = "0";
+            this.lbl_mek3.Theme = MetroFramework.MetroThemeStyle.Dark;
+            this.lbl_mek3.UseCustomBackColor = true;
+            this.lbl_mek3.UseCustomForeColor = true;
+            this.lbl_mek3.UseStyleColors = true;
+            // 
+            // lbl_mekfrm3
+            // 
+            this.lbl_mekfrm3.AutoSize = true;
+            this.lbl_mekfrm3.Dock = System.Windows.Forms.DockStyle.Right;
+            this.lbl_mekfrm3.FontWeight = MetroFramework.MetroLabelWeight.Regular;
+            this.lbl_mekfrm3.ForeColor = System.Drawing.Color.Black;
+            this.lbl_mekfrm3.Location = new System.Drawing.Point(499, 0);
+            this.lbl_mekfrm3.Name = "lbl_mekfrm3";
+            this.lbl_mekfrm3.Size = new System.Drawing.Size(17, 19);
+            this.lbl_mekfrm3.Style = MetroFramework.MetroColorStyle.Red;
+            this.lbl_mekfrm3.TabIndex = 37;
+            this.lbl_mekfrm3.Text = "0";
+            this.lbl_mekfrm3.Theme = MetroFramework.MetroThemeStyle.Dark;
+            this.lbl_mekfrm3.UseCustomBackColor = true;
+            this.lbl_mekfrm3.UseCustomForeColor = true;
+            this.lbl_mekfrm3.UseStyleColors = true;
+            // 
+            // metroTabPage3
+            // 
+            this.metroTabPage3.Controls.Add(this.splitContainer11);
+            this.metroTabPage3.HorizontalScrollbarBarColor = true;
+            this.metroTabPage3.HorizontalScrollbarHighlightOnWheel = false;
+            this.metroTabPage3.HorizontalScrollbarSize = 10;
+            this.metroTabPage3.Location = new System.Drawing.Point(4, 38);
+            this.metroTabPage3.Name = "metroTabPage3";
+            this.metroTabPage3.Size = new System.Drawing.Size(859, 216);
+            this.metroTabPage3.Style = MetroFramework.MetroColorStyle.Red;
+            this.metroTabPage3.TabIndex = 2;
+            this.metroTabPage3.Text = "GENEL GİDERLER";
+            this.metroTabPage3.UseCustomBackColor = true;
+            this.metroTabPage3.UseCustomForeColor = true;
+            this.metroTabPage3.UseStyleColors = true;
+            this.metroTabPage3.UseVisualStyleBackColor = true;
+            this.metroTabPage3.VerticalScrollbar = true;
+            this.metroTabPage3.VerticalScrollbarBarColor = true;
+            this.metroTabPage3.VerticalScrollbarHighlightOnWheel = false;
+            this.metroTabPage3.VerticalScrollbarSize = 10;
+            // 
+            // splitContainer11
+            // 
+            this.splitContainer11.BackColor = System.Drawing.SystemColors.Control;
+            this.splitContainer11.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.splitContainer11.Location = new System.Drawing.Point(0, 0);
+            this.splitContainer11.Name = "splitContainer11";
+            this.splitContainer11.Orientation = System.Windows.Forms.Orientation.Horizontal;
+            // 
+            // splitContainer11.Panel1
+            // 
+            this.splitContainer11.Panel1.BackColor = System.Drawing.SystemColors.Control;
+            this.splitContainer11.Panel1.Controls.Add(this.splitContainer22);
+            // 
+            // splitContainer11.Panel2
+            // 
+            this.splitContainer11.Panel2.Controls.Add(this.splitContainer23);
+            this.splitContainer11.Size = new System.Drawing.Size(859, 216);
+            this.splitContainer11.SplitterDistance = 72;
+            this.splitContainer11.TabIndex = 3;
+            // 
+            // splitContainer22
+            // 
+            this.splitContainer22.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.splitContainer22.Location = new System.Drawing.Point(0, 0);
+            this.splitContainer22.Name = "splitContainer22";
+            // 
+            // splitContainer22.Panel1
+            // 
+            this.splitContainer22.Panel1.Controls.Add(this.lbl_gnl1);
+            // 
+            // splitContainer22.Panel2
+            // 
+            this.splitContainer22.Panel2.Controls.Add(this.lbl_gnlfrm1);
+            this.splitContainer22.Size = new System.Drawing.Size(859, 72);
+            this.splitContainer22.SplitterDistance = 346;
+            this.splitContainer22.TabIndex = 0;
+            // 
+            // lbl_gnl1
+            // 
+            this.lbl_gnl1.AutoSize = true;
+            this.lbl_gnl1.Dock = System.Windows.Forms.DockStyle.Right;
+            this.lbl_gnl1.FontWeight = MetroFramework.MetroLabelWeight.Bold;
+            this.lbl_gnl1.ForeColor = System.Drawing.Color.Black;
+            this.lbl_gnl1.Location = new System.Drawing.Point(329, 0);
+            this.lbl_gnl1.Name = "lbl_gnl1";
+            this.lbl_gnl1.Size = new System.Drawing.Size(17, 19);
+            this.lbl_gnl1.Style = MetroFramework.MetroColorStyle.Red;
+            this.lbl_gnl1.TabIndex = 40;
+            this.lbl_gnl1.Text = "0";
+            this.lbl_gnl1.Theme = MetroFramework.MetroThemeStyle.Dark;
+            this.lbl_gnl1.UseCustomBackColor = true;
+            this.lbl_gnl1.UseCustomForeColor = true;
+            this.lbl_gnl1.UseStyleColors = true;
+            // 
+            // lbl_gnlfrm1
+            // 
+            this.lbl_gnlfrm1.AutoSize = true;
+            this.lbl_gnlfrm1.Dock = System.Windows.Forms.DockStyle.Right;
+            this.lbl_gnlfrm1.FontWeight = MetroFramework.MetroLabelWeight.Regular;
+            this.lbl_gnlfrm1.ForeColor = System.Drawing.Color.Black;
+            this.lbl_gnlfrm1.Location = new System.Drawing.Point(492, 0);
+            this.lbl_gnlfrm1.Name = "lbl_gnlfrm1";
+            this.lbl_gnlfrm1.Size = new System.Drawing.Size(17, 19);
+            this.lbl_gnlfrm1.Style = MetroFramework.MetroColorStyle.Red;
+            this.lbl_gnlfrm1.TabIndex = 38;
+            this.lbl_gnlfrm1.Text = "0";
+            this.lbl_gnlfrm1.Theme = MetroFramework.MetroThemeStyle.Dark;
+            this.lbl_gnlfrm1.UseCustomBackColor = true;
+            this.lbl_gnlfrm1.UseCustomForeColor = true;
+            this.lbl_gnlfrm1.UseStyleColors = true;
+            // 
+            // splitContainer23
+            // 
+            this.splitContainer23.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.splitContainer23.Location = new System.Drawing.Point(0, 0);
+            this.splitContainer23.Name = "splitContainer23";
+            this.splitContainer23.Orientation = System.Windows.Forms.Orientation.Horizontal;
+            // 
+            // splitContainer23.Panel1
+            // 
+            this.splitContainer23.Panel1.Controls.Add(this.splitContainer24);
+            // 
+            // splitContainer23.Panel2
+            // 
+            this.splitContainer23.Panel2.Controls.Add(this.splitContainer25);
+            this.splitContainer23.Size = new System.Drawing.Size(859, 140);
+            this.splitContainer23.SplitterDistance = 73;
+            this.splitContainer23.TabIndex = 0;
+            // 
+            // splitContainer24
+            // 
+            this.splitContainer24.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.splitContainer24.Location = new System.Drawing.Point(0, 0);
+            this.splitContainer24.Name = "splitContainer24";
+            // 
+            // splitContainer24.Panel1
+            // 
+            this.splitContainer24.Panel1.Controls.Add(this.lbl_gnl2);
+            // 
+            // splitContainer24.Panel2
+            // 
+            this.splitContainer24.Panel2.Controls.Add(this.lbl_gnlfrm2);
+            this.splitContainer24.Size = new System.Drawing.Size(859, 73);
+            this.splitContainer24.SplitterDistance = 345;
+            this.splitContainer24.TabIndex = 0;
+            // 
+            // lbl_gnl2
+            // 
+            this.lbl_gnl2.AutoSize = true;
+            this.lbl_gnl2.Dock = System.Windows.Forms.DockStyle.Right;
+            this.lbl_gnl2.FontWeight = MetroFramework.MetroLabelWeight.Bold;
+            this.lbl_gnl2.ForeColor = System.Drawing.Color.Black;
+            this.lbl_gnl2.Location = new System.Drawing.Point(328, 0);
+            this.lbl_gnl2.Name = "lbl_gnl2";
+            this.lbl_gnl2.Size = new System.Drawing.Size(17, 19);
+            this.lbl_gnl2.Style = MetroFramework.MetroColorStyle.Red;
+            this.lbl_gnl2.TabIndex = 42;
+            this.lbl_gnl2.Text = "0";
+            this.lbl_gnl2.Theme = MetroFramework.MetroThemeStyle.Dark;
+            this.lbl_gnl2.UseCustomBackColor = true;
+            this.lbl_gnl2.UseCustomForeColor = true;
+            this.lbl_gnl2.UseStyleColors = true;
+            // 
+            // lbl_gnlfrm2
+            // 
+            this.lbl_gnlfrm2.AutoSize = true;
+            this.lbl_gnlfrm2.Dock = System.Windows.Forms.DockStyle.Right;
+            this.lbl_gnlfrm2.FontWeight = MetroFramework.MetroLabelWeight.Regular;
+            this.lbl_gnlfrm2.ForeColor = System.Drawing.Color.Black;
+            this.lbl_gnlfrm2.Location = new System.Drawing.Point(493, 0);
+            this.lbl_gnlfrm2.Name = "lbl_gnlfrm2";
+            this.lbl_gnlfrm2.Size = new System.Drawing.Size(17, 19);
+            this.lbl_gnlfrm2.Style = MetroFramework.MetroColorStyle.Red;
+            this.lbl_gnlfrm2.TabIndex = 39;
+            this.lbl_gnlfrm2.Text = "0";
+            this.lbl_gnlfrm2.Theme = MetroFramework.MetroThemeStyle.Dark;
+            this.lbl_gnlfrm2.UseCustomBackColor = true;
+            this.lbl_gnlfrm2.UseCustomForeColor = true;
+            this.lbl_gnlfrm2.UseStyleColors = true;
+            // 
+            // splitContainer25
+            // 
+            this.splitContainer25.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.splitContainer25.Location = new System.Drawing.Point(0, 0);
+            this.splitContainer25.Name = "splitContainer25";
+            // 
+            // splitContainer25.Panel1
+            // 
+            this.splitContainer25.Panel1.Controls.Add(this.lbl_gnl3);
+            // 
+            // splitContainer25.Panel2
+            // 
+            this.splitContainer25.Panel2.Controls.Add(this.lbl_gnlfrm3);
+            this.splitContainer25.Size = new System.Drawing.Size(859, 63);
+            this.splitContainer25.SplitterDistance = 345;
+            this.splitContainer25.TabIndex = 0;
+            // 
+            // lbl_gnl3
+            // 
+            this.lbl_gnl3.AutoSize = true;
+            this.lbl_gnl3.Dock = System.Windows.Forms.DockStyle.Right;
+            this.lbl_gnl3.FontWeight = MetroFramework.MetroLabelWeight.Bold;
+            this.lbl_gnl3.ForeColor = System.Drawing.Color.Black;
+            this.lbl_gnl3.Location = new System.Drawing.Point(328, 0);
+            this.lbl_gnl3.Name = "lbl_gnl3";
+            this.lbl_gnl3.Size = new System.Drawing.Size(17, 19);
+            this.lbl_gnl3.Style = MetroFramework.MetroColorStyle.Red;
+            this.lbl_gnl3.TabIndex = 43;
+            this.lbl_gnl3.Text = "0";
+            this.lbl_gnl3.Theme = MetroFramework.MetroThemeStyle.Dark;
+            this.lbl_gnl3.UseCustomBackColor = true;
+            this.lbl_gnl3.UseCustomForeColor = true;
+            this.lbl_gnl3.UseStyleColors = true;
+            // 
+            // lbl_gnlfrm3
+            // 
+            this.lbl_gnlfrm3.AutoSize = true;
+            this.lbl_gnlfrm3.Dock = System.Windows.Forms.DockStyle.Right;
+            this.lbl_gnlfrm3.FontWeight = MetroFramework.MetroLabelWeight.Regular;
+            this.lbl_gnlfrm3.ForeColor = System.Drawing.Color.Black;
+            this.lbl_gnlfrm3.Location = new System.Drawing.Point(493, 0);
+            this.lbl_gnlfrm3.Name = "lbl_gnlfrm3";
+            this.lbl_gnlfrm3.Size = new System.Drawing.Size(17, 19);
+            this.lbl_gnlfrm3.Style = MetroFramework.MetroColorStyle.Red;
+            this.lbl_gnlfrm3.TabIndex = 41;
+            this.lbl_gnlfrm3.Text = "0";
+            this.lbl_gnlfrm3.Theme = MetroFramework.MetroThemeStyle.Dark;
+            this.lbl_gnlfrm3.UseCustomBackColor = true;
+            this.lbl_gnlfrm3.UseCustomForeColor = true;
+            this.lbl_gnlfrm3.UseStyleColors = true;
+            // 
             // OdenecekFaturalar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1798, 853);
+            this.ClientSize = new System.Drawing.Size(1716, 1052);
             this.ControlBox = false;
             this.Controls.Add(this.pbClose);
             this.Controls.Add(this.splitContainer2);
             this.Controls.Add(this.splitContainer1);
+            this.Controls.Add(this.lbl_prjNo);
+            this.Controls.Add(this.metroLabel6);
             this.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "OdenecekFaturalar";
@@ -1271,72 +1464,130 @@
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer2)).EndInit();
             this.splitContainer2.ResumeLayout(false);
             this.splitContainer3.Panel1.ResumeLayout(false);
-            this.splitContainer3.Panel1.PerformLayout();
-            this.splitContainer3.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer3)).EndInit();
             this.splitContainer3.ResumeLayout(false);
-            this.splitContainer4.Panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.metroGrid1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbClose)).EndInit();
             this.splitContainer4.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer4)).EndInit();
             this.splitContainer4.ResumeLayout(false);
-            this.splitContainer6.Panel1.ResumeLayout(false);
-            this.splitContainer6.Panel1.PerformLayout();
-            this.splitContainer6.Panel2.ResumeLayout(false);
-            this.splitContainer6.Panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.splitContainer6)).EndInit();
-            this.splitContainer6.ResumeLayout(false);
-            this.splitContainer9.Panel1.ResumeLayout(false);
-            this.splitContainer9.Panel1.PerformLayout();
-            this.splitContainer9.Panel2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.splitContainer9)).EndInit();
-            this.splitContainer9.ResumeLayout(false);
-            this.splitContainer10.Panel1.ResumeLayout(false);
-            this.splitContainer10.Panel1.PerformLayout();
-            this.splitContainer10.Panel2.ResumeLayout(false);
-            this.splitContainer10.Panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.splitContainer10)).EndInit();
-            this.splitContainer10.ResumeLayout(false);
+            this.splitContainer12.Panel1.ResumeLayout(false);
+            this.splitContainer12.Panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainer12)).EndInit();
+            this.splitContainer12.ResumeLayout(false);
+            this.metroTabControl2.ResumeLayout(false);
+            this.metroTabPage5.ResumeLayout(false);
+            this.panel1.ResumeLayout(false);
             this.splitContainer5.Panel1.ResumeLayout(false);
             this.splitContainer5.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer5)).EndInit();
             this.splitContainer5.ResumeLayout(false);
+            this.splitContainer16.Panel1.ResumeLayout(false);
+            this.splitContainer16.Panel1.PerformLayout();
+            this.splitContainer16.Panel2.ResumeLayout(false);
+            this.splitContainer16.Panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainer16)).EndInit();
+            this.splitContainer16.ResumeLayout(false);
+            this.splitContainer6.Panel1.ResumeLayout(false);
+            this.splitContainer6.Panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainer6)).EndInit();
+            this.splitContainer6.ResumeLayout(false);
+            this.splitContainer17.Panel1.ResumeLayout(false);
+            this.splitContainer17.Panel1.PerformLayout();
+            this.splitContainer17.Panel2.ResumeLayout(false);
+            this.splitContainer17.Panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainer17)).EndInit();
+            this.splitContainer17.ResumeLayout(false);
+            this.splitContainer18.Panel1.ResumeLayout(false);
+            this.splitContainer18.Panel1.PerformLayout();
+            this.splitContainer18.Panel2.ResumeLayout(false);
+            this.splitContainer18.Panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainer18)).EndInit();
+            this.splitContainer18.ResumeLayout(false);
+            this.metroTabControl1.ResumeLayout(false);
+            this.metroTabPage1.ResumeLayout(false);
             this.splitContainer7.Panel1.ResumeLayout(false);
-            this.splitContainer7.Panel1.PerformLayout();
             this.splitContainer7.Panel2.ResumeLayout(false);
-            this.splitContainer7.Panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer7)).EndInit();
             this.splitContainer7.ResumeLayout(false);
-            this.splitContainer11.Panel1.ResumeLayout(false);
-            this.splitContainer11.Panel1.PerformLayout();
-            this.splitContainer11.Panel2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.splitContainer11)).EndInit();
-            this.splitContainer11.ResumeLayout(false);
-            this.splitContainer12.Panel1.ResumeLayout(false);
-            this.splitContainer12.Panel1.PerformLayout();
-            this.splitContainer12.Panel2.ResumeLayout(false);
-            this.splitContainer12.Panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.splitContainer12)).EndInit();
-            this.splitContainer12.ResumeLayout(false);
-            this.splitContainer8.Panel1.ResumeLayout(false);
-            this.splitContainer8.Panel1.PerformLayout();
-            this.splitContainer8.Panel2.ResumeLayout(false);
-            this.splitContainer8.Panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.splitContainer8)).EndInit();
-            this.splitContainer8.ResumeLayout(false);
             this.splitContainer13.Panel1.ResumeLayout(false);
             this.splitContainer13.Panel1.PerformLayout();
             this.splitContainer13.Panel2.ResumeLayout(false);
+            this.splitContainer13.Panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer13)).EndInit();
             this.splitContainer13.ResumeLayout(false);
+            this.splitContainer8.Panel1.ResumeLayout(false);
+            this.splitContainer8.Panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainer8)).EndInit();
+            this.splitContainer8.ResumeLayout(false);
             this.splitContainer14.Panel1.ResumeLayout(false);
             this.splitContainer14.Panel1.PerformLayout();
             this.splitContainer14.Panel2.ResumeLayout(false);
             this.splitContainer14.Panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer14)).EndInit();
             this.splitContainer14.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.metroGrid1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbClose)).EndInit();
+            this.splitContainer15.Panel1.ResumeLayout(false);
+            this.splitContainer15.Panel1.PerformLayout();
+            this.splitContainer15.Panel2.ResumeLayout(false);
+            this.splitContainer15.Panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainer15)).EndInit();
+            this.splitContainer15.ResumeLayout(false);
+            this.metroTabPage2.ResumeLayout(false);
+            this.splitContainer9.Panel1.ResumeLayout(false);
+            this.splitContainer9.Panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainer9)).EndInit();
+            this.splitContainer9.ResumeLayout(false);
+            this.splitContainer19.Panel1.ResumeLayout(false);
+            this.splitContainer19.Panel1.PerformLayout();
+            this.splitContainer19.Panel2.ResumeLayout(false);
+            this.splitContainer19.Panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainer19)).EndInit();
+            this.splitContainer19.ResumeLayout(false);
+            this.splitContainer10.Panel1.ResumeLayout(false);
+            this.splitContainer10.Panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainer10)).EndInit();
+            this.splitContainer10.ResumeLayout(false);
+            this.splitContainer20.Panel1.ResumeLayout(false);
+            this.splitContainer20.Panel1.PerformLayout();
+            this.splitContainer20.Panel2.ResumeLayout(false);
+            this.splitContainer20.Panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainer20)).EndInit();
+            this.splitContainer20.ResumeLayout(false);
+            this.splitContainer21.Panel1.ResumeLayout(false);
+            this.splitContainer21.Panel1.PerformLayout();
+            this.splitContainer21.Panel2.ResumeLayout(false);
+            this.splitContainer21.Panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainer21)).EndInit();
+            this.splitContainer21.ResumeLayout(false);
+            this.metroTabPage3.ResumeLayout(false);
+            this.splitContainer11.Panel1.ResumeLayout(false);
+            this.splitContainer11.Panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainer11)).EndInit();
+            this.splitContainer11.ResumeLayout(false);
+            this.splitContainer22.Panel1.ResumeLayout(false);
+            this.splitContainer22.Panel1.PerformLayout();
+            this.splitContainer22.Panel2.ResumeLayout(false);
+            this.splitContainer22.Panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainer22)).EndInit();
+            this.splitContainer22.ResumeLayout(false);
+            this.splitContainer23.Panel1.ResumeLayout(false);
+            this.splitContainer23.Panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainer23)).EndInit();
+            this.splitContainer23.ResumeLayout(false);
+            this.splitContainer24.Panel1.ResumeLayout(false);
+            this.splitContainer24.Panel1.PerformLayout();
+            this.splitContainer24.Panel2.ResumeLayout(false);
+            this.splitContainer24.Panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainer24)).EndInit();
+            this.splitContainer24.ResumeLayout(false);
+            this.splitContainer25.Panel1.ResumeLayout(false);
+            this.splitContainer25.Panel1.PerformLayout();
+            this.splitContainer25.Panel2.ResumeLayout(false);
+            this.splitContainer25.Panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainer25)).EndInit();
+            this.splitContainer25.ResumeLayout(false);
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -1349,12 +1600,9 @@
         private System.Windows.Forms.DataVisualization.Charting.Chart chart2;
         private System.Windows.Forms.SplitContainer splitContainer2;
         private System.Windows.Forms.SplitContainer splitContainer3;
-        private System.Windows.Forms.SplitContainer splitContainer4;
-        private System.Windows.Forms.SplitContainer splitContainer5;
         private MetroFramework.Controls.MetroGrid metroGrid1;
         private MetroFramework.Controls.MetroLabel metroLabel6;
         public MetroFramework.Controls.MetroLabel lbl_prjNo;
-        private System.Windows.Forms.PictureBox pbClose;
         private System.Windows.Forms.DataGridViewTextBoxColumn Tanım;
         private System.Windows.Forms.DataGridViewTextBoxColumn ocak;
         private System.Windows.Forms.DataGridViewTextBoxColumn subat;
@@ -1368,47 +1616,59 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn ekim;
         private System.Windows.Forms.DataGridViewTextBoxColumn kasim;
         private System.Windows.Forms.DataGridViewTextBoxColumn aralik;
-        private System.Windows.Forms.SplitContainer splitContainer6;
-        private MetroFramework.Controls.MetroLabel lbl_tutar1;
-        private MetroFramework.Controls.MetroLabel metroLabel2;
-        private MetroFramework.Controls.MetroLabel lbl_firma1;
-        private System.Windows.Forms.SplitContainer splitContainer9;
-        private MetroFramework.Controls.MetroLabel metroLabel9;
-        private MetroFramework.Controls.MetroLabel lbl_el1;
-        private System.Windows.Forms.SplitContainer splitContainer10;
-        private MetroFramework.Controls.MetroLabel metroLabel12;
-        private MetroFramework.Controls.MetroLabel metroLabel13;
-        private MetroFramework.Controls.MetroLabel metroLabel1;
-        private System.Windows.Forms.SplitContainer splitContainer7;
-        private MetroFramework.Controls.MetroLabel lbl_tutar2;
-        private MetroFramework.Controls.MetroLabel metroLabel4;
-        private MetroFramework.Controls.MetroLabel lbl_firma2;
-        private System.Windows.Forms.SplitContainer splitContainer11;
-        private MetroFramework.Controls.MetroLabel lbl_mek1;
-        private MetroFramework.Controls.MetroLabel metroLabel10;
+        private System.Windows.Forms.PictureBox pbClose;
+        private System.Windows.Forms.SplitContainer splitContainer4;
         private System.Windows.Forms.SplitContainer splitContainer12;
-        private MetroFramework.Controls.MetroLabel lbl_mek2;
-        private MetroFramework.Controls.MetroLabel metroLabel14;
-        private MetroFramework.Controls.MetroLabel lbl_mek3;
-        private MetroFramework.Controls.MetroLabel metroLabel16;
-        private MetroFramework.Controls.MetroLabel metroLabel3;
-        private System.Windows.Forms.SplitContainer splitContainer8;
+        private MetroFramework.Controls.MetroTabControl metroTabControl2;
+        private MetroFramework.Controls.MetroTabPage metroTabPage5;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.SplitContainer splitContainer5;
+        private System.Windows.Forms.SplitContainer splitContainer16;
+        private MetroFramework.Controls.MetroLabel lbl_tutar1;
+        private MetroFramework.Controls.MetroLabel lbl_firma1;
+        private System.Windows.Forms.SplitContainer splitContainer6;
+        private System.Windows.Forms.SplitContainer splitContainer17;
+        private MetroFramework.Controls.MetroLabel lbl_tutar2;
+        private MetroFramework.Controls.MetroLabel lbl_firma2;
+        private System.Windows.Forms.SplitContainer splitContainer18;
         private MetroFramework.Controls.MetroLabel lbl_tutar3;
-        private MetroFramework.Controls.MetroLabel metroLabel7;
         private MetroFramework.Controls.MetroLabel lbl_firma3;
+        private MetroFramework.Controls.MetroTabControl metroTabControl1;
+        private MetroFramework.Controls.MetroTabPage metroTabPage1;
+        private System.Windows.Forms.SplitContainer splitContainer7;
         private System.Windows.Forms.SplitContainer splitContainer13;
-        private MetroFramework.Controls.MetroLabel lbl_gnl1;
-        private MetroFramework.Controls.MetroLabel metroLabel11;
+        private MetroFramework.Controls.MetroLabel lbl_el1;
+        private MetroFramework.Controls.MetroLabel lbl_elfrm1;
+        private System.Windows.Forms.SplitContainer splitContainer8;
         private System.Windows.Forms.SplitContainer splitContainer14;
-        private MetroFramework.Controls.MetroLabel lbl_gnl2;
-        private MetroFramework.Controls.MetroLabel metroLabel15;
-        private MetroFramework.Controls.MetroLabel lbl_gnl3;
-        private MetroFramework.Controls.MetroLabel metroLabel17;
-        private MetroFramework.Controls.MetroLabel metroLabel5;
-        private MetroFramework.Controls.MetroLabel lbl_elfirma1;
-        private MetroFramework.Controls.MetroLabel metroLabel8;
-        private MetroFramework.Controls.MetroLabel metroLabel18;
         private MetroFramework.Controls.MetroLabel lbl_el2;
+        private MetroFramework.Controls.MetroLabel lbl_elfrm2;
+        private System.Windows.Forms.SplitContainer splitContainer15;
         private MetroFramework.Controls.MetroLabel lbl_el3;
+        private MetroFramework.Controls.MetroLabel lbl_elfrm3;
+        private MetroFramework.Controls.MetroTabPage metroTabPage2;
+        private System.Windows.Forms.SplitContainer splitContainer9;
+        private System.Windows.Forms.SplitContainer splitContainer19;
+        private MetroFramework.Controls.MetroLabel lbl_mek1;
+        private MetroFramework.Controls.MetroLabel lbl_mekfrm1;
+        private System.Windows.Forms.SplitContainer splitContainer10;
+        private System.Windows.Forms.SplitContainer splitContainer20;
+        private MetroFramework.Controls.MetroLabel lbl_mek2;
+        private MetroFramework.Controls.MetroLabel lbl_mekfrm2;
+        private System.Windows.Forms.SplitContainer splitContainer21;
+        private MetroFramework.Controls.MetroLabel lbl_mek3;
+        private MetroFramework.Controls.MetroLabel lbl_mekfrm3;
+        private MetroFramework.Controls.MetroTabPage metroTabPage3;
+        private System.Windows.Forms.SplitContainer splitContainer11;
+        private System.Windows.Forms.SplitContainer splitContainer22;
+        private MetroFramework.Controls.MetroLabel lbl_gnl1;
+        private MetroFramework.Controls.MetroLabel lbl_gnlfrm1;
+        private System.Windows.Forms.SplitContainer splitContainer23;
+        private System.Windows.Forms.SplitContainer splitContainer24;
+        private MetroFramework.Controls.MetroLabel lbl_gnl2;
+        private MetroFramework.Controls.MetroLabel lbl_gnlfrm2;
+        private System.Windows.Forms.SplitContainer splitContainer25;
+        private MetroFramework.Controls.MetroLabel lbl_gnl3;
+        private MetroFramework.Controls.MetroLabel lbl_gnlfrm3;
     }
 }

@@ -489,7 +489,7 @@
             this.splitContainer7.Panel2.Controls.Add(this.groupBox3);
             this.splitContainer7.Panel2.Controls.Add(this.btn_ozet);
             this.splitContainer7.Size = new System.Drawing.Size(1792, 398);
-            this.splitContainer7.SplitterDistance = 1337;
+            this.splitContainer7.SplitterDistance = 1359;
             this.splitContainer7.TabIndex = 0;
             // 
             // groupBox1
@@ -500,7 +500,7 @@
             this.groupBox1.ForeColor = System.Drawing.Color.Crimson;
             this.groupBox1.Location = new System.Drawing.Point(0, 0);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(1337, 398);
+            this.groupBox1.Size = new System.Drawing.Size(1359, 398);
             this.groupBox1.TabIndex = 5;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "GRAFİKLER";
@@ -518,8 +518,8 @@
             // splitContainer8.Panel2
             // 
             this.splitContainer8.Panel2.Controls.Add(this.splitContainer12);
-            this.splitContainer8.Size = new System.Drawing.Size(1331, 379);
-            this.splitContainer8.SplitterDistance = 324;
+            this.splitContainer8.Size = new System.Drawing.Size(1353, 379);
+            this.splitContainer8.SplitterDistance = 329;
             this.splitContainer8.TabIndex = 0;
             // 
             // chart1
@@ -540,7 +540,11 @@
             this.chart1.Legends.Add(legend1);
             this.chart1.Location = new System.Drawing.Point(0, 0);
             this.chart1.Name = "chart1";
-            this.chart1.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.Excel;
+            this.chart1.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.None;
+            this.chart1.PaletteCustomColors = new System.Drawing.Color[] {
+        System.Drawing.Color.Silver,
+        System.Drawing.Color.DarkSeaGreen,
+        System.Drawing.Color.PaleTurquoise};
             series1.ChartArea = "ChartArea1";
             series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie;
             series1.Legend = "Maliyet";
@@ -549,7 +553,7 @@
             series1.Points.Add(dataPoint2);
             series1.Points.Add(dataPoint3);
             this.chart1.Series.Add(series1);
-            this.chart1.Size = new System.Drawing.Size(324, 379);
+            this.chart1.Size = new System.Drawing.Size(329, 379);
             this.chart1.TabIndex = 1;
             this.chart1.Text = "chart_maliyet";
             // 
@@ -566,12 +570,17 @@
             // splitContainer12.Panel2
             // 
             this.splitContainer12.Panel2.Controls.Add(this.splitContainer13);
-            this.splitContainer12.Size = new System.Drawing.Size(1003, 379);
-            this.splitContainer12.SplitterDistance = 331;
+            this.splitContainer12.Size = new System.Drawing.Size(1020, 379);
+            this.splitContainer12.SplitterDistance = 336;
             this.splitContainer12.TabIndex = 0;
             // 
             // chart2
             // 
+            this.chart2.BorderlineWidth = 0;
+            this.chart2.BorderSkin.BorderWidth = 0;
+            chartArea2.AlignmentOrientation = ((System.Windows.Forms.DataVisualization.Charting.AreaAlignmentOrientations)((System.Windows.Forms.DataVisualization.Charting.AreaAlignmentOrientations.Vertical | System.Windows.Forms.DataVisualization.Charting.AreaAlignmentOrientations.Horizontal)));
+            chartArea2.BorderColor = System.Drawing.Color.Transparent;
+            chartArea2.BorderWidth = 0;
             chartArea2.Name = "ChartArea1";
             this.chart2.ChartAreas.Add(chartArea2);
             this.chart2.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -582,6 +591,11 @@
             this.chart2.Legends.Add(legend2);
             this.chart2.Location = new System.Drawing.Point(0, 0);
             this.chart2.Name = "chart2";
+            this.chart2.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.None;
+            this.chart2.PaletteCustomColors = new System.Drawing.Color[] {
+        System.Drawing.Color.DarkSeaGreen,
+        System.Drawing.Color.Silver};
+            series2.BorderWidth = 0;
             series2.ChartArea = "ChartArea1";
             series2.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie;
             series2.Legend = "Legend1";
@@ -589,7 +603,7 @@
             series2.Points.Add(dataPoint4);
             series2.Points.Add(dataPoint5);
             this.chart2.Series.Add(series2);
-            this.chart2.Size = new System.Drawing.Size(331, 379);
+            this.chart2.Size = new System.Drawing.Size(336, 379);
             this.chart2.TabIndex = 5;
             this.chart2.Text = "chart2";
             // 
@@ -606,8 +620,8 @@
             // splitContainer13.Panel2
             // 
             this.splitContainer13.Panel2.Controls.Add(this.chart4);
-            this.splitContainer13.Size = new System.Drawing.Size(668, 379);
-            this.splitContainer13.SplitterDistance = 329;
+            this.splitContainer13.Size = new System.Drawing.Size(680, 379);
+            this.splitContainer13.SplitterDistance = 334;
             this.splitContainer13.TabIndex = 0;
             // 
             // chart3
@@ -622,6 +636,10 @@
             this.chart3.Legends.Add(legend3);
             this.chart3.Location = new System.Drawing.Point(0, 0);
             this.chart3.Name = "chart3";
+            this.chart3.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.None;
+            this.chart3.PaletteCustomColors = new System.Drawing.Color[] {
+        System.Drawing.Color.DarkSeaGreen,
+        System.Drawing.Color.Silver};
             series3.ChartArea = "ChartArea1";
             series3.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie;
             series3.Legend = "Legend1";
@@ -629,7 +647,7 @@
             series3.Points.Add(dataPoint6);
             series3.Points.Add(dataPoint7);
             this.chart3.Series.Add(series3);
-            this.chart3.Size = new System.Drawing.Size(329, 379);
+            this.chart3.Size = new System.Drawing.Size(334, 379);
             this.chart3.TabIndex = 3;
             this.chart3.Text = "chart3";
             // 
@@ -645,6 +663,10 @@
             this.chart4.Legends.Add(legend4);
             this.chart4.Location = new System.Drawing.Point(0, 0);
             this.chart4.Name = "chart4";
+            this.chart4.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.None;
+            this.chart4.PaletteCustomColors = new System.Drawing.Color[] {
+        System.Drawing.Color.DarkSeaGreen,
+        System.Drawing.Color.Silver};
             series4.ChartArea = "ChartArea1";
             series4.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie;
             series4.Legend = "Legend1";
@@ -652,7 +674,7 @@
             series4.Points.Add(dataPoint8);
             series4.Points.Add(dataPoint9);
             this.chart4.Series.Add(series4);
-            this.chart4.Size = new System.Drawing.Size(335, 379);
+            this.chart4.Size = new System.Drawing.Size(342, 379);
             this.chart4.TabIndex = 4;
             this.chart4.Text = "chart4";
             // 
@@ -671,7 +693,7 @@
             this.groupBox3.Controls.Add(this.metroLabel3);
             this.groupBox3.Location = new System.Drawing.Point(3, 12);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(445, 234);
+            this.groupBox3.Size = new System.Drawing.Size(423, 234);
             this.groupBox3.TabIndex = 0;
             this.groupBox3.TabStop = false;
             // 
@@ -810,7 +832,7 @@
             this.btn_ozet.Highlight = true;
             this.btn_ozet.Location = new System.Drawing.Point(0, 368);
             this.btn_ozet.Name = "btn_ozet";
-            this.btn_ozet.Size = new System.Drawing.Size(451, 30);
+            this.btn_ozet.Size = new System.Drawing.Size(429, 30);
             this.btn_ozet.Style = MetroFramework.MetroColorStyle.Red;
             this.btn_ozet.TabIndex = 113;
             this.btn_ozet.Text = "ÖZET";

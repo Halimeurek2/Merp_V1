@@ -262,22 +262,22 @@ namespace MERP_MUI
                     {
                         case 0:
                             {
-                                lbl_elfirma1.Text = Convert.ToString(myReader.GetString(0));
+                                lbl_elfrm1.Text = Convert.ToString(myReader.GetString(0));
                                 lbl_el1.Text = string.Format(new CultureInfo("de-DE"), "{0:C2}", Convert.ToDecimal(myReader.GetString(1)));
                                 state = 1;
                                 break;
                             }
                         case 1:
                             {
-                                lbl_el2.Text = Convert.ToString(myReader.GetString(0));
-                                //lbl_tutar2.Text = string.Format(new CultureInfo("de-DE"), "{0:C2}", Convert.ToDecimal(myReader.GetString(1)));
+                                lbl_elfrm2.Text = Convert.ToString(myReader.GetString(0));
+                                lbl_el2.Text = string.Format(new CultureInfo("de-DE"), "{0:C2}", Convert.ToDecimal(myReader.GetString(1)));
                                 state = 2;
                                 break;
                             }
                         case 2:
                             {
-                                lbl_el3.Text = Convert.ToString(myReader.GetString(0));
-                                //lbl_tutar3.Text = string.Format(new CultureInfo("de-DE"), "{0:C2}", Convert.ToDecimal(myReader.GetString(1)));
+                                lbl_elfrm3.Text = Convert.ToString(myReader.GetString(0));
+                                lbl_el3.Text = string.Format(new CultureInfo("de-DE"), "{0:C2}", Convert.ToDecimal(myReader.GetString(1)));
                                 state = 0;
                                 processDone1 = true;
                                 break;
@@ -300,22 +300,22 @@ namespace MERP_MUI
                     {
                         case 0:
                             {
-                                lbl_mek1.Text = Convert.ToString(myReader.GetString(0));
-                                //lbl.Text = string.Format(new CultureInfo("de-DE"), "{0:C2}", Convert.ToDecimal(myReader.GetString(1)));
+                                lbl_mekfrm1.Text = Convert.ToString(myReader.GetString(0));
+                                lbl_mek1.Text = string.Format(new CultureInfo("de-DE"), "{0:C2}", Convert.ToDecimal(myReader.GetString(1)));
                                 state = 1;
                                 break;
                             }
                         case 1:
                             {
-                                lbl_mek2.Text = Convert.ToString(myReader.GetString(0));
-                                //lbl_tutar2.Text = string.Format(new CultureInfo("de-DE"), "{0:C2}", Convert.ToDecimal(myReader.GetString(1)));
+                                lbl_mekfrm2.Text = Convert.ToString(myReader.GetString(0));
+                                lbl_mek2.Text = string.Format(new CultureInfo("de-DE"), "{0:C2}", Convert.ToDecimal(myReader.GetString(1)));
                                 state = 2;
                                 break;
                             }
                         case 2:
                             {
-                                lbl_mek3.Text = Convert.ToString(myReader.GetString(0));
-                                //lbl_tutar3.Text = string.Format(new CultureInfo("de-DE"), "{0:C2}", Convert.ToDecimal(myReader.GetString(1)));
+                                lbl_mekfrm3.Text = Convert.ToString(myReader.GetString(0));
+                                lbl_mek3.Text = string.Format(new CultureInfo("de-DE"), "{0:C2}", Convert.ToDecimal(myReader.GetString(1)));
                                 state = 0;
                                 processDone1 = true;
                                 break;
@@ -339,22 +339,22 @@ namespace MERP_MUI
                     {
                         case 0:
                             {
-                                lbl_gnl1.Text = Convert.ToString(myReader.GetString(0));
-                                //lbl.Text = string.Format(new CultureInfo("de-DE"), "{0:C2}", Convert.ToDecimal(myReader.GetString(1)));
+                                lbl_gnlfrm1.Text = Convert.ToString(myReader.GetString(0));
+                                lbl_gnl1.Text = string.Format(new CultureInfo("de-DE"), "{0:C2}", Convert.ToDecimal(myReader.GetString(1)));
                                 state = 1;
                                 break;
                             }
                         case 1:
                             {
-                                lbl_gnl2.Text = Convert.ToString(myReader.GetString(0));
-                                //lbl_tutar2.Text = string.Format(new CultureInfo("de-DE"), "{0:C2}", Convert.ToDecimal(myReader.GetString(1)));
+                                lbl_gnlfrm2.Text = Convert.ToString(myReader.GetString(0));
+                                lbl_gnl2.Text = string.Format(new CultureInfo("de-DE"), "{0:C2}", Convert.ToDecimal(myReader.GetString(1)));
                                 state = 2;
                                 break;
                             }
                         case 2:
                             {
-                                lbl_gnl3.Text = Convert.ToString(myReader.GetString(0));
-                                //lbl_tutar3.Text = string.Format(new CultureInfo("de-DE"), "{0:C2}", Convert.ToDecimal(myReader.GetString(1)));
+                                lbl_gnlfrm3.Text = Convert.ToString(myReader.GetString(0));
+                                lbl_gnl3.Text = string.Format(new CultureInfo("de-DE"), "{0:C2}", Convert.ToDecimal(myReader.GetString(1)));
                                 state = 0;
                                 processDone1 = true;
                                 break;

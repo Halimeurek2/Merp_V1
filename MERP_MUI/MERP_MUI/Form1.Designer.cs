@@ -101,6 +101,7 @@
             this.cmb_proje = new MetroFramework.Controls.MetroComboBox();
             this.cmb_yil = new MetroFramework.Controls.MetroComboBox();
             this.pbClose = new System.Windows.Forms.PictureBox();
+            this.lbl_kullanici = new MetroFramework.Controls.MetroLabel();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer2)).BeginInit();
             this.splitContainer2.Panel1.SuspendLayout();
             this.splitContainer2.Panel2.SuspendLayout();
@@ -177,8 +178,8 @@
             // splitContainer2.Panel2
             // 
             this.splitContainer2.Panel2.Controls.Add(this.splitContainer3);
-            this.splitContainer2.Size = new System.Drawing.Size(36, 700);
-            this.splitContainer2.SplitterDistance = 230;
+            this.splitContainer2.Size = new System.Drawing.Size(36, 982);
+            this.splitContainer2.SplitterDistance = 322;
             this.splitContainer2.TabIndex = 2;
             // 
             // pictureBox1
@@ -200,7 +201,7 @@
             this.btnDGW.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.btnDGW.Location = new System.Drawing.Point(0, 0);
             this.btnDGW.Name = "btnDGW";
-            this.btnDGW.Size = new System.Drawing.Size(36, 230);
+            this.btnDGW.Size = new System.Drawing.Size(36, 322);
             this.btnDGW.TabIndex = 0;
             this.btnDGW.UseVisualStyleBackColor = true;
             this.btnDGW.Click += new System.EventHandler(this.button1_Click);
@@ -220,8 +221,8 @@
             // splitContainer3.Panel2
             // 
             this.splitContainer3.Panel2.Controls.Add(this.btnFilter);
-            this.splitContainer3.Size = new System.Drawing.Size(36, 466);
-            this.splitContainer3.SplitterDistance = 231;
+            this.splitContainer3.Size = new System.Drawing.Size(36, 656);
+            this.splitContainer3.SplitterDistance = 325;
             this.splitContainer3.TabIndex = 0;
             // 
             // pictureBox2
@@ -243,7 +244,7 @@
             this.btnAktivite.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.btnAktivite.Location = new System.Drawing.Point(0, 0);
             this.btnAktivite.Name = "btnAktivite";
-            this.btnAktivite.Size = new System.Drawing.Size(36, 231);
+            this.btnAktivite.Size = new System.Drawing.Size(36, 325);
             this.btnAktivite.TabIndex = 1;
             this.btnAktivite.UseVisualStyleBackColor = true;
             this.btnAktivite.Click += new System.EventHandler(this.btnAktivite_Click);
@@ -255,7 +256,7 @@
             this.btnFilter.Image = ((System.Drawing.Image)(resources.GetObject("btnFilter.Image")));
             this.btnFilter.Location = new System.Drawing.Point(0, 0);
             this.btnFilter.Name = "btnFilter";
-            this.btnFilter.Size = new System.Drawing.Size(36, 231);
+            this.btnFilter.Size = new System.Drawing.Size(36, 327);
             this.btnFilter.TabIndex = 1;
             this.btnFilter.UseVisualStyleBackColor = true;
             this.btnFilter.Click += new System.EventHandler(this.btnFilter_Click);
@@ -278,7 +279,11 @@
             this.chart1.Legends.Add(legend1);
             this.chart1.Location = new System.Drawing.Point(0, 0);
             this.chart1.Name = "chart1";
-            this.chart1.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.SeaGreen;
+            this.chart1.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.None;
+            this.chart1.PaletteCustomColors = new System.Drawing.Color[] {
+        System.Drawing.Color.PaleTurquoise,
+        System.Drawing.Color.Silver,
+        System.Drawing.Color.DarkSeaGreen};
             series1.ChartArea = "ChartArea1";
             series1.Legend = "Legend1";
             series1.Name = "Gelen Faturalar";
@@ -295,7 +300,7 @@
             this.chart1.Series.Add(series1);
             this.chart1.Series.Add(series2);
             this.chart1.Series.Add(series3);
-            this.chart1.Size = new System.Drawing.Size(1157, 700);
+            this.chart1.Size = new System.Drawing.Size(1659, 982);
             this.chart1.TabIndex = 3;
             this.chart1.Text = "chart1";
             // 
@@ -316,17 +321,17 @@
             // splitContainer1.Panel2
             // 
             this.splitContainer1.Panel2.Controls.Add(this.splitContainer4);
-            this.splitContainer1.Size = new System.Drawing.Size(1302, 700);
-            this.splitContainer1.SplitterDistance = 1157;
+            this.splitContainer1.Size = new System.Drawing.Size(1868, 982);
+            this.splitContainer1.SplitterDistance = 1659;
             this.splitContainer1.TabIndex = 4;
             // 
             // panel1
             // 
             this.panel1.Controls.Add(this.splitContainer9);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel1.Location = new System.Drawing.Point(0, 675);
+            this.panel1.Location = new System.Drawing.Point(0, 957);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1157, 25);
+            this.panel1.Size = new System.Drawing.Size(1659, 25);
             this.panel1.TabIndex = 5;
             // 
             // splitContainer9
@@ -342,8 +347,8 @@
             // splitContainer9.Panel2
             // 
             this.splitContainer9.Panel2.Controls.Add(this.splitContainer10);
-            this.splitContainer9.Size = new System.Drawing.Size(1157, 25);
-            this.splitContainer9.SplitterDistance = 222;
+            this.splitContainer9.Size = new System.Drawing.Size(1659, 25);
+            this.splitContainer9.SplitterDistance = 318;
             this.splitContainer9.TabIndex = 0;
             // 
             // metroLabel4
@@ -375,8 +380,8 @@
             // splitContainer10.Panel2
             // 
             this.splitContainer10.Panel2.Controls.Add(this.splitContainer11);
-            this.splitContainer10.Size = new System.Drawing.Size(931, 25);
-            this.splitContainer10.SplitterDistance = 309;
+            this.splitContainer10.Size = new System.Drawing.Size(1337, 25);
+            this.splitContainer10.SplitterDistance = 443;
             this.splitContainer10.TabIndex = 0;
             // 
             // metroLabel1
@@ -424,8 +429,8 @@
             // 
             this.splitContainer11.Panel2.Controls.Add(this.lbl_gbp);
             this.splitContainer11.Panel2.Controls.Add(this.metroLabel3);
-            this.splitContainer11.Size = new System.Drawing.Size(618, 25);
-            this.splitContainer11.SplitterDistance = 299;
+            this.splitContainer11.Size = new System.Drawing.Size(890, 25);
+            this.splitContainer11.SplitterDistance = 430;
             this.splitContainer11.TabIndex = 0;
             // 
             // metroLabel2
@@ -757,8 +762,8 @@
             // splitContainer4.Panel2
             // 
             this.splitContainer4.Panel2.Controls.Add(this.groupBox3);
-            this.splitContainer4.Size = new System.Drawing.Size(141, 700);
-            this.splitContainer4.SplitterDistance = 514;
+            this.splitContainer4.Size = new System.Drawing.Size(205, 982);
+            this.splitContainer4.SplitterDistance = 721;
             this.splitContainer4.TabIndex = 0;
             // 
             // menuStrip1
@@ -778,7 +783,7 @@
             this.menuStrip1.LayoutStyle = System.Windows.Forms.ToolStripLayoutStyle.Table;
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(141, 514);
+            this.menuStrip1.Size = new System.Drawing.Size(205, 721);
             this.menuStrip1.TabIndex = 2;
             this.menuStrip1.Text = "menuStrip1";
             this.menuStrip1.TextDirection = System.Windows.Forms.ToolStripTextDirection.Vertical270;
@@ -942,7 +947,7 @@
             this.groupBox3.ForeColor = System.Drawing.Color.Red;
             this.groupBox3.Location = new System.Drawing.Point(0, 0);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(141, 182);
+            this.groupBox3.Size = new System.Drawing.Size(205, 257);
             this.groupBox3.TabIndex = 7;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Grafik Filtre";
@@ -960,8 +965,8 @@
             // splitContainer6.Panel2
             // 
             this.splitContainer6.Panel2.Controls.Add(this.splitContainer8);
-            this.splitContainer6.Size = new System.Drawing.Size(135, 163);
-            this.splitContainer6.SplitterDistance = 44;
+            this.splitContainer6.Size = new System.Drawing.Size(199, 238);
+            this.splitContainer6.SplitterDistance = 64;
             this.splitContainer6.TabIndex = 0;
             // 
             // splitContainer7
@@ -978,8 +983,8 @@
             // splitContainer7.Panel2
             // 
             this.splitContainer7.Panel2.Controls.Add(this.metroLabel5);
-            this.splitContainer7.Size = new System.Drawing.Size(44, 163);
-            this.splitContainer7.SplitterDistance = 77;
+            this.splitContainer7.Size = new System.Drawing.Size(64, 238);
+            this.splitContainer7.SplitterDistance = 112;
             this.splitContainer7.TabIndex = 0;
             // 
             // metroLabel6
@@ -1028,8 +1033,8 @@
             // splitContainer8.Panel2
             // 
             this.splitContainer8.Panel2.Controls.Add(this.cmb_yil);
-            this.splitContainer8.Size = new System.Drawing.Size(87, 163);
-            this.splitContainer8.SplitterDistance = 77;
+            this.splitContainer8.Size = new System.Drawing.Size(131, 238);
+            this.splitContainer8.SplitterDistance = 112;
             this.splitContainer8.TabIndex = 0;
             // 
             // cmb_proje
@@ -1041,7 +1046,7 @@
             this.cmb_proje.ItemHeight = 23;
             this.cmb_proje.Location = new System.Drawing.Point(12, 19);
             this.cmb_proje.Name = "cmb_proje";
-            this.cmb_proje.Size = new System.Drawing.Size(58, 29);
+            this.cmb_proje.Size = new System.Drawing.Size(102, 29);
             this.cmb_proje.TabIndex = 0;
             this.cmb_proje.UseSelectable = true;
             this.cmb_proje.SelectedIndexChanged += new System.EventHandler(this.cmb_proje_SelectedIndexChanged);
@@ -1060,7 +1065,7 @@
             "2018"});
             this.cmb_yil.Location = new System.Drawing.Point(12, 19);
             this.cmb_yil.Name = "cmb_yil";
-            this.cmb_yil.Size = new System.Drawing.Size(58, 29);
+            this.cmb_yil.Size = new System.Drawing.Size(102, 29);
             this.cmb_yil.TabIndex = 1;
             this.cmb_yil.UseSelectable = true;
             this.cmb_yil.SelectedIndexChanged += new System.EventHandler(this.cmb_yil_SelectedIndexChanged);
@@ -1070,7 +1075,7 @@
             this.pbClose.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.pbClose.BackColor = System.Drawing.Color.Transparent;
             this.pbClose.Image = global::MERP_MUI.Properties.Resources.appbar_arrow_left_dark;
-            this.pbClose.Location = new System.Drawing.Point(1309, 12);
+            this.pbClose.Location = new System.Drawing.Point(1878, 12);
             this.pbClose.Name = "pbClose";
             this.pbClose.Size = new System.Drawing.Size(46, 42);
             this.pbClose.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -1078,12 +1083,29 @@
             this.pbClose.TabStop = false;
             this.pbClose.Click += new System.EventHandler(this.pbClose_Click);
             // 
+            // lbl_kullanici
+            // 
+            this.lbl_kullanici.AutoSize = true;
+            this.lbl_kullanici.FontWeight = MetroFramework.MetroLabelWeight.Bold;
+            this.lbl_kullanici.ForeColor = System.Drawing.Color.Maroon;
+            this.lbl_kullanici.Location = new System.Drawing.Point(20, 12);
+            this.lbl_kullanici.Name = "lbl_kullanici";
+            this.lbl_kullanici.Size = new System.Drawing.Size(63, 19);
+            this.lbl_kullanici.Style = MetroFramework.MetroColorStyle.Red;
+            this.lbl_kullanici.TabIndex = 25;
+            this.lbl_kullanici.Text = "KURLAR";
+            this.lbl_kullanici.Theme = MetroFramework.MetroThemeStyle.Dark;
+            this.lbl_kullanici.UseCustomBackColor = true;
+            this.lbl_kullanici.UseCustomForeColor = true;
+            this.lbl_kullanici.UseStyleColors = true;
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1378, 780);
+            this.ClientSize = new System.Drawing.Size(1944, 1062);
             this.ControlBox = false;
+            this.Controls.Add(this.lbl_kullanici);
             this.Controls.Add(this.pbClose);
             this.Controls.Add(this.splitContainer1);
             this.Controls.Add(this.splitContainer2);
@@ -1161,6 +1183,7 @@
             this.splitContainer8.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pbClose)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -1223,6 +1246,7 @@
         private MetroFramework.Controls.MetroComboBox cmb_proje;
         private MetroFramework.Controls.MetroComboBox cmb_yil;
         private System.Windows.Forms.PictureBox pbClose;
+        private MetroFramework.Controls.MetroLabel lbl_kullanici;
     }
 }
 

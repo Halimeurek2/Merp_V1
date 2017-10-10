@@ -56,7 +56,7 @@ namespace MERP_MUI
             {
                 txtKullaniciAdi.Text = Properties.Settings.Default.UserName;
                 txtPassword.Text = Properties.Settings.Default.Password;
-                //txtKullaniciAdi.Text = Properties.Settings.Default.UserName;
+                cb_animsa.Checked = Convert.ToBoolean(Properties.Settings.Default.Check);
             }
         }
 

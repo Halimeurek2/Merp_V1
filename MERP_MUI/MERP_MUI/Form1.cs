@@ -68,6 +68,7 @@ namespace MERP_MUI
         private void Form1_Load(object sender, EventArgs e)
         {
             giris_tarihi = DateTime.Now;
+            lbl_kullanici.Text = Properties.Settings.Default.UserName;
 
             server = "localhost";
             database = "uretimplanlama_2";
@@ -563,8 +564,20 @@ namespace MERP_MUI
 
         private void pbClose_Click(object sender, EventArgs e)
         {
-            //db = new DBConnect();
-            //db.InsertKullanicilar(kullanici_id, giris_tarihi, DateTime.Now, animsaCheck);
+            myConnection.Open();
+            komut = "SELECT kullanicigirisi_id FROM db_kullanicilar where kullanici_adi='" + lbl_kullanici.Text + "';";
+            da = new MySqlDataAdapter(komut, connection);
+            myCommand = new MySqlCommand(komut, myConnection);
+            MySqlDataReader myReader;
+            myReader = myCommand.ExecuteReader();
+            while (myReader.Read())
+            {
+                kullanici_id = Convert.ToInt16(myReader.GetString(0));
+            }
+            myReader.Close();
+
+            db = new DBConnect();
+            db.InsertKullanicilar(kullanici_id, giris_tarihi, DateTime.Now, Properties.Settings.Default.Check);
 
             this.Close();
         }

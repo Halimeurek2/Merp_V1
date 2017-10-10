@@ -191,6 +191,9 @@
             this.cmb_projeNo.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.cmb_projeNo.FormattingEnabled = true;
             this.cmb_projeNo.ItemHeight = 23;
+            this.cmb_projeNo.Items.AddRange(new object[] {
+            "",
+            "Hepsi"});
             this.cmb_projeNo.Location = new System.Drawing.Point(86, 42);
             this.cmb_projeNo.Name = "cmb_projeNo";
             this.cmb_projeNo.Size = new System.Drawing.Size(156, 29);
@@ -348,12 +351,13 @@
             this.btnClear.Size = new System.Drawing.Size(141, 36);
             this.btnClear.Style = MetroFramework.MetroColorStyle.Red;
             this.btnClear.TabIndex = 60;
-            this.btnClear.Text = "Clear";
+            this.btnClear.Text = "Temizle";
             this.btnClear.Theme = MetroFramework.MetroThemeStyle.Dark;
             this.btnClear.UseCustomBackColor = true;
             this.btnClear.UseCustomForeColor = true;
             this.btnClear.UseSelectable = true;
             this.btnClear.UseStyleColors = true;
+            this.btnClear.Click += new System.EventHandler(this.btnClear_Click);
             // 
             // splitContainer6
             // 

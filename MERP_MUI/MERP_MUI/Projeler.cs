@@ -376,5 +376,29 @@ namespace MERP_MUI
         {
             this.Close();
         }
+
+        private void btnClear_Click(object sender, EventArgs e)
+        {
+            cmb_projeNo.Text = "";
+            txt_prjAdi.Text = "";
+
+            komut = "SELECT proje_no,proje_ismi,proje_butce,proje_birim,proje_musteri,proje_baslangic,proje_bitis,proje_vade,proje_aciklama,harcama_toplam,harcama_toplam_birim,prj_tip FROM db_projeler";
+            myCommand = new MySqlCommand(komut, myConnection);
+            da = new MySqlDataAdapter(myCommand);
+            dt = new DataTable();
+            // myReader = myCommand.ExecuteReader();
+
+            da.Fill(dt);
+
+            dgw_prj_list.DataSource = dt;
+
+            dgw_prj_list.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
+            dgw_prj_list.AutoSizeColumnsMode =
+                       DataGridViewAutoSizeColumnsMode.Fill;
+
+            myConnection.Close();
+
+            SumDGW();
+        }
     }
 }

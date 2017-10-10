@@ -47,6 +47,7 @@
             this.metroLabel3 = new MetroFramework.Controls.MetroLabel();
             this.dgw_stf_list = new MetroFramework.Controls.MetroGrid();
             this.splitContainer6 = new System.Windows.Forms.SplitContainer();
+            this.btnClear = new MetroFramework.Controls.MetroButton();
             this.splitContainer7 = new System.Windows.Forms.SplitContainer();
             this.btn_ftr_duzenle = new MetroFramework.Controls.MetroButton();
             this.btn_ftr_sil = new MetroFramework.Controls.MetroButton();
@@ -73,6 +74,7 @@
             this.splitContainer5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgw_stf_list)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer6)).BeginInit();
+            this.splitContainer6.Panel1.SuspendLayout();
             this.splitContainer6.Panel2.SuspendLayout();
             this.splitContainer6.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer7)).BeginInit();
@@ -115,7 +117,7 @@
             // 
             this.splitContainer2.Panel2.Controls.Add(this.dgw_stf_list);
             this.splitContainer2.Size = new System.Drawing.Size(1539, 730);
-            this.splitContainer2.SplitterDistance = 86;
+            this.splitContainer2.SplitterDistance = 85;
             this.splitContainer2.SplitterWidth = 20;
             this.splitContainer2.TabIndex = 53;
             // 
@@ -134,7 +136,7 @@
             // splitContainer3.Panel2
             // 
             this.splitContainer3.Panel2.Controls.Add(this.splitContainer4);
-            this.splitContainer3.Size = new System.Drawing.Size(1539, 86);
+            this.splitContainer3.Size = new System.Drawing.Size(1539, 85);
             this.splitContainer3.SplitterDistance = 437;
             this.splitContainer3.TabIndex = 0;
             // 
@@ -185,7 +187,7 @@
             // splitContainer4.Panel2
             // 
             this.splitContainer4.Panel2.Controls.Add(this.splitContainer5);
-            this.splitContainer4.Size = new System.Drawing.Size(1098, 86);
+            this.splitContainer4.Size = new System.Drawing.Size(1098, 85);
             this.splitContainer4.SplitterDistance = 364;
             this.splitContainer4.TabIndex = 0;
             // 
@@ -194,6 +196,9 @@
             this.cmb_projeNo.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.cmb_projeNo.FormattingEnabled = true;
             this.cmb_projeNo.ItemHeight = 23;
+            this.cmb_projeNo.Items.AddRange(new object[] {
+            "",
+            "Hepsi"});
             this.cmb_projeNo.Location = new System.Drawing.Point(46, 38);
             this.cmb_projeNo.Name = "cmb_projeNo";
             this.cmb_projeNo.Size = new System.Drawing.Size(156, 29);
@@ -237,7 +242,7 @@
             // 
             this.splitContainer5.Panel2.Controls.Add(this.txt_tedarikci);
             this.splitContainer5.Panel2.Controls.Add(this.metroLabel3);
-            this.splitContainer5.Size = new System.Drawing.Size(730, 86);
+            this.splitContainer5.Size = new System.Drawing.Size(730, 85);
             this.splitContainer5.SplitterDistance = 366;
             this.splitContainer5.TabIndex = 0;
             // 
@@ -386,7 +391,7 @@
             this.dgw_stf_list.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.dgw_stf_list.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.dgw_stf_list.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgw_stf_list.Size = new System.Drawing.Size(1539, 624);
+            this.dgw_stf_list.Size = new System.Drawing.Size(1539, 625);
             this.dgw_stf_list.Style = MetroFramework.MetroColorStyle.Silver;
             this.dgw_stf_list.TabIndex = 0;
             this.dgw_stf_list.UseCustomBackColor = true;
@@ -399,12 +404,33 @@
             this.splitContainer6.Location = new System.Drawing.Point(0, 0);
             this.splitContainer6.Name = "splitContainer6";
             // 
+            // splitContainer6.Panel1
+            // 
+            this.splitContainer6.Panel1.Controls.Add(this.btnClear);
+            // 
             // splitContainer6.Panel2
             // 
             this.splitContainer6.Panel2.Controls.Add(this.splitContainer7);
             this.splitContainer6.Size = new System.Drawing.Size(1539, 35);
             this.splitContainer6.SplitterDistance = 1181;
             this.splitContainer6.TabIndex = 0;
+            // 
+            // btnClear
+            // 
+            this.btnClear.Dock = System.Windows.Forms.DockStyle.Left;
+            this.btnClear.Highlight = true;
+            this.btnClear.Location = new System.Drawing.Point(0, 0);
+            this.btnClear.Name = "btnClear";
+            this.btnClear.Size = new System.Drawing.Size(141, 35);
+            this.btnClear.Style = MetroFramework.MetroColorStyle.Red;
+            this.btnClear.TabIndex = 60;
+            this.btnClear.Text = "Temizle";
+            this.btnClear.Theme = MetroFramework.MetroThemeStyle.Dark;
+            this.btnClear.UseCustomBackColor = true;
+            this.btnClear.UseCustomForeColor = true;
+            this.btnClear.UseSelectable = true;
+            this.btnClear.UseStyleColors = true;
+            this.btnClear.Click += new System.EventHandler(this.btnClear_Click);
             // 
             // splitContainer7
             // 
@@ -509,6 +535,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer5)).EndInit();
             this.splitContainer5.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgw_stf_list)).EndInit();
+            this.splitContainer6.Panel1.ResumeLayout(false);
             this.splitContainer6.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer6)).EndInit();
             this.splitContainer6.ResumeLayout(false);
@@ -542,5 +569,6 @@
         private System.Windows.Forms.SplitContainer splitContainer7;
         private MetroFramework.Controls.MetroButton btn_ftr_duzenle;
         private MetroFramework.Controls.MetroButton btn_ftr_sil;
+        private MetroFramework.Controls.MetroButton btnClear;
     }
 }

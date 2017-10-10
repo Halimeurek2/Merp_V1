@@ -246,6 +246,44 @@ namespace MERP_MUI
             {
 
             }
+            myConnection.Open();
+            komut = "SELECT fatura_cinsi,sum(fatura_euro) from db_faturalar where fatura_cinsi='Elektronik' group by(fatura_cinsi);";
+            da = new MySqlDataAdapter(komut, connection);
+
+            myCommand = new MySqlCommand(komut, myConnection);
+            MySqlDataReader myReader;
+            myReader = myCommand.ExecuteReader();
+            while (myReader.Read())
+            {
+                lbl_el.Text = string.Format(new CultureInfo("de-DE"), "{0:C2}", Convert.ToDecimal(myReader.GetString(1)));
+            }
+
+            myReader.Close();
+
+            komut = "SELECT fatura_cinsi,sum(fatura_euro) from db_faturalar where fatura_cinsi='Mekanik' group by(fatura_cinsi);";
+            da = new MySqlDataAdapter(komut, connection);
+
+            myCommand = new MySqlCommand(komut, myConnection);
+            myReader = myCommand.ExecuteReader();
+            while (myReader.Read())
+            {
+                lbl_mek.Text = string.Format(new CultureInfo("de-DE"), "{0:C2}", Convert.ToDecimal(myReader.GetString(1)));
+            }
+
+            myReader.Close();
+
+            komut = "SELECT fatura_cinsi,sum(fatura_euro) from db_faturalar where fatura_cinsi='Genel Giderler' group by(fatura_cinsi);";
+            da = new MySqlDataAdapter(komut, connection);
+
+            myCommand = new MySqlCommand(komut, myConnection);
+            myReader = myCommand.ExecuteReader();
+            while (myReader.Read())
+            {
+                lbl_gnl.Text = string.Format(new CultureInfo("de-DE"), "{0:C2}", Convert.ToDecimal(myReader.GetString(1)));
+            }
+
+            myReader.Close();
+            myConnection.Close();
         }
 
         private void cmb_projeNo_SelectedIndexChanged(object sender, EventArgs e)
@@ -297,6 +335,24 @@ namespace MERP_MUI
             cmb_projeNo.Text = "";
             txt_ftr_no.Text = "";
             txt_tip.Text = "";
+
+            komut = "SELECT * FROM db_faturalar";
+            myCommand = new MySqlCommand(komut, myConnection);
+            da = new MySqlDataAdapter(myCommand);
+            dt = new DataTable();
+            // myReader = myCommand.ExecuteReader();
+
+            da.Fill(dt);
+
+            dgw_ftr_list.DataSource = dt;
+
+            dgw_ftr_list.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
+            dgw_ftr_list.AutoSizeColumnsMode =
+                       DataGridViewAutoSizeColumnsMode.Fill;
+
+            myConnection.Close();
+
+            SumDGW();
         }
     }
 }

@@ -245,5 +245,30 @@ namespace MERP_MUI
 
             }
         }
+
+        private void btnClear_Click(object sender, EventArgs e)
+        {
+            cmb_projeNo.Text = "";
+            txt_satınalma_no.Text = "";
+            txt_tedarikci.Text = "";
+
+            komut = "SELECT * FROM db_siparis_emri";
+            myCommand = new MySqlCommand(komut, myConnection);
+            da = new MySqlDataAdapter(myCommand);
+            dt = new DataTable();
+            // myReader = myCommand.ExecuteReader();
+
+            da.Fill(dt);
+
+            dgw_stf_list.DataSource = dt;
+
+            dgw_stf_list.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
+            dgw_stf_list.AutoSizeColumnsMode =
+                       DataGridViewAutoSizeColumnsMode.Fill;
+
+            myConnection.Close();
+
+            SumDGW();
+        }
     }
 }

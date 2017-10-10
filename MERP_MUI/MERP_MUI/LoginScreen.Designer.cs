@@ -87,6 +87,7 @@
             this.cb_animsa.UseCustomForeColor = true;
             this.cb_animsa.UseSelectable = true;
             this.cb_animsa.UseStyleColors = true;
+            this.cb_animsa.CheckedChanged += new System.EventHandler(this.cb_animsa_CheckedChanged);
             // 
             // lblgetPassword
             // 

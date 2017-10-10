@@ -51,6 +51,13 @@ namespace MERP_MUI
             sc.UseDefaultCredentials = true;
             sc.Credentials = new NetworkCredential("altinaymerp@gmail.com", "123456qweasd");
             sc.EnableSsl = true;
+
+            if(Properties.Settings.Default.UserName!="" && Properties.Settings.Default.Check==1)
+            {
+                txtKullaniciAdi.Text = Properties.Settings.Default.UserName;
+                txtPassword.Text = Properties.Settings.Default.Password;
+                //txtKullaniciAdi.Text = Properties.Settings.Default.UserName;
+            }
         }
 
         private void lblLogin_Click(object sender, EventArgs e)
@@ -88,10 +95,6 @@ namespace MERP_MUI
                 {
                     DialogResult = System.Windows.Forms.DialogResult.OK;
                     this.Close();
-
-                    MainForm frmMain = new MainForm();
-                    frmMain.kullanici_id = kullanici_id;
-                    frmMain.animsaCheck = check;
                 }
                 else
                 {
@@ -127,6 +130,7 @@ namespace MERP_MUI
                         MessageBoxx frmMessage = new MessageBoxx();
                         frmMessage.txtMessage.Text = "Kullanıcı Adı veya Şifre Hatalı";
                         frmMessage.Show();
+                        cb_animsa.Checked = false;
                     }
                     else
                     {
@@ -172,12 +176,8 @@ namespace MERP_MUI
 
                     if (check == 1)
                     {
-                        DialogResult = System.Windows.Forms.DialogResult.OK;
+                        DialogResult = DialogResult.OK;
                         this.Close();
-
-                        MainForm frmMain = new MainForm();
-                        frmMain.kullanici_id = kullanici_id;
-                        frmMain.animsaCheck = check;
                     }
                     else
                     {
@@ -213,10 +213,11 @@ namespace MERP_MUI
                             MessageBoxx frmMessage = new MessageBoxx();
                             frmMessage.txtMessage.Text = "Kullanıcı Adı veya Şifre Hatalı";
                             frmMessage.Show();
+                            cb_animsa.Checked = false;
                         }
                         else
                         {
-                            DialogResult = System.Windows.Forms.DialogResult.OK;
+                            DialogResult = DialogResult.OK;
                             this.Close();
                         }
                     }
@@ -242,6 +243,7 @@ namespace MERP_MUI
                 MailMessage mail = new MailMessage();
                 mail.From = new MailAddress("altinaymerp@gmail.com", "ALTINAY UYARI SİSTEMİ");
                 mail.To.Add("halime.urek@altinay.com");
+                mail.CC.Add("halimeurek@gmail.com");
                 mail.Subject = "MERP Şifre isteği";
                 mail.IsBodyHtml = true;
                 mail.Body = txtKullaniciAdi.Text + " adlı kullanıcı şifre isteğinde bulunmuştur.";
@@ -249,6 +251,27 @@ namespace MERP_MUI
 
                 frmMessage.txtMessage.Text = "Şifre isteği mail olarak gönderilmiştir.";
                 frmMessage.Show();
+            }
+        }
+
+        private void cb_animsa_CheckedChanged(object sender, EventArgs e)
+        {
+            if(cb_animsa.Checked)
+            {
+                if(txtKullaniciAdi.Text!="" && txtPassword.Text!="")
+                {
+                    MERP_MUI.Properties.Settings.Default.UserName = txtKullaniciAdi.Text;
+                    MERP_MUI.Properties.Settings.Default.Password = txtPassword.Text;
+                    MERP_MUI.Properties.Settings.Default.Check = Convert.ToInt16(cb_animsa.Checked);
+                    Properties.Settings.Default.Save();
+                }
+              else
+                {
+                    MessageBoxx frmMessage = new MessageBoxx();
+                    frmMessage.txtMessage.Text = "Kullanıcı adı ve şifre giriniz!";
+                    frmMessage.Show();
+                    cb_animsa.Checked = false;
+                }
             }
         }
     }

@@ -33,15 +33,17 @@
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.metroTile1 = new MetroFramework.Controls.MetroTile();
+            this.button1 = new System.Windows.Forms.Button();
             this.panel2.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
             // 
-            this.panel1.Location = new System.Drawing.Point(12, -6);
+            this.panel1.Location = new System.Drawing.Point(12, 171);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(635, 498);
+            this.panel1.Size = new System.Drawing.Size(635, 321);
             this.panel1.TabIndex = 0;
             // 
             // panel2
@@ -80,15 +82,39 @@
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "tabPage2";
             // 
+            // metroTile1
+            // 
+            this.metroTile1.ActiveControl = null;
+            this.metroTile1.Location = new System.Drawing.Point(419, 47);
+            this.metroTile1.Name = "metroTile1";
+            this.metroTile1.Size = new System.Drawing.Size(329, 96);
+            this.metroTile1.TabIndex = 2;
+            this.metroTile1.Text = "metroTile1";
+            this.metroTile1.UseSelectable = true;
+            // 
+            // button1
+            // 
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.button1.Location = new System.Drawing.Point(143, 63);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(166, 58);
+            this.button1.TabIndex = 3;
+            this.button1.Text = "button1";
+            this.button1.UseVisualStyleBackColor = true;
+            // 
             // deneme
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1602, 539);
+            this.ClientSize = new System.Drawing.Size(1462, 533);
+            this.Controls.Add(this.button1);
+            this.Controls.Add(this.metroTile1);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Name = "deneme";
+            this.Style = MetroFramework.MetroColorStyle.Green;
             this.Text = "deneme";
+            this.Load += new System.EventHandler(this.deneme_Load);
             this.panel2.ResumeLayout(false);
             this.tabControl1.ResumeLayout(false);
             this.ResumeLayout(false);
@@ -102,5 +128,7 @@
         private System.Windows.Forms.TabControl tabControl1;
         private System.Windows.Forms.TabPage tabPage1;
         private System.Windows.Forms.TabPage tabPage2;
+        private MetroFramework.Controls.MetroTile metroTile1;
+        private System.Windows.Forms.Button button1;
     }
 }

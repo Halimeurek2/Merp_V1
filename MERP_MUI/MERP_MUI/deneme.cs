@@ -10,11 +10,16 @@ using System.Windows.Forms;
 
 namespace MERP_MUI
 {
-    public partial class deneme : Form
+    public partial class deneme : MetroFramework.Forms.MetroForm
     {
         public deneme()
         {
             InitializeComponent();
+        }
+
+        private void deneme_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -31,12 +31,12 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(LoginScreen));
             this.lblLogin = new MetroFramework.Controls.MetroLink();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.cb_animsa = new MetroFramework.Controls.MetroCheckBox();
             this.lblgetPassword = new MetroFramework.Controls.MetroLink();
             this.pbLogin = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.txtPassword = new MetroFramework.Controls.MetroTextBox();
             this.txtKullaniciAdi = new MetroFramework.Controls.MetroTextBox();
-            this.cb_animsa = new MetroFramework.Controls.MetroCheckBox();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbLogin)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -72,6 +72,22 @@
             this.panel2.Size = new System.Drawing.Size(209, 275);
             this.panel2.TabIndex = 7;
             // 
+            // cb_animsa
+            // 
+            this.cb_animsa.AutoSize = true;
+            this.cb_animsa.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.cb_animsa.Location = new System.Drawing.Point(21, 206);
+            this.cb_animsa.Name = "cb_animsa";
+            this.cb_animsa.Size = new System.Drawing.Size(63, 15);
+            this.cb_animsa.Style = MetroFramework.MetroColorStyle.Red;
+            this.cb_animsa.TabIndex = 28;
+            this.cb_animsa.Text = "Anımsa";
+            this.cb_animsa.Theme = MetroFramework.MetroThemeStyle.Dark;
+            this.cb_animsa.UseCustomBackColor = true;
+            this.cb_animsa.UseCustomForeColor = true;
+            this.cb_animsa.UseSelectable = true;
+            this.cb_animsa.UseStyleColors = true;
+            // 
             // lblgetPassword
             // 
             this.lblgetPassword.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
@@ -85,6 +101,7 @@
             this.lblgetPassword.UseCustomForeColor = true;
             this.lblgetPassword.UseSelectable = true;
             this.lblgetPassword.UseStyleColors = true;
+            this.lblgetPassword.Click += new System.EventHandler(this.lblgetPassword_Click);
             // 
             // pbLogin
             // 
@@ -186,22 +203,6 @@
             this.txtKullaniciAdi.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.txtKullaniciAdi.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
             this.txtKullaniciAdi.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtPassword_KeyPress);
-            // 
-            // cb_animsa
-            // 
-            this.cb_animsa.AutoSize = true;
-            this.cb_animsa.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.cb_animsa.Location = new System.Drawing.Point(21, 206);
-            this.cb_animsa.Name = "cb_animsa";
-            this.cb_animsa.Size = new System.Drawing.Size(63, 15);
-            this.cb_animsa.Style = MetroFramework.MetroColorStyle.Red;
-            this.cb_animsa.TabIndex = 28;
-            this.cb_animsa.Text = "Anımsa";
-            this.cb_animsa.Theme = MetroFramework.MetroThemeStyle.Dark;
-            this.cb_animsa.UseCustomBackColor = true;
-            this.cb_animsa.UseCustomForeColor = true;
-            this.cb_animsa.UseSelectable = true;
-            this.cb_animsa.UseStyleColors = true;
             // 
             // LoginScreen
             // 

@@ -1,6 +1,8 @@
 ﻿using MySql.Data.MySqlClient;
 using System;
 using System.Data;
+using System.Net;
+using System.Net.Mail;
 using System.Windows.Forms;
 
 namespace MERP_MUI
@@ -20,6 +22,7 @@ namespace MERP_MUI
         DataTable dt = new DataTable();
 
         DBConnect db;
+        SmtpClient sc;
 
         Boolean Connected;
         public int check;
@@ -41,6 +44,13 @@ namespace MERP_MUI
             connectionString = "SERVER=" + server + ";" + "DATABASE=" + database + ";" + "UID=" + uid + ";" + "PASSWORD=" + password + ";";
             myConnection = new MySqlConnection(connectionString);
             myConnection.Open();
+
+            sc = new SmtpClient();
+            sc.Port = 587;
+            sc.Host = "smtp.gmail.com";
+            sc.UseDefaultCredentials = true;
+            sc.Credentials = new NetworkCredential("altinaymerp@gmail.com", "123456qweasd");
+            sc.EnableSsl = true;
         }
 
         private void lblLogin_Click(object sender, EventArgs e)
@@ -215,6 +225,30 @@ namespace MERP_MUI
 
                     }
                 }
+            }
+        }
+
+        private void lblgetPassword_Click(object sender, EventArgs e)
+        {
+            MessageBoxx frmMessage = new MessageBoxx();
+
+            if (txtKullaniciAdi.Text=="")
+            {
+                frmMessage.txtMessage.Text = "Kullanıcı adını giriniz!";
+                frmMessage.Show();
+            }
+            else
+            {
+                MailMessage mail = new MailMessage();
+                mail.From = new MailAddress("altinaymerp@gmail.com", "ALTINAY UYARI SİSTEMİ");
+                mail.To.Add("halime.urek@altinay.com");
+                mail.Subject = "MERP Şifre isteği";
+                mail.IsBodyHtml = true;
+                mail.Body = txtKullaniciAdi.Text + " adlı kullanıcı şifre isteğinde bulunmuştur.";
+                sc.Send(mail);
+
+                frmMessage.txtMessage.Text = "Şifre isteği mail olarak gönderilmiştir.";
+                frmMessage.Show();
             }
         }
     }

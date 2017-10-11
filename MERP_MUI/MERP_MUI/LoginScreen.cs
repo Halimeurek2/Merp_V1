@@ -273,6 +273,12 @@ namespace MERP_MUI
                     cb_animsa.Checked = false;
                 }
             }
+            else
+            {
+                MERP_MUI.Properties.Settings.Default.UserName = "";
+                MERP_MUI.Properties.Settings.Default.Password = "";
+                MERP_MUI.Properties.Settings.Default.Check = 0;
+            }
         }
     }
 }

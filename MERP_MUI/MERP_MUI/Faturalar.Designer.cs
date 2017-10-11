@@ -46,24 +46,24 @@
             this.splitContainer6 = new System.Windows.Forms.SplitContainer();
             this.cmb_firma = new System.Windows.Forms.ComboBox();
             this.metroLabel2 = new MetroFramework.Controls.MetroLabel();
+            this.splitContainer9 = new System.Windows.Forms.SplitContainer();
+            this.txt_tip = new MetroFramework.Controls.MetroTextBox();
+            this.metroLabel3 = new MetroFramework.Controls.MetroLabel();
+            this.btnClear = new MetroFramework.Controls.MetroButton();
             this.dgw_ftr_list = new MetroFramework.Controls.MetroGrid();
             this.splitContainer7 = new System.Windows.Forms.SplitContainer();
-            this.btnClear = new MetroFramework.Controls.MetroButton();
+            this.splitContainer10 = new System.Windows.Forms.SplitContainer();
+            this.lbl_el = new MetroFramework.Controls.MetroLabel();
+            this.metroLabel6 = new MetroFramework.Controls.MetroLabel();
+            this.splitContainer11 = new System.Windows.Forms.SplitContainer();
+            this.lbl_mek = new MetroFramework.Controls.MetroLabel();
+            this.metroLabel7 = new MetroFramework.Controls.MetroLabel();
+            this.lbl_gnl = new MetroFramework.Controls.MetroLabel();
+            this.metroLabel8 = new MetroFramework.Controls.MetroLabel();
             this.splitContainer8 = new System.Windows.Forms.SplitContainer();
             this.btn_ftr_duzenle = new MetroFramework.Controls.MetroButton();
             this.btn_ftr_sil = new MetroFramework.Controls.MetroButton();
             this.pbClose = new System.Windows.Forms.PictureBox();
-            this.splitContainer9 = new System.Windows.Forms.SplitContainer();
-            this.txt_tip = new MetroFramework.Controls.MetroTextBox();
-            this.metroLabel3 = new MetroFramework.Controls.MetroLabel();
-            this.splitContainer10 = new System.Windows.Forms.SplitContainer();
-            this.splitContainer11 = new System.Windows.Forms.SplitContainer();
-            this.metroLabel6 = new MetroFramework.Controls.MetroLabel();
-            this.metroLabel7 = new MetroFramework.Controls.MetroLabel();
-            this.metroLabel8 = new MetroFramework.Controls.MetroLabel();
-            this.lbl_el = new MetroFramework.Controls.MetroLabel();
-            this.lbl_mek = new MetroFramework.Controls.MetroLabel();
-            this.lbl_gnl = new MetroFramework.Controls.MetroLabel();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -88,20 +88,15 @@
             this.splitContainer6.Panel1.SuspendLayout();
             this.splitContainer6.Panel2.SuspendLayout();
             this.splitContainer6.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainer9)).BeginInit();
+            this.splitContainer9.Panel1.SuspendLayout();
+            this.splitContainer9.Panel2.SuspendLayout();
+            this.splitContainer9.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgw_ftr_list)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer7)).BeginInit();
             this.splitContainer7.Panel1.SuspendLayout();
             this.splitContainer7.Panel2.SuspendLayout();
             this.splitContainer7.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.splitContainer8)).BeginInit();
-            this.splitContainer8.Panel1.SuspendLayout();
-            this.splitContainer8.Panel2.SuspendLayout();
-            this.splitContainer8.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pbClose)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.splitContainer9)).BeginInit();
-            this.splitContainer9.Panel1.SuspendLayout();
-            this.splitContainer9.Panel2.SuspendLayout();
-            this.splitContainer9.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer10)).BeginInit();
             this.splitContainer10.Panel1.SuspendLayout();
             this.splitContainer10.Panel2.SuspendLayout();
@@ -110,6 +105,11 @@
             this.splitContainer11.Panel1.SuspendLayout();
             this.splitContainer11.Panel2.SuspendLayout();
             this.splitContainer11.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainer8)).BeginInit();
+            this.splitContainer8.Panel1.SuspendLayout();
+            this.splitContainer8.Panel2.SuspendLayout();
+            this.splitContainer8.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbClose)).BeginInit();
             this.SuspendLayout();
             // 
             // splitContainer1
@@ -378,150 +378,6 @@
             this.metroLabel2.UseCustomForeColor = true;
             this.metroLabel2.UseStyleColors = true;
             // 
-            // dgw_ftr_list
-            // 
-            this.dgw_ftr_list.AllowUserToResizeRows = false;
-            this.dgw_ftr_list.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.dgw_ftr_list.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.dgw_ftr_list.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
-            this.dgw_ftr_list.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(85)))), ((int)(((byte)(85)))), ((int)(((byte)(85)))));
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(102)))), ((int)(((byte)(102)))));
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgw_ftr_list.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
-            this.dgw_ftr_list.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(136)))), ((int)(((byte)(136)))));
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(102)))), ((int)(((byte)(102)))));
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgw_ftr_list.DefaultCellStyle = dataGridViewCellStyle2;
-            this.dgw_ftr_list.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dgw_ftr_list.EnableHeadersVisualStyles = false;
-            this.dgw_ftr_list.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.dgw_ftr_list.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.dgw_ftr_list.Location = new System.Drawing.Point(0, 0);
-            this.dgw_ftr_list.Name = "dgw_ftr_list";
-            this.dgw_ftr_list.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(85)))), ((int)(((byte)(85)))), ((int)(((byte)(85)))));
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(102)))), ((int)(((byte)(102)))));
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgw_ftr_list.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
-            this.dgw_ftr_list.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
-            this.dgw_ftr_list.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgw_ftr_list.Size = new System.Drawing.Size(1571, 738);
-            this.dgw_ftr_list.Style = MetroFramework.MetroColorStyle.Silver;
-            this.dgw_ftr_list.TabIndex = 1;
-            this.dgw_ftr_list.UseCustomBackColor = true;
-            this.dgw_ftr_list.UseCustomForeColor = true;
-            this.dgw_ftr_list.UseStyleColors = true;
-            this.dgw_ftr_list.RowHeaderMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgw_ftr_list_RowHeaderMouseClick);
-            // 
-            // splitContainer7
-            // 
-            this.splitContainer7.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.splitContainer7.Location = new System.Drawing.Point(0, 0);
-            this.splitContainer7.Name = "splitContainer7";
-            // 
-            // splitContainer7.Panel1
-            // 
-            this.splitContainer7.Panel1.Controls.Add(this.splitContainer10);
-            // 
-            // splitContainer7.Panel2
-            // 
-            this.splitContainer7.Panel2.Controls.Add(this.splitContainer8);
-            this.splitContainer7.Size = new System.Drawing.Size(1571, 46);
-            this.splitContainer7.SplitterDistance = 1208;
-            this.splitContainer7.TabIndex = 0;
-            // 
-            // btnClear
-            // 
-            this.btnClear.Highlight = true;
-            this.btnClear.Location = new System.Drawing.Point(3, 22);
-            this.btnClear.Name = "btnClear";
-            this.btnClear.Size = new System.Drawing.Size(115, 23);
-            this.btnClear.Style = MetroFramework.MetroColorStyle.Red;
-            this.btnClear.TabIndex = 59;
-            this.btnClear.Text = "Temizle";
-            this.btnClear.Theme = MetroFramework.MetroThemeStyle.Dark;
-            this.btnClear.UseCustomBackColor = true;
-            this.btnClear.UseCustomForeColor = true;
-            this.btnClear.UseSelectable = true;
-            this.btnClear.UseStyleColors = true;
-            this.btnClear.Click += new System.EventHandler(this.btnClear_Click);
-            // 
-            // splitContainer8
-            // 
-            this.splitContainer8.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.splitContainer8.Location = new System.Drawing.Point(0, 0);
-            this.splitContainer8.Name = "splitContainer8";
-            // 
-            // splitContainer8.Panel1
-            // 
-            this.splitContainer8.Panel1.Controls.Add(this.btn_ftr_duzenle);
-            // 
-            // splitContainer8.Panel2
-            // 
-            this.splitContainer8.Panel2.Controls.Add(this.btn_ftr_sil);
-            this.splitContainer8.Size = new System.Drawing.Size(359, 46);
-            this.splitContainer8.SplitterDistance = 180;
-            this.splitContainer8.TabIndex = 0;
-            // 
-            // btn_ftr_duzenle
-            // 
-            this.btn_ftr_duzenle.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btn_ftr_duzenle.Highlight = true;
-            this.btn_ftr_duzenle.Location = new System.Drawing.Point(0, 0);
-            this.btn_ftr_duzenle.Name = "btn_ftr_duzenle";
-            this.btn_ftr_duzenle.Size = new System.Drawing.Size(180, 46);
-            this.btn_ftr_duzenle.Style = MetroFramework.MetroColorStyle.Red;
-            this.btn_ftr_duzenle.TabIndex = 57;
-            this.btn_ftr_duzenle.Text = "DÜZENLE";
-            this.btn_ftr_duzenle.Theme = MetroFramework.MetroThemeStyle.Dark;
-            this.btn_ftr_duzenle.UseCustomBackColor = true;
-            this.btn_ftr_duzenle.UseCustomForeColor = true;
-            this.btn_ftr_duzenle.UseSelectable = true;
-            this.btn_ftr_duzenle.UseStyleColors = true;
-            // 
-            // btn_ftr_sil
-            // 
-            this.btn_ftr_sil.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btn_ftr_sil.Highlight = true;
-            this.btn_ftr_sil.Location = new System.Drawing.Point(0, 0);
-            this.btn_ftr_sil.Name = "btn_ftr_sil";
-            this.btn_ftr_sil.Size = new System.Drawing.Size(175, 46);
-            this.btn_ftr_sil.Style = MetroFramework.MetroColorStyle.Red;
-            this.btn_ftr_sil.TabIndex = 58;
-            this.btn_ftr_sil.Text = "SİL";
-            this.btn_ftr_sil.Theme = MetroFramework.MetroThemeStyle.Dark;
-            this.btn_ftr_sil.UseCustomBackColor = true;
-            this.btn_ftr_sil.UseCustomForeColor = true;
-            this.btn_ftr_sil.UseSelectable = true;
-            this.btn_ftr_sil.UseStyleColors = true;
-            // 
-            // pbClose
-            // 
-            this.pbClose.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.pbClose.BackColor = System.Drawing.Color.Transparent;
-            this.pbClose.Image = global::MERP_MUI.Properties.Resources.appbar_arrow_left_dark;
-            this.pbClose.Location = new System.Drawing.Point(1545, 12);
-            this.pbClose.Name = "pbClose";
-            this.pbClose.Size = new System.Drawing.Size(46, 42);
-            this.pbClose.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pbClose.TabIndex = 26;
-            this.pbClose.TabStop = false;
-            this.pbClose.Click += new System.EventHandler(this.pbClose_Click);
-            // 
             // splitContainer9
             // 
             this.splitContainer9.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -592,6 +448,88 @@
             this.metroLabel3.UseCustomForeColor = true;
             this.metroLabel3.UseStyleColors = true;
             // 
+            // btnClear
+            // 
+            this.btnClear.Highlight = true;
+            this.btnClear.Location = new System.Drawing.Point(3, 22);
+            this.btnClear.Name = "btnClear";
+            this.btnClear.Size = new System.Drawing.Size(115, 23);
+            this.btnClear.Style = MetroFramework.MetroColorStyle.Red;
+            this.btnClear.TabIndex = 59;
+            this.btnClear.Text = "Temizle";
+            this.btnClear.Theme = MetroFramework.MetroThemeStyle.Dark;
+            this.btnClear.UseCustomBackColor = true;
+            this.btnClear.UseCustomForeColor = true;
+            this.btnClear.UseSelectable = true;
+            this.btnClear.UseStyleColors = true;
+            this.btnClear.Click += new System.EventHandler(this.btnClear_Click);
+            // 
+            // dgw_ftr_list
+            // 
+            this.dgw_ftr_list.AllowUserToResizeRows = false;
+            this.dgw_ftr_list.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.dgw_ftr_list.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dgw_ftr_list.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
+            this.dgw_ftr_list.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(85)))), ((int)(((byte)(85)))), ((int)(((byte)(85)))));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(102)))), ((int)(((byte)(102)))));
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgw_ftr_list.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.dgw_ftr_list.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(136)))), ((int)(((byte)(136)))));
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(102)))), ((int)(((byte)(102)))));
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgw_ftr_list.DefaultCellStyle = dataGridViewCellStyle2;
+            this.dgw_ftr_list.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgw_ftr_list.EnableHeadersVisualStyles = false;
+            this.dgw_ftr_list.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.dgw_ftr_list.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.dgw_ftr_list.Location = new System.Drawing.Point(0, 0);
+            this.dgw_ftr_list.Name = "dgw_ftr_list";
+            this.dgw_ftr_list.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(85)))), ((int)(((byte)(85)))), ((int)(((byte)(85)))));
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(102)))), ((int)(((byte)(102)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgw_ftr_list.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            this.dgw_ftr_list.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
+            this.dgw_ftr_list.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgw_ftr_list.Size = new System.Drawing.Size(1571, 738);
+            this.dgw_ftr_list.Style = MetroFramework.MetroColorStyle.Silver;
+            this.dgw_ftr_list.TabIndex = 1;
+            this.dgw_ftr_list.UseCustomBackColor = true;
+            this.dgw_ftr_list.UseCustomForeColor = true;
+            this.dgw_ftr_list.UseStyleColors = true;
+            this.dgw_ftr_list.RowHeaderMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgw_ftr_list_RowHeaderMouseClick);
+            // 
+            // splitContainer7
+            // 
+            this.splitContainer7.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.splitContainer7.Location = new System.Drawing.Point(0, 0);
+            this.splitContainer7.Name = "splitContainer7";
+            // 
+            // splitContainer7.Panel1
+            // 
+            this.splitContainer7.Panel1.Controls.Add(this.splitContainer10);
+            // 
+            // splitContainer7.Panel2
+            // 
+            this.splitContainer7.Panel2.Controls.Add(this.splitContainer8);
+            this.splitContainer7.Size = new System.Drawing.Size(1571, 46);
+            this.splitContainer7.SplitterDistance = 1208;
+            this.splitContainer7.TabIndex = 0;
+            // 
             // splitContainer10
             // 
             this.splitContainer10.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -609,6 +547,41 @@
             this.splitContainer10.Size = new System.Drawing.Size(1208, 46);
             this.splitContainer10.SplitterDistance = 374;
             this.splitContainer10.TabIndex = 0;
+            // 
+            // lbl_el
+            // 
+            this.lbl_el.AutoSize = true;
+            this.lbl_el.Dock = System.Windows.Forms.DockStyle.Right;
+            this.lbl_el.FontWeight = MetroFramework.MetroLabelWeight.Bold;
+            this.lbl_el.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.lbl_el.Location = new System.Drawing.Point(357, 25);
+            this.lbl_el.Name = "lbl_el";
+            this.lbl_el.Size = new System.Drawing.Size(17, 19);
+            this.lbl_el.Style = MetroFramework.MetroColorStyle.Red;
+            this.lbl_el.TabIndex = 54;
+            this.lbl_el.Text = "0";
+            this.lbl_el.Theme = MetroFramework.MetroThemeStyle.Dark;
+            this.lbl_el.UseCustomBackColor = true;
+            this.lbl_el.UseCustomForeColor = true;
+            this.lbl_el.UseStyleColors = true;
+            // 
+            // metroLabel6
+            // 
+            this.metroLabel6.AutoSize = true;
+            this.metroLabel6.Dock = System.Windows.Forms.DockStyle.Top;
+            this.metroLabel6.FontSize = MetroFramework.MetroLabelSize.Tall;
+            this.metroLabel6.FontWeight = MetroFramework.MetroLabelWeight.Bold;
+            this.metroLabel6.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.metroLabel6.Location = new System.Drawing.Point(0, 0);
+            this.metroLabel6.Name = "metroLabel6";
+            this.metroLabel6.Size = new System.Drawing.Size(108, 25);
+            this.metroLabel6.Style = MetroFramework.MetroColorStyle.Red;
+            this.metroLabel6.TabIndex = 53;
+            this.metroLabel6.Text = "Elektronik :";
+            this.metroLabel6.Theme = MetroFramework.MetroThemeStyle.Dark;
+            this.metroLabel6.UseCustomBackColor = true;
+            this.metroLabel6.UseCustomForeColor = true;
+            this.metroLabel6.UseStyleColors = true;
             // 
             // splitContainer11
             // 
@@ -629,23 +602,22 @@
             this.splitContainer11.SplitterDistance = 434;
             this.splitContainer11.TabIndex = 0;
             // 
-            // metroLabel6
+            // lbl_mek
             // 
-            this.metroLabel6.AutoSize = true;
-            this.metroLabel6.Dock = System.Windows.Forms.DockStyle.Top;
-            this.metroLabel6.FontSize = MetroFramework.MetroLabelSize.Tall;
-            this.metroLabel6.FontWeight = MetroFramework.MetroLabelWeight.Bold;
-            this.metroLabel6.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.metroLabel6.Location = new System.Drawing.Point(0, 0);
-            this.metroLabel6.Name = "metroLabel6";
-            this.metroLabel6.Size = new System.Drawing.Size(108, 25);
-            this.metroLabel6.Style = MetroFramework.MetroColorStyle.Red;
-            this.metroLabel6.TabIndex = 53;
-            this.metroLabel6.Text = "Elektronik :";
-            this.metroLabel6.Theme = MetroFramework.MetroThemeStyle.Dark;
-            this.metroLabel6.UseCustomBackColor = true;
-            this.metroLabel6.UseCustomForeColor = true;
-            this.metroLabel6.UseStyleColors = true;
+            this.lbl_mek.AutoSize = true;
+            this.lbl_mek.Dock = System.Windows.Forms.DockStyle.Right;
+            this.lbl_mek.FontWeight = MetroFramework.MetroLabelWeight.Bold;
+            this.lbl_mek.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.lbl_mek.Location = new System.Drawing.Point(417, 25);
+            this.lbl_mek.Name = "lbl_mek";
+            this.lbl_mek.Size = new System.Drawing.Size(17, 19);
+            this.lbl_mek.Style = MetroFramework.MetroColorStyle.Red;
+            this.lbl_mek.TabIndex = 55;
+            this.lbl_mek.Text = "0";
+            this.lbl_mek.Theme = MetroFramework.MetroThemeStyle.Dark;
+            this.lbl_mek.UseCustomBackColor = true;
+            this.lbl_mek.UseCustomForeColor = true;
+            this.lbl_mek.UseStyleColors = true;
             // 
             // metroLabel7
             // 
@@ -665,6 +637,23 @@
             this.metroLabel7.UseCustomForeColor = true;
             this.metroLabel7.UseStyleColors = true;
             // 
+            // lbl_gnl
+            // 
+            this.lbl_gnl.AutoSize = true;
+            this.lbl_gnl.Dock = System.Windows.Forms.DockStyle.Right;
+            this.lbl_gnl.FontWeight = MetroFramework.MetroLabelWeight.Bold;
+            this.lbl_gnl.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.lbl_gnl.Location = new System.Drawing.Point(375, 25);
+            this.lbl_gnl.Name = "lbl_gnl";
+            this.lbl_gnl.Size = new System.Drawing.Size(17, 19);
+            this.lbl_gnl.Style = MetroFramework.MetroColorStyle.Red;
+            this.lbl_gnl.TabIndex = 55;
+            this.lbl_gnl.Text = "0";
+            this.lbl_gnl.Theme = MetroFramework.MetroThemeStyle.Dark;
+            this.lbl_gnl.UseCustomBackColor = true;
+            this.lbl_gnl.UseCustomForeColor = true;
+            this.lbl_gnl.UseStyleColors = true;
+            // 
             // metroLabel8
             // 
             this.metroLabel8.AutoSize = true;
@@ -683,56 +672,69 @@
             this.metroLabel8.UseCustomForeColor = true;
             this.metroLabel8.UseStyleColors = true;
             // 
-            // lbl_el
+            // splitContainer8
             // 
-            this.lbl_el.AutoSize = true;
-            this.lbl_el.Dock = System.Windows.Forms.DockStyle.Right;
-            this.lbl_el.FontWeight = MetroFramework.MetroLabelWeight.Bold;
-            this.lbl_el.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.lbl_el.Location = new System.Drawing.Point(357, 25);
-            this.lbl_el.Name = "lbl_el";
-            this.lbl_el.Size = new System.Drawing.Size(17, 19);
-            this.lbl_el.Style = MetroFramework.MetroColorStyle.Red;
-            this.lbl_el.TabIndex = 54;
-            this.lbl_el.Text = "0";
-            this.lbl_el.Theme = MetroFramework.MetroThemeStyle.Dark;
-            this.lbl_el.UseCustomBackColor = true;
-            this.lbl_el.UseCustomForeColor = true;
-            this.lbl_el.UseStyleColors = true;
+            this.splitContainer8.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.splitContainer8.Location = new System.Drawing.Point(0, 0);
+            this.splitContainer8.Name = "splitContainer8";
             // 
-            // lbl_mek
+            // splitContainer8.Panel1
             // 
-            this.lbl_mek.AutoSize = true;
-            this.lbl_mek.Dock = System.Windows.Forms.DockStyle.Right;
-            this.lbl_mek.FontWeight = MetroFramework.MetroLabelWeight.Bold;
-            this.lbl_mek.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.lbl_mek.Location = new System.Drawing.Point(417, 25);
-            this.lbl_mek.Name = "lbl_mek";
-            this.lbl_mek.Size = new System.Drawing.Size(17, 19);
-            this.lbl_mek.Style = MetroFramework.MetroColorStyle.Red;
-            this.lbl_mek.TabIndex = 55;
-            this.lbl_mek.Text = "0";
-            this.lbl_mek.Theme = MetroFramework.MetroThemeStyle.Dark;
-            this.lbl_mek.UseCustomBackColor = true;
-            this.lbl_mek.UseCustomForeColor = true;
-            this.lbl_mek.UseStyleColors = true;
+            this.splitContainer8.Panel1.Controls.Add(this.btn_ftr_duzenle);
             // 
-            // lbl_gnl
+            // splitContainer8.Panel2
             // 
-            this.lbl_gnl.AutoSize = true;
-            this.lbl_gnl.Dock = System.Windows.Forms.DockStyle.Right;
-            this.lbl_gnl.FontWeight = MetroFramework.MetroLabelWeight.Bold;
-            this.lbl_gnl.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.lbl_gnl.Location = new System.Drawing.Point(375, 25);
-            this.lbl_gnl.Name = "lbl_gnl";
-            this.lbl_gnl.Size = new System.Drawing.Size(17, 19);
-            this.lbl_gnl.Style = MetroFramework.MetroColorStyle.Red;
-            this.lbl_gnl.TabIndex = 55;
-            this.lbl_gnl.Text = "0";
-            this.lbl_gnl.Theme = MetroFramework.MetroThemeStyle.Dark;
-            this.lbl_gnl.UseCustomBackColor = true;
-            this.lbl_gnl.UseCustomForeColor = true;
-            this.lbl_gnl.UseStyleColors = true;
+            this.splitContainer8.Panel2.Controls.Add(this.btn_ftr_sil);
+            this.splitContainer8.Size = new System.Drawing.Size(359, 46);
+            this.splitContainer8.SplitterDistance = 180;
+            this.splitContainer8.TabIndex = 0;
+            // 
+            // btn_ftr_duzenle
+            // 
+            this.btn_ftr_duzenle.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btn_ftr_duzenle.Highlight = true;
+            this.btn_ftr_duzenle.Location = new System.Drawing.Point(0, 0);
+            this.btn_ftr_duzenle.Name = "btn_ftr_duzenle";
+            this.btn_ftr_duzenle.Size = new System.Drawing.Size(180, 46);
+            this.btn_ftr_duzenle.Style = MetroFramework.MetroColorStyle.Red;
+            this.btn_ftr_duzenle.TabIndex = 57;
+            this.btn_ftr_duzenle.Text = "DÜZENLE";
+            this.btn_ftr_duzenle.Theme = MetroFramework.MetroThemeStyle.Dark;
+            this.btn_ftr_duzenle.UseCustomBackColor = true;
+            this.btn_ftr_duzenle.UseCustomForeColor = true;
+            this.btn_ftr_duzenle.UseSelectable = true;
+            this.btn_ftr_duzenle.UseStyleColors = true;
+            this.btn_ftr_duzenle.Click += new System.EventHandler(this.btn_ftr_duzenle_Click);
+            // 
+            // btn_ftr_sil
+            // 
+            this.btn_ftr_sil.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btn_ftr_sil.Highlight = true;
+            this.btn_ftr_sil.Location = new System.Drawing.Point(0, 0);
+            this.btn_ftr_sil.Name = "btn_ftr_sil";
+            this.btn_ftr_sil.Size = new System.Drawing.Size(175, 46);
+            this.btn_ftr_sil.Style = MetroFramework.MetroColorStyle.Red;
+            this.btn_ftr_sil.TabIndex = 58;
+            this.btn_ftr_sil.Text = "SİL";
+            this.btn_ftr_sil.Theme = MetroFramework.MetroThemeStyle.Dark;
+            this.btn_ftr_sil.UseCustomBackColor = true;
+            this.btn_ftr_sil.UseCustomForeColor = true;
+            this.btn_ftr_sil.UseSelectable = true;
+            this.btn_ftr_sil.UseStyleColors = true;
+            this.btn_ftr_sil.Click += new System.EventHandler(this.btn_ftr_sil_Click);
+            // 
+            // pbClose
+            // 
+            this.pbClose.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.pbClose.BackColor = System.Drawing.Color.Transparent;
+            this.pbClose.Image = global::MERP_MUI.Properties.Resources.appbar_arrow_left_dark;
+            this.pbClose.Location = new System.Drawing.Point(1545, 12);
+            this.pbClose.Name = "pbClose";
+            this.pbClose.Size = new System.Drawing.Size(46, 42);
+            this.pbClose.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbClose.TabIndex = 26;
+            this.pbClose.TabStop = false;
+            this.pbClose.Click += new System.EventHandler(this.pbClose_Click);
             // 
             // Faturalar
             // 
@@ -778,21 +780,16 @@
             this.splitContainer6.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer6)).EndInit();
             this.splitContainer6.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dgw_ftr_list)).EndInit();
-            this.splitContainer7.Panel1.ResumeLayout(false);
-            this.splitContainer7.Panel2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.splitContainer7)).EndInit();
-            this.splitContainer7.ResumeLayout(false);
-            this.splitContainer8.Panel1.ResumeLayout(false);
-            this.splitContainer8.Panel2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.splitContainer8)).EndInit();
-            this.splitContainer8.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pbClose)).EndInit();
             this.splitContainer9.Panel1.ResumeLayout(false);
             this.splitContainer9.Panel1.PerformLayout();
             this.splitContainer9.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer9)).EndInit();
             this.splitContainer9.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dgw_ftr_list)).EndInit();
+            this.splitContainer7.Panel1.ResumeLayout(false);
+            this.splitContainer7.Panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainer7)).EndInit();
+            this.splitContainer7.ResumeLayout(false);
             this.splitContainer10.Panel1.ResumeLayout(false);
             this.splitContainer10.Panel1.PerformLayout();
             this.splitContainer10.Panel2.ResumeLayout(false);
@@ -804,6 +801,11 @@
             this.splitContainer11.Panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer11)).EndInit();
             this.splitContainer11.ResumeLayout(false);
+            this.splitContainer8.Panel1.ResumeLayout(false);
+            this.splitContainer8.Panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainer8)).EndInit();
+            this.splitContainer8.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pbClose)).EndInit();
             this.ResumeLayout(false);
 
         }

@@ -464,6 +464,7 @@
             this.btn_ftr_duzenle.UseCustomForeColor = true;
             this.btn_ftr_duzenle.UseSelectable = true;
             this.btn_ftr_duzenle.UseStyleColors = true;
+            this.btn_ftr_duzenle.Click += new System.EventHandler(this.btn_ftr_duzenle_Click);
             // 
             // btn_ftr_sil
             // 
@@ -480,6 +481,7 @@
             this.btn_ftr_sil.UseCustomForeColor = true;
             this.btn_ftr_sil.UseSelectable = true;
             this.btn_ftr_sil.UseStyleColors = true;
+            this.btn_ftr_sil.Click += new System.EventHandler(this.btn_ftr_sil_Click);
             // 
             // pbClose
             // 

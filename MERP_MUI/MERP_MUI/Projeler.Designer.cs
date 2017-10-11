@@ -391,6 +391,7 @@
             this.btn_prj_duzenle.UseCustomForeColor = true;
             this.btn_prj_duzenle.UseSelectable = true;
             this.btn_prj_duzenle.UseStyleColors = true;
+            this.btn_prj_duzenle.Click += new System.EventHandler(this.btn_prj_duzenle_Click);
             // 
             // btn_prj_sil
             // 
@@ -407,6 +408,7 @@
             this.btn_prj_sil.UseCustomForeColor = true;
             this.btn_prj_sil.UseSelectable = true;
             this.btn_prj_sil.UseStyleColors = true;
+            this.btn_prj_sil.Click += new System.EventHandler(this.btn_prj_sil_Click);
             // 
             // pbClose
             // 

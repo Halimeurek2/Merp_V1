@@ -223,7 +223,7 @@ namespace MERP_MUI
                     if (Convert.ToDateTime(myReader.GetString(0)).Year == DateTime.Now.Year)
                     {
                         myapilmisOdemeler[index] = Convert.ToDateTime(myReader.GetString(0));
-                        yapilmisOdemeler[myOdemeler[index].Month - 1] = (float)Convert.ToDouble(myReader.GetString(1));
+                        yapilmisOdemeler[myapilmisOdemeler[index].Month - 1] = (float)Convert.ToDouble(myReader.GetString(1));
                         index++;
                     }
                 }
@@ -265,7 +265,7 @@ namespace MERP_MUI
                     if (Convert.ToDateTime(myReader.GetString(0)).Year == DateTime.Now.Year)
                     {
                         malinmisOdemeler[index] = Convert.ToDateTime(myReader.GetString(0));
-                        alinmisOdemeler[maOdemeler[index].Month - 1] = (float)Convert.ToDouble(myReader.GetString(1));
+                        alinmisOdemeler[malinmisOdemeler[index].Month - 1] = (float)Convert.ToDouble(myReader.GetString(1));
                         index++;
                     }
                 }

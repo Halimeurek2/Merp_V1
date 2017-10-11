@@ -45,8 +45,14 @@ namespace MERP_MUI
         public float[] yapOdemeler = new float[12];
         public DateTime[] myOdemeler = new DateTime[12];
 
+        public float[] yapilmisOdemeler = new float[12];
+        public DateTime[] myapilmisOdemeler = new DateTime[12];
+
         public float[] alOdemeler = new float[12];
         public DateTime[] maOdemeler = new DateTime[12];
+
+        public float[] alinmisOdemeler = new float[12];
+        public DateTime[] malinmisOdemeler = new DateTime[12];
 
 
         public int i, j, index = 0;
@@ -89,6 +95,11 @@ namespace MERP_MUI
             Array.Clear(myOdemeler, 0, 12);
             Array.Clear(alOdemeler, 0, 12);
             Array.Clear(maOdemeler, 0, 12);
+
+            Array.Clear(yapilmisOdemeler, 0, 12);
+            Array.Clear(myapilmisOdemeler, 0, 12);
+            Array.Clear(alinmisOdemeler, 0, 12);
+            Array.Clear(malinmisOdemeler, 0, 12);
 
             for (int index = 0; index < 12; index++)
             {
@@ -203,6 +214,27 @@ namespace MERP_MUI
             try
             {
                 index = 0;
+                komut = "SELECT fatura_vade_tarih,sum(fatura_euro) FROM db_faturalar where fatura_durum='ÖDENDİ' and fatura_tipi='G' and fatura_proje_no='" + lbl_prjNo.Text + "' group by date_format(fatura_vade_tarih, '%m-%Y');";
+                da = new MySqlDataAdapter(komut, connection);
+                myCommand = new MySqlCommand(komut, myConnection);
+                myReader = myCommand.ExecuteReader();
+                while (myReader.Read())
+                {
+                    if (Convert.ToDateTime(myReader.GetString(0)).Year == DateTime.Now.Year)
+                    {
+                        myapilmisOdemeler[index] = Convert.ToDateTime(myReader.GetString(0));
+                        yapilmisOdemeler[myOdemeler[index].Month - 1] = (float)Convert.ToDouble(myReader.GetString(1));
+                        index++;
+                    }
+                }
+
+                myReader.Close();
+            }
+            catch { }
+
+            try
+            {
+                index = 0;
                 komut = "SELECT fatura_vade_tarih,sum(fatura_euro) FROM db_faturalar where fatura_durum='ÖDENMEDİ' and fatura_tipi='K' and fatura_proje_no='" + lbl_prjNo.Text + "'group by date_format(fatura_vade_tarih, '%m-%Y');";
                 da = new MySqlDataAdapter(komut, connection);
                 myCommand = new MySqlCommand(komut, myConnection);
@@ -221,8 +253,31 @@ namespace MERP_MUI
             }
             catch { }
 
+            try
+            {
+                index = 0;
+                komut = "SELECT fatura_vade_tarih,sum(fatura_euro) FROM db_faturalar where fatura_durum='ÖDENDİ' and fatura_tipi='K' and fatura_proje_no='" + lbl_prjNo.Text + "'group by date_format(fatura_vade_tarih, '%m-%Y');";
+                da = new MySqlDataAdapter(komut, connection);
+                myCommand = new MySqlCommand(komut, myConnection);
+                myReader = myCommand.ExecuteReader();
+                while (myReader.Read())
+                {
+                    if (Convert.ToDateTime(myReader.GetString(0)).Year == DateTime.Now.Year)
+                    {
+                        malinmisOdemeler[index] = Convert.ToDateTime(myReader.GetString(0));
+                        alinmisOdemeler[maOdemeler[index].Month - 1] = (float)Convert.ToDouble(myReader.GetString(1));
+                        index++;
+                    }
+                }
+
+                myReader.Close();
+            }
+            catch { }
+
             myConnection.Close();
 
+            metroGrid1.Rows.Add();
+            metroGrid1.Rows.Add();
             metroGrid1.Rows.Add();
             metroGrid1.Rows.Add();
 
@@ -233,14 +288,18 @@ namespace MERP_MUI
 
                     metroGrid1.Rows[0].Cells[i + 1].Value = string.Format(new CultureInfo("de-DE"), "{0:C2}", Convert.ToDecimal(verSip[i]));
                     metroGrid1.Rows[1].Cells[i + 1].Value = string.Format(new CultureInfo("de-DE"), "{0:C2}", Convert.ToDecimal(yapOdemeler[i]));
-                    metroGrid1.Rows[2].Cells[i + 1].Value = string.Format(new CultureInfo("de-DE"), "{0:C2}", Convert.ToDecimal(alOdemeler[i]));
+                    metroGrid1.Rows[2].Cells[i + 1].Value = string.Format(new CultureInfo("de-DE"), "{0:C2}", Convert.ToDecimal(yapilmisOdemeler[i]));
+                    metroGrid1.Rows[3].Cells[i + 1].Value = string.Format(new CultureInfo("de-DE"), "{0:C2}", Convert.ToDecimal(alOdemeler[i]));
+                    metroGrid1.Rows[4].Cells[i + 1].Value = string.Format(new CultureInfo("de-DE"), "{0:C2}", Convert.ToDecimal(alinmisOdemeler[i]));
                 }
                 catch { }
             }
 
             metroGrid1.Rows[0].Cells[0].Value = Convert.ToString("Verilecek Siparişler");
             metroGrid1.Rows[1].Cells[0].Value = Convert.ToString("Tedarikçilere Yapılacak Ödemeler");
-            metroGrid1.Rows[2].Cells[0].Value = Convert.ToString("Alınacak Ödemeler");
+            metroGrid1.Rows[2].Cells[0].Value = Convert.ToString("Tedarikçilere Yapılmış Ödemeler");
+            metroGrid1.Rows[3].Cells[0].Value = Convert.ToString("Alınacak Ödemeler");
+            metroGrid1.Rows[4].Cells[0].Value = Convert.ToString("Alınmış Ödemeler");
 
             Firmalar();
         }
@@ -249,7 +308,7 @@ namespace MERP_MUI
         {
             myConnection.Open();
 
-            komut = "SELECT fatura_firma,sum(fatura_euro) from db_faturalar where fatura_cinsi='Elektronik' group by fatura_firma order by sum(fatura_euro) DESC";
+            komut = "SELECT fatura_firma,sum(fatura_euro) from db_faturalar where fatura_cinsi='Elektronik' and fatura_tipi='G' group by fatura_firma order by sum(fatura_euro) DESC";
             da = new MySqlDataAdapter(komut, connection);
             myCommand = new MySqlCommand(komut, myConnection);
             MySqlDataReader myReader;
@@ -288,7 +347,7 @@ namespace MERP_MUI
             myReader.Close();
             processDone1 = false;
 
-            komut = "SELECT fatura_firma,sum(fatura_euro) from db_faturalar where fatura_cinsi='Mekanik' group by fatura_firma order by sum(fatura_euro) DESC";
+            komut = "SELECT fatura_firma,sum(fatura_euro) from db_faturalar where fatura_cinsi='Mekanik' and fatura_tipi='G' group by fatura_firma order by sum(fatura_euro) DESC";
             da = new MySqlDataAdapter(komut, connection);
             myCommand = new MySqlCommand(komut, myConnection);
             myReader = myCommand.ExecuteReader();
@@ -327,7 +386,7 @@ namespace MERP_MUI
             myReader.Close();
             processDone1 = false;
 
-            komut = "SELECT fatura_firma,sum(fatura_euro) from db_faturalar where fatura_cinsi='Genel Giderler' group by fatura_firma order by sum(fatura_euro) DESC";
+            komut = "SELECT fatura_firma,sum(fatura_euro) from db_faturalar where fatura_cinsi='Genel Giderler' and fatura_tipi='G' group by fatura_firma order by sum(fatura_euro) DESC";
             da = new MySqlDataAdapter(komut, connection);
             myCommand = new MySqlCommand(komut, myConnection);
             myReader = myCommand.ExecuteReader();

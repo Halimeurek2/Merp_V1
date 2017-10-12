@@ -188,7 +188,7 @@ namespace MERP_MUI
                 }
                 myReader.Close();
             }
-            catch { }
+            catch { myReader.Close(); }
 
             try
             {
@@ -209,7 +209,7 @@ namespace MERP_MUI
 
                 myReader.Close();
             }
-            catch { }
+            catch { myReader.Close(); }
 
             try
             {
@@ -230,7 +230,7 @@ namespace MERP_MUI
 
                 myReader.Close();
             }
-            catch { }
+            catch { myReader.Close(); }
 
             try
             {
@@ -251,7 +251,7 @@ namespace MERP_MUI
 
                 myReader.Close();
             }
-            catch { }
+            catch { myReader.Close(); }
 
             try
             {
@@ -272,7 +272,7 @@ namespace MERP_MUI
 
                 myReader.Close();
             }
-            catch { }
+            catch { myReader.Close(); }
 
             myConnection.Close();
 
@@ -308,7 +308,7 @@ namespace MERP_MUI
         {
             myConnection.Open();
 
-            komut = "SELECT fatura_firma,sum(fatura_euro) from db_faturalar where fatura_cinsi='Elektronik' and fatura_tipi='G' group by fatura_firma order by sum(fatura_euro) DESC";
+            komut = "SELECT fatura_firma,sum(fatura_euro) from db_faturalar where fatura_cinsi='Elektronik' and fatura_tipi='G' and fatura_proje_no='" + lbl_prjNo.Text + "' group by fatura_firma order by sum(fatura_euro) DESC";
             da = new MySqlDataAdapter(komut, connection);
             myCommand = new MySqlCommand(komut, myConnection);
             MySqlDataReader myReader;
@@ -347,7 +347,7 @@ namespace MERP_MUI
             myReader.Close();
             processDone1 = false;
 
-            komut = "SELECT fatura_firma,sum(fatura_euro) from db_faturalar where fatura_cinsi='Mekanik' and fatura_tipi='G' group by fatura_firma order by sum(fatura_euro) DESC";
+            komut = "SELECT fatura_firma,sum(fatura_euro) from db_faturalar where fatura_cinsi='Mekanik' and fatura_tipi='G' and fatura_proje_no='"+lbl_prjNo.Text+"' group by fatura_firma order by sum(fatura_euro) DESC";
             da = new MySqlDataAdapter(komut, connection);
             myCommand = new MySqlCommand(komut, myConnection);
             myReader = myCommand.ExecuteReader();
@@ -386,7 +386,7 @@ namespace MERP_MUI
             myReader.Close();
             processDone1 = false;
 
-            komut = "SELECT fatura_firma,sum(fatura_euro) from db_faturalar where fatura_cinsi='Genel Giderler' and fatura_tipi='G' group by fatura_firma order by sum(fatura_euro) DESC";
+            komut = "SELECT fatura_firma,sum(fatura_euro) from db_faturalar where fatura_cinsi='Genel Giderler' and fatura_tipi='G' and fatura_proje_no='" + lbl_prjNo.Text + "' group by fatura_firma order by sum(fatura_euro) DESC";
             da = new MySqlDataAdapter(komut, connection);
             myCommand = new MySqlCommand(komut, myConnection);
             myReader = myCommand.ExecuteReader();

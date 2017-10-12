@@ -78,10 +78,10 @@
             this.cb_animsa.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
             this.cb_animsa.Location = new System.Drawing.Point(21, 206);
             this.cb_animsa.Name = "cb_animsa";
-            this.cb_animsa.Size = new System.Drawing.Size(63, 15);
+            this.cb_animsa.Size = new System.Drawing.Size(84, 15);
             this.cb_animsa.Style = MetroFramework.MetroColorStyle.Orange;
             this.cb_animsa.TabIndex = 28;
-            this.cb_animsa.Text = "Anımsa";
+            this.cb_animsa.Text = "Beni Hatırla";
             this.cb_animsa.Theme = MetroFramework.MetroThemeStyle.Dark;
             this.cb_animsa.UseCustomBackColor = true;
             this.cb_animsa.UseCustomForeColor = true;

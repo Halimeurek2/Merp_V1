@@ -27,6 +27,8 @@ namespace MERP_MUI
         DateTime bitis;
         string vade;
 
+        Boolean CokluFatura = false;
+
         public FaturaGiris()
         {
             InitializeComponent();
@@ -127,13 +129,13 @@ namespace MERP_MUI
                             {
                                 db = new DBConnect();
                                 db.InsertFaturaGiris(Convert.ToString(txt_fatura_no.Text), Convert.ToString(cmb_projeNo.Text), Convert.ToString(cmb_firma.Text), Convert.ToInt32(txt_ftr_vade.Text), bitis, Convert.ToString(rcb_acıklama.Text), Convert.ToDateTime(txt_ftr_tarih.Text), ck_alarm.Checked, Convert.ToDecimal(txt_ftr_tutar.Text), Convert.ToString(cmb_birim.Text), Convert.ToInt32(txt_avans.Text), fatura_euro, Convert.ToString('G'), Convert.ToString(cmb_ftr_tip.Text), Convert.ToString("ÖDENDİ"));
-                                this.Close();
+                               // this.Close();
                             }
                             if(rbKesilen.Checked)
                             {
                                 db = new DBConnect();
                                 db.InsertFaturaGiris(Convert.ToString(txt_fatura_no.Text), Convert.ToString(cmb_projeNo.Text), Convert.ToString(cmb_firma.Text), Convert.ToInt32(txt_ftr_vade.Text), bitis, Convert.ToString(rcb_acıklama.Text), Convert.ToDateTime(txt_ftr_tarih.Text), ck_alarm.Checked, Convert.ToDecimal(txt_ftr_tutar.Text), Convert.ToString(cmb_birim.Text), Convert.ToInt32(txt_avans.Text), fatura_euro, Convert.ToString('K'), Convert.ToString(cmb_ftr_tip.Text), Convert.ToString("ÖDENDİ"));
-                                this.Close();
+                               // this.Close();
                             }
                         }
                         else
@@ -142,14 +144,36 @@ namespace MERP_MUI
                             {
                                 db = new DBConnect();
                                 db.InsertFaturaGiris(Convert.ToString(txt_fatura_no.Text), Convert.ToString(cmb_projeNo.Text), Convert.ToString(cmb_firma.Text), Convert.ToInt32(txt_ftr_vade.Text), bitis, Convert.ToString(rcb_acıklama.Text), Convert.ToDateTime(txt_ftr_tarih.Text), ck_alarm.Checked, Convert.ToDecimal(txt_ftr_tutar.Text), Convert.ToString(cmb_birim.Text), Convert.ToInt32(txt_avans.Text), fatura_euro, Convert.ToString('G'), Convert.ToString(cmb_ftr_tip.Text), Convert.ToString("ÖDENMEDİ"));
-                                this.Close();
+                               // this.Close();
                             }
                             if(rbKesilen.Checked)
                             {
                                 db = new DBConnect();
                                 db.InsertFaturaGiris(Convert.ToString(txt_fatura_no.Text), Convert.ToString(cmb_projeNo.Text), Convert.ToString(cmb_firma.Text), Convert.ToInt32(txt_ftr_vade.Text), bitis, Convert.ToString(rcb_acıklama.Text), Convert.ToDateTime(txt_ftr_tarih.Text), ck_alarm.Checked, Convert.ToDecimal(txt_ftr_tutar.Text), Convert.ToString(cmb_birim.Text), Convert.ToInt32(txt_avans.Text), fatura_euro, Convert.ToString('K'), Convert.ToString(cmb_ftr_tip.Text), Convert.ToString("ÖDENMEDİ"));
-                                this.Close();
+                               // this.Close();
                             }
+                        }
+
+                        if(CokluFatura == true)
+                        {
+                            txt_avans.Text = "";
+                            txt_fatura_no.Text = "";
+                            txt_ftr_tarih.Text = "";
+                            txt_ftr_tutar.Text = "";
+                            txt_ftr_vade.Text = "";
+                            ck_alarm.Checked = false;
+                            cb_durum.Checked = false;
+                            rbGelen.Checked = false;
+                            rbKesilen.Checked = false;
+                            cmb_birim.Text = "";
+                            cmb_firma.Text = "";
+                            cmb_ftr_tip.Text = "";
+                            cmb_projeNo.Text = "";
+                            date_alarm.Value = DateTime.Now;
+                        }
+                        else
+                        {
+                            this.Close();
                         }
                     }
                 }
@@ -168,6 +192,18 @@ namespace MERP_MUI
             catch
             {
 
+            }
+        }
+
+        private void ck_cokluftr_CheckedChanged(object sender, EventArgs e)
+        {
+            if(ck_cokluftr.Checked)
+            {
+                CokluFatura = true;
+            }
+            else
+            {
+                CokluFatura = false;
             }
         }
     }

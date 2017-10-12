@@ -81,7 +81,7 @@ namespace MERP_MUI
             }
             else
             {
-                txt_mlz_brmFiyat.Text = hf.Comma2Dot(txt_mlz_brmFiyat.Text);
+               // txt_mlz_brmFiyat.Text = hf.Comma2Dot(txt_mlz_brmFiyat.Text);
 
                 DateTime dt = Convert.ToDateTime(date_teslim.Text);
 

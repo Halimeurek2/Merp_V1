@@ -90,8 +90,8 @@ namespace MERP_MUI
             else
             {
 
-                txt_butce.Text = hf.Comma2Dot(txt_butce.Text);
-                lbl_harcamalar.Text = hf.Comma2Dot(lbl_harcamalar.Text);
+              //  txt_butce.Text = hf.Comma2Dot(txt_butce.Text);
+                //lbl_harcamalar.Text = hf.Comma2Dot(lbl_harcamalar.Text);
 
                 vade = Convert.ToString(txt_vade.Text);
                 baslangic = Convert.ToDateTime(dtp_baslangıc.Text);

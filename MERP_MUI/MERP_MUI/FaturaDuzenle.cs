@@ -66,6 +66,15 @@ namespace MERP_MUI
                 cmb_firma.Items.Add(myReader["fatura_firma"]);
             }
             myReader.Close();
+
+            if(lbl_tip.Text=="K")
+            {
+                ck_kesilen.Checked = true;
+            }
+            else
+            {
+                ck_gelen.Checked = true;
+            }
         }
 
         private void pbClose_Click(object sender, EventArgs e)
@@ -91,8 +100,8 @@ namespace MERP_MUI
             }
             else
             {
-                txt_ftr_tutar.Text = hf.Comma2Dot(txt_ftr_tutar.Text);
-                txt_avans.Text = hf.Comma2Dot(txt_avans.Text);
+                //txt_ftr_tutar.Text = hf.Comma2Dot(txt_ftr_tutar.Text);
+                //txt_avans.Text = hf.Comma2Dot(txt_avans.Text);
 
                 DateTime dt = Convert.ToDateTime(txt_ftr_tarih.Text);
 
@@ -152,6 +161,11 @@ namespace MERP_MUI
             {
 
             }
+        }
+
+        private void cmb_firma_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

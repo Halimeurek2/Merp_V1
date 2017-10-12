@@ -27,6 +27,7 @@ namespace MERP_MUI
         Boolean Connected;
         public int check;
         public int kullanici_id;
+        public string mailAdress;
         public DateTime giris_tarihi;
 
         public LoginScreen()
@@ -52,7 +53,7 @@ namespace MERP_MUI
             sc.Credentials = new NetworkCredential("altinaymerp@gmail.com", "123456qweasd");
             sc.EnableSsl = true;
 
-            if(Properties.Settings.Default.UserName!="" && Properties.Settings.Default.Check==1)
+            if(Properties.Settings.Default.Check==1)
             {
                 txtKullaniciAdi.Text = Properties.Settings.Default.UserName;
                 txtPassword.Text = Properties.Settings.Default.Password;
@@ -240,13 +241,30 @@ namespace MERP_MUI
             }
             else
             {
+                try
+                {
+                    komut = "SELECT kullanici_mail FROM db_kullanicilar where kullanici_adi='" + txtKullaniciAdi.Text + "';";
+                    da = new MySqlDataAdapter(komut, connection);
+                    myCommand = new MySqlCommand(komut, myConnection);
+                    MySqlDataReader myReader;
+                    myReader = myCommand.ExecuteReader();
+                    while (myReader.Read())
+                    {
+                        mailAdress = myReader.GetString(0);
+                    }
+                }
+                catch
+                {
+
+                }
+
                 MailMessage mail = new MailMessage();
                 mail.From = new MailAddress("altinaymerp@gmail.com", "ALTINAY UYARI SİSTEMİ");
                 mail.To.Add("halime.urek@altinay.com");
                 mail.CC.Add("halimeurek@gmail.com");
                 mail.Subject = "MERP Şifre isteği";
                 mail.IsBodyHtml = true;
-                mail.Body = txtKullaniciAdi.Text + " adlı kullanıcı şifre isteğinde bulunmuştur.";
+                mail.Body = txtKullaniciAdi.Text + " adlı kullanıcı şifre isteğinde bulunmuştur. Mail adresi : " + mailAdress;
                 sc.Send(mail);
 
                 frmMessage.txtMessage.Text = "Şifre isteği mail olarak gönderilmiştir.";
@@ -275,9 +293,8 @@ namespace MERP_MUI
             }
             else
             {
-                MERP_MUI.Properties.Settings.Default.UserName = "";
-                MERP_MUI.Properties.Settings.Default.Password = "";
                 MERP_MUI.Properties.Settings.Default.Check = 0;
+                Properties.Settings.Default.Save();
             }
         }
     }

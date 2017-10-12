@@ -463,7 +463,7 @@
             // btn_prjDZN
             // 
             this.btn_prjDZN.Highlight = true;
-            this.btn_prjDZN.Location = new System.Drawing.Point(531, 434);
+            this.btn_prjDZN.Location = new System.Drawing.Point(531, 435);
             this.btn_prjDZN.Name = "btn_prjDZN";
             this.btn_prjDZN.Size = new System.Drawing.Size(116, 60);
             this.btn_prjDZN.Style = MetroFramework.MetroColorStyle.Red;

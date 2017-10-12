@@ -206,16 +206,16 @@ namespace MERP_MUI
             genel_mal2 = hf.DecimalToCurrency(Convert.ToDecimal(genel_mal2), genel_mal2);
 
             var p1 = chart1.Series["pieChart"].Points[0];
-            p1.AxisLabel = Convert.ToString(el_mal2);
-            p1.LegendText = "Elektronik " + "#PERCENT";
+            p1.AxisLabel = Convert.ToString("#PERCENT");
+            p1.LegendText = "Elektronik " + el_mal2;
 
             var p2 = chart1.Series["pieChart"].Points[1];
-            p2.AxisLabel = Convert.ToString(mek_mal2);
-            p2.LegendText = "Mekanik " + "#PERCENT";
+            p2.AxisLabel = Convert.ToString("#PERCENT");
+            p2.LegendText = "Mekanik " + mek_mal2;
 
             var p3 = chart1.Series["pieChart"].Points[2];
-            p3.AxisLabel = Convert.ToString(genel_mal2);
-            p3.LegendText = "Genel Giderler " + "#PERCENT";
+            p3.AxisLabel = Convert.ToString("#PERCENT");
+            p3.LegendText = "Genel Giderler " + genel_mal2;
 
             chart1.Series[0]["PieLabelStyle"] = "Outside";
 
@@ -277,12 +277,12 @@ namespace MERP_MUI
             el_kalan = hf.DecimalToCurrency(Convert.ToDecimal(el_kalan), el_kalan);
 
             var p1 = chart2.Series["Series1"].Points[0];
-            p1.AxisLabel = Convert.ToString(el_harcanan);
-            p1.LegendText = "Harcanan " + "#PERCENT";
+            p1.AxisLabel = Convert.ToString("#PERCENT");
+            p1.LegendText = "Harcanan " + el_harcanan;
 
             var p2 = chart2.Series["Series1"].Points[1];
-            p2.AxisLabel = Convert.ToString(el_kalan);
-            p2.LegendText = "Kalan " + "#PERCENT";
+            p2.AxisLabel = Convert.ToString("#PERCENT");
+            p2.LegendText = "Kalan " + el_kalan;
 
             chart2.Series[0]["PieLabelStyle"] = "Outside";
 
@@ -344,12 +344,12 @@ namespace MERP_MUI
             mek_kalan = hf.DecimalToCurrency(Convert.ToDecimal(mek_kalan), mek_kalan);
 
             var p1 = chart3.Series["Series1"].Points[0];
-            p1.AxisLabel = Convert.ToString(mek_harcanan);
-            p1.LegendText = "Harcanan " + "#PERCENT";
+            p1.AxisLabel = Convert.ToString("#PERCENT");
+            p1.LegendText = "Harcanan " + mek_harcanan;
 
             var p2 = chart3.Series["Series1"].Points[1];
-            p2.AxisLabel = Convert.ToString(mek_kalan);
-            p2.LegendText = "Kalan " + "#PERCENT";
+            p2.AxisLabel = Convert.ToString("#PERCENT");
+            p2.LegendText = "Kalan " + mek_kalan;
 
             chart3.Series[0]["PieLabelStyle"] = "Outside";
 
@@ -411,12 +411,12 @@ namespace MERP_MUI
             genel_kalan = hf.DecimalToCurrency(Convert.ToDecimal(genel_kalan), genel_kalan);
 
             var p1 = chart4.Series["Series1"].Points[0];
-            p1.AxisLabel = Convert.ToString(genel_harcanan);
-            p1.LegendText = "Harcanan " + "#PERCENT";
+            p1.AxisLabel = Convert.ToString("#PERCENT");
+            p1.LegendText = "Harcanan " + genel_harcanan;
 
             var p2 = chart4.Series["Series1"].Points[1];
-            p2.AxisLabel = Convert.ToString(genel_kalan);
-            p2.LegendText = "Kalan " + "#PERCENT";
+            p2.AxisLabel = Convert.ToString("#PERCENT");
+            p2.LegendText = "Kalan " + genel_kalan;
 
             chart4.Series[0]["PieLabelStyle"] = "Outside";
 

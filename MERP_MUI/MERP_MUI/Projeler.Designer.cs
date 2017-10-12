@@ -91,8 +91,8 @@
             // splitContainer1.Panel2
             // 
             this.splitContainer1.Panel2.Controls.Add(this.splitContainer5);
-            this.splitContainer1.Size = new System.Drawing.Size(1783, 775);
-            this.splitContainer1.SplitterDistance = 735;
+            this.splitContainer1.Size = new System.Drawing.Size(1338, 700);
+            this.splitContainer1.SplitterDistance = 663;
             this.splitContainer1.TabIndex = 0;
             // 
             // splitContainer2
@@ -109,8 +109,8 @@
             // splitContainer2.Panel2
             // 
             this.splitContainer2.Panel2.Controls.Add(this.dgw_prj_list);
-            this.splitContainer2.Size = new System.Drawing.Size(1783, 735);
-            this.splitContainer2.SplitterDistance = 89;
+            this.splitContainer2.Size = new System.Drawing.Size(1338, 663);
+            this.splitContainer2.SplitterDistance = 80;
             this.splitContainer2.SplitterWidth = 10;
             this.splitContainer2.TabIndex = 0;
             // 
@@ -129,8 +129,8 @@
             // splitContainer3.Panel2
             // 
             this.splitContainer3.Panel2.Controls.Add(this.splitContainer4);
-            this.splitContainer3.Size = new System.Drawing.Size(1783, 89);
-            this.splitContainer3.SplitterDistance = 591;
+            this.splitContainer3.Size = new System.Drawing.Size(1338, 80);
+            this.splitContainer3.SplitterDistance = 443;
             this.splitContainer3.TabIndex = 0;
             // 
             // lbl_toplam
@@ -182,8 +182,8 @@
             // 
             this.splitContainer4.Panel2.Controls.Add(this.txt_prjAdi);
             this.splitContainer4.Panel2.Controls.Add(this.metroLabel2);
-            this.splitContainer4.Size = new System.Drawing.Size(1188, 89);
-            this.splitContainer4.SplitterDistance = 588;
+            this.splitContainer4.Size = new System.Drawing.Size(891, 80);
+            this.splitContainer4.SplitterDistance = 441;
             this.splitContainer4.TabIndex = 0;
             // 
             // cmb_projeNo
@@ -317,7 +317,7 @@
             this.dgw_prj_list.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.dgw_prj_list.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.dgw_prj_list.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgw_prj_list.Size = new System.Drawing.Size(1783, 636);
+            this.dgw_prj_list.Size = new System.Drawing.Size(1338, 573);
             this.dgw_prj_list.Style = MetroFramework.MetroColorStyle.Silver;
             this.dgw_prj_list.TabIndex = 1;
             this.dgw_prj_list.UseCustomBackColor = true;
@@ -338,8 +338,8 @@
             // splitContainer5.Panel2
             // 
             this.splitContainer5.Panel2.Controls.Add(this.splitContainer6);
-            this.splitContainer5.Size = new System.Drawing.Size(1783, 36);
-            this.splitContainer5.SplitterDistance = 1415;
+            this.splitContainer5.Size = new System.Drawing.Size(1338, 33);
+            this.splitContainer5.SplitterDistance = 1061;
             this.splitContainer5.TabIndex = 0;
             // 
             // btnClear
@@ -348,7 +348,7 @@
             this.btnClear.Highlight = true;
             this.btnClear.Location = new System.Drawing.Point(0, 0);
             this.btnClear.Name = "btnClear";
-            this.btnClear.Size = new System.Drawing.Size(141, 36);
+            this.btnClear.Size = new System.Drawing.Size(141, 33);
             this.btnClear.Style = MetroFramework.MetroColorStyle.Red;
             this.btnClear.TabIndex = 60;
             this.btnClear.Text = "Temizle";
@@ -372,8 +372,8 @@
             // splitContainer6.Panel2
             // 
             this.splitContainer6.Panel2.Controls.Add(this.btn_prj_sil);
-            this.splitContainer6.Size = new System.Drawing.Size(364, 36);
-            this.splitContainer6.SplitterDistance = 182;
+            this.splitContainer6.Size = new System.Drawing.Size(273, 33);
+            this.splitContainer6.SplitterDistance = 136;
             this.splitContainer6.TabIndex = 0;
             // 
             // btn_prj_duzenle
@@ -382,7 +382,7 @@
             this.btn_prj_duzenle.Highlight = true;
             this.btn_prj_duzenle.Location = new System.Drawing.Point(0, 0);
             this.btn_prj_duzenle.Name = "btn_prj_duzenle";
-            this.btn_prj_duzenle.Size = new System.Drawing.Size(182, 36);
+            this.btn_prj_duzenle.Size = new System.Drawing.Size(136, 33);
             this.btn_prj_duzenle.Style = MetroFramework.MetroColorStyle.Red;
             this.btn_prj_duzenle.TabIndex = 57;
             this.btn_prj_duzenle.Text = "DÜZENLE";
@@ -399,7 +399,7 @@
             this.btn_prj_sil.Highlight = true;
             this.btn_prj_sil.Location = new System.Drawing.Point(0, 0);
             this.btn_prj_sil.Name = "btn_prj_sil";
-            this.btn_prj_sil.Size = new System.Drawing.Size(178, 36);
+            this.btn_prj_sil.Size = new System.Drawing.Size(133, 33);
             this.btn_prj_sil.Style = MetroFramework.MetroColorStyle.Red;
             this.btn_prj_sil.TabIndex = 58;
             this.btn_prj_sil.Text = "SİL";
@@ -415,7 +415,7 @@
             this.pbClose.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.pbClose.BackColor = System.Drawing.Color.Transparent;
             this.pbClose.Image = global::MERP_MUI.Properties.Resources.appbar_arrow_left_dark;
-            this.pbClose.Location = new System.Drawing.Point(1757, 12);
+            this.pbClose.Location = new System.Drawing.Point(1312, 12);
             this.pbClose.Name = "pbClose";
             this.pbClose.Size = new System.Drawing.Size(46, 42);
             this.pbClose.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -427,7 +427,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1823, 855);
+            this.ClientSize = new System.Drawing.Size(1378, 780);
             this.ControlBox = false;
             this.Controls.Add(this.pbClose);
             this.Controls.Add(this.splitContainer1);

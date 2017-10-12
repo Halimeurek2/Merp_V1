@@ -410,6 +410,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="merp_sHq_icon.ico" />
+    <None Include="Resources\appbar.close.png" />
     <None Include="Resources\cokaciil.png" />
     <None Include="Resources\cokacil.png" />
     <None Include="Resources\malvefatu.png" />

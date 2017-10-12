@@ -132,6 +132,7 @@ namespace MERP_MUI
         {
             if (btn1_Flag == 0)
             {
+                maliyet_hesapla();
                 pnlDGW.Dock = DockStyle.Fill;
                 pnlDGW.Visible = true;
 

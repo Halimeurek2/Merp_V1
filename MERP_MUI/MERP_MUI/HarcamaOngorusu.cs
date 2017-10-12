@@ -26,19 +26,7 @@ namespace MERP_MUI
 
         private void btn_hesapla_Click(object sender, EventArgs e)
         {
-            txt_avans.Text = hf.Comma2Dot(txt_avans.Text);
-            txt_cdr.Text = hf.Comma2Dot(txt_cdr.Text);
-            txt_el_mlz.Text = hf.Comma2Dot(txt_el_mlz.Text);
-            txt_imalat.Text = hf.Comma2Dot(txt_imalat.Text);
-            txt_kabul.Text = hf.Comma2Dot(txt_kabul.Text);
-            txt_m_mlz.Text = hf.Comma2Dot(txt_m_mlz.Text);
-            txt_o_test.Text = hf.Comma2Dot(txt_o_test.Text);
-            txt_pdr.Text = hf.Comma2Dot(txt_pdr.Text);
-            txt_prototip.Text = hf.Comma2Dot(txt_prototip.Text);
-            txt_risk.Text = hf.Comma2Dot(txt_risk.Text);
-            txt_test.Text = hf.Comma2Dot(txt_test.Text);
-            txt_toplam.Text = hf.Comma2Dot(txt_toplam.Text);
-            txt_s6.Text = hf.Comma2Dot(txt_s6.Text);
+
 
 
             txt_toplam.Text = Convert.ToString(Convert.ToDecimal(txt_test.Text) + Convert.ToDecimal(txt_risk.Text) + Convert.ToDecimal(txt_m_mlz.Text) + Convert.ToDecimal(txt_imalat.Text) + Convert.ToDecimal(txt_el_mlz.Text));
@@ -48,6 +36,20 @@ namespace MERP_MUI
 
             if (f1 != null)
             {
+                txt_avans.Text = hf.Comma2Dot(txt_avans.Text);
+                txt_cdr.Text = hf.Comma2Dot(txt_cdr.Text);
+                txt_el_mlz.Text = hf.Comma2Dot(txt_el_mlz.Text);
+                txt_imalat.Text = hf.Comma2Dot(txt_imalat.Text);
+                txt_kabul.Text = hf.Comma2Dot(txt_kabul.Text);
+                txt_m_mlz.Text = hf.Comma2Dot(txt_m_mlz.Text);
+                txt_o_test.Text = hf.Comma2Dot(txt_o_test.Text);
+                txt_pdr.Text = hf.Comma2Dot(txt_pdr.Text);
+                txt_prototip.Text = hf.Comma2Dot(txt_prototip.Text);
+                txt_risk.Text = hf.Comma2Dot(txt_risk.Text);
+                txt_test.Text = hf.Comma2Dot(txt_test.Text);
+                // txt_toplam.Text = hf.Comma2Dot(txt_toplam.Text);
+                txt_s6.Text = hf.Comma2Dot(txt_s6.Text);
+
                 Label label_harcamalar = (Label)f1.Controls["lbl_harcamalar"];
                 Label label_birim = (Label)f1.Controls["lbl_birim"];
                 label_harcamalar.Text = txt_toplam.Text.ToString();

@@ -56,6 +56,7 @@
             this.rbGelen = new MetroFramework.Controls.MetroRadioButton();
             this.rbKesilen = new MetroFramework.Controls.MetroRadioButton();
             this.cmb_firma = new System.Windows.Forms.ComboBox();
+            this.ck_cokluftr = new MetroFramework.Controls.MetroCheckBox();
             ((System.ComponentModel.ISupportInitialize)(this.pbClose)).BeginInit();
             this.SuspendLayout();
             // 
@@ -562,12 +563,30 @@
             this.cmb_firma.Size = new System.Drawing.Size(156, 21);
             this.cmb_firma.TabIndex = 68;
             // 
+            // ck_cokluftr
+            // 
+            this.ck_cokluftr.AutoSize = true;
+            this.ck_cokluftr.ForeColor = System.Drawing.Color.Maroon;
+            this.ck_cokluftr.Location = new System.Drawing.Point(535, 102);
+            this.ck_cokluftr.Name = "ck_cokluftr";
+            this.ck_cokluftr.Size = new System.Drawing.Size(116, 15);
+            this.ck_cokluftr.Style = MetroFramework.MetroColorStyle.Red;
+            this.ck_cokluftr.TabIndex = 69;
+            this.ck_cokluftr.Text = "Çoklu fatura girişi";
+            this.ck_cokluftr.Theme = MetroFramework.MetroThemeStyle.Dark;
+            this.ck_cokluftr.UseCustomBackColor = true;
+            this.ck_cokluftr.UseCustomForeColor = true;
+            this.ck_cokluftr.UseSelectable = true;
+            this.ck_cokluftr.UseStyleColors = true;
+            this.ck_cokluftr.CheckedChanged += new System.EventHandler(this.ck_cokluftr_CheckedChanged);
+            // 
             // FaturaGiris
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(671, 510);
             this.ControlBox = false;
+            this.Controls.Add(this.ck_cokluftr);
             this.Controls.Add(this.cmb_firma);
             this.Controls.Add(this.rbKesilen);
             this.Controls.Add(this.rbGelen);
@@ -637,5 +656,6 @@
         private MetroFramework.Controls.MetroRadioButton rbGelen;
         private MetroFramework.Controls.MetroRadioButton rbKesilen;
         public System.Windows.Forms.ComboBox cmb_firma;
+        private MetroFramework.Controls.MetroCheckBox ck_cokluftr;
     }
 }

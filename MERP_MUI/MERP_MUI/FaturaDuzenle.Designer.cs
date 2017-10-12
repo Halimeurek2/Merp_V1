@@ -50,7 +50,6 @@
             this.txt_ftr_tutar = new MetroFramework.Controls.MetroTextBox();
             this.cmb_birim = new MetroFramework.Controls.MetroComboBox();
             this.cmb_ftr_tip = new MetroFramework.Controls.MetroComboBox();
-            this.cmb_firma = new MetroFramework.Controls.MetroComboBox();
             this.cb_durum = new MetroFramework.Controls.MetroCheckBox();
             this.txt_ftr_vade = new MetroFramework.Controls.MetroTextBox();
             this.txt_fatura_no = new MetroFramework.Controls.MetroTextBox();
@@ -58,6 +57,7 @@
             this.pbClose = new System.Windows.Forms.PictureBox();
             this.lbl_id = new MetroFramework.Controls.MetroLabel();
             this.lbl_tip = new MetroFramework.Controls.MetroLabel();
+            this.cmb_firma = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.pbClose)).BeginInit();
             this.SuspendLayout();
             // 
@@ -437,22 +437,6 @@
             this.cmb_ftr_tip.UseSelectable = true;
             this.cmb_ftr_tip.UseStyleColors = true;
             // 
-            // cmb_firma
-            // 
-            this.cmb_firma.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.cmb_firma.FormattingEnabled = true;
-            this.cmb_firma.ItemHeight = 23;
-            this.cmb_firma.Location = new System.Drawing.Point(493, 152);
-            this.cmb_firma.Name = "cmb_firma";
-            this.cmb_firma.Size = new System.Drawing.Size(156, 29);
-            this.cmb_firma.Style = MetroFramework.MetroColorStyle.Red;
-            this.cmb_firma.TabIndex = 58;
-            this.cmb_firma.Theme = MetroFramework.MetroThemeStyle.Dark;
-            this.cmb_firma.UseCustomBackColor = true;
-            this.cmb_firma.UseCustomForeColor = true;
-            this.cmb_firma.UseSelectable = true;
-            this.cmb_firma.UseStyleColors = true;
-            // 
             // cb_durum
             // 
             this.cb_durum.AutoSize = true;
@@ -600,12 +584,26 @@
             this.lbl_tip.UseStyleColors = true;
             this.lbl_tip.Visible = false;
             // 
+            // cmb_firma
+            // 
+            this.cmb_firma.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
+            this.cmb_firma.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.cmb_firma.BackColor = System.Drawing.Color.White;
+            this.cmb_firma.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.cmb_firma.FormattingEnabled = true;
+            this.cmb_firma.Location = new System.Drawing.Point(493, 155);
+            this.cmb_firma.Name = "cmb_firma";
+            this.cmb_firma.Size = new System.Drawing.Size(156, 21);
+            this.cmb_firma.TabIndex = 126;
+            this.cmb_firma.SelectedIndexChanged += new System.EventHandler(this.cmb_firma_SelectedIndexChanged);
+            // 
             // FaturaDuzenle
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(671, 510);
             this.ControlBox = false;
+            this.Controls.Add(this.cmb_firma);
             this.Controls.Add(this.lbl_tip);
             this.Controls.Add(this.lbl_id);
             this.Controls.Add(this.btn_ftr_dzn);
@@ -629,7 +627,6 @@
             this.Controls.Add(this.txt_ftr_tutar);
             this.Controls.Add(this.cmb_birim);
             this.Controls.Add(this.cmb_ftr_tip);
-            this.Controls.Add(this.cmb_firma);
             this.Controls.Add(this.cb_durum);
             this.Controls.Add(this.txt_ftr_vade);
             this.Controls.Add(this.txt_fatura_no);
@@ -671,7 +668,6 @@
         public MetroFramework.Controls.MetroTextBox txt_ftr_tutar;
         public MetroFramework.Controls.MetroComboBox cmb_birim;
         public MetroFramework.Controls.MetroComboBox cmb_ftr_tip;
-        public MetroFramework.Controls.MetroComboBox cmb_firma;
         public MetroFramework.Controls.MetroCheckBox cb_durum;
         public MetroFramework.Controls.MetroTextBox txt_ftr_vade;
         public MetroFramework.Controls.MetroTextBox txt_fatura_no;
@@ -679,5 +675,6 @@
         public System.Windows.Forms.PictureBox pbClose;
         public MetroFramework.Controls.MetroLabel lbl_id;
         public MetroFramework.Controls.MetroLabel lbl_tip;
+        public System.Windows.Forms.ComboBox cmb_firma;
     }
 }

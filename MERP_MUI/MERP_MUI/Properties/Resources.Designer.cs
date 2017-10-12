@@ -183,6 +183,16 @@ namespace MERP_MUI.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap appbar_close {
+            get {
+                object obj = ResourceManager.GetObject("appbar_close", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap appbar_fingerprint {
             get {
                 object obj = ResourceManager.GetObject("appbar_fingerprint", resourceCulture);

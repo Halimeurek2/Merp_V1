@@ -96,8 +96,8 @@
             // splitContainer1.Panel2
             // 
             this.splitContainer1.Panel2.Controls.Add(this.splitContainer3);
-            this.splitContainer1.Size = new System.Drawing.Size(1570, 766);
-            this.splitContainer1.SplitterDistance = 329;
+            this.splitContainer1.Size = new System.Drawing.Size(1338, 700);
+            this.splitContainer1.SplitterDistance = 300;
             this.splitContainer1.TabIndex = 0;
             // 
             // splitContainer2
@@ -114,8 +114,8 @@
             // splitContainer2.Panel2
             // 
             this.splitContainer2.Panel2.Controls.Add(this.groupBox2);
-            this.splitContainer2.Size = new System.Drawing.Size(1570, 329);
-            this.splitContainer2.SplitterDistance = 157;
+            this.splitContainer2.Size = new System.Drawing.Size(1338, 300);
+            this.splitContainer2.SplitterDistance = 143;
             this.splitContainer2.TabIndex = 0;
             // 
             // groupBox1
@@ -125,7 +125,7 @@
             this.groupBox1.ForeColor = System.Drawing.Color.Red;
             this.groupBox1.Location = new System.Drawing.Point(0, 0);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(1570, 157);
+            this.groupBox1.Size = new System.Drawing.Size(1338, 143);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "AKTİF İŞLER";
@@ -171,7 +171,7 @@
             this.dg_aktif.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.dg_aktif.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.dg_aktif.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dg_aktif.Size = new System.Drawing.Size(1564, 138);
+            this.dg_aktif.Size = new System.Drawing.Size(1332, 124);
             this.dg_aktif.Style = MetroFramework.MetroColorStyle.Silver;
             this.dg_aktif.TabIndex = 0;
             this.dg_aktif.UseCustomBackColor = true;
@@ -186,7 +186,7 @@
             this.groupBox2.ForeColor = System.Drawing.Color.Green;
             this.groupBox2.Location = new System.Drawing.Point(0, 0);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(1570, 168);
+            this.groupBox2.Size = new System.Drawing.Size(1338, 153);
             this.groupBox2.TabIndex = 0;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "PASİF İŞLER";
@@ -232,7 +232,7 @@
             this.dg_pasif.RowHeadersDefaultCellStyle = dataGridViewCellStyle6;
             this.dg_pasif.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.dg_pasif.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dg_pasif.Size = new System.Drawing.Size(1564, 149);
+            this.dg_pasif.Size = new System.Drawing.Size(1332, 134);
             this.dg_pasif.Style = MetroFramework.MetroColorStyle.Silver;
             this.dg_pasif.TabIndex = 1;
             this.dg_pasif.UseCustomBackColor = true;
@@ -254,8 +254,8 @@
             // splitContainer3.Panel2
             // 
             this.splitContainer3.Panel2.Controls.Add(this.splitContainer4);
-            this.splitContainer3.Size = new System.Drawing.Size(1570, 433);
-            this.splitContainer3.SplitterDistance = 167;
+            this.splitContainer3.Size = new System.Drawing.Size(1338, 396);
+            this.splitContainer3.SplitterDistance = 152;
             this.splitContainer3.TabIndex = 0;
             // 
             // groupBox3
@@ -265,7 +265,7 @@
             this.groupBox3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
             this.groupBox3.Location = new System.Drawing.Point(0, 0);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(1570, 167);
+            this.groupBox3.Size = new System.Drawing.Size(1338, 152);
             this.groupBox3.TabIndex = 0;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "BEKLEMEDE İŞLER";
@@ -311,7 +311,7 @@
             this.dg_bekleme.RowHeadersDefaultCellStyle = dataGridViewCellStyle9;
             this.dg_bekleme.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.dg_bekleme.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dg_bekleme.Size = new System.Drawing.Size(1564, 148);
+            this.dg_bekleme.Size = new System.Drawing.Size(1332, 133);
             this.dg_bekleme.Style = MetroFramework.MetroColorStyle.Silver;
             this.dg_bekleme.TabIndex = 1;
             this.dg_bekleme.UseCustomBackColor = true;
@@ -333,8 +333,8 @@
             // splitContainer4.Panel2
             // 
             this.splitContainer4.Panel2.Controls.Add(this.btn_prj_sil);
-            this.splitContainer4.Size = new System.Drawing.Size(1570, 262);
-            this.splitContainer4.SplitterDistance = 216;
+            this.splitContainer4.Size = new System.Drawing.Size(1338, 240);
+            this.splitContainer4.SplitterDistance = 197;
             this.splitContainer4.TabIndex = 0;
             // 
             // groupBox4
@@ -344,7 +344,7 @@
             this.groupBox4.ForeColor = System.Drawing.Color.Blue;
             this.groupBox4.Location = new System.Drawing.Point(0, 0);
             this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(1570, 216);
+            this.groupBox4.Size = new System.Drawing.Size(1338, 197);
             this.groupBox4.TabIndex = 1;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "BİTEN İŞLER";
@@ -390,7 +390,7 @@
             this.dg_biten.RowHeadersDefaultCellStyle = dataGridViewCellStyle12;
             this.dg_biten.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.dg_biten.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dg_biten.Size = new System.Drawing.Size(1564, 197);
+            this.dg_biten.Size = new System.Drawing.Size(1332, 178);
             this.dg_biten.Style = MetroFramework.MetroColorStyle.Silver;
             this.dg_biten.TabIndex = 1;
             this.dg_biten.UseCustomBackColor = true;
@@ -402,9 +402,9 @@
             // 
             this.btn_prj_sil.Dock = System.Windows.Forms.DockStyle.Right;
             this.btn_prj_sil.Highlight = true;
-            this.btn_prj_sil.Location = new System.Drawing.Point(1450, 0);
+            this.btn_prj_sil.Location = new System.Drawing.Point(1218, 0);
             this.btn_prj_sil.Name = "btn_prj_sil";
-            this.btn_prj_sil.Size = new System.Drawing.Size(120, 42);
+            this.btn_prj_sil.Size = new System.Drawing.Size(120, 39);
             this.btn_prj_sil.Style = MetroFramework.MetroColorStyle.Red;
             this.btn_prj_sil.TabIndex = 111;
             this.btn_prj_sil.Text = "SİL";
@@ -420,7 +420,7 @@
             this.pbClose.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.pbClose.BackColor = System.Drawing.Color.Transparent;
             this.pbClose.Image = global::MERP_MUI.Properties.Resources.appbar_arrow_left_dark;
-            this.pbClose.Location = new System.Drawing.Point(1544, 12);
+            this.pbClose.Location = new System.Drawing.Point(1312, 12);
             this.pbClose.Name = "pbClose";
             this.pbClose.Size = new System.Drawing.Size(46, 42);
             this.pbClose.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -432,7 +432,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1610, 846);
+            this.ClientSize = new System.Drawing.Size(1378, 780);
             this.ControlBox = false;
             this.Controls.Add(this.pbClose);
             this.Controls.Add(this.splitContainer1);

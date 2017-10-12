@@ -178,8 +178,8 @@
             // splitContainer2.Panel2
             // 
             this.splitContainer2.Panel2.Controls.Add(this.splitContainer3);
-            this.splitContainer2.Size = new System.Drawing.Size(36, 982);
-            this.splitContainer2.SplitterDistance = 322;
+            this.splitContainer2.Size = new System.Drawing.Size(36, 1012);
+            this.splitContainer2.SplitterDistance = 331;
             this.splitContainer2.TabIndex = 2;
             // 
             // pictureBox1
@@ -201,7 +201,7 @@
             this.btnDGW.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.btnDGW.Location = new System.Drawing.Point(0, 0);
             this.btnDGW.Name = "btnDGW";
-            this.btnDGW.Size = new System.Drawing.Size(36, 322);
+            this.btnDGW.Size = new System.Drawing.Size(36, 331);
             this.btnDGW.TabIndex = 0;
             this.btnDGW.UseVisualStyleBackColor = true;
             this.btnDGW.Click += new System.EventHandler(this.button1_Click);
@@ -221,8 +221,8 @@
             // splitContainer3.Panel2
             // 
             this.splitContainer3.Panel2.Controls.Add(this.btnFilter);
-            this.splitContainer3.Size = new System.Drawing.Size(36, 656);
-            this.splitContainer3.SplitterDistance = 325;
+            this.splitContainer3.Size = new System.Drawing.Size(36, 677);
+            this.splitContainer3.SplitterDistance = 334;
             this.splitContainer3.TabIndex = 0;
             // 
             // pictureBox2
@@ -244,7 +244,7 @@
             this.btnAktivite.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.btnAktivite.Location = new System.Drawing.Point(0, 0);
             this.btnAktivite.Name = "btnAktivite";
-            this.btnAktivite.Size = new System.Drawing.Size(36, 325);
+            this.btnAktivite.Size = new System.Drawing.Size(36, 334);
             this.btnAktivite.TabIndex = 1;
             this.btnAktivite.UseVisualStyleBackColor = true;
             this.btnAktivite.Click += new System.EventHandler(this.btnAktivite_Click);
@@ -256,7 +256,7 @@
             this.btnFilter.Image = ((System.Drawing.Image)(resources.GetObject("btnFilter.Image")));
             this.btnFilter.Location = new System.Drawing.Point(0, 0);
             this.btnFilter.Name = "btnFilter";
-            this.btnFilter.Size = new System.Drawing.Size(36, 327);
+            this.btnFilter.Size = new System.Drawing.Size(36, 339);
             this.btnFilter.TabIndex = 1;
             this.btnFilter.UseVisualStyleBackColor = true;
             this.btnFilter.Click += new System.EventHandler(this.btnFilter_Click);
@@ -300,7 +300,7 @@
             this.chart1.Series.Add(series1);
             this.chart1.Series.Add(series2);
             this.chart1.Series.Add(series3);
-            this.chart1.Size = new System.Drawing.Size(1659, 982);
+            this.chart1.Size = new System.Drawing.Size(1624, 1012);
             this.chart1.TabIndex = 3;
             this.chart1.Text = "chart1";
             // 
@@ -321,17 +321,17 @@
             // splitContainer1.Panel2
             // 
             this.splitContainer1.Panel2.Controls.Add(this.splitContainer4);
-            this.splitContainer1.Size = new System.Drawing.Size(1868, 982);
-            this.splitContainer1.SplitterDistance = 1659;
+            this.splitContainer1.Size = new System.Drawing.Size(1830, 1012);
+            this.splitContainer1.SplitterDistance = 1624;
             this.splitContainer1.TabIndex = 4;
             // 
             // panel1
             // 
             this.panel1.Controls.Add(this.splitContainer9);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel1.Location = new System.Drawing.Point(0, 957);
+            this.panel1.Location = new System.Drawing.Point(0, 987);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1659, 25);
+            this.panel1.Size = new System.Drawing.Size(1624, 25);
             this.panel1.TabIndex = 5;
             // 
             // splitContainer9
@@ -347,8 +347,8 @@
             // splitContainer9.Panel2
             // 
             this.splitContainer9.Panel2.Controls.Add(this.splitContainer10);
-            this.splitContainer9.Size = new System.Drawing.Size(1659, 25);
-            this.splitContainer9.SplitterDistance = 318;
+            this.splitContainer9.Size = new System.Drawing.Size(1624, 25);
+            this.splitContainer9.SplitterDistance = 310;
             this.splitContainer9.TabIndex = 0;
             // 
             // metroLabel4
@@ -380,8 +380,8 @@
             // splitContainer10.Panel2
             // 
             this.splitContainer10.Panel2.Controls.Add(this.splitContainer11);
-            this.splitContainer10.Size = new System.Drawing.Size(1337, 25);
-            this.splitContainer10.SplitterDistance = 443;
+            this.splitContainer10.Size = new System.Drawing.Size(1310, 25);
+            this.splitContainer10.SplitterDistance = 433;
             this.splitContainer10.TabIndex = 0;
             // 
             // metroLabel1
@@ -429,8 +429,8 @@
             // 
             this.splitContainer11.Panel2.Controls.Add(this.lbl_gbp);
             this.splitContainer11.Panel2.Controls.Add(this.metroLabel3);
-            this.splitContainer11.Size = new System.Drawing.Size(890, 25);
-            this.splitContainer11.SplitterDistance = 430;
+            this.splitContainer11.Size = new System.Drawing.Size(873, 25);
+            this.splitContainer11.SplitterDistance = 421;
             this.splitContainer11.TabIndex = 0;
             // 
             // metroLabel2
@@ -570,7 +570,7 @@
             this.dg_maliyet.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(17)))), ((int)(((byte)(65)))));
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(19)))), ((int)(((byte)(73)))));
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
@@ -579,7 +579,7 @@
             this.dg_maliyet.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(136)))), ((int)(((byte)(136)))));
             dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(19)))), ((int)(((byte)(73)))));
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
@@ -630,7 +630,7 @@
             this.dgw_faturalar.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(85)))), ((int)(((byte)(85)))), ((int)(((byte)(85)))));
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(102)))), ((int)(((byte)(102)))));
             dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
@@ -639,7 +639,7 @@
             this.dgw_faturalar.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(136)))), ((int)(((byte)(136)))));
             dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(102)))), ((int)(((byte)(102)))));
             dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
@@ -708,7 +708,7 @@
             this.dg_cokacil.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(17)))), ((int)(((byte)(65)))));
-            dataGridViewCellStyle7.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             dataGridViewCellStyle7.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(19)))), ((int)(((byte)(73)))));
             dataGridViewCellStyle7.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
@@ -717,7 +717,7 @@
             this.dg_cokacil.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle8.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(136)))), ((int)(((byte)(136)))));
             dataGridViewCellStyle8.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(19)))), ((int)(((byte)(73)))));
             dataGridViewCellStyle8.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
@@ -762,8 +762,8 @@
             // splitContainer4.Panel2
             // 
             this.splitContainer4.Panel2.Controls.Add(this.groupBox3);
-            this.splitContainer4.Size = new System.Drawing.Size(205, 982);
-            this.splitContainer4.SplitterDistance = 721;
+            this.splitContainer4.Size = new System.Drawing.Size(202, 1012);
+            this.splitContainer4.SplitterDistance = 741;
             this.splitContainer4.TabIndex = 0;
             // 
             // menuStrip1
@@ -783,7 +783,7 @@
             this.menuStrip1.LayoutStyle = System.Windows.Forms.ToolStripLayoutStyle.Table;
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(205, 721);
+            this.menuStrip1.Size = new System.Drawing.Size(202, 741);
             this.menuStrip1.TabIndex = 2;
             this.menuStrip1.Text = "menuStrip1";
             this.menuStrip1.TextDirection = System.Windows.Forms.ToolStripTextDirection.Vertical270;
@@ -947,7 +947,7 @@
             this.groupBox3.ForeColor = System.Drawing.Color.Red;
             this.groupBox3.Location = new System.Drawing.Point(0, 0);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(205, 257);
+            this.groupBox3.Size = new System.Drawing.Size(202, 267);
             this.groupBox3.TabIndex = 7;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Grafik Filtre";
@@ -965,8 +965,8 @@
             // splitContainer6.Panel2
             // 
             this.splitContainer6.Panel2.Controls.Add(this.splitContainer8);
-            this.splitContainer6.Size = new System.Drawing.Size(199, 238);
-            this.splitContainer6.SplitterDistance = 64;
+            this.splitContainer6.Size = new System.Drawing.Size(196, 248);
+            this.splitContainer6.SplitterDistance = 61;
             this.splitContainer6.TabIndex = 0;
             // 
             // splitContainer7
@@ -983,8 +983,8 @@
             // splitContainer7.Panel2
             // 
             this.splitContainer7.Panel2.Controls.Add(this.metroLabel5);
-            this.splitContainer7.Size = new System.Drawing.Size(64, 238);
-            this.splitContainer7.SplitterDistance = 112;
+            this.splitContainer7.Size = new System.Drawing.Size(61, 248);
+            this.splitContainer7.SplitterDistance = 116;
             this.splitContainer7.TabIndex = 0;
             // 
             // metroLabel6
@@ -1033,8 +1033,8 @@
             // splitContainer8.Panel2
             // 
             this.splitContainer8.Panel2.Controls.Add(this.cmb_yil);
-            this.splitContainer8.Size = new System.Drawing.Size(131, 238);
-            this.splitContainer8.SplitterDistance = 112;
+            this.splitContainer8.Size = new System.Drawing.Size(131, 248);
+            this.splitContainer8.SplitterDistance = 116;
             this.splitContainer8.TabIndex = 0;
             // 
             // cmb_proje
@@ -1074,8 +1074,8 @@
             // 
             this.pbClose.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.pbClose.BackColor = System.Drawing.Color.Transparent;
-            this.pbClose.Image = global::MERP_MUI.Properties.Resources.appbar_arrow_left_dark;
-            this.pbClose.Location = new System.Drawing.Point(1878, 12);
+            this.pbClose.Image = global::MERP_MUI.Properties.Resources.appbar_close;
+            this.pbClose.Location = new System.Drawing.Point(1840, 12);
             this.pbClose.Name = "pbClose";
             this.pbClose.Size = new System.Drawing.Size(46, 42);
             this.pbClose.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -1085,15 +1085,16 @@
             // 
             // lbl_kullanici
             // 
+            this.lbl_kullanici.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.lbl_kullanici.AutoSize = true;
             this.lbl_kullanici.FontWeight = MetroFramework.MetroLabelWeight.Bold;
             this.lbl_kullanici.ForeColor = System.Drawing.Color.Maroon;
-            this.lbl_kullanici.Location = new System.Drawing.Point(20, 12);
+            this.lbl_kullanici.Location = new System.Drawing.Point(1733, 35);
             this.lbl_kullanici.Name = "lbl_kullanici";
-            this.lbl_kullanici.Size = new System.Drawing.Size(63, 19);
+            this.lbl_kullanici.Size = new System.Drawing.Size(65, 19);
             this.lbl_kullanici.Style = MetroFramework.MetroColorStyle.Red;
             this.lbl_kullanici.TabIndex = 25;
-            this.lbl_kullanici.Text = "KURLAR";
+            this.lbl_kullanici.Text = "Kullanıcı";
             this.lbl_kullanici.Theme = MetroFramework.MetroThemeStyle.Dark;
             this.lbl_kullanici.UseCustomBackColor = true;
             this.lbl_kullanici.UseCustomForeColor = true;
@@ -1103,7 +1104,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1944, 1062);
+            this.ClientSize = new System.Drawing.Size(1906, 1092);
             this.ControlBox = false;
             this.Controls.Add(this.lbl_kullanici);
             this.Controls.Add(this.pbClose);
@@ -1113,6 +1114,7 @@
             this.Name = "MainForm";
             this.Resizable = false;
             this.Style = MetroFramework.MetroColorStyle.Black;
+            this.Text = "MERP";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.Form1_Load);
             this.splitContainer2.Panel1.ResumeLayout(false);

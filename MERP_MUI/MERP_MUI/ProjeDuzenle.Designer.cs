@@ -509,7 +509,8 @@
             "USD",
             "EUR",
             "TRY",
-            "CHF"});
+            "CHF",
+            "GBP"});
             this.cmb_birim.Location = new System.Drawing.Point(128, 299);
             this.cmb_birim.Name = "cmb_birim";
             this.cmb_birim.Size = new System.Drawing.Size(156, 29);

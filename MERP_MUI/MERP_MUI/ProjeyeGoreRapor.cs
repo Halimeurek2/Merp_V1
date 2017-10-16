@@ -542,6 +542,25 @@ namespace MERP_MUI
 
             try
             {
+                komut = "SELECT sum(siparis_euro) FROM db_siparis_emri WHERE proje_no ='" + cmb_projeler.Text + "'";
+                da = new MySqlDataAdapter(komut, connection);
+                myCommand = new MySqlCommand(komut, myConnection);
+                myReader = myCommand.ExecuteReader();
+                while (myReader.Read())
+                {
+                    TOPLAM = Convert.ToDecimal(myReader.GetString(0));
+                    lbl_siparis.Text = string.Format(new CultureInfo("de-DE"), "{0:C2}", Convert.ToDecimal(TOPLAM));
+                }
+                myReader.Close();
+            }
+            catch
+            {
+                lbl_siparis.Text = "0";
+                myReader.Close();
+            }
+
+            try
+            {
                 komut = "SELECT proje_butce,proje_birim FROM db_projeler WHERE proje_no='" + cmb_projeler.Text + "'";
                 da = new MySqlDataAdapter(komut, connection);
                 myCommand = new MySqlCommand(komut, myConnection);
@@ -1165,6 +1184,13 @@ namespace MERP_MUI
             }
             frm1.lbl_prjNo.Text = cmb_projeler.Text;
             frm1.Show();
+        }
+
+        private void btn_frmRapor_Click(object sender, EventArgs e)
+        {
+            FirmaRapor frmFirmaRapor = new FirmaRapor();
+            frmFirmaRapor.lbl_prjNo.Text = cmb_projeler.Text;
+            frmFirmaRapor.Show();
         }
     }
 }

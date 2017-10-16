@@ -61,7 +61,7 @@ namespace MERP_MUI
             myConnection.Open();
 
 
-            komut = "SELECT * FROM db_faturalar";
+            komut = "SELECT * FROM (SELECT * FROM db_faturalar ORDER BY fatura_id DESC LIMIT 200) as r ORDER BY fatura_id";
             myCommand = new MySqlCommand(komut, myConnection);
             da = new MySqlDataAdapter(myCommand);
             dt = new DataTable();
@@ -206,17 +206,17 @@ namespace MERP_MUI
 
         private void txt_ftr_no_TextChanged(object sender, EventArgs e)
         {
-            Refresh();
+            RefreshFilter();
             SumDGW();
         }
 
         private void txt_tip_TextChanged(object sender, EventArgs e)
         {
-            Refresh();
+            RefreshFilter();
             SumDGW();
         }
 
-        public void Refresh()
+        public void RefreshFilter()
         {
             BindingSource bs = new BindingSource();
             bs.DataSource = dgw_ftr_list.DataSource;
@@ -312,7 +312,7 @@ namespace MERP_MUI
             }
             else
             {
-                Refresh();
+                RefreshFilter();
             }
 
             SumDGW();
@@ -320,7 +320,7 @@ namespace MERP_MUI
 
         private void cmb_firma_SelectedIndexChanged(object sender, EventArgs e)
         {
-            Refresh();
+            RefreshFilter();
             SumDGW();
         }
 

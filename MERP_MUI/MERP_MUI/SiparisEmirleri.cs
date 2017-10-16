@@ -144,7 +144,7 @@ namespace MERP_MUI
 
         private void txt_satınalma_no_TextChanged(object sender, EventArgs e)
         {
-            Refresh();
+            RefreshFilter();
             SumDGW();
         }
 
@@ -169,7 +169,7 @@ namespace MERP_MUI
             obj.lbl_id.Text = id;
             obj.cmb_prjno.Text = proje_no;
             obj.txt_siparisNo.Text = satinalma_no;
-            obj.txt_tedarikci.Text = tedarikci;
+            obj.cmb_tedarikci.Text = tedarikci;
             obj.txt_talepKisi.Text = olusturan;
             obj.date_teslim.Text = Convert.ToString(siparis_tarihi);
             obj.txt_vade.Text = vade;
@@ -180,7 +180,7 @@ namespace MERP_MUI
             obj.Show();
         }
 
-        public void Refresh()
+        public void RefreshFilter()
         {
             BindingSource bs = new BindingSource();
             bs.DataSource = dgw_stf_list.DataSource;
@@ -214,7 +214,7 @@ namespace MERP_MUI
             }
             else
             {
-                Refresh();
+                RefreshFilter();
             }
 
             SumDGW();
@@ -222,7 +222,7 @@ namespace MERP_MUI
 
         private void txt_tedarikci_TextChanged(object sender, EventArgs e)
         {
-            Refresh();
+            RefreshFilter();
             SumDGW();
         }
 
@@ -247,6 +247,31 @@ namespace MERP_MUI
         }
 
         private void btnClear_Click(object sender, EventArgs e)
+        {
+            cmb_projeNo.Text = "";
+            txt_satınalma_no.Text = "";
+            txt_tedarikci.Text = "";
+
+            komut = "SELECT * FROM db_siparis_emri";
+            myCommand = new MySqlCommand(komut, myConnection);
+            da = new MySqlDataAdapter(myCommand);
+            dt = new DataTable();
+            // myReader = myCommand.ExecuteReader();
+
+            da.Fill(dt);
+
+            dgw_stf_list.DataSource = dt;
+
+            dgw_stf_list.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
+            dgw_stf_list.AutoSizeColumnsMode =
+                       DataGridViewAutoSizeColumnsMode.Fill;
+
+            myConnection.Close();
+
+            SumDGW();
+        }
+
+        private void pb_refresh_Click(object sender, EventArgs e)
         {
             cmb_projeNo.Text = "";
             txt_satınalma_no.Text = "";

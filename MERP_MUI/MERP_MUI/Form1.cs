@@ -1,14 +1,13 @@
 ﻿using MySql.Data.MySqlClient;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
-using System.Drawing;
 using System.Globalization;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.IO;
+using System.Net;
+using System.Net.Mail;
+using System.Runtime.InteropServices;
 using System.Windows.Forms;
+using Excel = Microsoft.Office.Interop.Excel;
 
 namespace MERP_MUI
 {
@@ -58,7 +57,19 @@ namespace MERP_MUI
         public int animsaCheck;
         public static DateTime giris_tarihi;
 
+        DateTime fatura_vade_tarih;
+        public int flag = 0;
+        int Mailfatura_id;
+        string Mailfatura_no;
+        int MailVade;
+        string MailTip;
+        string MailAciklama;
+        int Excel_index = 2;
+        Boolean PopupTrueG=false;
+        Boolean PopupTrueK = false;
+
         DBConnect db;
+        SmtpClient sc;
 
         public MainForm()
         {
@@ -114,7 +125,6 @@ namespace MERP_MUI
             komut = "SELECT DISTINCT proje_no FROM db_projeler";
             da = new MySqlDataAdapter(komut, connection);
             myCommand = new MySqlCommand(komut, myConnection);
-            MySqlDataReader myReader;
             myReader = myCommand.ExecuteReader();
             while (myReader.Read())
             {
@@ -125,7 +135,171 @@ namespace MERP_MUI
 
             cmb_yil.Text = "2017";
 
+            Mail();
             maliyet_hesapla();
+        }
+
+        public void Mail()
+        {
+            try
+            {
+                sc = new SmtpClient();
+                sc.Port = 587;
+                sc.Host = "smtp.gmail.com";
+                sc.EnableSsl = true;
+                sc.Credentials = new NetworkCredential("altinaymerp@gmail.com", "123456qweasd");
+
+                Excel.Application xlApp = new Microsoft.Office.Interop.Excel.Application();
+
+                if (xlApp == null)
+                {
+                    MessageBox.Show("Excel is not properly installed!!");
+                    return;
+                }
+
+                if (File.Exists(Application.StartupPath + @"\" + "MERP" + ".xlsx"))
+                {
+                    File.Delete(Application.StartupPath + @"\" + "MERP" + ".xlsx");
+                }
+
+                Excel.Workbook xlWorkBook;
+                Excel.Worksheet xlWorkSheet;
+                object misValue = System.Reflection.Missing.Value;
+
+                xlWorkBook = xlApp.Workbooks.Add(misValue);
+                xlWorkSheet = (Excel.Worksheet)xlWorkBook.Worksheets.get_Item(1);
+
+                xlWorkSheet.Cells[1, 1] = "ID";
+                xlWorkSheet.Cells[1, 2] = "Fatura No";
+                xlWorkSheet.Cells[1, 3] = "Fatura Vade Tarih";
+                xlWorkSheet.Cells[1, 4] = "Vade";
+                xlWorkSheet.Cells[1, 5] = "Fatura Tipi";
+                xlWorkSheet.Cells[1, 6] = "Fatura Açıklama";
+
+                xlWorkSheet.Columns[1].ColumnWidth = 20;
+                xlWorkSheet.Columns[2].ColumnWidth = 20;
+                xlWorkSheet.Columns[3].ColumnWidth = 20;
+                xlWorkSheet.Columns[4].ColumnWidth = 20;
+                xlWorkSheet.Columns[6].ColumnWidth = 100;
+
+                komut = "SELECT fatura_id,fatura_no,fatura_vade_tarih,fatura_vade,fatura_tipi,fatura_aciklama  FROM db_faturalar WHERE fatura_tipi='K'";
+                da = new MySqlDataAdapter(komut, connection);
+
+                myConnection = new MySqlConnection(connectionString);
+                myCommand = new MySqlCommand(komut, myConnection);
+                myConnection.Open();
+                MySqlDataReader myReader;
+                myReader = myCommand.ExecuteReader();
+                // Always call Read before accessing data.
+
+                while (myReader.Read())
+                {
+                    fatura_vade_tarih = Convert.ToDateTime(myReader["fatura_vade_tarih"]);
+
+                    if ((fatura_vade_tarih - DateTime.Now).TotalDays < 5 && (fatura_vade_tarih - DateTime.Now).TotalDays > 0)
+                    {
+                        Mailfatura_id = Convert.ToInt32(myReader["fatura_id"]);
+                        Mailfatura_no = Convert.ToString(myReader["fatura_no"]);
+                        MailVade = Convert.ToInt32(myReader["fatura_vade"]);
+                        MailTip = Convert.ToString(myReader["fatura_tipi"]);
+                        MailAciklama = Convert.ToString(myReader["fatura_aciklama"]);
+
+
+                        xlWorkSheet.Cells[Excel_index, 1] = Mailfatura_id;
+                        xlWorkSheet.Cells[Excel_index, 2] = Mailfatura_no;
+                        xlWorkSheet.Cells[Excel_index, 3] = fatura_vade_tarih;
+                        xlWorkSheet.Cells[Excel_index, 4] = MailVade;
+                        xlWorkSheet.Cells[Excel_index, 5] = MailTip;
+                        xlWorkSheet.Cells[Excel_index, 6] = MailAciklama;
+                        Excel_index++;
+                        PopupTrueK = true;
+                    }
+                }
+
+                myReader.Close();
+
+                NotificationWindow.PopupNotifier popup = new NotificationWindow.PopupNotifier();
+
+                if (PopupTrueK==true)
+                {
+                    popup.Image = Properties.Resources.information_alert_attention_sign_help_48;
+                    popup.TitleText = "Uyarı";
+                    popup.ContentText = "Yaklaşan Vade Tarihi - KESİLEN FATURA -";
+                    popup.popupIndex = 1;
+                    popup.Popup();
+                }
+
+
+                komut = "SELECT fatura_id,fatura_no,fatura_vade_tarih,fatura_vade,fatura_tipi,fatura_aciklama  FROM db_faturalar WHERE fatura_tipi='G' and fatura_check='1'";
+                da = new MySqlDataAdapter(komut, connection);
+
+                myConnection = new MySqlConnection(connectionString);
+                myCommand = new MySqlCommand(komut, myConnection);
+                myConnection.Open();
+                myReader = myCommand.ExecuteReader();
+                // Always call Read before accessing data.
+
+                while (myReader.Read())
+                {
+                    fatura_vade_tarih = Convert.ToDateTime(myReader["fatura_vade_tarih"]);
+
+                    if ((fatura_vade_tarih - DateTime.Now).TotalDays < 5 && (fatura_vade_tarih - DateTime.Now).TotalDays > 0)
+                    {
+                        Mailfatura_id = Convert.ToInt32(myReader["fatura_id"]);
+                        Mailfatura_no = Convert.ToString(myReader["fatura_no"]);
+                        MailVade = Convert.ToInt32(myReader["fatura_vade"]);
+                        MailTip = Convert.ToString(myReader["fatura_tipi"]);
+                        MailAciklama = Convert.ToString(myReader["fatura_aciklama"]);
+
+
+                        xlWorkSheet.Cells[Excel_index, 1] = Mailfatura_id;
+                        xlWorkSheet.Cells[Excel_index, 2] = Mailfatura_no;
+                        xlWorkSheet.Cells[Excel_index, 3] = fatura_vade_tarih;
+                        xlWorkSheet.Cells[Excel_index, 4] = MailVade;
+                        xlWorkSheet.Cells[Excel_index, 5] = MailTip;
+                        xlWorkSheet.Cells[Excel_index, 6] = MailAciklama;
+                        Excel_index++;
+                        PopupTrueG = true;
+                    }
+                }
+
+                myReader.Close();
+
+                if(PopupTrueG==true)
+                {
+                    popup.Image = Properties.Resources.information_alert_attention_sign_help_48;
+                    popup.TitleText = "Uyarı";
+                    popup.ContentText = "Yaklaşan Vade Tarihi - GELEN FATURA -";
+                    popup.popupIndex = 3;
+                    //popup.popupIndex++;
+                    popup.Popup();
+                }
+
+
+                xlWorkBook.SaveAs(Application.StartupPath + @"\" + "MERP", Excel.XlFileFormat.xlWorkbookDefault, misValue, misValue, false, misValue, Excel.XlSaveAsAccessMode.xlNoChange);
+                xlWorkBook.Close(true, misValue, misValue);
+                xlApp.Quit();
+
+                //MessageBox.Show("Excel file created , you can find the file d:\\csharp-Excel.xls");
+
+
+                MailMessage mail = new MailMessage();
+                mail.From = new MailAddress("altinaymerp@gmail.com", "ALTINAY UYARI SİSTEMİ");
+                mail.To.Add("halime.urek@altinay.com");
+                mail.Subject = "FATURA UYARISI";
+                mail.IsBodyHtml = true;
+                mail.Body = "Fatura vade tarihi 5 günden az olan faturalar ekteki excel dosyasındadır.";
+
+                System.Net.Mail.Attachment attachment;
+                attachment = new System.Net.Mail.Attachment(Application.StartupPath + @"\" + "MERP" + ".xlsx");
+                mail.Attachments.Add(attachment);
+                //sc.Send(mail);
+
+                myConnection.Close();
+            }
+            catch { }
+
+           
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -159,6 +333,7 @@ namespace MERP_MUI
         public void maliyet_hesapla()
         {
             myConnection.Open();
+
             int a = dg_maliyet.RowCount;
 
             komut = "select fatura_proje_no as PROJE_NO, sum(case when fatura_birim = 'TRY' then fatura_tutari else 0 end) as TRY, " +
@@ -437,18 +612,17 @@ namespace MERP_MUI
 
         private void btnFilter_Click(object sender, EventArgs e)
         {
-            //if(btn3_Flag==0)
-            //{
-            //    pnlFilter.Left = this.Location.X;
-            //    pnlFilter.Top = pnlFilter.Height * 3;
-            //    pnlFilter.Visible = true;
-            //    btn3_Flag = 1;
-            //}
-            //else
-            //{
-            //    pnlFilter.Visible = false;
-            //    btn3_Flag = 0;
-            //}
+            if (btn3_Flag == 0)
+            {
+                pnlFilter.Dock = DockStyle.Fill;
+                pnlFilter.Visible = true;
+                btn3_Flag = 1;
+            }
+            else
+            {
+                pnlFilter.Visible = false;
+                btn3_Flag = 0;
+            }
             if (pnlAcil.Visible == true)
             {
                 pnlAcil.Visible = false;

@@ -53,11 +53,11 @@
             this.cb_durum = new MetroFramework.Controls.MetroCheckBox();
             this.txt_ftr_vade = new MetroFramework.Controls.MetroTextBox();
             this.txt_fatura_no = new MetroFramework.Controls.MetroTextBox();
-            this.cmb_projeNo = new MetroFramework.Controls.MetroComboBox();
             this.pbClose = new System.Windows.Forms.PictureBox();
             this.lbl_id = new MetroFramework.Controls.MetroLabel();
             this.lbl_tip = new MetroFramework.Controls.MetroLabel();
             this.cmb_firma = new System.Windows.Forms.ComboBox();
+            this.cmb_projeNo = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.pbClose)).BeginInit();
             this.SuspendLayout();
             // 
@@ -405,7 +405,8 @@
             "USD",
             "EUR",
             "TRY",
-            "CHF"});
+            "CHF",
+            "GBP"});
             this.cmb_birim.Location = new System.Drawing.Point(493, 296);
             this.cmb_birim.Name = "cmb_birim";
             this.cmb_birim.Size = new System.Drawing.Size(156, 29);
@@ -425,7 +426,8 @@
             this.cmb_ftr_tip.Items.AddRange(new object[] {
             "Mekanik",
             "Elektronik",
-            "Genel Giderler"});
+            "Genel Giderler",
+            "Kesilen"});
             this.cmb_ftr_tip.Location = new System.Drawing.Point(493, 344);
             this.cmb_ftr_tip.Name = "cmb_ftr_tip";
             this.cmb_ftr_tip.Size = new System.Drawing.Size(156, 29);
@@ -524,22 +526,6 @@
             this.txt_fatura_no.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.txt_fatura_no.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
             // 
-            // cmb_projeNo
-            // 
-            this.cmb_projeNo.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.cmb_projeNo.FormattingEnabled = true;
-            this.cmb_projeNo.ItemHeight = 23;
-            this.cmb_projeNo.Location = new System.Drawing.Point(126, 152);
-            this.cmb_projeNo.Name = "cmb_projeNo";
-            this.cmb_projeNo.Size = new System.Drawing.Size(156, 29);
-            this.cmb_projeNo.Style = MetroFramework.MetroColorStyle.Red;
-            this.cmb_projeNo.TabIndex = 52;
-            this.cmb_projeNo.Theme = MetroFramework.MetroThemeStyle.Dark;
-            this.cmb_projeNo.UseCustomBackColor = true;
-            this.cmb_projeNo.UseCustomForeColor = true;
-            this.cmb_projeNo.UseSelectable = true;
-            this.cmb_projeNo.UseStyleColors = true;
-            // 
             // pbClose
             // 
             this.pbClose.BackColor = System.Drawing.Color.Transparent;
@@ -597,12 +583,25 @@
             this.cmb_firma.TabIndex = 126;
             this.cmb_firma.SelectedIndexChanged += new System.EventHandler(this.cmb_firma_SelectedIndexChanged);
             // 
+            // cmb_projeNo
+            // 
+            this.cmb_projeNo.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
+            this.cmb_projeNo.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.cmb_projeNo.BackColor = System.Drawing.Color.White;
+            this.cmb_projeNo.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.cmb_projeNo.FormattingEnabled = true;
+            this.cmb_projeNo.Location = new System.Drawing.Point(126, 155);
+            this.cmb_projeNo.Name = "cmb_projeNo";
+            this.cmb_projeNo.Size = new System.Drawing.Size(156, 21);
+            this.cmb_projeNo.TabIndex = 130;
+            // 
             // FaturaDuzenle
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(671, 510);
             this.ControlBox = false;
+            this.Controls.Add(this.cmb_projeNo);
             this.Controls.Add(this.cmb_firma);
             this.Controls.Add(this.lbl_tip);
             this.Controls.Add(this.lbl_id);
@@ -630,7 +629,6 @@
             this.Controls.Add(this.cb_durum);
             this.Controls.Add(this.txt_ftr_vade);
             this.Controls.Add(this.txt_fatura_no);
-            this.Controls.Add(this.cmb_projeNo);
             this.Controls.Add(this.pbClose);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FaturaDuzenle";
@@ -671,10 +669,10 @@
         public MetroFramework.Controls.MetroCheckBox cb_durum;
         public MetroFramework.Controls.MetroTextBox txt_ftr_vade;
         public MetroFramework.Controls.MetroTextBox txt_fatura_no;
-        public MetroFramework.Controls.MetroComboBox cmb_projeNo;
         public System.Windows.Forms.PictureBox pbClose;
         public MetroFramework.Controls.MetroLabel lbl_id;
         public MetroFramework.Controls.MetroLabel lbl_tip;
         public System.Windows.Forms.ComboBox cmb_firma;
+        public System.Windows.Forms.ComboBox cmb_projeNo;
     }
 }

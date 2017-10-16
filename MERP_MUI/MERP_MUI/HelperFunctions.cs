@@ -73,7 +73,9 @@ namespace MERP_MUI
                 }
                 else if (birim == "TRY")
                 {
-                    euro = Convert.ToString(Convert.ToDecimal(tutar) / Convert.ToDecimal(EURO));
+                    double X = Convert.ToDouble(tutar);
+                    double Y = Convert.ToDouble(EURO.Replace('.', ','));
+                    euro = Convert.ToString(X/Y);
                 }
                 else if (birim == "GBP")
                 {

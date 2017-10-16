@@ -313,6 +313,16 @@ namespace MERP_MUI.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap grafik {
+            get {
+                object obj = ResourceManager.GetObject("grafik", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap if_disc_list_1954536 {
             get {
                 object obj = ResourceManager.GetObject("if_disc_list_1954536", resourceCulture);
@@ -406,6 +416,16 @@ namespace MERP_MUI.Properties {
         internal static System.Drawing.Bitmap if_user_avatar_human_admin_login_2203549 {
             get {
                 object obj = ResourceManager.GetObject("if_user_avatar_human_admin_login_2203549", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap information_alert_attention_sign_help_48 {
+            get {
+                object obj = ResourceManager.GetObject("information_alert_attention_sign_help_48", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

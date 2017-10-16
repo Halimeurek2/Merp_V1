@@ -22,6 +22,7 @@ namespace MERP_MUI
         DBConnect db;
         HelperFunctions hf;
         decimal fatura_euro;
+        string tutar;
 
 
         DateTime baslangic;
@@ -100,8 +101,8 @@ namespace MERP_MUI
             }
             else
             {
-                //txt_ftr_tutar.Text = hf.Comma2Dot(txt_ftr_tutar.Text);
-                //txt_avans.Text = hf.Comma2Dot(txt_avans.Text);
+                tutar = hf.Comma2Dot(txt_ftr_tutar.Text);
+                txt_avans.Text = hf.Comma2Dot(txt_avans.Text);
 
                 DateTime dt = Convert.ToDateTime(txt_ftr_tarih.Text);
 

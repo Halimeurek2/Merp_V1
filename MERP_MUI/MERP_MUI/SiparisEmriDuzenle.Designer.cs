@@ -41,7 +41,6 @@
             this.metroLabel2 = new MetroFramework.Controls.MetroLabel();
             this.metroLabel1 = new MetroFramework.Controls.MetroLabel();
             this.metroLabel3 = new MetroFramework.Controls.MetroLabel();
-            this.txt_tedarikci = new MetroFramework.Controls.MetroTextBox();
             this.txt_mlz_brmFiyat = new MetroFramework.Controls.MetroTextBox();
             this.txt_vade = new MetroFramework.Controls.MetroTextBox();
             this.txt_talepKisi = new MetroFramework.Controls.MetroTextBox();
@@ -49,9 +48,10 @@
             this.date_teslim = new MetroFramework.Controls.MetroTextBox();
             this.date_temin = new MetroFramework.Controls.MetroDateTime();
             this.cmb_paraBirimi = new MetroFramework.Controls.MetroComboBox();
-            this.cmb_prjno = new MetroFramework.Controls.MetroComboBox();
             this.pbClose = new System.Windows.Forms.PictureBox();
             this.lbl_id = new MetroFramework.Controls.MetroLabel();
+            this.cmb_tedarikci = new System.Windows.Forms.ComboBox();
+            this.cmb_prjno = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.pbClose)).BeginInit();
             this.SuspendLayout();
             // 
@@ -228,41 +228,6 @@
             this.metroLabel3.UseCustomBackColor = true;
             this.metroLabel3.UseCustomForeColor = true;
             this.metroLabel3.UseStyleColors = true;
-            // 
-            // txt_tedarikci
-            // 
-            // 
-            // 
-            // 
-            this.txt_tedarikci.CustomButton.Image = null;
-            this.txt_tedarikci.CustomButton.Location = new System.Drawing.Point(134, 1);
-            this.txt_tedarikci.CustomButton.Name = "";
-            this.txt_tedarikci.CustomButton.Size = new System.Drawing.Size(21, 21);
-            this.txt_tedarikci.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
-            this.txt_tedarikci.CustomButton.TabIndex = 1;
-            this.txt_tedarikci.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
-            this.txt_tedarikci.CustomButton.UseSelectable = true;
-            this.txt_tedarikci.CustomButton.Visible = false;
-            this.txt_tedarikci.Lines = new string[0];
-            this.txt_tedarikci.Location = new System.Drawing.Point(193, 252);
-            this.txt_tedarikci.MaxLength = 32767;
-            this.txt_tedarikci.Name = "txt_tedarikci";
-            this.txt_tedarikci.PasswordChar = '\0';
-            this.txt_tedarikci.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.txt_tedarikci.SelectedText = "";
-            this.txt_tedarikci.SelectionLength = 0;
-            this.txt_tedarikci.SelectionStart = 0;
-            this.txt_tedarikci.ShortcutsEnabled = true;
-            this.txt_tedarikci.Size = new System.Drawing.Size(156, 23);
-            this.txt_tedarikci.Style = MetroFramework.MetroColorStyle.Red;
-            this.txt_tedarikci.TabIndex = 109;
-            this.txt_tedarikci.Theme = MetroFramework.MetroThemeStyle.Dark;
-            this.txt_tedarikci.UseCustomBackColor = true;
-            this.txt_tedarikci.UseCustomForeColor = true;
-            this.txt_tedarikci.UseSelectable = true;
-            this.txt_tedarikci.UseStyleColors = true;
-            this.txt_tedarikci.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.txt_tedarikci.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
             // 
             // txt_mlz_brmFiyat
             // 
@@ -456,7 +421,8 @@
             "USD",
             "EUR",
             "CHF",
-            "TRY"});
+            "TRY",
+            "GBP"});
             this.cmb_paraBirimi.Location = new System.Drawing.Point(193, 408);
             this.cmb_paraBirimi.Name = "cmb_paraBirimi";
             this.cmb_paraBirimi.Size = new System.Drawing.Size(156, 29);
@@ -467,22 +433,6 @@
             this.cmb_paraBirimi.UseCustomForeColor = true;
             this.cmb_paraBirimi.UseSelectable = true;
             this.cmb_paraBirimi.UseStyleColors = true;
-            // 
-            // cmb_prjno
-            // 
-            this.cmb_prjno.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.cmb_prjno.FormattingEnabled = true;
-            this.cmb_prjno.ItemHeight = 23;
-            this.cmb_prjno.Location = new System.Drawing.Point(193, 98);
-            this.cmb_prjno.Name = "cmb_prjno";
-            this.cmb_prjno.Size = new System.Drawing.Size(156, 29);
-            this.cmb_prjno.Style = MetroFramework.MetroColorStyle.Red;
-            this.cmb_prjno.TabIndex = 101;
-            this.cmb_prjno.Theme = MetroFramework.MetroThemeStyle.Dark;
-            this.cmb_prjno.UseCustomBackColor = true;
-            this.cmb_prjno.UseCustomForeColor = true;
-            this.cmb_prjno.UseSelectable = true;
-            this.cmb_prjno.UseStyleColors = true;
             // 
             // pbClose
             // 
@@ -512,12 +462,38 @@
             this.lbl_id.UseStyleColors = true;
             this.lbl_id.Visible = false;
             // 
+            // cmb_tedarikci
+            // 
+            this.cmb_tedarikci.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
+            this.cmb_tedarikci.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.cmb_tedarikci.BackColor = System.Drawing.Color.White;
+            this.cmb_tedarikci.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.cmb_tedarikci.FormattingEnabled = true;
+            this.cmb_tedarikci.Location = new System.Drawing.Point(193, 258);
+            this.cmb_tedarikci.Name = "cmb_tedarikci";
+            this.cmb_tedarikci.Size = new System.Drawing.Size(156, 21);
+            this.cmb_tedarikci.TabIndex = 128;
+            // 
+            // cmb_prjno
+            // 
+            this.cmb_prjno.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
+            this.cmb_prjno.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.cmb_prjno.BackColor = System.Drawing.Color.White;
+            this.cmb_prjno.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.cmb_prjno.FormattingEnabled = true;
+            this.cmb_prjno.Location = new System.Drawing.Point(193, 102);
+            this.cmb_prjno.Name = "cmb_prjno";
+            this.cmb_prjno.Size = new System.Drawing.Size(156, 21);
+            this.cmb_prjno.TabIndex = 129;
+            // 
             // SiparisEmriDuzenle
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(396, 604);
             this.ControlBox = false;
+            this.Controls.Add(this.cmb_prjno);
+            this.Controls.Add(this.cmb_tedarikci);
             this.Controls.Add(this.lbl_id);
             this.Controls.Add(this.pbClose);
             this.Controls.Add(this.btn_duzenle);
@@ -532,7 +508,6 @@
             this.Controls.Add(this.metroLabel2);
             this.Controls.Add(this.metroLabel1);
             this.Controls.Add(this.metroLabel3);
-            this.Controls.Add(this.txt_tedarikci);
             this.Controls.Add(this.txt_mlz_brmFiyat);
             this.Controls.Add(this.txt_vade);
             this.Controls.Add(this.txt_talepKisi);
@@ -540,7 +515,6 @@
             this.Controls.Add(this.date_teslim);
             this.Controls.Add(this.date_temin);
             this.Controls.Add(this.cmb_paraBirimi);
-            this.Controls.Add(this.cmb_prjno);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "SiparisEmriDuzenle";
             this.Resizable = false;
@@ -569,7 +543,6 @@
         private MetroFramework.Controls.MetroLabel metroLabel3;
         private System.Windows.Forms.PictureBox pbClose;
         public System.Windows.Forms.RichTextBox rcb_aciklama;
-        public MetroFramework.Controls.MetroTextBox txt_tedarikci;
         public MetroFramework.Controls.MetroTextBox txt_mlz_brmFiyat;
         public MetroFramework.Controls.MetroTextBox txt_vade;
         public MetroFramework.Controls.MetroTextBox txt_talepKisi;
@@ -577,7 +550,8 @@
         public MetroFramework.Controls.MetroTextBox date_teslim;
         public MetroFramework.Controls.MetroDateTime date_temin;
         public MetroFramework.Controls.MetroComboBox cmb_paraBirimi;
-        public MetroFramework.Controls.MetroComboBox cmb_prjno;
         public MetroFramework.Controls.MetroLabel lbl_id;
+        public System.Windows.Forms.ComboBox cmb_tedarikci;
+        public System.Windows.Forms.ComboBox cmb_prjno;
     }
 }

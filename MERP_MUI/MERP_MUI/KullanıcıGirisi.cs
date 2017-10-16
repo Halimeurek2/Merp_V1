@@ -12,9 +12,6 @@ namespace MERP_MUI
         private string uid;
         private string password;
         string connectionString;
-        string komut;
-        MySqlCommand myCommand;
-        MySqlDataAdapter da;
         MySqlConnection myConnection;
         DataTable dt = new DataTable();
 

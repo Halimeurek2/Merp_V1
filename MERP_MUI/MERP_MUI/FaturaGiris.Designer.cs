@@ -183,7 +183,8 @@
             this.cmb_ftr_tip.Items.AddRange(new object[] {
             "Mekanik",
             "Elektronik",
-            "Genel Giderler"});
+            "Genel Giderler",
+            "Kesilen"});
             this.cmb_ftr_tip.Location = new System.Drawing.Point(495, 345);
             this.cmb_ftr_tip.Name = "cmb_ftr_tip";
             this.cmb_ftr_tip.Size = new System.Drawing.Size(156, 29);
@@ -204,7 +205,8 @@
             "USD",
             "EUR",
             "TRY",
-            "CHF"});
+            "CHF",
+            "GBP"});
             this.cmb_birim.Location = new System.Drawing.Point(495, 297);
             this.cmb_birim.Name = "cmb_birim";
             this.cmb_birim.Size = new System.Drawing.Size(156, 29);

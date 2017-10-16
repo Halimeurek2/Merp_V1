@@ -65,8 +65,11 @@
             this.splitContainer3 = new System.Windows.Forms.SplitContainer();
             this.lbl_prjEuro = new MetroFramework.Controls.MetroLabel();
             this.metroLabel10 = new MetroFramework.Controls.MetroLabel();
+            this.splitContainer14 = new System.Windows.Forms.SplitContainer();
             this.lbl_top_maliyet = new MetroFramework.Controls.MetroLabel();
             this.metroLabel8 = new MetroFramework.Controls.MetroLabel();
+            this.lbl_siparis = new MetroFramework.Controls.MetroLabel();
+            this.metroLabel9 = new MetroFramework.Controls.MetroLabel();
             this.splitContainer4 = new System.Windows.Forms.SplitContainer();
             this.splitContainer5 = new System.Windows.Forms.SplitContainer();
             this.metroLabel6 = new MetroFramework.Controls.MetroLabel();
@@ -83,6 +86,7 @@
             this.splitContainer13 = new System.Windows.Forms.SplitContainer();
             this.chart3 = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.chart4 = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            this.btn_frmRapor = new MetroFramework.Controls.MetroButton();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.lbl_odenmemisGelen = new MetroFramework.Controls.MetroLabel();
             this.lbl_odenmemisKesilen = new MetroFramework.Controls.MetroLabel();
@@ -118,6 +122,10 @@
             this.splitContainer3.Panel1.SuspendLayout();
             this.splitContainer3.Panel2.SuspendLayout();
             this.splitContainer3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainer14)).BeginInit();
+            this.splitContainer14.Panel1.SuspendLayout();
+            this.splitContainer14.Panel2.SuspendLayout();
+            this.splitContainer14.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer4)).BeginInit();
             this.splitContainer4.Panel1.SuspendLayout();
             this.splitContainer4.Panel2.SuspendLayout();
@@ -186,8 +194,8 @@
             // splitContainer1.Panel2
             // 
             this.splitContainer1.Panel2.Controls.Add(this.splitContainer2);
-            this.splitContainer1.Size = new System.Drawing.Size(1338, 46);
-            this.splitContainer1.SplitterDistance = 342;
+            this.splitContainer1.Size = new System.Drawing.Size(1810, 46);
+            this.splitContainer1.SplitterDistance = 461;
             this.splitContainer1.TabIndex = 0;
             // 
             // cmb_projeler
@@ -237,8 +245,8 @@
             // splitContainer2.Panel2
             // 
             this.splitContainer2.Panel2.Controls.Add(this.splitContainer3);
-            this.splitContainer2.Size = new System.Drawing.Size(992, 46);
-            this.splitContainer2.SplitterDistance = 332;
+            this.splitContainer2.Size = new System.Drawing.Size(1345, 46);
+            this.splitContainer2.SplitterDistance = 317;
             this.splitContainer2.TabIndex = 0;
             // 
             // lbl_prj_butce
@@ -286,10 +294,9 @@
             // 
             // splitContainer3.Panel2
             // 
-            this.splitContainer3.Panel2.Controls.Add(this.lbl_top_maliyet);
-            this.splitContainer3.Panel2.Controls.Add(this.metroLabel8);
-            this.splitContainer3.Size = new System.Drawing.Size(656, 46);
-            this.splitContainer3.SplitterDistance = 313;
+            this.splitContainer3.Panel2.Controls.Add(this.splitContainer14);
+            this.splitContainer3.Size = new System.Drawing.Size(1024, 46);
+            this.splitContainer3.SplitterDistance = 345;
             this.splitContainer3.TabIndex = 0;
             // 
             // lbl_prjEuro
@@ -324,6 +331,25 @@
             this.metroLabel10.UseCustomForeColor = true;
             this.metroLabel10.UseStyleColors = true;
             // 
+            // splitContainer14
+            // 
+            this.splitContainer14.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.splitContainer14.Location = new System.Drawing.Point(0, 0);
+            this.splitContainer14.Name = "splitContainer14";
+            // 
+            // splitContainer14.Panel1
+            // 
+            this.splitContainer14.Panel1.Controls.Add(this.lbl_top_maliyet);
+            this.splitContainer14.Panel1.Controls.Add(this.metroLabel8);
+            // 
+            // splitContainer14.Panel2
+            // 
+            this.splitContainer14.Panel2.Controls.Add(this.lbl_siparis);
+            this.splitContainer14.Panel2.Controls.Add(this.metroLabel9);
+            this.splitContainer14.Size = new System.Drawing.Size(675, 46);
+            this.splitContainer14.SplitterDistance = 346;
+            this.splitContainer14.TabIndex = 0;
+            // 
             // lbl_top_maliyet
             // 
             this.lbl_top_maliyet.AutoSize = true;
@@ -333,7 +359,7 @@
             this.lbl_top_maliyet.Name = "lbl_top_maliyet";
             this.lbl_top_maliyet.Size = new System.Drawing.Size(17, 19);
             this.lbl_top_maliyet.Style = MetroFramework.MetroColorStyle.Red;
-            this.lbl_top_maliyet.TabIndex = 116;
+            this.lbl_top_maliyet.TabIndex = 118;
             this.lbl_top_maliyet.Text = "0";
             this.lbl_top_maliyet.Theme = MetroFramework.MetroThemeStyle.Dark;
             this.lbl_top_maliyet.UseCustomBackColor = true;
@@ -349,17 +375,49 @@
             this.metroLabel8.Name = "metroLabel8";
             this.metroLabel8.Size = new System.Drawing.Size(122, 19);
             this.metroLabel8.Style = MetroFramework.MetroColorStyle.Red;
-            this.metroLabel8.TabIndex = 115;
+            this.metroLabel8.TabIndex = 117;
             this.metroLabel8.Text = "Toplam Maliyet :";
             this.metroLabel8.Theme = MetroFramework.MetroThemeStyle.Dark;
             this.metroLabel8.UseCustomBackColor = true;
             this.metroLabel8.UseCustomForeColor = true;
             this.metroLabel8.UseStyleColors = true;
             // 
+            // lbl_siparis
+            // 
+            this.lbl_siparis.AutoSize = true;
+            this.lbl_siparis.FontWeight = MetroFramework.MetroLabelWeight.Bold;
+            this.lbl_siparis.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.lbl_siparis.Location = new System.Drawing.Point(126, 13);
+            this.lbl_siparis.Name = "lbl_siparis";
+            this.lbl_siparis.Size = new System.Drawing.Size(17, 19);
+            this.lbl_siparis.Style = MetroFramework.MetroColorStyle.Red;
+            this.lbl_siparis.TabIndex = 118;
+            this.lbl_siparis.Text = "0";
+            this.lbl_siparis.Theme = MetroFramework.MetroThemeStyle.Dark;
+            this.lbl_siparis.UseCustomBackColor = true;
+            this.lbl_siparis.UseCustomForeColor = true;
+            this.lbl_siparis.UseStyleColors = true;
+            // 
+            // metroLabel9
+            // 
+            this.metroLabel9.AutoSize = true;
+            this.metroLabel9.FontWeight = MetroFramework.MetroLabelWeight.Bold;
+            this.metroLabel9.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.metroLabel9.Location = new System.Drawing.Point(3, 13);
+            this.metroLabel9.Name = "metroLabel9";
+            this.metroLabel9.Size = new System.Drawing.Size(115, 19);
+            this.metroLabel9.Style = MetroFramework.MetroColorStyle.Red;
+            this.metroLabel9.TabIndex = 117;
+            this.metroLabel9.Text = "Geçilen Sipariş :";
+            this.metroLabel9.Theme = MetroFramework.MetroThemeStyle.Dark;
+            this.metroLabel9.UseCustomBackColor = true;
+            this.metroLabel9.UseCustomForeColor = true;
+            this.metroLabel9.UseStyleColors = true;
+            // 
             // splitContainer4
             // 
             this.splitContainer4.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.splitContainer4.Location = new System.Drawing.Point(20, 706);
+            this.splitContainer4.Location = new System.Drawing.Point(20, 1010);
             this.splitContainer4.Name = "splitContainer4";
             // 
             // splitContainer4.Panel1
@@ -369,8 +427,8 @@
             // splitContainer4.Panel2
             // 
             this.splitContainer4.Panel2.Controls.Add(this.btn_print);
-            this.splitContainer4.Size = new System.Drawing.Size(1338, 54);
-            this.splitContainer4.SplitterDistance = 467;
+            this.splitContainer4.Size = new System.Drawing.Size(1810, 54);
+            this.splitContainer4.SplitterDistance = 630;
             this.splitContainer4.TabIndex = 1;
             // 
             // splitContainer5
@@ -387,7 +445,7 @@
             // splitContainer5.Panel2
             // 
             this.splitContainer5.Panel2.Controls.Add(this.metroLabel1);
-            this.splitContainer5.Size = new System.Drawing.Size(467, 54);
+            this.splitContainer5.Size = new System.Drawing.Size(630, 54);
             this.splitContainer5.SplitterDistance = 25;
             this.splitContainer5.TabIndex = 0;
             // 
@@ -430,7 +488,7 @@
             this.btn_print.Dock = System.Windows.Forms.DockStyle.Right;
             this.btn_print.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
             this.btn_print.Highlight = true;
-            this.btn_print.Location = new System.Drawing.Point(676, 0);
+            this.btn_print.Location = new System.Drawing.Point(985, 0);
             this.btn_print.Name = "btn_print";
             this.btn_print.Size = new System.Drawing.Size(191, 54);
             this.btn_print.Style = MetroFramework.MetroColorStyle.Red;
@@ -448,7 +506,7 @@
             this.pbClose.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.pbClose.BackColor = System.Drawing.Color.Transparent;
             this.pbClose.Image = global::MERP_MUI.Properties.Resources.appbar_arrow_left_dark;
-            this.pbClose.Location = new System.Drawing.Point(1312, 12);
+            this.pbClose.Location = new System.Drawing.Point(1784, 12);
             this.pbClose.Name = "pbClose";
             this.pbClose.Size = new System.Drawing.Size(46, 42);
             this.pbClose.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -470,8 +528,8 @@
             // splitContainer6.Panel2
             // 
             this.splitContainer6.Panel2.Controls.Add(this.groupBox2);
-            this.splitContainer6.Size = new System.Drawing.Size(1338, 600);
-            this.splitContainer6.SplitterDistance = 307;
+            this.splitContainer6.Size = new System.Drawing.Size(1810, 904);
+            this.splitContainer6.SplitterDistance = 460;
             this.splitContainer6.TabIndex = 111;
             // 
             // splitContainer7
@@ -486,10 +544,11 @@
             // 
             // splitContainer7.Panel2
             // 
+            this.splitContainer7.Panel2.Controls.Add(this.btn_frmRapor);
             this.splitContainer7.Panel2.Controls.Add(this.groupBox3);
             this.splitContainer7.Panel2.Controls.Add(this.btn_ozet);
-            this.splitContainer7.Size = new System.Drawing.Size(1338, 307);
-            this.splitContainer7.SplitterDistance = 1013;
+            this.splitContainer7.Size = new System.Drawing.Size(1810, 460);
+            this.splitContainer7.SplitterDistance = 1457;
             this.splitContainer7.TabIndex = 0;
             // 
             // groupBox1
@@ -500,7 +559,7 @@
             this.groupBox1.ForeColor = System.Drawing.Color.Crimson;
             this.groupBox1.Location = new System.Drawing.Point(0, 0);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(1013, 307);
+            this.groupBox1.Size = new System.Drawing.Size(1457, 460);
             this.groupBox1.TabIndex = 5;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "GRAFİKLER";
@@ -518,8 +577,8 @@
             // splitContainer8.Panel2
             // 
             this.splitContainer8.Panel2.Controls.Add(this.splitContainer12);
-            this.splitContainer8.Size = new System.Drawing.Size(1007, 288);
-            this.splitContainer8.SplitterDistance = 244;
+            this.splitContainer8.Size = new System.Drawing.Size(1451, 441);
+            this.splitContainer8.SplitterDistance = 358;
             this.splitContainer8.TabIndex = 0;
             // 
             // chart1
@@ -553,7 +612,7 @@
             series1.Points.Add(dataPoint2);
             series1.Points.Add(dataPoint3);
             this.chart1.Series.Add(series1);
-            this.chart1.Size = new System.Drawing.Size(244, 288);
+            this.chart1.Size = new System.Drawing.Size(358, 441);
             this.chart1.TabIndex = 1;
             this.chart1.Text = "chart_maliyet";
             // 
@@ -570,8 +629,8 @@
             // splitContainer12.Panel2
             // 
             this.splitContainer12.Panel2.Controls.Add(this.splitContainer13);
-            this.splitContainer12.Size = new System.Drawing.Size(759, 288);
-            this.splitContainer12.SplitterDistance = 250;
+            this.splitContainer12.Size = new System.Drawing.Size(1089, 441);
+            this.splitContainer12.SplitterDistance = 357;
             this.splitContainer12.TabIndex = 0;
             // 
             // chart2
@@ -603,7 +662,7 @@
             series2.Points.Add(dataPoint4);
             series2.Points.Add(dataPoint5);
             this.chart2.Series.Add(series2);
-            this.chart2.Size = new System.Drawing.Size(250, 288);
+            this.chart2.Size = new System.Drawing.Size(357, 441);
             this.chart2.TabIndex = 5;
             this.chart2.Text = "chart2";
             // 
@@ -620,8 +679,8 @@
             // splitContainer13.Panel2
             // 
             this.splitContainer13.Panel2.Controls.Add(this.chart4);
-            this.splitContainer13.Size = new System.Drawing.Size(505, 288);
-            this.splitContainer13.SplitterDistance = 248;
+            this.splitContainer13.Size = new System.Drawing.Size(728, 441);
+            this.splitContainer13.SplitterDistance = 356;
             this.splitContainer13.TabIndex = 0;
             // 
             // chart3
@@ -647,7 +706,7 @@
             series3.Points.Add(dataPoint6);
             series3.Points.Add(dataPoint7);
             this.chart3.Series.Add(series3);
-            this.chart3.Size = new System.Drawing.Size(248, 288);
+            this.chart3.Size = new System.Drawing.Size(356, 441);
             this.chart3.TabIndex = 3;
             this.chart3.Text = "chart3";
             // 
@@ -674,9 +733,27 @@
             series4.Points.Add(dataPoint8);
             series4.Points.Add(dataPoint9);
             this.chart4.Series.Add(series4);
-            this.chart4.Size = new System.Drawing.Size(253, 288);
+            this.chart4.Size = new System.Drawing.Size(368, 441);
             this.chart4.TabIndex = 4;
             this.chart4.Text = "chart4";
+            // 
+            // btn_frmRapor
+            // 
+            this.btn_frmRapor.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.btn_frmRapor.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.btn_frmRapor.Highlight = true;
+            this.btn_frmRapor.Location = new System.Drawing.Point(0, 400);
+            this.btn_frmRapor.Name = "btn_frmRapor";
+            this.btn_frmRapor.Size = new System.Drawing.Size(349, 30);
+            this.btn_frmRapor.Style = MetroFramework.MetroColorStyle.Red;
+            this.btn_frmRapor.TabIndex = 114;
+            this.btn_frmRapor.Text = "FİRMA RAPOR";
+            this.btn_frmRapor.Theme = MetroFramework.MetroThemeStyle.Dark;
+            this.btn_frmRapor.UseCustomBackColor = true;
+            this.btn_frmRapor.UseCustomForeColor = true;
+            this.btn_frmRapor.UseSelectable = true;
+            this.btn_frmRapor.UseStyleColors = true;
+            this.btn_frmRapor.Click += new System.EventHandler(this.btn_frmRapor_Click);
             // 
             // groupBox3
             // 
@@ -691,9 +768,9 @@
             this.groupBox3.Controls.Add(this.metroLabel4);
             this.groupBox3.Controls.Add(this.metroLabel2);
             this.groupBox3.Controls.Add(this.metroLabel3);
-            this.groupBox3.Location = new System.Drawing.Point(3, 12);
+            this.groupBox3.Location = new System.Drawing.Point(3, 16);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(315, 143);
+            this.groupBox3.Size = new System.Drawing.Size(343, 241);
             this.groupBox3.TabIndex = 0;
             this.groupBox3.TabStop = false;
             // 
@@ -702,7 +779,7 @@
             this.lbl_odenmemisGelen.AutoSize = true;
             this.lbl_odenmemisGelen.FontWeight = MetroFramework.MetroLabelWeight.Bold;
             this.lbl_odenmemisGelen.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.lbl_odenmemisGelen.Location = new System.Drawing.Point(191, 188);
+            this.lbl_odenmemisGelen.Location = new System.Drawing.Point(191, 182);
             this.lbl_odenmemisGelen.Name = "lbl_odenmemisGelen";
             this.lbl_odenmemisGelen.Size = new System.Drawing.Size(17, 19);
             this.lbl_odenmemisGelen.Style = MetroFramework.MetroColorStyle.Red;
@@ -718,7 +795,7 @@
             this.lbl_odenmemisKesilen.AutoSize = true;
             this.lbl_odenmemisKesilen.FontWeight = MetroFramework.MetroLabelWeight.Bold;
             this.lbl_odenmemisKesilen.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.lbl_odenmemisKesilen.Location = new System.Drawing.Point(197, 140);
+            this.lbl_odenmemisKesilen.Location = new System.Drawing.Point(197, 134);
             this.lbl_odenmemisKesilen.Name = "lbl_odenmemisKesilen";
             this.lbl_odenmemisKesilen.Size = new System.Drawing.Size(17, 19);
             this.lbl_odenmemisKesilen.Style = MetroFramework.MetroColorStyle.Red;
@@ -734,7 +811,7 @@
             this.lbl_odenmisG.AutoSize = true;
             this.lbl_odenmisG.FontWeight = MetroFramework.MetroLabelWeight.Bold;
             this.lbl_odenmisG.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.lbl_odenmisG.Location = new System.Drawing.Point(172, 92);
+            this.lbl_odenmisG.Location = new System.Drawing.Point(172, 86);
             this.lbl_odenmisG.Name = "lbl_odenmisG";
             this.lbl_odenmisG.Size = new System.Drawing.Size(17, 19);
             this.lbl_odenmisG.Style = MetroFramework.MetroColorStyle.Red;
@@ -750,7 +827,7 @@
             this.lbl_odenmisK.AutoSize = true;
             this.lbl_odenmisK.FontWeight = MetroFramework.MetroLabelWeight.Bold;
             this.lbl_odenmisK.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.lbl_odenmisK.Location = new System.Drawing.Point(178, 44);
+            this.lbl_odenmisK.Location = new System.Drawing.Point(178, 38);
             this.lbl_odenmisK.Name = "lbl_odenmisK";
             this.lbl_odenmisK.Size = new System.Drawing.Size(17, 19);
             this.lbl_odenmisK.Style = MetroFramework.MetroColorStyle.Red;
@@ -766,7 +843,7 @@
             this.metroLabel5.AutoSize = true;
             this.metroLabel5.FontWeight = MetroFramework.MetroLabelWeight.Bold;
             this.metroLabel5.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.metroLabel5.Location = new System.Drawing.Point(2, 188);
+            this.metroLabel5.Location = new System.Drawing.Point(2, 182);
             this.metroLabel5.Name = "metroLabel5";
             this.metroLabel5.Size = new System.Drawing.Size(185, 19);
             this.metroLabel5.Style = MetroFramework.MetroColorStyle.Red;
@@ -782,7 +859,7 @@
             this.metroLabel4.AutoSize = true;
             this.metroLabel4.FontWeight = MetroFramework.MetroLabelWeight.Bold;
             this.metroLabel4.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.metroLabel4.Location = new System.Drawing.Point(2, 140);
+            this.metroLabel4.Location = new System.Drawing.Point(2, 134);
             this.metroLabel4.Name = "metroLabel4";
             this.metroLabel4.Size = new System.Drawing.Size(194, 19);
             this.metroLabel4.Style = MetroFramework.MetroColorStyle.Red;
@@ -798,7 +875,7 @@
             this.metroLabel2.AutoSize = true;
             this.metroLabel2.FontWeight = MetroFramework.MetroLabelWeight.Bold;
             this.metroLabel2.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.metroLabel2.Location = new System.Drawing.Point(2, 92);
+            this.metroLabel2.Location = new System.Drawing.Point(2, 86);
             this.metroLabel2.Name = "metroLabel2";
             this.metroLabel2.Size = new System.Drawing.Size(164, 19);
             this.metroLabel2.Style = MetroFramework.MetroColorStyle.Red;
@@ -814,7 +891,7 @@
             this.metroLabel3.AutoSize = true;
             this.metroLabel3.FontWeight = MetroFramework.MetroLabelWeight.Bold;
             this.metroLabel3.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.metroLabel3.Location = new System.Drawing.Point(2, 44);
+            this.metroLabel3.Location = new System.Drawing.Point(2, 38);
             this.metroLabel3.Name = "metroLabel3";
             this.metroLabel3.Size = new System.Drawing.Size(173, 19);
             this.metroLabel3.Style = MetroFramework.MetroColorStyle.Red;
@@ -830,9 +907,9 @@
             this.btn_ozet.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.btn_ozet.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
             this.btn_ozet.Highlight = true;
-            this.btn_ozet.Location = new System.Drawing.Point(0, 277);
+            this.btn_ozet.Location = new System.Drawing.Point(0, 430);
             this.btn_ozet.Name = "btn_ozet";
-            this.btn_ozet.Size = new System.Drawing.Size(321, 30);
+            this.btn_ozet.Size = new System.Drawing.Size(349, 30);
             this.btn_ozet.Style = MetroFramework.MetroColorStyle.Red;
             this.btn_ozet.TabIndex = 113;
             this.btn_ozet.Text = "ÖZET";
@@ -851,7 +928,7 @@
             this.groupBox2.ForeColor = System.Drawing.Color.RoyalBlue;
             this.groupBox2.Location = new System.Drawing.Point(0, 0);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(1338, 289);
+            this.groupBox2.Size = new System.Drawing.Size(1810, 440);
             this.groupBox2.TabIndex = 5;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "ÖDENMEMİŞ FATURALAR";
@@ -870,8 +947,8 @@
             // splitContainer9.Panel2
             // 
             this.splitContainer9.Panel2.Controls.Add(this.splitContainer11);
-            this.splitContainer9.Size = new System.Drawing.Size(1332, 270);
-            this.splitContainer9.SplitterDistance = 234;
+            this.splitContainer9.Size = new System.Drawing.Size(1804, 421);
+            this.splitContainer9.SplitterDistance = 362;
             this.splitContainer9.TabIndex = 0;
             // 
             // splitContainer10
@@ -887,8 +964,8 @@
             // splitContainer10.Panel2
             // 
             this.splitContainer10.Panel2.Controls.Add(this.gb_K);
-            this.splitContainer10.Size = new System.Drawing.Size(1332, 234);
-            this.splitContainer10.SplitterDistance = 663;
+            this.splitContainer10.Size = new System.Drawing.Size(1804, 362);
+            this.splitContainer10.SplitterDistance = 895;
             this.splitContainer10.TabIndex = 0;
             // 
             // gb_G
@@ -898,7 +975,7 @@
             this.gb_G.ForeColor = System.Drawing.Color.Indigo;
             this.gb_G.Location = new System.Drawing.Point(0, 0);
             this.gb_G.Name = "gb_G";
-            this.gb_G.Size = new System.Drawing.Size(663, 234);
+            this.gb_G.Size = new System.Drawing.Size(895, 362);
             this.gb_G.TabIndex = 0;
             this.gb_G.TabStop = false;
             this.gb_G.Text = "Toplam";
@@ -944,7 +1021,7 @@
             this.dgw_odenmemisG.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.dgw_odenmemisG.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.dgw_odenmemisG.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgw_odenmemisG.Size = new System.Drawing.Size(657, 215);
+            this.dgw_odenmemisG.Size = new System.Drawing.Size(889, 343);
             this.dgw_odenmemisG.Style = MetroFramework.MetroColorStyle.Silver;
             this.dgw_odenmemisG.TabIndex = 0;
             this.dgw_odenmemisG.UseCustomBackColor = true;
@@ -958,7 +1035,7 @@
             this.gb_K.ForeColor = System.Drawing.Color.Indigo;
             this.gb_K.Location = new System.Drawing.Point(0, 0);
             this.gb_K.Name = "gb_K";
-            this.gb_K.Size = new System.Drawing.Size(665, 234);
+            this.gb_K.Size = new System.Drawing.Size(905, 362);
             this.gb_K.TabIndex = 1;
             this.gb_K.TabStop = false;
             this.gb_K.Text = "Toplam";
@@ -1004,7 +1081,7 @@
             this.dgw_odenmemisK.RowHeadersDefaultCellStyle = dataGridViewCellStyle6;
             this.dgw_odenmemisK.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.dgw_odenmemisK.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgw_odenmemisK.Size = new System.Drawing.Size(659, 215);
+            this.dgw_odenmemisK.Size = new System.Drawing.Size(899, 343);
             this.dgw_odenmemisK.Style = MetroFramework.MetroColorStyle.Silver;
             this.dgw_odenmemisK.TabIndex = 1;
             // 
@@ -1021,17 +1098,17 @@
             // splitContainer11.Panel2
             // 
             this.splitContainer11.Panel2.Controls.Add(this.btn_print2);
-            this.splitContainer11.Size = new System.Drawing.Size(1332, 32);
-            this.splitContainer11.SplitterDistance = 663;
+            this.splitContainer11.Size = new System.Drawing.Size(1804, 55);
+            this.splitContainer11.SplitterDistance = 895;
             this.splitContainer11.TabIndex = 0;
             // 
             // btn_print1
             // 
             this.btn_print1.Dock = System.Windows.Forms.DockStyle.Right;
             this.btn_print1.Highlight = true;
-            this.btn_print1.Location = new System.Drawing.Point(543, 0);
+            this.btn_print1.Location = new System.Drawing.Point(775, 0);
             this.btn_print1.Name = "btn_print1";
-            this.btn_print1.Size = new System.Drawing.Size(120, 32);
+            this.btn_print1.Size = new System.Drawing.Size(120, 55);
             this.btn_print1.Style = MetroFramework.MetroColorStyle.Red;
             this.btn_print1.TabIndex = 111;
             this.btn_print1.Text = "Print";
@@ -1046,9 +1123,9 @@
             // 
             this.btn_print2.Dock = System.Windows.Forms.DockStyle.Right;
             this.btn_print2.Highlight = true;
-            this.btn_print2.Location = new System.Drawing.Point(548, 0);
+            this.btn_print2.Location = new System.Drawing.Point(788, 0);
             this.btn_print2.Name = "btn_print2";
-            this.btn_print2.Size = new System.Drawing.Size(117, 32);
+            this.btn_print2.Size = new System.Drawing.Size(117, 55);
             this.btn_print2.Style = MetroFramework.MetroColorStyle.Red;
             this.btn_print2.TabIndex = 112;
             this.btn_print2.Text = "Print";
@@ -1077,7 +1154,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1378, 780);
+            this.ClientSize = new System.Drawing.Size(1850, 1084);
             this.ControlBox = false;
             this.Controls.Add(this.splitContainer6);
             this.Controls.Add(this.pbClose);
@@ -1104,9 +1181,14 @@
             this.splitContainer3.Panel1.ResumeLayout(false);
             this.splitContainer3.Panel1.PerformLayout();
             this.splitContainer3.Panel2.ResumeLayout(false);
-            this.splitContainer3.Panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer3)).EndInit();
             this.splitContainer3.ResumeLayout(false);
+            this.splitContainer14.Panel1.ResumeLayout(false);
+            this.splitContainer14.Panel1.PerformLayout();
+            this.splitContainer14.Panel2.ResumeLayout(false);
+            this.splitContainer14.Panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainer14)).EndInit();
+            this.splitContainer14.ResumeLayout(false);
             this.splitContainer4.Panel1.ResumeLayout(false);
             this.splitContainer4.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer4)).EndInit();
@@ -1210,13 +1292,17 @@
         private MetroFramework.Controls.MetroLabel metroLabel12;
         private MetroFramework.Controls.MetroLabel lbl_prjEuro;
         private MetroFramework.Controls.MetroLabel metroLabel10;
-        private MetroFramework.Controls.MetroLabel lbl_top_maliyet;
-        private MetroFramework.Controls.MetroLabel metroLabel8;
         public MetroFramework.Controls.MetroComboBox cmb_projeler;
         private MetroFramework.Controls.MetroGrid dgw_odenmemisG;
         private MetroFramework.Controls.MetroGrid dgw_odenmemisK;
         private System.Drawing.Printing.PrintDocument printDocument1;
         private System.Drawing.Printing.PrintDocument printDocument2;
         private System.Drawing.Printing.PrintDocument printDocument3;
+        private System.Windows.Forms.SplitContainer splitContainer14;
+        private MetroFramework.Controls.MetroLabel lbl_top_maliyet;
+        private MetroFramework.Controls.MetroLabel metroLabel8;
+        private MetroFramework.Controls.MetroLabel lbl_siparis;
+        private MetroFramework.Controls.MetroLabel metroLabel9;
+        private MetroFramework.Controls.MetroButton btn_frmRapor;
     }
 }

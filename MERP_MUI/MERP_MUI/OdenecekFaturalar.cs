@@ -24,7 +24,6 @@ namespace MERP_MUI
         MySqlCommand myCommand;
         MySqlDataAdapter da;
         MySqlConnection myConnection;
-        MySqlDataReader myReader;
         DataTable dt = new DataTable();
 
         public float[] month_sumG = new float[12];

@@ -49,8 +49,8 @@
             this.splitContainer3 = new System.Windows.Forms.SplitContainer();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.btnAktivite = new System.Windows.Forms.Button();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.btnFilter = new System.Windows.Forms.Button();
-            this.chart1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.panel1 = new System.Windows.Forms.Panel();
             this.splitContainer9 = new System.Windows.Forms.SplitContainer();
@@ -64,6 +64,7 @@
             this.lbl_gbp = new MetroFramework.Controls.MetroLabel();
             this.metroLabel3 = new MetroFramework.Controls.MetroLabel();
             this.pnlFilter = new MetroFramework.Controls.MetroPanel();
+            this.chart1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.pnlDGW = new MetroFramework.Controls.MetroPanel();
             this.splitContainer5 = new System.Windows.Forms.SplitContainer();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
@@ -112,7 +113,7 @@
             this.splitContainer3.Panel2.SuspendLayout();
             this.splitContainer3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.chart1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -130,6 +131,8 @@
             this.splitContainer11.Panel1.SuspendLayout();
             this.splitContainer11.Panel2.SuspendLayout();
             this.splitContainer11.SuspendLayout();
+            this.pnlFilter.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.chart1)).BeginInit();
             this.pnlDGW.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer5)).BeginInit();
             this.splitContainer5.Panel1.SuspendLayout();
@@ -178,8 +181,8 @@
             // splitContainer2.Panel2
             // 
             this.splitContainer2.Panel2.Controls.Add(this.splitContainer3);
-            this.splitContainer2.Size = new System.Drawing.Size(36, 1012);
-            this.splitContainer2.SplitterDistance = 331;
+            this.splitContainer2.Size = new System.Drawing.Size(36, 708);
+            this.splitContainer2.SplitterDistance = 228;
             this.splitContainer2.TabIndex = 2;
             // 
             // pictureBox1
@@ -201,7 +204,7 @@
             this.btnDGW.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.btnDGW.Location = new System.Drawing.Point(0, 0);
             this.btnDGW.Name = "btnDGW";
-            this.btnDGW.Size = new System.Drawing.Size(36, 331);
+            this.btnDGW.Size = new System.Drawing.Size(36, 228);
             this.btnDGW.TabIndex = 0;
             this.btnDGW.UseVisualStyleBackColor = true;
             this.btnDGW.Click += new System.EventHandler(this.button1_Click);
@@ -220,9 +223,10 @@
             // 
             // splitContainer3.Panel2
             // 
+            this.splitContainer3.Panel2.Controls.Add(this.pictureBox3);
             this.splitContainer3.Panel2.Controls.Add(this.btnFilter);
-            this.splitContainer3.Size = new System.Drawing.Size(36, 677);
-            this.splitContainer3.SplitterDistance = 334;
+            this.splitContainer3.Size = new System.Drawing.Size(36, 476);
+            this.splitContainer3.SplitterDistance = 233;
             this.splitContainer3.TabIndex = 0;
             // 
             // pictureBox2
@@ -244,65 +248,33 @@
             this.btnAktivite.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.btnAktivite.Location = new System.Drawing.Point(0, 0);
             this.btnAktivite.Name = "btnAktivite";
-            this.btnAktivite.Size = new System.Drawing.Size(36, 334);
+            this.btnAktivite.Size = new System.Drawing.Size(36, 233);
             this.btnAktivite.TabIndex = 1;
             this.btnAktivite.UseVisualStyleBackColor = true;
             this.btnAktivite.Click += new System.EventHandler(this.btnAktivite_Click);
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.Image = global::MERP_MUI.Properties.Resources.grafik;
+            this.pictureBox3.Location = new System.Drawing.Point(3, 67);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(30, 120);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox3.TabIndex = 3;
+            this.pictureBox3.TabStop = false;
             // 
             // btnFilter
             // 
             this.btnFilter.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btnFilter.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnFilter.Image = ((System.Drawing.Image)(resources.GetObject("btnFilter.Image")));
+            this.btnFilter.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.btnFilter.Location = new System.Drawing.Point(0, 0);
             this.btnFilter.Name = "btnFilter";
-            this.btnFilter.Size = new System.Drawing.Size(36, 339);
+            this.btnFilter.Size = new System.Drawing.Size(36, 239);
             this.btnFilter.TabIndex = 1;
             this.btnFilter.UseVisualStyleBackColor = true;
             this.btnFilter.Click += new System.EventHandler(this.btnFilter_Click);
-            // 
-            // chart1
-            // 
-            chartArea1.Name = "ChartArea1";
-            chartArea1.Position.Auto = false;
-            chartArea1.Position.Height = 92F;
-            chartArea1.Position.Width = 94F;
-            chartArea1.Position.X = 3F;
-            this.chart1.ChartAreas.Add(chartArea1);
-            this.chart1.Dock = System.Windows.Forms.DockStyle.Fill;
-            legend1.Name = "Legend1";
-            legend1.Position.Auto = false;
-            legend1.Position.Height = 5F;
-            legend1.Position.Width = 50F;
-            legend1.Position.X = 50F;
-            legend1.Position.Y = 93F;
-            this.chart1.Legends.Add(legend1);
-            this.chart1.Location = new System.Drawing.Point(0, 0);
-            this.chart1.Name = "chart1";
-            this.chart1.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.None;
-            this.chart1.PaletteCustomColors = new System.Drawing.Color[] {
-        System.Drawing.Color.PaleTurquoise,
-        System.Drawing.Color.Silver,
-        System.Drawing.Color.DarkSeaGreen};
-            series1.ChartArea = "ChartArea1";
-            series1.Legend = "Legend1";
-            series1.Name = "Gelen Faturalar";
-            series1.XValueType = System.Windows.Forms.DataVisualization.Charting.ChartValueType.Int32;
-            series2.ChartArea = "ChartArea1";
-            series2.Legend = "Legend1";
-            series2.Name = "Kesilen Faturalar";
-            series2.XValueType = System.Windows.Forms.DataVisualization.Charting.ChartValueType.Int32;
-            series3.ChartArea = "ChartArea1";
-            series3.LabelAngle = 45;
-            series3.Legend = "Legend1";
-            series3.Name = "Öngörülen Ödemeler";
-            series3.XValueType = System.Windows.Forms.DataVisualization.Charting.ChartValueType.Int32;
-            this.chart1.Series.Add(series1);
-            this.chart1.Series.Add(series2);
-            this.chart1.Series.Add(series3);
-            this.chart1.Size = new System.Drawing.Size(1624, 1012);
-            this.chart1.TabIndex = 3;
-            this.chart1.Text = "chart1";
             // 
             // splitContainer1
             // 
@@ -316,22 +288,21 @@
             this.splitContainer1.Panel1.Controls.Add(this.pnlFilter);
             this.splitContainer1.Panel1.Controls.Add(this.pnlDGW);
             this.splitContainer1.Panel1.Controls.Add(this.pnlAcil);
-            this.splitContainer1.Panel1.Controls.Add(this.chart1);
             // 
             // splitContainer1.Panel2
             // 
             this.splitContainer1.Panel2.Controls.Add(this.splitContainer4);
-            this.splitContainer1.Size = new System.Drawing.Size(1830, 1012);
-            this.splitContainer1.SplitterDistance = 1624;
+            this.splitContainer1.Size = new System.Drawing.Size(1830, 708);
+            this.splitContainer1.SplitterDistance = 1621;
             this.splitContainer1.TabIndex = 4;
             // 
             // panel1
             // 
             this.panel1.Controls.Add(this.splitContainer9);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel1.Location = new System.Drawing.Point(0, 987);
+            this.panel1.Location = new System.Drawing.Point(0, 683);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1624, 25);
+            this.panel1.Size = new System.Drawing.Size(1621, 25);
             this.panel1.TabIndex = 5;
             // 
             // splitContainer9
@@ -347,8 +318,8 @@
             // splitContainer9.Panel2
             // 
             this.splitContainer9.Panel2.Controls.Add(this.splitContainer10);
-            this.splitContainer9.Size = new System.Drawing.Size(1624, 25);
-            this.splitContainer9.SplitterDistance = 310;
+            this.splitContainer9.Size = new System.Drawing.Size(1621, 25);
+            this.splitContainer9.SplitterDistance = 308;
             this.splitContainer9.TabIndex = 0;
             // 
             // metroLabel4
@@ -380,8 +351,8 @@
             // splitContainer10.Panel2
             // 
             this.splitContainer10.Panel2.Controls.Add(this.splitContainer11);
-            this.splitContainer10.Size = new System.Drawing.Size(1310, 25);
-            this.splitContainer10.SplitterDistance = 433;
+            this.splitContainer10.Size = new System.Drawing.Size(1309, 25);
+            this.splitContainer10.SplitterDistance = 429;
             this.splitContainer10.TabIndex = 0;
             // 
             // metroLabel1
@@ -429,8 +400,8 @@
             // 
             this.splitContainer11.Panel2.Controls.Add(this.lbl_gbp);
             this.splitContainer11.Panel2.Controls.Add(this.metroLabel3);
-            this.splitContainer11.Size = new System.Drawing.Size(873, 25);
-            this.splitContainer11.SplitterDistance = 421;
+            this.splitContainer11.Size = new System.Drawing.Size(876, 25);
+            this.splitContainer11.SplitterDistance = 419;
             this.splitContainer11.TabIndex = 0;
             // 
             // metroLabel2
@@ -496,6 +467,7 @@
             // pnlFilter
             // 
             this.pnlFilter.BackColor = System.Drawing.Color.Transparent;
+            this.pnlFilter.Controls.Add(this.chart1);
             this.pnlFilter.HorizontalScrollbarBarColor = true;
             this.pnlFilter.HorizontalScrollbarHighlightOnWheel = false;
             this.pnlFilter.HorizontalScrollbarSize = 10;
@@ -512,6 +484,49 @@
             this.pnlFilter.VerticalScrollbarHighlightOnWheel = false;
             this.pnlFilter.VerticalScrollbarSize = 10;
             this.pnlFilter.Visible = false;
+            // 
+            // chart1
+            // 
+            chartArea1.Name = "ChartArea1";
+            chartArea1.Position.Auto = false;
+            chartArea1.Position.Height = 92F;
+            chartArea1.Position.Width = 94F;
+            chartArea1.Position.X = 3F;
+            this.chart1.ChartAreas.Add(chartArea1);
+            this.chart1.Dock = System.Windows.Forms.DockStyle.Fill;
+            legend1.Name = "Legend1";
+            legend1.Position.Auto = false;
+            legend1.Position.Height = 5F;
+            legend1.Position.Width = 50F;
+            legend1.Position.X = 50F;
+            legend1.Position.Y = 93F;
+            this.chart1.Legends.Add(legend1);
+            this.chart1.Location = new System.Drawing.Point(0, 0);
+            this.chart1.Name = "chart1";
+            this.chart1.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.None;
+            this.chart1.PaletteCustomColors = new System.Drawing.Color[] {
+        System.Drawing.Color.PaleTurquoise,
+        System.Drawing.Color.Silver,
+        System.Drawing.Color.DarkSeaGreen};
+            series1.ChartArea = "ChartArea1";
+            series1.Legend = "Legend1";
+            series1.Name = "Gelen Faturalar";
+            series1.XValueType = System.Windows.Forms.DataVisualization.Charting.ChartValueType.Int32;
+            series2.ChartArea = "ChartArea1";
+            series2.Legend = "Legend1";
+            series2.Name = "Kesilen Faturalar";
+            series2.XValueType = System.Windows.Forms.DataVisualization.Charting.ChartValueType.Int32;
+            series3.ChartArea = "ChartArea1";
+            series3.LabelAngle = 45;
+            series3.Legend = "Legend1";
+            series3.Name = "Öngörülen Ödemeler";
+            series3.XValueType = System.Windows.Forms.DataVisualization.Charting.ChartValueType.Int32;
+            this.chart1.Series.Add(series1);
+            this.chart1.Series.Add(series2);
+            this.chart1.Series.Add(series3);
+            this.chart1.Size = new System.Drawing.Size(237, 162);
+            this.chart1.TabIndex = 4;
+            this.chart1.Text = "chart1";
             // 
             // pnlDGW
             // 
@@ -762,8 +777,8 @@
             // splitContainer4.Panel2
             // 
             this.splitContainer4.Panel2.Controls.Add(this.groupBox3);
-            this.splitContainer4.Size = new System.Drawing.Size(202, 1012);
-            this.splitContainer4.SplitterDistance = 741;
+            this.splitContainer4.Size = new System.Drawing.Size(205, 708);
+            this.splitContainer4.SplitterDistance = 517;
             this.splitContainer4.TabIndex = 0;
             // 
             // menuStrip1
@@ -783,7 +798,7 @@
             this.menuStrip1.LayoutStyle = System.Windows.Forms.ToolStripLayoutStyle.Table;
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(202, 741);
+            this.menuStrip1.Size = new System.Drawing.Size(205, 517);
             this.menuStrip1.TabIndex = 2;
             this.menuStrip1.Text = "menuStrip1";
             this.menuStrip1.TextDirection = System.Windows.Forms.ToolStripTextDirection.Vertical270;
@@ -947,7 +962,7 @@
             this.groupBox3.ForeColor = System.Drawing.Color.Red;
             this.groupBox3.Location = new System.Drawing.Point(0, 0);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(202, 267);
+            this.groupBox3.Size = new System.Drawing.Size(205, 187);
             this.groupBox3.TabIndex = 7;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Grafik Filtre";
@@ -965,8 +980,8 @@
             // splitContainer6.Panel2
             // 
             this.splitContainer6.Panel2.Controls.Add(this.splitContainer8);
-            this.splitContainer6.Size = new System.Drawing.Size(196, 248);
-            this.splitContainer6.SplitterDistance = 61;
+            this.splitContainer6.Size = new System.Drawing.Size(199, 168);
+            this.splitContainer6.SplitterDistance = 59;
             this.splitContainer6.TabIndex = 0;
             // 
             // splitContainer7
@@ -983,8 +998,8 @@
             // splitContainer7.Panel2
             // 
             this.splitContainer7.Panel2.Controls.Add(this.metroLabel5);
-            this.splitContainer7.Size = new System.Drawing.Size(61, 248);
-            this.splitContainer7.SplitterDistance = 116;
+            this.splitContainer7.Size = new System.Drawing.Size(59, 168);
+            this.splitContainer7.SplitterDistance = 77;
             this.splitContainer7.TabIndex = 0;
             // 
             // metroLabel6
@@ -1033,8 +1048,8 @@
             // splitContainer8.Panel2
             // 
             this.splitContainer8.Panel2.Controls.Add(this.cmb_yil);
-            this.splitContainer8.Size = new System.Drawing.Size(131, 248);
-            this.splitContainer8.SplitterDistance = 116;
+            this.splitContainer8.Size = new System.Drawing.Size(136, 168);
+            this.splitContainer8.SplitterDistance = 77;
             this.splitContainer8.TabIndex = 0;
             // 
             // cmb_proje
@@ -1046,7 +1061,7 @@
             this.cmb_proje.ItemHeight = 23;
             this.cmb_proje.Location = new System.Drawing.Point(12, 19);
             this.cmb_proje.Name = "cmb_proje";
-            this.cmb_proje.Size = new System.Drawing.Size(102, 29);
+            this.cmb_proje.Size = new System.Drawing.Size(107, 29);
             this.cmb_proje.TabIndex = 0;
             this.cmb_proje.UseSelectable = true;
             this.cmb_proje.SelectedIndexChanged += new System.EventHandler(this.cmb_proje_SelectedIndexChanged);
@@ -1065,7 +1080,7 @@
             "2018"});
             this.cmb_yil.Location = new System.Drawing.Point(12, 19);
             this.cmb_yil.Name = "cmb_yil";
-            this.cmb_yil.Size = new System.Drawing.Size(102, 29);
+            this.cmb_yil.Size = new System.Drawing.Size(107, 29);
             this.cmb_yil.TabIndex = 1;
             this.cmb_yil.UseSelectable = true;
             this.cmb_yil.SelectedIndexChanged += new System.EventHandler(this.cmb_yil_SelectedIndexChanged);
@@ -1104,7 +1119,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1906, 1092);
+            this.ClientSize = new System.Drawing.Size(1906, 788);
             this.ControlBox = false;
             this.Controls.Add(this.lbl_kullanici);
             this.Controls.Add(this.pbClose);
@@ -1127,7 +1142,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer3)).EndInit();
             this.splitContainer3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.chart1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.splitContainer1.Panel1.ResumeLayout(false);
             this.splitContainer1.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
@@ -1149,6 +1164,8 @@
             this.splitContainer11.Panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer11)).EndInit();
             this.splitContainer11.ResumeLayout(false);
+            this.pnlFilter.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.chart1)).EndInit();
             this.pnlDGW.ResumeLayout(false);
             this.splitContainer5.Panel1.ResumeLayout(false);
             this.splitContainer5.Panel2.ResumeLayout(false);
@@ -1195,7 +1212,6 @@
         private System.Windows.Forms.SplitContainer splitContainer3;
         private System.Windows.Forms.Button btnAktivite;
         private System.Windows.Forms.Button btnFilter;
-        private System.Windows.Forms.DataVisualization.Charting.Chart chart1;
         private System.Windows.Forms.SplitContainer splitContainer1;
         private System.Windows.Forms.SplitContainer splitContainer4;
         private System.Windows.Forms.MenuStrip menuStrip1;
@@ -1249,6 +1265,8 @@
         private MetroFramework.Controls.MetroComboBox cmb_yil;
         private System.Windows.Forms.PictureBox pbClose;
         private MetroFramework.Controls.MetroLabel lbl_kullanici;
+        private System.Windows.Forms.DataVisualization.Charting.Chart chart1;
+        private System.Windows.Forms.PictureBox pictureBox3;
     }
 }
 

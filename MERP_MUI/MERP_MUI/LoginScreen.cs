@@ -20,8 +20,6 @@ namespace MERP_MUI
         MySqlDataAdapter da;
         MySqlConnection myConnection;
         DataTable dt = new DataTable();
-
-        DBConnect db;
         SmtpClient sc;
 
         Boolean Connected;

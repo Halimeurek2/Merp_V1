@@ -420,6 +420,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="merp_sHq_icon.ico" />
+    <None Include="Resources\loading.gif" />
     <None Include="Resources\information_alert_attention_sign_help-48.png" />
     <None Include="Resources\appbar.refresh.png" />
     <None Include="Resources\grafik.png" />

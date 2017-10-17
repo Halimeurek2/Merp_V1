@@ -103,6 +103,7 @@
             this.cmb_yil = new MetroFramework.Controls.MetroComboBox();
             this.pbClose = new System.Windows.Forms.PictureBox();
             this.lbl_kullanici = new MetroFramework.Controls.MetroLabel();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer2)).BeginInit();
             this.splitContainer2.Panel1.SuspendLayout();
             this.splitContainer2.Panel2.SuspendLayout();
@@ -164,6 +165,7 @@
             this.splitContainer8.Panel2.SuspendLayout();
             this.splitContainer8.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbClose)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             this.SuspendLayout();
             // 
             // splitContainer2
@@ -1115,12 +1117,23 @@
             this.lbl_kullanici.UseCustomForeColor = true;
             this.lbl_kullanici.UseStyleColors = true;
             // 
+            // pictureBox4
+            // 
+            this.pictureBox4.Image = global::MERP_MUI.Properties.Resources.loading;
+            this.pictureBox4.Location = new System.Drawing.Point(1616, 7);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(61, 47);
+            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.pictureBox4.TabIndex = 26;
+            this.pictureBox4.TabStop = false;
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1906, 788);
             this.ControlBox = false;
+            this.Controls.Add(this.pictureBox4);
             this.Controls.Add(this.lbl_kullanici);
             this.Controls.Add(this.pbClose);
             this.Controls.Add(this.splitContainer1);
@@ -1201,6 +1214,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer8)).EndInit();
             this.splitContainer8.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pbClose)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1267,6 +1281,7 @@
         private MetroFramework.Controls.MetroLabel lbl_kullanici;
         private System.Windows.Forms.DataVisualization.Charting.Chart chart1;
         private System.Windows.Forms.PictureBox pictureBox3;
+        private System.Windows.Forms.PictureBox pictureBox4;
     }
 }
 

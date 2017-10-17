@@ -617,6 +617,8 @@
             this.Controls.Add(this.cmb_projeNo);
             this.Controls.Add(this.pbClose);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "FaturaGiris";
             this.Resizable = false;
             this.ShadowType = MetroFramework.Forms.MetroFormShadowType.AeroShadow;

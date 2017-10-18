@@ -78,6 +78,8 @@
             this.Controls.Add(this.metroButton1);
             this.Controls.Add(this.txtMessage);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "MessageBoxx";
             this.Resizable = false;
             this.ShadowType = MetroFramework.Forms.MetroFormShadowType.None;

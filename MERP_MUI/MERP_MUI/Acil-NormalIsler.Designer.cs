@@ -135,6 +135,7 @@
             this.dg_acil.UseCustomBackColor = true;
             this.dg_acil.UseCustomForeColor = true;
             this.dg_acil.UseStyleColors = true;
+            this.dg_acil.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dg_acil_CellClick);
             this.dg_acil.RowHeaderMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dg_acil_RowHeaderMouseClick);
             // 
             // splitContainer2
@@ -214,6 +215,7 @@
             this.dg_normal.UseCustomBackColor = true;
             this.dg_normal.UseCustomForeColor = true;
             this.dg_normal.UseStyleColors = true;
+            this.dg_normal.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dg_normal_CellClick);
             this.dg_normal.RowHeaderMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dg_normal_RowHeaderMouseClick);
             // 
             // btn_sil
@@ -255,6 +257,8 @@
             this.Controls.Add(this.pbClose);
             this.Controls.Add(this.splitContainer1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "Acil_NormalIsler";
             this.Resizable = false;
             this.ShadowType = MetroFramework.Forms.MetroFormShadowType.None;

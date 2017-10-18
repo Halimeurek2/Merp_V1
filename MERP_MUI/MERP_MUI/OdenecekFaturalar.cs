@@ -192,7 +192,7 @@ namespace MERP_MUI
             try
             {
                 index = 0;
-                komut = "SELECT fatura_vade_tarih,sum(fatura_euro) FROM db_faturalar where fatura_durum='ÖDENMEDİ' and fatura_tipi='G' and fatura_proje_no='" + lbl_prjNo.Text + "' group by date_format(fatura_vade_tarih, '%m-%Y');";
+                komut = "SELECT fatura_vade_tarih,sum(fatura_euro) FROM db_faturalar where fatura_durum='ODENMEDI' and fatura_tipi='G' and fatura_proje_no='" + lbl_prjNo.Text + "' group by date_format(fatura_vade_tarih, '%m-%Y');";
                 da = new MySqlDataAdapter(komut, connection);
                 myCommand = new MySqlCommand(komut, myConnection);
                 myReader = myCommand.ExecuteReader();
@@ -213,7 +213,7 @@ namespace MERP_MUI
             try
             {
                 index = 0;
-                komut = "SELECT fatura_vade_tarih,sum(fatura_euro) FROM db_faturalar where fatura_durum='ÖDENDİ' and fatura_tipi='G' and fatura_proje_no='" + lbl_prjNo.Text + "' group by date_format(fatura_vade_tarih, '%m-%Y');";
+                komut = "SELECT fatura_vade_tarih,sum(fatura_euro) FROM db_faturalar where fatura_durum='ODENDI' and fatura_tipi='G' and fatura_proje_no='" + lbl_prjNo.Text + "' group by date_format(fatura_vade_tarih, '%m-%Y');";
                 da = new MySqlDataAdapter(komut, connection);
                 myCommand = new MySqlCommand(komut, myConnection);
                 myReader = myCommand.ExecuteReader();
@@ -234,7 +234,7 @@ namespace MERP_MUI
             try
             {
                 index = 0;
-                komut = "SELECT fatura_vade_tarih,sum(fatura_euro) FROM db_faturalar where fatura_durum='ÖDENMEDİ' and fatura_tipi='K' and fatura_proje_no='" + lbl_prjNo.Text + "'group by date_format(fatura_vade_tarih, '%m-%Y');";
+                komut = "SELECT fatura_vade_tarih,sum(fatura_euro) FROM db_faturalar where fatura_durum='ODENMEDI' and fatura_tipi='K' and fatura_proje_no='" + lbl_prjNo.Text + "'group by date_format(fatura_vade_tarih, '%m-%Y');";
                 da = new MySqlDataAdapter(komut, connection);
                 myCommand = new MySqlCommand(komut, myConnection);
                 myReader = myCommand.ExecuteReader();
@@ -255,7 +255,7 @@ namespace MERP_MUI
             try
             {
                 index = 0;
-                komut = "SELECT fatura_vade_tarih,sum(fatura_euro) FROM db_faturalar where fatura_durum='ÖDENDİ' and fatura_tipi='K' and fatura_proje_no='" + lbl_prjNo.Text + "'group by date_format(fatura_vade_tarih, '%m-%Y');";
+                komut = "SELECT fatura_vade_tarih,sum(fatura_euro) FROM db_faturalar where fatura_durum='ODENDI' and fatura_tipi='K' and fatura_proje_no='" + lbl_prjNo.Text + "'group by date_format(fatura_vade_tarih, '%m-%Y');";
                 da = new MySqlDataAdapter(komut, connection);
                 myCommand = new MySqlCommand(komut, myConnection);
                 myReader = myCommand.ExecuteReader();

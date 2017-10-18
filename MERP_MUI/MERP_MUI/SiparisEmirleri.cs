@@ -150,34 +150,42 @@ namespace MERP_MUI
 
         private void dgw_stf_list_RowHeaderMouseClick(object sender, DataGridViewCellMouseEventArgs e)
         {
-            id = dgw_stf_list.Rows[e.RowIndex].Cells[0].Value.ToString();
-            proje_no = dgw_stf_list.Rows[e.RowIndex].Cells[1].Value.ToString();
-            satinalma_no = dgw_stf_list.Rows[e.RowIndex].Cells[2].Value.ToString();
-            tedarikci = dgw_stf_list.Rows[e.RowIndex].Cells[3].Value.ToString();
-            olusturan = dgw_stf_list.Rows[e.RowIndex].Cells[4].Value.ToString();
-            siparis_tarihi = Convert.ToDateTime(dgw_stf_list.Rows[e.RowIndex].Cells[5].Value);
-            vade = dgw_stf_list.Rows[e.RowIndex].Cells[6].Value.ToString();
-            temin_tarihi = Convert.ToDateTime(dgw_stf_list.Rows[e.RowIndex].Cells[7].Value);
-            fiyat = dgw_stf_list.Rows[e.RowIndex].Cells[8].Value.ToString();
-            fiyat_birim = dgw_stf_list.Rows[e.RowIndex].Cells[9].Value.ToString();
-            aciklama = dgw_stf_list.Rows[e.RowIndex].Cells[11].Value.ToString();
+            try
+            {
+                id = dgw_stf_list.Rows[e.RowIndex].Cells[0].Value.ToString();
+                proje_no = dgw_stf_list.Rows[e.RowIndex].Cells[1].Value.ToString();
+                satinalma_no = dgw_stf_list.Rows[e.RowIndex].Cells[2].Value.ToString();
+                tedarikci = dgw_stf_list.Rows[e.RowIndex].Cells[3].Value.ToString();
+                olusturan = dgw_stf_list.Rows[e.RowIndex].Cells[4].Value.ToString();
+                siparis_tarihi = Convert.ToDateTime(dgw_stf_list.Rows[e.RowIndex].Cells[5].Value);
+                vade = dgw_stf_list.Rows[e.RowIndex].Cells[6].Value.ToString();
+                temin_tarihi = Convert.ToDateTime(dgw_stf_list.Rows[e.RowIndex].Cells[7].Value);
+                fiyat = dgw_stf_list.Rows[e.RowIndex].Cells[8].Value.ToString();
+                fiyat_birim = dgw_stf_list.Rows[e.RowIndex].Cells[9].Value.ToString();
+                aciklama = dgw_stf_list.Rows[e.RowIndex].Cells[11].Value.ToString();
+            }
+            catch { }
         }
 
         private void btn_ftr_duzenle_Click(object sender, EventArgs e)
         {
-            SiparisEmriDuzenle obj = new SiparisEmriDuzenle();
-            obj.lbl_id.Text = id;
-            obj.cmb_prjno.Text = proje_no;
-            obj.txt_siparisNo.Text = satinalma_no;
-            obj.cmb_tedarikci.Text = tedarikci;
-            obj.txt_talepKisi.Text = olusturan;
-            obj.date_teslim.Text = Convert.ToString(siparis_tarihi);
-            obj.txt_vade.Text = vade;
-            obj.date_temin.Value = temin_tarihi;
-            obj.txt_mlz_brmFiyat.Text = fiyat;
-            obj.cmb_paraBirimi.Text = fiyat_birim;
-            obj.rcb_aciklama.Text = aciklama;
-            obj.Show();
+            try
+            {
+                SiparisEmriDuzenle obj = new SiparisEmriDuzenle();
+                obj.lbl_id.Text = id;
+                obj.cmb_prjno.Text = proje_no;
+                obj.txt_siparisNo.Text = satinalma_no;
+                obj.cmb_tedarikci.Text = tedarikci;
+                obj.txt_talepKisi.Text = olusturan;
+                obj.date_teslim.Text = Convert.ToString(siparis_tarihi);
+                obj.txt_vade.Text = vade;
+                obj.date_temin.Value = temin_tarihi;
+                obj.txt_mlz_brmFiyat.Text = fiyat;
+                obj.cmb_paraBirimi.Text = fiyat_birim;
+                obj.rcb_aciklama.Text = aciklama;
+                obj.Show();
+            }
+            catch { }
         }
 
         public void RefreshFilter()
@@ -294,6 +302,25 @@ namespace MERP_MUI
             myConnection.Close();
 
             SumDGW();
+        }
+
+        private void dgw_stf_list_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            try
+            {
+                id = dgw_stf_list.Rows[e.RowIndex].Cells[0].Value.ToString();
+                proje_no = dgw_stf_list.Rows[e.RowIndex].Cells[1].Value.ToString();
+                satinalma_no = dgw_stf_list.Rows[e.RowIndex].Cells[2].Value.ToString();
+                tedarikci = dgw_stf_list.Rows[e.RowIndex].Cells[3].Value.ToString();
+                olusturan = dgw_stf_list.Rows[e.RowIndex].Cells[4].Value.ToString();
+                siparis_tarihi = Convert.ToDateTime(dgw_stf_list.Rows[e.RowIndex].Cells[5].Value);
+                vade = dgw_stf_list.Rows[e.RowIndex].Cells[6].Value.ToString();
+                temin_tarihi = Convert.ToDateTime(dgw_stf_list.Rows[e.RowIndex].Cells[7].Value);
+                fiyat = dgw_stf_list.Rows[e.RowIndex].Cells[8].Value.ToString();
+                fiyat_birim = dgw_stf_list.Rows[e.RowIndex].Cells[9].Value.ToString();
+                aciklama = dgw_stf_list.Rows[e.RowIndex].Cells[11].Value.ToString();
+            }
+            catch { }
         }
     }
 }

@@ -631,6 +631,8 @@
             this.Controls.Add(this.txt_fatura_no);
             this.Controls.Add(this.pbClose);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "FaturaDuzenle";
             this.Resizable = false;
             this.ShadowType = MetroFramework.Forms.MetroFormShadowType.AeroShadow;

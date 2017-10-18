@@ -51,7 +51,7 @@ namespace MERP_MUI
             myReader = myCommand.ExecuteReader();
             while (myReader.Read())
             {
-                if(myReader.GetString(0)!="M111" || myReader.GetString(0) != "T111" || myReader.GetString(0) != "M222")
+                if(myReader.GetString(0)!="MASRAF")
                 {
                     dgw_elektronik.Rows.Add();
                     dgw_elektronik.Rows[index].Cells[0].Value = myReader.GetString(0);
@@ -69,7 +69,7 @@ namespace MERP_MUI
             myReader = myCommand.ExecuteReader();
             while (myReader.Read())
             {
-                if (myReader.GetString(0) != "M111" || myReader.GetString(0) != "T111" || myReader.GetString(0) != "M222")
+                if (myReader.GetString(0) != "MASRAF")
                 {
                     dgw_mekanik.Rows.Add();
                     dgw_mekanik.Rows[index].Cells[0].Value = myReader.GetString(0);
@@ -87,7 +87,7 @@ namespace MERP_MUI
             myReader = myCommand.ExecuteReader();
             while (myReader.Read())
             {
-                if (myReader.GetString(0) != "M111" || myReader.GetString(0) != "T111" || myReader.GetString(0) != "M222")
+                if (myReader.GetString(0) != "MASRAF")
                 {
                     dgw_genel.Rows.Add();
                     dgw_genel.Rows[index].Cells[0].Value = myReader.GetString(0);
@@ -176,7 +176,7 @@ namespace MERP_MUI
             {
                 try
                 {
-                    komut = "SELECT sum(fatura_euro) from db_faturalar where fatura_cinsi='Genel Giderler' and fatura_proje_no='" + lbl_prjNo.Text + "' and fatura_firma='" + dgw_genel.Rows[i].Cells[0].Value + "' and fatura_durum='ÖDENDİ' and fatura_tipi='G'";
+                    komut = "SELECT sum(fatura_euro) from db_faturalar where fatura_cinsi='Genel Giderler' and fatura_proje_no='" + lbl_prjNo.Text + "' and fatura_firma='" + dgw_genel.Rows[i].Cells[0].Value + "' and fatura_durum='ODENDI' and fatura_tipi='G'";
                     da = new MySqlDataAdapter(komut, connection);
 
                     myCommand = new MySqlCommand(komut, myConnection);
@@ -198,7 +198,7 @@ namespace MERP_MUI
             {
                 try
                 {
-                    komut = "SELECT sum(fatura_euro) from db_faturalar where fatura_cinsi='Elektronik' and fatura_proje_no='" + lbl_prjNo.Text + "' and fatura_firma='" + dgw_elektronik.Rows[i].Cells[0].Value + "' and fatura_durum='ÖDENDİ' and fatura_tipi='G'";
+                    komut = "SELECT sum(fatura_euro) from db_faturalar where fatura_cinsi='Elektronik' and fatura_proje_no='" + lbl_prjNo.Text + "' and fatura_firma='" + dgw_elektronik.Rows[i].Cells[0].Value + "' and fatura_durum='ODENDI' and fatura_tipi='G'";
                     da = new MySqlDataAdapter(komut, connection);
 
                     myCommand = new MySqlCommand(komut, myConnection);
@@ -220,7 +220,7 @@ namespace MERP_MUI
             {
                 try
                 {
-                    komut = "SELECT sum(fatura_euro) from db_faturalar where fatura_cinsi='Mekanik' and fatura_proje_no='"+lbl_prjNo.Text+"' and fatura_firma='"+ dgw_mekanik.Rows[i].Cells[0].Value + "' and fatura_durum='ÖDENDİ' and fatura_tipi='G'";
+                    komut = "SELECT sum(fatura_euro) from db_faturalar where fatura_cinsi='Mekanik' and fatura_proje_no='"+lbl_prjNo.Text+"' and fatura_firma='"+ dgw_mekanik.Rows[i].Cells[0].Value + "' and fatura_durum='ODENDI' and fatura_tipi='G'";
                     da = new MySqlDataAdapter(komut, connection);
 
                     myCommand = new MySqlCommand(komut, myConnection);

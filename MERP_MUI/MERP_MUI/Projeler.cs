@@ -167,56 +167,60 @@ namespace MERP_MUI
 
         private void dgw_prj_list_RowHeaderMouseClick(object sender, DataGridViewCellMouseEventArgs e)
         {
-            ProjeDuzenle obj = new ProjeDuzenle();
-            proje_no = dgw_prj_list.Rows[e.RowIndex].Cells[0].Value.ToString();
-            proje_adi = dgw_prj_list.Rows[e.RowIndex].Cells[1].Value.ToString();
-            butce = dgw_prj_list.Rows[e.RowIndex].Cells[2].Value.ToString();
-            birim = dgw_prj_list.Rows[e.RowIndex].Cells[3].Value.ToString();
-
-            musteri = dgw_prj_list.Rows[e.RowIndex].Cells[4].Value.ToString();
-            baslangic = Convert.ToDateTime(dgw_prj_list.Rows[e.RowIndex].Cells[5].Value.ToString());
-            bitis = Convert.ToDateTime(dgw_prj_list.Rows[e.RowIndex].Cells[6].Value.ToString());
-            vade = dgw_prj_list.Rows[e.RowIndex].Cells[7].Value.ToString();
-            aciklama = dgw_prj_list.Rows[e.RowIndex].Cells[8].Value.ToString();
-            harcamalar = dgw_prj_list.Rows[e.RowIndex].Cells[9].Value.ToString();
-            harcama_birim = dgw_prj_list.Rows[e.RowIndex].Cells[10].Value.ToString();
-            flag = dgw_prj_list.Rows[e.RowIndex].Cells[11].Value.ToString();
-
-            myConnection.Close();
-            myConnection.Open();
-            komut = "SELECT * FROM db_projeler WHERE proje_no='" + proje_no + "' AND proje_ismi='" + proje_adi + "'";
-            da = new MySqlDataAdapter(komut, connection);
-
-            //  myConnection = new MySqlConnection(connectionString);
-            myCommand = new MySqlCommand(komut, myConnection);
-            //   myConnection.Open();
-            MySqlDataReader myReader;
-            myReader = myCommand.ExecuteReader();
-            // Always call Read before accessing data.
-            while (myReader.Read())
+            try
             {
-                id = myReader.GetString(0);
-                harcama_m_mlz = myReader.GetString(10);
-                harcama_el_mlz = myReader.GetString(11);
-                harcama_imalat = myReader.GetString(12);
-                harcama_test = myReader.GetString(13);
-                harcama_risk = myReader.GetString(14);
-                odeme_avans = myReader.GetString(17);
-                dtp_avans = Convert.ToDateTime(myReader.GetString(18));
-                odeme_pdr = myReader.GetString(19);
-                dtp_pdr = Convert.ToDateTime(myReader.GetString(20));
-                odeme_cdr = myReader.GetString(21);
-                dtp_cdr = Convert.ToDateTime(myReader.GetString(22));
-                odeme_prototip = myReader.GetString(23);
-                dtp_prototip = Convert.ToDateTime(myReader.GetString(24));
-                odeme_test = myReader.GetString(25);
-                dtp_test = Convert.ToDateTime(myReader.GetString(26));
-                odeme_kabul = myReader.GetString(27);
-                dtp_kabul = Convert.ToDateTime(myReader.GetString(28));
-                s6 = myReader.GetString(29);
-                dtp_s6 = Convert.ToDateTime(myReader.GetString(30));
+                ProjeDuzenle obj = new ProjeDuzenle();
+                proje_no = dgw_prj_list.Rows[e.RowIndex].Cells[0].Value.ToString();
+                proje_adi = dgw_prj_list.Rows[e.RowIndex].Cells[1].Value.ToString();
+                butce = dgw_prj_list.Rows[e.RowIndex].Cells[2].Value.ToString();
+                birim = dgw_prj_list.Rows[e.RowIndex].Cells[3].Value.ToString();
+
+                musteri = dgw_prj_list.Rows[e.RowIndex].Cells[4].Value.ToString();
+                baslangic = Convert.ToDateTime(dgw_prj_list.Rows[e.RowIndex].Cells[5].Value.ToString());
+                bitis = Convert.ToDateTime(dgw_prj_list.Rows[e.RowIndex].Cells[6].Value.ToString());
+                vade = dgw_prj_list.Rows[e.RowIndex].Cells[7].Value.ToString();
+                aciklama = dgw_prj_list.Rows[e.RowIndex].Cells[8].Value.ToString();
+                harcamalar = dgw_prj_list.Rows[e.RowIndex].Cells[9].Value.ToString();
+                harcama_birim = dgw_prj_list.Rows[e.RowIndex].Cells[10].Value.ToString();
+                flag = dgw_prj_list.Rows[e.RowIndex].Cells[11].Value.ToString();
+
+                myConnection.Close();
+                myConnection.Open();
+                komut = "SELECT * FROM db_projeler WHERE proje_no='" + proje_no + "' AND proje_ismi='" + proje_adi + "'";
+                da = new MySqlDataAdapter(komut, connection);
+
+                //  myConnection = new MySqlConnection(connectionString);
+                myCommand = new MySqlCommand(komut, myConnection);
+                //   myConnection.Open();
+                MySqlDataReader myReader;
+                myReader = myCommand.ExecuteReader();
+                // Always call Read before accessing data.
+                while (myReader.Read())
+                {
+                    id = myReader.GetString(0);
+                    harcama_m_mlz = myReader.GetString(10);
+                    harcama_el_mlz = myReader.GetString(11);
+                    harcama_imalat = myReader.GetString(12);
+                    harcama_test = myReader.GetString(13);
+                    harcama_risk = myReader.GetString(14);
+                    odeme_avans = myReader.GetString(17);
+                    dtp_avans = Convert.ToDateTime(myReader.GetString(18));
+                    odeme_pdr = myReader.GetString(19);
+                    dtp_pdr = Convert.ToDateTime(myReader.GetString(20));
+                    odeme_cdr = myReader.GetString(21);
+                    dtp_cdr = Convert.ToDateTime(myReader.GetString(22));
+                    odeme_prototip = myReader.GetString(23);
+                    dtp_prototip = Convert.ToDateTime(myReader.GetString(24));
+                    odeme_test = myReader.GetString(25);
+                    dtp_test = Convert.ToDateTime(myReader.GetString(26));
+                    odeme_kabul = myReader.GetString(27);
+                    dtp_kabul = Convert.ToDateTime(myReader.GetString(28));
+                    s6 = myReader.GetString(29);
+                    dtp_s6 = Convert.ToDateTime(myReader.GetString(30));
+                }
+                myReader.Close();
             }
-            myReader.Close();
+            catch { }
         }
 
         private void txt_prjAdi_TextChanged(object sender, EventArgs e)
@@ -244,69 +248,73 @@ namespace MERP_MUI
 
         private void btn_prj_duzenle_Click(object sender, EventArgs e)
         {
-            ProjeDuzenle obj = new ProjeDuzenle();
-            obj.lbl_id.Text = id;
-            obj.cmb_birim.Text = birim;
-            obj.txt_butce.Text = butce;
-            obj.txt_musteri.Text = musteri;
-            obj.txt_proje_adı.Text = proje_adi;
-            obj.txt_proje_no.Text = proje_no;
-            obj.dtp_baslangıc.Value = baslangic;
-            obj.dtp_bitis.Value = bitis;
-            obj.txt_vade.Text = vade;
-            obj.rcb_acıklama.Text = aciklama;
-            obj.lbl_harcamalar.Text = harcamalar;
-            obj.lbl_birim.Text = harcama_birim;
-            if (flag == "S") { obj.ck_seri.Checked = true; }
-            else { obj.ck_prj.Checked = true; }
-            obj.Show();
-
-
-            HarcamaOngorusu ho = new HarcamaOngorusu();
-
-            if (flag == "S")
+            try
             {
-                ho.lbl_pdr.Text = "S1";
-                ho.lbl_cdr.Text = "S2";
-                ho.lbl_prototip.Text = "S3";
-                ho.lbl_kabul.Text = "S5";
-                ho.lbl_test.Text = "S4";
-                ho.lbl_s6.Enabled = true;
-                ho.txt_s6.Enabled = true;
-                ho.dtp_s6.Enabled = true;
-            }
-            else
-            {
-                ho.lbl_pdr.Text = "PDR";
-                ho.lbl_cdr.Text = "CDR";
-                ho.lbl_prototip.Text = "Prototip";
-                ho.lbl_kabul.Text = "Kabul";
-                ho.lbl_test.Text = "Test";
-                ho.lbl_s6.Enabled = false;
-                ho.txt_s6.Enabled = false;
-                ho.dtp_s6.Enabled = false;
-            }
-            ho.txt_m_mlz.Text = harcama_m_mlz;
-            ho.txt_el_mlz.Text = harcama_el_mlz;
-            ho.txt_imalat.Text = harcama_imalat;
-            ho.txt_test.Text = harcama_test;
-            ho.txt_risk.Text = harcama_risk;
-            ho.txt_avans.Text = odeme_avans;
-            ho.txt_pdr.Text = odeme_pdr;
-            ho.txt_cdr.Text = odeme_cdr;
-            ho.txt_prototip.Text = odeme_prototip;
-            ho.txt_o_test.Text = odeme_test;
-            ho.txt_kabul.Text = odeme_kabul;
-            ho.txt_s6.Text = s6;
-            ho.dtp_avans.Value = dtp_avans;
-            ho.dtp_pdr.Value = dtp_pdr;
-            ho.dtp_cdr.Value = dtp_cdr;
-            ho.dtp_prototip.Value = dtp_prototip;
-            ho.dtp_test.Value = dtp_test;
-            ho.dtp_kabul.Value = dtp_kabul;
-            ho.dtp_s6.Value = dtp_s6;
+                ProjeDuzenle obj = new ProjeDuzenle();
+                obj.lbl_id.Text = id;
+                obj.cmb_birim.Text = birim;
+                obj.txt_butce.Text = butce;
+                obj.txt_musteri.Text = musteri;
+                obj.txt_proje_adı.Text = proje_adi;
+                obj.txt_proje_no.Text = proje_no;
+                obj.dtp_baslangıc.Value = baslangic;
+                obj.dtp_bitis.Value = bitis;
+                obj.txt_vade.Text = vade;
+                obj.rcb_acıklama.Text = aciklama;
+                obj.lbl_harcamalar.Text = harcamalar;
+                obj.lbl_birim.Text = harcama_birim;
+                if (flag == "S") { obj.ck_seri.Checked = true; }
+                else { obj.ck_prj.Checked = true; }
+                obj.Show();
 
-            ho.Show();
+
+                HarcamaOngorusu ho = new HarcamaOngorusu();
+
+                if (flag == "S")
+                {
+                    ho.lbl_pdr.Text = "S1";
+                    ho.lbl_cdr.Text = "S2";
+                    ho.lbl_prototip.Text = "S3";
+                    ho.lbl_kabul.Text = "S5";
+                    ho.lbl_test.Text = "S4";
+                    ho.lbl_s6.Enabled = true;
+                    ho.txt_s6.Enabled = true;
+                    ho.dtp_s6.Enabled = true;
+                }
+                else
+                {
+                    ho.lbl_pdr.Text = "PDR";
+                    ho.lbl_cdr.Text = "CDR";
+                    ho.lbl_prototip.Text = "Prototip";
+                    ho.lbl_kabul.Text = "Kabul";
+                    ho.lbl_test.Text = "Test";
+                    ho.lbl_s6.Enabled = false;
+                    ho.txt_s6.Enabled = false;
+                    ho.dtp_s6.Enabled = false;
+                }
+                ho.txt_m_mlz.Text = harcama_m_mlz;
+                ho.txt_el_mlz.Text = harcama_el_mlz;
+                ho.txt_imalat.Text = harcama_imalat;
+                ho.txt_test.Text = harcama_test;
+                ho.txt_risk.Text = harcama_risk;
+                ho.txt_avans.Text = odeme_avans;
+                ho.txt_pdr.Text = odeme_pdr;
+                ho.txt_cdr.Text = odeme_cdr;
+                ho.txt_prototip.Text = odeme_prototip;
+                ho.txt_o_test.Text = odeme_test;
+                ho.txt_kabul.Text = odeme_kabul;
+                ho.txt_s6.Text = s6;
+                ho.dtp_avans.Value = dtp_avans;
+                ho.dtp_pdr.Value = dtp_pdr;
+                ho.dtp_cdr.Value = dtp_cdr;
+                ho.dtp_prototip.Value = dtp_prototip;
+                ho.dtp_test.Value = dtp_test;
+                ho.dtp_kabul.Value = dtp_kabul;
+                ho.dtp_s6.Value = dtp_s6;
+
+                ho.Show();
+            }
+            catch { }
         }
 
         public void SumDGW()
@@ -399,6 +407,64 @@ namespace MERP_MUI
             myConnection.Close();
 
             SumDGW();
+        }
+
+        private void dgw_prj_list_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            try
+            {
+                ProjeDuzenle obj = new ProjeDuzenle();
+                proje_no = dgw_prj_list.Rows[e.RowIndex].Cells[0].Value.ToString();
+                proje_adi = dgw_prj_list.Rows[e.RowIndex].Cells[1].Value.ToString();
+                butce = dgw_prj_list.Rows[e.RowIndex].Cells[2].Value.ToString();
+                birim = dgw_prj_list.Rows[e.RowIndex].Cells[3].Value.ToString();
+
+                musteri = dgw_prj_list.Rows[e.RowIndex].Cells[4].Value.ToString();
+                baslangic = Convert.ToDateTime(dgw_prj_list.Rows[e.RowIndex].Cells[5].Value.ToString());
+                bitis = Convert.ToDateTime(dgw_prj_list.Rows[e.RowIndex].Cells[6].Value.ToString());
+                vade = dgw_prj_list.Rows[e.RowIndex].Cells[7].Value.ToString();
+                aciklama = dgw_prj_list.Rows[e.RowIndex].Cells[8].Value.ToString();
+                harcamalar = dgw_prj_list.Rows[e.RowIndex].Cells[9].Value.ToString();
+                harcama_birim = dgw_prj_list.Rows[e.RowIndex].Cells[10].Value.ToString();
+                flag = dgw_prj_list.Rows[e.RowIndex].Cells[11].Value.ToString();
+
+                myConnection.Close();
+                myConnection.Open();
+                komut = "SELECT * FROM db_projeler WHERE proje_no='" + proje_no + "' AND proje_ismi='" + proje_adi + "'";
+                da = new MySqlDataAdapter(komut, connection);
+
+                //  myConnection = new MySqlConnection(connectionString);
+                myCommand = new MySqlCommand(komut, myConnection);
+                //   myConnection.Open();
+                MySqlDataReader myReader;
+                myReader = myCommand.ExecuteReader();
+                // Always call Read before accessing data.
+                while (myReader.Read())
+                {
+                    id = myReader.GetString(0);
+                    harcama_m_mlz = myReader.GetString(10);
+                    harcama_el_mlz = myReader.GetString(11);
+                    harcama_imalat = myReader.GetString(12);
+                    harcama_test = myReader.GetString(13);
+                    harcama_risk = myReader.GetString(14);
+                    odeme_avans = myReader.GetString(17);
+                    dtp_avans = Convert.ToDateTime(myReader.GetString(18));
+                    odeme_pdr = myReader.GetString(19);
+                    dtp_pdr = Convert.ToDateTime(myReader.GetString(20));
+                    odeme_cdr = myReader.GetString(21);
+                    dtp_cdr = Convert.ToDateTime(myReader.GetString(22));
+                    odeme_prototip = myReader.GetString(23);
+                    dtp_prototip = Convert.ToDateTime(myReader.GetString(24));
+                    odeme_test = myReader.GetString(25);
+                    dtp_test = Convert.ToDateTime(myReader.GetString(26));
+                    odeme_kabul = myReader.GetString(27);
+                    dtp_kabul = Convert.ToDateTime(myReader.GetString(28));
+                    s6 = myReader.GetString(29);
+                    dtp_s6 = Convert.ToDateTime(myReader.GetString(30));
+                }
+                myReader.Close();
+            }
+            catch { }
         }
     }
 }

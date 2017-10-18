@@ -50,6 +50,7 @@
             this.txt_tip = new MetroFramework.Controls.MetroTextBox();
             this.metroLabel3 = new MetroFramework.Controls.MetroLabel();
             this.btnClear = new MetroFramework.Controls.MetroButton();
+            this.pb_loading = new System.Windows.Forms.PictureBox();
             this.dgw_ftr_list = new MetroFramework.Controls.MetroGrid();
             this.splitContainer7 = new System.Windows.Forms.SplitContainer();
             this.splitContainer10 = new System.Windows.Forms.SplitContainer();
@@ -92,6 +93,7 @@
             this.splitContainer9.Panel1.SuspendLayout();
             this.splitContainer9.Panel2.SuspendLayout();
             this.splitContainer9.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pb_loading)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgw_ftr_list)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer7)).BeginInit();
             this.splitContainer7.Panel1.SuspendLayout();
@@ -143,6 +145,7 @@
             // 
             // splitContainer2.Panel2
             // 
+            this.splitContainer2.Panel2.Controls.Add(this.pb_loading);
             this.splitContainer2.Panel2.Controls.Add(this.dgw_ftr_list);
             this.splitContainer2.Size = new System.Drawing.Size(1338, 660);
             this.splitContainer2.SplitterDistance = 60;
@@ -465,6 +468,16 @@
             this.btnClear.UseStyleColors = true;
             this.btnClear.Click += new System.EventHandler(this.btnClear_Click);
             // 
+            // pb_loading
+            // 
+            this.pb_loading.Image = global::MERP_MUI.Properties.Resources.loading;
+            this.pb_loading.Location = new System.Drawing.Point(639, 267);
+            this.pb_loading.Name = "pb_loading";
+            this.pb_loading.Size = new System.Drawing.Size(61, 47);
+            this.pb_loading.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.pb_loading.TabIndex = 27;
+            this.pb_loading.TabStop = false;
+            // 
             // dgw_ftr_list
             // 
             this.dgw_ftr_list.AllowUserToResizeRows = false;
@@ -512,6 +525,7 @@
             this.dgw_ftr_list.UseCustomBackColor = true;
             this.dgw_ftr_list.UseCustomForeColor = true;
             this.dgw_ftr_list.UseStyleColors = true;
+            this.dgw_ftr_list.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgw_ftr_list_CellClick);
             this.dgw_ftr_list.RowHeaderMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgw_ftr_list_RowHeaderMouseClick);
             // 
             // splitContainer7
@@ -746,6 +760,8 @@
             this.Controls.Add(this.pbClose);
             this.Controls.Add(this.splitContainer1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "Faturalar";
             this.Resizable = false;
             this.ShadowType = MetroFramework.Forms.MetroFormShadowType.None;
@@ -786,6 +802,7 @@
             this.splitContainer9.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer9)).EndInit();
             this.splitContainer9.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pb_loading)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgw_ftr_list)).EndInit();
             this.splitContainer7.Panel1.ResumeLayout(false);
             this.splitContainer7.Panel2.ResumeLayout(false);
@@ -845,5 +862,6 @@
         private MetroFramework.Controls.MetroLabel metroLabel7;
         private MetroFramework.Controls.MetroLabel lbl_gnl;
         private MetroFramework.Controls.MetroLabel metroLabel8;
+        private System.Windows.Forms.PictureBox pb_loading;
     }
 }

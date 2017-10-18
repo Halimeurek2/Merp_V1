@@ -177,6 +177,7 @@
             this.dg_aktif.UseCustomBackColor = true;
             this.dg_aktif.UseCustomForeColor = true;
             this.dg_aktif.UseStyleColors = true;
+            this.dg_aktif.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dg_aktif_CellClick);
             this.dg_aktif.RowHeaderMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dg_aktif_RowHeaderMouseClick);
             // 
             // groupBox2
@@ -238,6 +239,7 @@
             this.dg_pasif.UseCustomBackColor = true;
             this.dg_pasif.UseCustomForeColor = true;
             this.dg_pasif.UseStyleColors = true;
+            this.dg_pasif.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dg_pasif_CellClick);
             this.dg_pasif.RowHeaderMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dg_pasif_RowHeaderMouseClick);
             // 
             // splitContainer3
@@ -317,6 +319,7 @@
             this.dg_bekleme.UseCustomBackColor = true;
             this.dg_bekleme.UseCustomForeColor = true;
             this.dg_bekleme.UseStyleColors = true;
+            this.dg_bekleme.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dg_bekleme_CellClick);
             this.dg_bekleme.RowHeaderMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dg_bekleme_RowHeaderMouseClick);
             // 
             // splitContainer4
@@ -334,7 +337,7 @@
             // 
             this.splitContainer4.Panel2.Controls.Add(this.btn_prj_sil);
             this.splitContainer4.Size = new System.Drawing.Size(1338, 240);
-            this.splitContainer4.SplitterDistance = 197;
+            this.splitContainer4.SplitterDistance = 196;
             this.splitContainer4.TabIndex = 0;
             // 
             // groupBox4
@@ -344,7 +347,7 @@
             this.groupBox4.ForeColor = System.Drawing.Color.Blue;
             this.groupBox4.Location = new System.Drawing.Point(0, 0);
             this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(1338, 197);
+            this.groupBox4.Size = new System.Drawing.Size(1338, 196);
             this.groupBox4.TabIndex = 1;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "BİTEN İŞLER";
@@ -390,12 +393,13 @@
             this.dg_biten.RowHeadersDefaultCellStyle = dataGridViewCellStyle12;
             this.dg_biten.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.dg_biten.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dg_biten.Size = new System.Drawing.Size(1332, 178);
+            this.dg_biten.Size = new System.Drawing.Size(1332, 177);
             this.dg_biten.Style = MetroFramework.MetroColorStyle.Silver;
             this.dg_biten.TabIndex = 1;
             this.dg_biten.UseCustomBackColor = true;
             this.dg_biten.UseCustomForeColor = true;
             this.dg_biten.UseStyleColors = true;
+            this.dg_biten.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dg_biten_CellClick);
             this.dg_biten.RowHeaderMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dg_biten_RowHeaderMouseClick);
             // 
             // btn_prj_sil
@@ -404,7 +408,7 @@
             this.btn_prj_sil.Highlight = true;
             this.btn_prj_sil.Location = new System.Drawing.Point(1218, 0);
             this.btn_prj_sil.Name = "btn_prj_sil";
-            this.btn_prj_sil.Size = new System.Drawing.Size(120, 39);
+            this.btn_prj_sil.Size = new System.Drawing.Size(120, 40);
             this.btn_prj_sil.Style = MetroFramework.MetroColorStyle.Red;
             this.btn_prj_sil.TabIndex = 111;
             this.btn_prj_sil.Text = "SİL";
@@ -437,6 +441,8 @@
             this.Controls.Add(this.pbClose);
             this.Controls.Add(this.splitContainer1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "DigerIsler";
             this.Resizable = false;
             this.ShadowType = MetroFramework.Forms.MetroFormShadowType.None;

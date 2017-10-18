@@ -51,6 +51,8 @@ namespace MERP_MUI
 
         private void Faturalar_Load(object sender, EventArgs e)
         {
+            pb_loading.Visible = true;
+
             server = "localhost";
             database = "uretimplanlama_2";
             uid = "root";
@@ -107,34 +109,40 @@ namespace MERP_MUI
             myConnection.Close();
 
             SumDGW();
+
+            pb_loading.Visible = false;
         }
 
         private void btn_ftr_duzenle_Click(object sender, EventArgs e)
         {
-            FaturaDuzenle obj = new FaturaDuzenle();
-            obj.lbl_id.Text = id;
-            obj.txt_fatura_no.Text = fatura_no;
-            obj.cmb_projeNo.Text = proje_no;
-            obj.cmb_firma.Text = firma;
-            obj.txt_ftr_vade.Text = vade;
-            obj.rcb_acıklama.Text = acıklama;
-            obj.date_alarm.Value = vade_tarih;
-            obj.txt_ftr_tarih.Text = fatura_tarih;
-            obj.ck_alarm.Checked = Convert.ToBoolean(check);
-            obj.txt_ftr_tutar.Text = tutar;
-            obj.cmb_birim.Text = birim;
-            obj.txt_avans.Text = avans;
-            obj.lbl_tip.Text = tip;
-            obj.cmb_ftr_tip.Text = cins;
-            if (durum == "ÖDENDİ")
+            try
             {
-                obj.cb_durum.Checked = true;
+                FaturaDuzenle obj = new FaturaDuzenle();
+                obj.lbl_id.Text = id;
+                obj.txt_fatura_no.Text = fatura_no;
+                obj.cmb_projeNo.Text = proje_no;
+                obj.cmb_firma.Text = firma;
+                obj.txt_ftr_vade.Text = vade;
+                obj.rcb_acıklama.Text = acıklama;
+                obj.date_alarm.Value = vade_tarih;
+                obj.txt_ftr_tarih.Text = fatura_tarih;
+                obj.ck_alarm.Checked = Convert.ToBoolean(check);
+                obj.txt_ftr_tutar.Text = tutar;
+                obj.cmb_birim.Text = birim;
+                obj.txt_avans.Text = avans;
+                obj.lbl_tip.Text = tip;
+                obj.cmb_ftr_tip.Text = cins;
+                if (durum == "ODENDI")
+                {
+                    obj.cb_durum.Checked = true;
+                }
+                else
+                {
+                    obj.cb_durum.Checked = false;
+                }
+                obj.Show();
             }
-            else
-            {
-                obj.cb_durum.Checked = false;
-            }
-            obj.Show();
+            catch { }
         }
 
         private void btn_ftr_sil_Click(object sender, EventArgs e)
@@ -185,23 +193,27 @@ namespace MERP_MUI
 
         private void dgw_ftr_list_RowHeaderMouseClick(object sender, DataGridViewCellMouseEventArgs e)
         {
-            FaturaDuzenle obj = new FaturaDuzenle();
+            try
+            {
+                FaturaDuzenle obj = new FaturaDuzenle();
 
-            id = dgw_ftr_list.Rows[e.RowIndex].Cells[0].Value.ToString();
-            fatura_no = dgw_ftr_list.Rows[e.RowIndex].Cells[1].Value.ToString();
-            proje_no = dgw_ftr_list.Rows[e.RowIndex].Cells[2].Value.ToString();
-            firma = dgw_ftr_list.Rows[e.RowIndex].Cells[3].Value.ToString();
-            vade = dgw_ftr_list.Rows[e.RowIndex].Cells[4].Value.ToString();
-            acıklama = dgw_ftr_list.Rows[e.RowIndex].Cells[6].Value.ToString();
-            vade_tarih = Convert.ToDateTime(dgw_ftr_list.Rows[e.RowIndex].Cells[5].Value.ToString());
-            fatura_tarih = dgw_ftr_list.Rows[e.RowIndex].Cells[7].Value.ToString();
-            check = Convert.ToInt32(dgw_ftr_list.Rows[e.RowIndex].Cells[8].Value);
-            tutar = dgw_ftr_list.Rows[e.RowIndex].Cells[9].Value.ToString();
-            birim = dgw_ftr_list.Rows[e.RowIndex].Cells[10].Value.ToString();
-            avans = dgw_ftr_list.Rows[e.RowIndex].Cells[11].Value.ToString();
-            tip = dgw_ftr_list.Rows[e.RowIndex].Cells[13].Value.ToString();
-            cins = dgw_ftr_list.Rows[e.RowIndex].Cells[14].Value.ToString();
-            durum = dgw_ftr_list.Rows[e.RowIndex].Cells[15].Value.ToString();
+                id = dgw_ftr_list.Rows[e.RowIndex].Cells[0].Value.ToString();
+                fatura_no = dgw_ftr_list.Rows[e.RowIndex].Cells[1].Value.ToString();
+                proje_no = dgw_ftr_list.Rows[e.RowIndex].Cells[2].Value.ToString();
+                firma = dgw_ftr_list.Rows[e.RowIndex].Cells[3].Value.ToString();
+                vade = dgw_ftr_list.Rows[e.RowIndex].Cells[4].Value.ToString();
+                acıklama = dgw_ftr_list.Rows[e.RowIndex].Cells[6].Value.ToString();
+                vade_tarih = Convert.ToDateTime(dgw_ftr_list.Rows[e.RowIndex].Cells[5].Value.ToString());
+                fatura_tarih = dgw_ftr_list.Rows[e.RowIndex].Cells[7].Value.ToString();
+                check = Convert.ToInt32(dgw_ftr_list.Rows[e.RowIndex].Cells[8].Value);
+                tutar = dgw_ftr_list.Rows[e.RowIndex].Cells[9].Value.ToString();
+                birim = dgw_ftr_list.Rows[e.RowIndex].Cells[10].Value.ToString();
+                avans = dgw_ftr_list.Rows[e.RowIndex].Cells[11].Value.ToString();
+                tip = dgw_ftr_list.Rows[e.RowIndex].Cells[13].Value.ToString();
+                cins = dgw_ftr_list.Rows[e.RowIndex].Cells[14].Value.ToString();
+                durum = dgw_ftr_list.Rows[e.RowIndex].Cells[15].Value.ToString();
+            }
+            catch { }
         }
 
         private void txt_ftr_no_TextChanged(object sender, EventArgs e)
@@ -353,6 +365,31 @@ namespace MERP_MUI
             myConnection.Close();
 
             SumDGW();
+        }
+
+        private void dgw_ftr_list_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            try
+            {
+                FaturaDuzenle obj = new FaturaDuzenle();
+
+                id = dgw_ftr_list.Rows[e.RowIndex].Cells[0].Value.ToString();
+                fatura_no = dgw_ftr_list.Rows[e.RowIndex].Cells[1].Value.ToString();
+                proje_no = dgw_ftr_list.Rows[e.RowIndex].Cells[2].Value.ToString();
+                firma = dgw_ftr_list.Rows[e.RowIndex].Cells[3].Value.ToString();
+                vade = dgw_ftr_list.Rows[e.RowIndex].Cells[4].Value.ToString();
+                acıklama = dgw_ftr_list.Rows[e.RowIndex].Cells[6].Value.ToString();
+                vade_tarih = Convert.ToDateTime(dgw_ftr_list.Rows[e.RowIndex].Cells[5].Value.ToString());
+                fatura_tarih = dgw_ftr_list.Rows[e.RowIndex].Cells[7].Value.ToString();
+                check = Convert.ToInt32(dgw_ftr_list.Rows[e.RowIndex].Cells[8].Value);
+                tutar = dgw_ftr_list.Rows[e.RowIndex].Cells[9].Value.ToString();
+                birim = dgw_ftr_list.Rows[e.RowIndex].Cells[10].Value.ToString();
+                avans = dgw_ftr_list.Rows[e.RowIndex].Cells[11].Value.ToString();
+                tip = dgw_ftr_list.Rows[e.RowIndex].Cells[13].Value.ToString();
+                cins = dgw_ftr_list.Rows[e.RowIndex].Cells[14].Value.ToString();
+                durum = dgw_ftr_list.Rows[e.RowIndex].Cells[15].Value.ToString();
+            }
+            catch { }
         }
     }
 }

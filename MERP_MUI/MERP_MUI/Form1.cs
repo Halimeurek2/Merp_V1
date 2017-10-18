@@ -5,9 +5,11 @@ using System.Globalization;
 using System.IO;
 using System.Net;
 using System.Net.Mail;
-using System.Runtime.InteropServices;
 using System.Windows.Forms;
 using Excel = Microsoft.Office.Interop.Excel;
+using System.Xml;
+using System.Xml.Linq;
+using System.Linq;
 
 namespace MERP_MUI
 {
@@ -74,10 +76,21 @@ namespace MERP_MUI
         public MainForm()
         {
             InitializeComponent();
+            var pos = this.PointToScreen(lbl_derece.Location);
+            pos = pictureBox4.PointToClient(pos);
+            lbl_derece.Parent = pictureBox4;
+            lbl_derece.Location = pos;
+            lbl_derece.BackColor = System.Drawing.Color.Transparent;
+            lbl_durum.Parent = pictureBox4;
+            lbl_yer.Parent = pictureBox4;
         }
+
+
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            pb_loading.Visible = true;
+
             giris_tarihi = DateTime.Now;
             lbl_kullanici.Text = Properties.Settings.Default.UserName;
 
@@ -108,6 +121,8 @@ namespace MERP_MUI
                 lbl_gbp.Text = "Connection Fail!";
             }
 
+           
+
             komut = "SELECT * FROM db_aktivite WHERE akt_oncelik='" + Convert.ToString("COK ACİL") + "' AND akt_statu='" + Convert.ToString("AKTİF") + "'";
             myCommand = new MySqlCommand(komut, myConnection);
             da = new MySqlDataAdapter(myCommand);
@@ -137,6 +152,9 @@ namespace MERP_MUI
 
             Mail();
             maliyet_hesapla();
+            GetWeather("ISTANBUL");
+         
+            pb_loading.Visible = false;
         }
 
         public void Mail()
@@ -307,6 +325,7 @@ namespace MERP_MUI
             if (btn1_Flag == 0)
             {
                 maliyet_hesapla();
+                splitContainer12.Visible = false;
                 pnlDGW.Dock = DockStyle.Fill;
                 pnlDGW.Visible = true;
 
@@ -315,6 +334,7 @@ namespace MERP_MUI
             else
             {
                 pnlDGW.Visible = false;
+                splitContainer12.Visible = true;
                 btn1_Flag = 0;
             }
 
@@ -589,12 +609,14 @@ namespace MERP_MUI
         {
             if(btn2_Flag==0)
             {
+                splitContainer12.Visible = false;
                 pnlAcil.Dock = DockStyle.Fill;
                 pnlAcil.Visible = true;
                 btn2_Flag = 1;
             }
             else
             {
+                splitContainer12.Visible = true;
                 pnlAcil.Visible = false;
                 btn2_Flag = 0;
             }
@@ -614,12 +636,14 @@ namespace MERP_MUI
         {
             if (btn3_Flag == 0)
             {
+                splitContainer12.Visible = false;
                 pnlFilter.Dock = DockStyle.Fill;
                 pnlFilter.Visible = true;
                 btn3_Flag = 1;
             }
             else
             {
+                splitContainer12.Visible = true;
                 pnlFilter.Visible = false;
                 btn3_Flag = 0;
             }
@@ -755,6 +779,51 @@ namespace MERP_MUI
             db.InsertKullanicilar(kullanici_id, giris_tarihi, DateTime.Now, Properties.Settings.Default.Check);
 
             this.Close();
+        }
+
+        public void GetWeather(string sehir)
+        {
+            const string api = "bafa10c3a0987fafa61257b03821b835";
+            string baglanti = "http://api.openweathermap.org/data/2.5/weather?q=Turkey," + sehir + "&mode=xml&units=metric&APPID=" + api;
+
+            XDocument hava = XDocument.Load(baglanti);
+            var sicaklik = hava.Descendants("temperature").ElementAt(0).Attribute("value").Value;
+
+            lbl_derece.Text = sicaklik.ToString()+ "°";
+
+            var durum = hava.Descendants("clouds").ElementAt(0).Attribute("name").Value;
+            lbl_durum.Text = durum.ToString();
+
+            if(durum.Contains("clear sky") == true)
+            {
+                pictureBox4.Image = Properties.Resources.clear_sky;
+            }
+            else if(durum.Contains("few clouds") == true)
+            {
+                pictureBox4.Image = Properties.Resources.few_clouds;
+            }
+            else if(durum.Contains("broken clouds") == true || durum.Contains("scattered clouds") == true)
+            {
+                pictureBox4.Image = Properties.Resources.broken_clouds;
+            }
+            else if(durum.Contains("shower rain") == true || durum.Contains("rain") == true || durum.Contains("thunderstorm") == true)
+            {
+                pictureBox4.Image = Properties.Resources.rain;
+            }
+            else
+            {
+                pictureBox4.Image = Properties.Resources.snow;
+            }
+
+
+            //var yer = hava.Descendants("city").ElementAt(0).Attribute("name").Value;
+            //lbl_yer.Text = yer.ToString();
+            lbl_yer.Text = sehir;
+        }
+
+        private void cmb_sehir_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            GetWeather(cmb_sehir.Text);
         }
     }
 }

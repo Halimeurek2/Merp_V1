@@ -77,27 +77,31 @@ namespace MERP_MUI
 
         private void dg_acil_RowHeaderMouseClick(object sender, DataGridViewCellMouseEventArgs e)
         {
-            AktiviteDuzenle ag = new AktiviteDuzenle();
-            ag.Show();
+            try
+            {
+                AktiviteDuzenle ag = new AktiviteDuzenle();
+                ag.Show();
 
-            akt_id = Convert.ToInt32(dg_acil.Rows[e.RowIndex].Cells[0].Value.ToString());
-            AktiviteDuzenle f1 = (AktiviteDuzenle)Application.OpenForms["AktiviteDuzenle"];
-            ComboBox no = (ComboBox)f1.Controls["cmb_prj_no"];
-            ComboBox oncelik = (ComboBox)f1.Controls["cmb_oncelik"];
-            ComboBox statu = (ComboBox)f1.Controls["cmb_statu"];
-            RichTextBox acıklama = (RichTextBox)f1.Controls["rcb_acıklama"];
-            ComboBox rapor = (ComboBox)f1.Controls["cmb_rapor_edilecek"];
-            DateTimePicker olusturma = (DateTimePicker)f1.Controls["date_olusturma"];
-            DateTimePicker bitis = (DateTimePicker)f1.Controls["date_bitis"];
-            Label id = (Label)f1.Controls["lbl_id"];
-            id.Text = dg_acil.Rows[e.RowIndex].Cells[0].Value.ToString();
-            no.Text = dg_acil.Rows[e.RowIndex].Cells[1].Value.ToString();
-            oncelik.Text = dg_acil.Rows[e.RowIndex].Cells[2].Value.ToString();
-            statu.Text = dg_acil.Rows[e.RowIndex].Cells[3].Value.ToString();
-            acıklama.Text = dg_acil.Rows[e.RowIndex].Cells[4].Value.ToString();
-            rapor.Text = dg_acil.Rows[e.RowIndex].Cells[5].Value.ToString();
-            olusturma.Text = dg_acil.Rows[e.RowIndex].Cells[6].Value.ToString();
-            bitis.Text = dg_acil.Rows[e.RowIndex].Cells[7].Value.ToString();
+                akt_id = Convert.ToInt32(dg_acil.Rows[e.RowIndex].Cells[0].Value.ToString());
+                AktiviteDuzenle f1 = (AktiviteDuzenle)Application.OpenForms["AktiviteDuzenle"];
+                ComboBox no = (ComboBox)f1.Controls["cmb_prj_no"];
+                ComboBox oncelik = (ComboBox)f1.Controls["cmb_oncelik"];
+                ComboBox statu = (ComboBox)f1.Controls["cmb_statu"];
+                RichTextBox acıklama = (RichTextBox)f1.Controls["rcb_acıklama"];
+                ComboBox rapor = (ComboBox)f1.Controls["cmb_rapor_edilecek"];
+                DateTimePicker olusturma = (DateTimePicker)f1.Controls["date_olusturma"];
+                DateTimePicker bitis = (DateTimePicker)f1.Controls["date_bitis"];
+                Label id = (Label)f1.Controls["lbl_id"];
+                id.Text = dg_acil.Rows[e.RowIndex].Cells[0].Value.ToString();
+                no.Text = dg_acil.Rows[e.RowIndex].Cells[1].Value.ToString();
+                oncelik.Text = dg_acil.Rows[e.RowIndex].Cells[2].Value.ToString();
+                statu.Text = dg_acil.Rows[e.RowIndex].Cells[3].Value.ToString();
+                acıklama.Text = dg_acil.Rows[e.RowIndex].Cells[4].Value.ToString();
+                rapor.Text = dg_acil.Rows[e.RowIndex].Cells[5].Value.ToString();
+                olusturma.Text = dg_acil.Rows[e.RowIndex].Cells[6].Value.ToString();
+                bitis.Text = dg_acil.Rows[e.RowIndex].Cells[7].Value.ToString();
+            }
+            catch { }
         }
 
         private void btn_sil_Click(object sender, EventArgs e)
@@ -192,27 +196,89 @@ namespace MERP_MUI
 
         private void dg_normal_RowHeaderMouseClick(object sender, DataGridViewCellMouseEventArgs e)
         {
-            AktiviteDuzenle ag = new AktiviteDuzenle();
-            ag.Show();
+            try
+            {
+                AktiviteDuzenle ag = new AktiviteDuzenle();
+                ag.Show();
 
-            akt_id = Convert.ToInt32(dg_normal.Rows[e.RowIndex].Cells[0].Value.ToString());
-            AktiviteDuzenle f1 = (AktiviteDuzenle)Application.OpenForms["AktiviteDuzenle"];
-            ComboBox no = (ComboBox)f1.Controls["cmb_prj_no"];
-            ComboBox oncelik = (ComboBox)f1.Controls["cmb_oncelik"];
-            ComboBox statu = (ComboBox)f1.Controls["cmb_statu"];
-            RichTextBox acıklama = (RichTextBox)f1.Controls["rcb_acıklama"];
-            ComboBox rapor = (ComboBox)f1.Controls["cmb_rapor_edilecek"];
-            DateTimePicker olusturma = (DateTimePicker)f1.Controls["date_olusturma"];
-            DateTimePicker bitis = (DateTimePicker)f1.Controls["date_bitis"];
-            Label id = (Label)f1.Controls["lbl_id"];
-            id.Text = dg_normal.Rows[e.RowIndex].Cells[0].Value.ToString();
-            no.Text = dg_normal.Rows[e.RowIndex].Cells[1].Value.ToString();
-            oncelik.Text = dg_normal.Rows[e.RowIndex].Cells[2].Value.ToString();
-            statu.Text = dg_normal.Rows[e.RowIndex].Cells[3].Value.ToString();
-            acıklama.Text = dg_normal.Rows[e.RowIndex].Cells[4].Value.ToString();
-            rapor.Text = dg_normal.Rows[e.RowIndex].Cells[5].Value.ToString();
-            olusturma.Text = dg_normal.Rows[e.RowIndex].Cells[6].Value.ToString();
-            bitis.Text = dg_normal.Rows[e.RowIndex].Cells[7].Value.ToString();
+                akt_id = Convert.ToInt32(dg_normal.Rows[e.RowIndex].Cells[0].Value.ToString());
+                AktiviteDuzenle f1 = (AktiviteDuzenle)Application.OpenForms["AktiviteDuzenle"];
+                ComboBox no = (ComboBox)f1.Controls["cmb_prj_no"];
+                ComboBox oncelik = (ComboBox)f1.Controls["cmb_oncelik"];
+                ComboBox statu = (ComboBox)f1.Controls["cmb_statu"];
+                RichTextBox acıklama = (RichTextBox)f1.Controls["rcb_acıklama"];
+                ComboBox rapor = (ComboBox)f1.Controls["cmb_rapor_edilecek"];
+                DateTimePicker olusturma = (DateTimePicker)f1.Controls["date_olusturma"];
+                DateTimePicker bitis = (DateTimePicker)f1.Controls["date_bitis"];
+                Label id = (Label)f1.Controls["lbl_id"];
+                id.Text = dg_normal.Rows[e.RowIndex].Cells[0].Value.ToString();
+                no.Text = dg_normal.Rows[e.RowIndex].Cells[1].Value.ToString();
+                oncelik.Text = dg_normal.Rows[e.RowIndex].Cells[2].Value.ToString();
+                statu.Text = dg_normal.Rows[e.RowIndex].Cells[3].Value.ToString();
+                acıklama.Text = dg_normal.Rows[e.RowIndex].Cells[4].Value.ToString();
+                rapor.Text = dg_normal.Rows[e.RowIndex].Cells[5].Value.ToString();
+                olusturma.Text = dg_normal.Rows[e.RowIndex].Cells[6].Value.ToString();
+                bitis.Text = dg_normal.Rows[e.RowIndex].Cells[7].Value.ToString();
+            }
+            catch { }
+        }
+
+        private void dg_acil_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            try
+            {
+                AktiviteDuzenle ag = new AktiviteDuzenle();
+                ag.Show();
+
+                akt_id = Convert.ToInt32(dg_acil.Rows[e.RowIndex].Cells[0].Value.ToString());
+                AktiviteDuzenle f1 = (AktiviteDuzenle)Application.OpenForms["AktiviteDuzenle"];
+                ComboBox no = (ComboBox)f1.Controls["cmb_prj_no"];
+                ComboBox oncelik = (ComboBox)f1.Controls["cmb_oncelik"];
+                ComboBox statu = (ComboBox)f1.Controls["cmb_statu"];
+                RichTextBox acıklama = (RichTextBox)f1.Controls["rcb_acıklama"];
+                ComboBox rapor = (ComboBox)f1.Controls["cmb_rapor_edilecek"];
+                DateTimePicker olusturma = (DateTimePicker)f1.Controls["date_olusturma"];
+                DateTimePicker bitis = (DateTimePicker)f1.Controls["date_bitis"];
+                Label id = (Label)f1.Controls["lbl_id"];
+                id.Text = dg_acil.Rows[e.RowIndex].Cells[0].Value.ToString();
+                no.Text = dg_acil.Rows[e.RowIndex].Cells[1].Value.ToString();
+                oncelik.Text = dg_acil.Rows[e.RowIndex].Cells[2].Value.ToString();
+                statu.Text = dg_acil.Rows[e.RowIndex].Cells[3].Value.ToString();
+                acıklama.Text = dg_acil.Rows[e.RowIndex].Cells[4].Value.ToString();
+                rapor.Text = dg_acil.Rows[e.RowIndex].Cells[5].Value.ToString();
+                olusturma.Text = dg_acil.Rows[e.RowIndex].Cells[6].Value.ToString();
+                bitis.Text = dg_acil.Rows[e.RowIndex].Cells[7].Value.ToString();
+            }
+            catch { }
+        }
+
+        private void dg_normal_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            try
+            {
+                AktiviteDuzenle ag = new AktiviteDuzenle();
+                ag.Show();
+
+                akt_id = Convert.ToInt32(dg_normal.Rows[e.RowIndex].Cells[0].Value.ToString());
+                AktiviteDuzenle f1 = (AktiviteDuzenle)Application.OpenForms["AktiviteDuzenle"];
+                ComboBox no = (ComboBox)f1.Controls["cmb_prj_no"];
+                ComboBox oncelik = (ComboBox)f1.Controls["cmb_oncelik"];
+                ComboBox statu = (ComboBox)f1.Controls["cmb_statu"];
+                RichTextBox acıklama = (RichTextBox)f1.Controls["rcb_acıklama"];
+                ComboBox rapor = (ComboBox)f1.Controls["cmb_rapor_edilecek"];
+                DateTimePicker olusturma = (DateTimePicker)f1.Controls["date_olusturma"];
+                DateTimePicker bitis = (DateTimePicker)f1.Controls["date_bitis"];
+                Label id = (Label)f1.Controls["lbl_id"];
+                id.Text = dg_normal.Rows[e.RowIndex].Cells[0].Value.ToString();
+                no.Text = dg_normal.Rows[e.RowIndex].Cells[1].Value.ToString();
+                oncelik.Text = dg_normal.Rows[e.RowIndex].Cells[2].Value.ToString();
+                statu.Text = dg_normal.Rows[e.RowIndex].Cells[3].Value.ToString();
+                acıklama.Text = dg_normal.Rows[e.RowIndex].Cells[4].Value.ToString();
+                rapor.Text = dg_normal.Rows[e.RowIndex].Cells[5].Value.ToString();
+                olusturma.Text = dg_normal.Rows[e.RowIndex].Cells[6].Value.ToString();
+                bitis.Text = dg_normal.Rows[e.RowIndex].Cells[7].Value.ToString();
+            }
+            catch { }
         }
     }
 }

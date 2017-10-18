@@ -925,6 +925,8 @@
             this.Controls.Add(this.txt_m_mlz);
             this.Controls.Add(this.cmb_toplam_brm);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "HarcamaOngorusu";
             this.Resizable = false;
             this.ShadowType = MetroFramework.Forms.MetroFormShadowType.AeroShadow;

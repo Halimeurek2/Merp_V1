@@ -341,6 +341,8 @@
             this.Controls.Add(this.txtPassword);
             this.Controls.Add(this.txtKullanıcıAdı);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "KullanıcıGirisi";
             this.Resizable = false;
             this.ShadowType = MetroFramework.Forms.MetroFormShadowType.None;

@@ -571,6 +571,8 @@
             this.Controls.Add(this.txt_proje_no);
             this.Controls.Add(this.cmb_birim);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "ProjeDuzenle";
             this.Resizable = false;
             this.ShadowType = MetroFramework.Forms.MetroFormShadowType.AeroShadow;

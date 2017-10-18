@@ -323,6 +323,7 @@
             this.dgw_prj_list.UseCustomBackColor = true;
             this.dgw_prj_list.UseCustomForeColor = true;
             this.dgw_prj_list.UseStyleColors = true;
+            this.dgw_prj_list.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgw_prj_list_CellClick);
             this.dgw_prj_list.RowHeaderMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgw_prj_list_RowHeaderMouseClick);
             // 
             // splitContainer5
@@ -432,6 +433,8 @@
             this.Controls.Add(this.pbClose);
             this.Controls.Add(this.splitContainer1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "Projeler";
             this.Resizable = false;
             this.ShadowType = MetroFramework.Forms.MetroFormShadowType.None;

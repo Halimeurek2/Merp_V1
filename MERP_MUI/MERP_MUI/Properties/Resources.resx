@@ -259,4 +259,49 @@
   <data name="loading" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\loading.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="if_weather_clear_118959" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\if_weather-clear_118959.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="if_weather_clear_118959__1_" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\if_weather-clear_118959 (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="if_weather_clear_night_118958" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\if_weather-clear-night_118958.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="if_weather_few_clouds_118961" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\if_weather-few-clouds_118961.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="if_weather_few_clouds_night_118960" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\if_weather-few-clouds-night_118960.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="if_weather_overcast_118962" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\if_weather-overcast_118962.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="if_weather_showers_118965" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\if_weather-showers_118965.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="if_weather_showers_scattered_118964" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\if_weather-showers-scattered_118964.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="if_weather_snow_118966" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\if_weather-snow_118966.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="if_weather_storm_118967" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\if_weather-storm_118967.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="clear_sky" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\5d498e5d8075f82c88108a24b465cb9c.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="broken_clouds" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\c6023f30971807.563b2b13a55cc.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="few_clouds" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\giphy (1).gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="rain" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\01d9bc30971807.563b2b13c384b.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="snow" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\c48be530971807.563b2b13efcae.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
 </root>

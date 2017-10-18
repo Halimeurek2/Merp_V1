@@ -502,6 +502,8 @@
             this.Controls.Add(this.cmb_paraBirimi);
             this.Controls.Add(this.cmb_prjno);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "SiparisEmriGiris";
             this.Resizable = false;
             this.ShadowType = MetroFramework.Forms.MetroFormShadowType.AeroShadow;

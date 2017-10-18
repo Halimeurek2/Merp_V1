@@ -214,6 +214,8 @@
             this.Controls.Add(this.lblLogin);
             this.Controls.Add(this.panel2);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "LoginScreen";
             this.Opacity = 0.7D;
             this.Resizable = false;

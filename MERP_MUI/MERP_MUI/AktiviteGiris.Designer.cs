@@ -308,6 +308,8 @@
             this.Controls.Add(this.cmb_oncelik);
             this.Controls.Add(this.cmb_prj_no);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "AktiviteGiris";
             this.Resizable = false;
             this.ShadowType = MetroFramework.Forms.MetroFormShadowType.AeroShadow;

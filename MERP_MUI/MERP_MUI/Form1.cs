@@ -1005,8 +1005,8 @@ namespace MERP_MUI
             myReader.Close();
 
            // MessageBox.Show(Convert.ToString(Convert.ToInt32(Convert.ToDouble(gelenFtr))));
-            mpb_butce.Value = Convert.ToInt32(((100) * (Convert.ToInt32(gelenFtr)) / (Convert.ToInt32(harcama_toplam))));
-            mpb_kesilenFtr.Value = Convert.ToInt32(((100 - 0) * (Convert.ToInt32(kesilenFtr) - 0) / (Convert.ToInt32(proje_butce) - 0)) + 0);
+            mpb_butce.Value = Convert.ToInt32(Math.Truncate(((100) * (Convert.ToDecimal(gelenFtr)) / (Convert.ToDecimal(harcama_toplam)))));
+            mpb_kesilenFtr.Value = Convert.ToInt32(Math.Truncate(((100 - 0) * (Convert.ToDecimal(kesilenFtr) - 0) / (Convert.ToDecimal(proje_butce) - 0)) + 0));
             myConnection.Close();
         }
     }

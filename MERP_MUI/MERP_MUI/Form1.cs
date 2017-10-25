@@ -90,6 +90,10 @@ namespace MERP_MUI
         string gelenFtr;
         string kesilenFtr;
 
+        int BarKesilenftr;
+        int BarZaman;
+        int BarButce;
+
         DBConnect db;
         SmtpClient sc;
 
@@ -926,8 +930,8 @@ namespace MERP_MUI
             string baglanti = "http://api.openweathermap.org/data/2.5/weather?q=Turkey," + sehir + "&mode=xml&units=metric&APPID=" + api;
 
             XDocument hava = XDocument.Load(baglanti);
-            var sicaklik = hava.Descendants("temperature").ElementAt(0).Attribute("value").Value;
-
+            var sicaklik = hava.Descendants("temperature").ElementAt(0).Attribute("value").Value.Replace(".",",");
+            sicaklik = Convert.ToString(Math.Truncate(Convert.ToDouble(sicaklik)));
             lbl_derece.Text = sicaklik.ToString()+ "°";
 
             var durum = hava.Descendants("clouds").ElementAt(0).Attribute("name").Value;
@@ -980,33 +984,103 @@ namespace MERP_MUI
                 proje_butce = myReader.GetString(2);
                 harcama_toplam = myReader.GetString(3);
                 var total = (end - start).TotalSeconds;
-                mpb_zaman.Value = Convert.ToInt32(Math.Truncate((DateTime.Now - start).TotalSeconds * 100 / total));
+                BarZaman = Convert.ToInt32(Math.Truncate((DateTime.Now - start).TotalSeconds * 100 / total));
+                if(BarZaman > 80 && BarZaman < 100)
+                {
+                    mpb_zaman.Style = MetroFramework.MetroColorStyle.Yellow;
+                    mpb_zaman.Value = BarZaman;
+                }
+                else if (BarZaman > 100)
+                {
+                    mpb_zaman.Style = MetroFramework.MetroColorStyle.Orange;
+                    mpb_zaman.Value = 100;
+                }
+               else
+                {
+                    mpb_zaman.Style = MetroFramework.MetroColorStyle.Red;
+                    mpb_zaman.Value = BarZaman;
+                }
             }
             myReader.Close();
 
-            komut = "SELECT sum(fatura_euro) FROM db_faturalar where fatura_tipi='G' and fatura_proje_no='"+cmb_Barprojeler.Text+"'";
-            da = new MySqlDataAdapter(komut, connection);
-            myCommand = new MySqlCommand(komut, myConnection);
-            myReader = myCommand.ExecuteReader();
-            while (myReader.Read())
+            try
             {
-                gelenFtr = myReader.GetString(0);
+                komut = "SELECT sum(fatura_euro) FROM db_faturalar where fatura_tipi='G' and fatura_proje_no='" + cmb_Barprojeler.Text + "'";
+                da = new MySqlDataAdapter(komut, connection);
+                myCommand = new MySqlCommand(komut, myConnection);
+                myReader = myCommand.ExecuteReader();
+                while (myReader.Read())
+                {
+                    gelenFtr = myReader.GetString(0);
+                }
+                myReader.Close();
             }
-            myReader.Close();
-
-            komut = "SELECT sum(fatura_euro) FROM db_faturalar where fatura_tipi='K' and fatura_proje_no='" + cmb_Barprojeler.Text + "'";
-            da = new MySqlDataAdapter(komut, connection);
-            myCommand = new MySqlCommand(komut, myConnection);
-            myReader = myCommand.ExecuteReader();
-            while (myReader.Read())
+            catch
             {
-                kesilenFtr = myReader.GetString(0);
+                gelenFtr = "0";
+                myReader.Close();
             }
-            myReader.Close();
+            try
+            {
+                komut = "SELECT sum(fatura_euro) FROM db_faturalar where fatura_tipi='K' and fatura_proje_no='" + cmb_Barprojeler.Text + "'";
+                da = new MySqlDataAdapter(komut, connection);
+                myCommand = new MySqlCommand(komut, myConnection);
+                myReader = myCommand.ExecuteReader();
+                while (myReader.Read())
+                {
+                    kesilenFtr = myReader.GetString(0);
+                }
+                myReader.Close();
+            }
+            catch
+            {
+                kesilenFtr = "0";
+                myReader.Close();
+            }
 
-           // MessageBox.Show(Convert.ToString(Convert.ToInt32(Convert.ToDouble(gelenFtr))));
-            mpb_butce.Value = Convert.ToInt32(Math.Truncate(((100) * (Convert.ToDecimal(gelenFtr)) / (Convert.ToDecimal(harcama_toplam)))));
-            mpb_kesilenFtr.Value = Convert.ToInt32(Math.Truncate(((100 - 0) * (Convert.ToDecimal(kesilenFtr) - 0) / (Convert.ToDecimal(proje_butce) - 0)) + 0));
+            try
+            {
+                BarButce = Convert.ToInt32(Math.Truncate(((100) * (Convert.ToDecimal(gelenFtr)) / (Convert.ToDecimal(harcama_toplam)))));
+                if(BarButce > 80 && BarButce < 100)
+                {
+                    mpb_butce.Style = MetroFramework.MetroColorStyle.Yellow;
+                    mpb_butce.Value = BarButce;
+                }
+                else if (BarButce > 100)
+                {
+                    mpb_butce.Style = MetroFramework.MetroColorStyle.Orange;
+                    mpb_butce.Value = 100;
+                }
+                else
+                {
+                    mpb_butce.Style = MetroFramework.MetroColorStyle.Red;
+                    mpb_butce.Value = BarZaman;
+                }
+            }
+            catch { mpb_butce.Value = 0; }
+
+            try
+            {
+                BarKesilenftr = Convert.ToInt32(Math.Truncate(((100 - 0) * (Convert.ToDecimal(kesilenFtr) - 0) / (Convert.ToDecimal(proje_butce) - 0)) + 0));
+                if(BarKesilenftr > 80 && BarKesilenftr < 100)
+                {
+                    mpb_kesilenFtr.Style = MetroFramework.MetroColorStyle.Yellow;
+                    mpb_kesilenFtr.Value = BarKesilenftr;
+                }
+                else if(BarKesilenftr>100)
+                {
+                    mpb_kesilenFtr.Style = MetroFramework.MetroColorStyle.Orange;
+                    mpb_kesilenFtr.Value = 100;
+                }
+                else
+                {
+                    mpb_kesilenFtr.Style = MetroFramework.MetroColorStyle.Red;
+                    mpb_kesilenFtr.Value = BarZaman;
+                }
+            }
+            catch { mpb_kesilenFtr.Value = 0; }
+            //MessageBox.Show(Convert.ToString(Convert.ToInt32(Math.Truncate(((100 - 0) * (Convert.ToDecimal(kesilenFtr) - 0) / (Convert.ToDecimal(proje_butce) - 0)) + 0))));
+            
             myConnection.Close();
         }
     }

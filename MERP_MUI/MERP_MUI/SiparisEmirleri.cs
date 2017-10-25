@@ -36,6 +36,7 @@ namespace MERP_MUI
         string fiyat_birim;
         string aciklama;
         string fiyat;
+        string siparis_tipi;
 
         string id;
 
@@ -47,7 +48,7 @@ namespace MERP_MUI
         private void SiparisEmirleri_Load(object sender, EventArgs e)
         {
             server = "localhost";
-            database = "uretimplanlama_2";
+            database = "merp_dbv1";
             uid = "root";
             password = "root";
             //string connectionString;
@@ -163,6 +164,7 @@ namespace MERP_MUI
                 fiyat = dgw_stf_list.Rows[e.RowIndex].Cells[8].Value.ToString();
                 fiyat_birim = dgw_stf_list.Rows[e.RowIndex].Cells[9].Value.ToString();
                 aciklama = dgw_stf_list.Rows[e.RowIndex].Cells[11].Value.ToString();
+                siparis_tipi= dgw_stf_list.Rows[e.RowIndex].Cells[12].Value.ToString();
             }
             catch { }
         }
@@ -177,12 +179,20 @@ namespace MERP_MUI
                 obj.txt_siparisNo.Text = satinalma_no;
                 obj.cmb_tedarikci.Text = tedarikci;
                 obj.txt_talepKisi.Text = olusturan;
-                obj.date_teslim.Text = Convert.ToString(siparis_tarihi);
+                obj.date_teslim.Value = siparis_tarihi;
                 obj.txt_vade.Text = vade;
                 obj.date_temin.Value = temin_tarihi;
                 obj.txt_mlz_brmFiyat.Text = fiyat;
                 obj.cmb_paraBirimi.Text = fiyat_birim;
                 obj.rcb_aciklama.Text = aciklama;
+                if(siparis_tipi=="Gelen")
+                {
+                    obj.rb_gelen.Checked = true;
+                }
+                else if(siparis_tipi=="Verilen")
+                {
+                    obj.rb_verilen.Checked = true;
+                }
                 obj.Show();
             }
             catch { }
@@ -319,6 +329,7 @@ namespace MERP_MUI
                 fiyat = dgw_stf_list.Rows[e.RowIndex].Cells[8].Value.ToString();
                 fiyat_birim = dgw_stf_list.Rows[e.RowIndex].Cells[9].Value.ToString();
                 aciklama = dgw_stf_list.Rows[e.RowIndex].Cells[11].Value.ToString();
+                siparis_tipi = dgw_stf_list.Rows[e.RowIndex].Cells[12].Value.ToString();
             }
             catch { }
         }

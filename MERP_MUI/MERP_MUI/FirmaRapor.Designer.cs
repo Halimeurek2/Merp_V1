@@ -63,6 +63,7 @@
             this.pbClose = new System.Windows.Forms.PictureBox();
             this.lbl_prjNo = new MetroFramework.Controls.MetroLabel();
             this.metroLabel6 = new MetroFramework.Controls.MetroLabel();
+            this.cmb_search = new System.Windows.Forms.ComboBox();
             this.metroTabControl1.SuspendLayout();
             this.metroTabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgw_elektronik)).BeginInit();
@@ -83,10 +84,10 @@
             this.metroTabControl1.FontWeight = MetroFramework.MetroTabControlWeight.Regular;
             this.metroTabControl1.Location = new System.Drawing.Point(20, 60);
             this.metroTabControl1.Name = "metroTabControl1";
-            this.metroTabControl1.SelectedIndex = 2;
+            this.metroTabControl1.SelectedIndex = 0;
             this.metroTabControl1.Size = new System.Drawing.Size(1338, 700);
             this.metroTabControl1.Style = MetroFramework.MetroColorStyle.Red;
-            this.metroTabControl1.TabIndex = 6;
+            this.metroTabControl1.TabIndex = 8;
             this.metroTabControl1.TabStop = false;
             this.metroTabControl1.Theme = MetroFramework.MetroThemeStyle.Dark;
             this.metroTabControl1.UseCustomBackColor = true;
@@ -102,7 +103,7 @@
             this.metroTabPage1.HorizontalScrollbarSize = 10;
             this.metroTabPage1.Location = new System.Drawing.Point(4, 41);
             this.metroTabPage1.Name = "metroTabPage1";
-            this.metroTabPage1.Size = new System.Drawing.Size(1862, 935);
+            this.metroTabPage1.Size = new System.Drawing.Size(1330, 655);
             this.metroTabPage1.TabIndex = 0;
             this.metroTabPage1.Text = "ELEKTRONİK";
             this.metroTabPage1.VerticalScrollbarBarColor = true;
@@ -143,7 +144,7 @@
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dgw_elektronik.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.dgw_elektronik.RowHeadersVisible = false;
-            this.dgw_elektronik.Size = new System.Drawing.Size(1862, 935);
+            this.dgw_elektronik.Size = new System.Drawing.Size(1330, 655);
             this.dgw_elektronik.TabIndex = 3;
             // 
             // dataGridViewTextBoxColumn6
@@ -186,7 +187,7 @@
             this.metroTabPage2.HorizontalScrollbarSize = 10;
             this.metroTabPage2.Location = new System.Drawing.Point(4, 41);
             this.metroTabPage2.Name = "metroTabPage2";
-            this.metroTabPage2.Size = new System.Drawing.Size(1862, 935);
+            this.metroTabPage2.Size = new System.Drawing.Size(1330, 655);
             this.metroTabPage2.TabIndex = 1;
             this.metroTabPage2.Text = "MEKANİK";
             this.metroTabPage2.VerticalScrollbarBarColor = true;
@@ -227,7 +228,7 @@
             dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dgw_mekanik.RowHeadersDefaultCellStyle = dataGridViewCellStyle6;
             this.dgw_mekanik.RowHeadersVisible = false;
-            this.dgw_mekanik.Size = new System.Drawing.Size(1862, 935);
+            this.dgw_mekanik.Size = new System.Drawing.Size(1330, 655);
             this.dgw_mekanik.TabIndex = 2;
             // 
             // firmaismi
@@ -397,12 +398,24 @@
             this.metroLabel6.UseCustomForeColor = true;
             this.metroLabel6.UseStyleColors = true;
             // 
+            // cmb_search
+            // 
+            this.cmb_search.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.cmb_search.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.cmb_search.FormattingEnabled = true;
+            this.cmb_search.Location = new System.Drawing.Point(1169, 35);
+            this.cmb_search.Name = "cmb_search";
+            this.cmb_search.Size = new System.Drawing.Size(121, 21);
+            this.cmb_search.TabIndex = 114;
+            this.cmb_search.SelectedIndexChanged += new System.EventHandler(this.cmb_search_SelectedIndexChanged);
+            // 
             // FirmaRapor
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1378, 780);
             this.ControlBox = false;
+            this.Controls.Add(this.cmb_search);
             this.Controls.Add(this.lbl_prjNo);
             this.Controls.Add(this.metroLabel6);
             this.Controls.Add(this.pbClose);
@@ -456,5 +469,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
+        private System.Windows.Forms.ComboBox cmb_search;
     }
 }

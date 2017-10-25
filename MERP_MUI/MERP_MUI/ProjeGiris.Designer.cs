@@ -406,6 +406,7 @@
             this.lbl_harcamalar.UseCustomBackColor = true;
             this.lbl_harcamalar.UseCustomForeColor = true;
             this.lbl_harcamalar.UseStyleColors = true;
+            this.lbl_harcamalar.Visible = false;
             // 
             // lbl_birim
             // 
@@ -421,6 +422,7 @@
             this.lbl_birim.UseCustomBackColor = true;
             this.lbl_birim.UseCustomForeColor = true;
             this.lbl_birim.UseStyleColors = true;
+            this.lbl_birim.Visible = false;
             // 
             // metroLabel11
             // 

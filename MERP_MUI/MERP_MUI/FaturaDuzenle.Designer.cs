@@ -58,6 +58,7 @@
             this.lbl_tip = new MetroFramework.Controls.MetroLabel();
             this.cmb_firma = new System.Windows.Forms.ComboBox();
             this.cmb_projeNo = new System.Windows.Forms.ComboBox();
+            this.cmb_se = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.pbClose)).BeginInit();
             this.SuspendLayout();
             // 
@@ -139,6 +140,7 @@
             this.ck_kesilen.UseCustomForeColor = true;
             this.ck_kesilen.UseSelectable = true;
             this.ck_kesilen.UseStyleColors = true;
+            this.ck_kesilen.CheckedChanged += new System.EventHandler(this.ck_kesilen_CheckedChanged);
             // 
             // ck_gelen
             // 
@@ -595,12 +597,22 @@
             this.cmb_projeNo.Size = new System.Drawing.Size(156, 21);
             this.cmb_projeNo.TabIndex = 130;
             // 
+            // cmb_se
+            // 
+            this.cmb_se.FormattingEnabled = true;
+            this.cmb_se.Location = new System.Drawing.Point(259, 109);
+            this.cmb_se.Name = "cmb_se";
+            this.cmb_se.Size = new System.Drawing.Size(121, 21);
+            this.cmb_se.TabIndex = 131;
+            this.cmb_se.Visible = false;
+            // 
             // FaturaDuzenle
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(671, 510);
             this.ControlBox = false;
+            this.Controls.Add(this.cmb_se);
             this.Controls.Add(this.cmb_projeNo);
             this.Controls.Add(this.cmb_firma);
             this.Controls.Add(this.lbl_tip);
@@ -676,5 +688,6 @@
         public MetroFramework.Controls.MetroLabel lbl_tip;
         public System.Windows.Forms.ComboBox cmb_firma;
         public System.Windows.Forms.ComboBox cmb_projeNo;
+        public System.Windows.Forms.ComboBox cmb_se;
     }
 }

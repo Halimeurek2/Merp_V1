@@ -57,6 +57,7 @@
             this.rbKesilen = new MetroFramework.Controls.MetroRadioButton();
             this.cmb_firma = new System.Windows.Forms.ComboBox();
             this.ck_cokluftr = new MetroFramework.Controls.MetroCheckBox();
+            this.cmb_se = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.pbClose)).BeginInit();
             this.SuspendLayout();
             // 
@@ -77,6 +78,8 @@
             this.cmb_projeNo.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.cmb_projeNo.FormattingEnabled = true;
             this.cmb_projeNo.ItemHeight = 23;
+            this.cmb_projeNo.Items.AddRange(new object[] {
+            ""});
             this.cmb_projeNo.Location = new System.Drawing.Point(128, 153);
             this.cmb_projeNo.Name = "cmb_projeNo";
             this.cmb_projeNo.Size = new System.Drawing.Size(156, 29);
@@ -181,6 +184,7 @@
             this.cmb_ftr_tip.FormattingEnabled = true;
             this.cmb_ftr_tip.ItemHeight = 23;
             this.cmb_ftr_tip.Items.AddRange(new object[] {
+            "",
             "Mekanik",
             "Elektronik",
             "Genel Giderler",
@@ -202,6 +206,7 @@
             this.cmb_birim.FormattingEnabled = true;
             this.cmb_birim.ItemHeight = 23;
             this.cmb_birim.Items.AddRange(new object[] {
+            "",
             "USD",
             "EUR",
             "TRY",
@@ -552,6 +557,7 @@
             this.rbKesilen.UseCustomForeColor = true;
             this.rbKesilen.UseSelectable = true;
             this.rbKesilen.UseStyleColors = true;
+            this.rbKesilen.CheckedChanged += new System.EventHandler(this.rbKesilen_CheckedChanged);
             // 
             // cmb_firma
             // 
@@ -582,12 +588,22 @@
             this.ck_cokluftr.UseStyleColors = true;
             this.ck_cokluftr.CheckedChanged += new System.EventHandler(this.ck_cokluftr_CheckedChanged);
             // 
+            // cmb_se
+            // 
+            this.cmb_se.FormattingEnabled = true;
+            this.cmb_se.Location = new System.Drawing.Point(252, 117);
+            this.cmb_se.Name = "cmb_se";
+            this.cmb_se.Size = new System.Drawing.Size(166, 21);
+            this.cmb_se.TabIndex = 70;
+            this.cmb_se.Visible = false;
+            // 
             // FaturaGiris
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(671, 510);
             this.ControlBox = false;
+            this.Controls.Add(this.cmb_se);
             this.Controls.Add(this.ck_cokluftr);
             this.Controls.Add(this.cmb_firma);
             this.Controls.Add(this.rbKesilen);
@@ -661,5 +677,6 @@
         private MetroFramework.Controls.MetroRadioButton rbKesilen;
         public System.Windows.Forms.ComboBox cmb_firma;
         private MetroFramework.Controls.MetroCheckBox ck_cokluftr;
+        private System.Windows.Forms.ComboBox cmb_se;
     }
 }

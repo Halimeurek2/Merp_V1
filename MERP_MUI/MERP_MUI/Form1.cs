@@ -10,6 +10,8 @@ using Excel = Microsoft.Office.Interop.Excel;
 using System.Xml;
 using System.Xml.Linq;
 using System.Linq;
+using System.Drawing;
+using System.Threading;
 
 namespace MERP_MUI
 {
@@ -43,17 +45,30 @@ namespace MERP_MUI
         public static float[] sumK = new float[2000];
         public static DateTime[] monthK = new DateTime[2000];
 
+        public static float[] alOdemeler = new float[2000];
+        public static DateTime[] monthAlOdemeler = new DateTime[2000];
+
+        public static float[] yapOdemeler = new float[2000];
+        public static DateTime[] monthYapOdemeler = new DateTime[2000];
+
         public static float[] odemeler = new float[7];
         public static DateTime[] monthOdemeler = new DateTime[7];
 
         public static float[] NewsumG = new float[12];
         public static float[] NewsumK = new float[12];
         public static float[] Newodemeler = new float[12];
+        public static float[] NewAlOdemeler = new float[12];
+        public static float[] NewYapOdemeler = new float[12];
+
+
 
         public int Connected;
 
         int elemanSayisiG = 0;
         int elemanSayisiK = 0;
+
+        int elemanSayisiYap = 0;
+        int elemanSayisiAl = 0;
 
         public int kullanici_id;
         public int animsaCheck;
@@ -70,6 +85,11 @@ namespace MERP_MUI
         Boolean PopupTrueG=false;
         Boolean PopupTrueK = false;
 
+        string proje_butce;
+        string harcama_toplam;
+        string gelenFtr;
+        string kesilenFtr;
+
         DBConnect db;
         SmtpClient sc;
 
@@ -85,17 +105,17 @@ namespace MERP_MUI
             lbl_yer.Parent = pictureBox4;
         }
 
-
-
         private void Form1_Load(object sender, EventArgs e)
         {
+            pb_loading.Location = new Point(this.Width / 2, this.Height / 2);
             pb_loading.Visible = true;
+            Application.DoEvents();
 
             giris_tarihi = DateTime.Now;
             lbl_kullanici.Text = Properties.Settings.Default.UserName;
 
             server = "localhost";
-            database = "uretimplanlama_2";
+            database = "merp_dbv1";
             uid = "root";
             password = "root";
             //string connectionString;
@@ -121,8 +141,6 @@ namespace MERP_MUI
                 lbl_gbp.Text = "Connection Fail!";
             }
 
-           
-
             komut = "SELECT * FROM db_aktivite WHERE akt_oncelik='" + Convert.ToString("COK ACİL") + "' AND akt_statu='" + Convert.ToString("AKTİF") + "'";
             myCommand = new MySqlCommand(komut, myConnection);
             da = new MySqlDataAdapter(myCommand);
@@ -144,16 +162,18 @@ namespace MERP_MUI
             while (myReader.Read())
             {
                 cmb_proje.Items.Add(myReader["proje_no"]);
+                cmb_Barprojeler.Items.Add(myReader["proje_no"]);
             }
             myReader.Close();
             myConnection.Close();
 
             cmb_yil.Text = "2017";
+            cmb_proje.Text = "910.20";
 
             Mail();
             maliyet_hesapla();
             GetWeather("ISTANBUL");
-         
+
             pb_loading.Visible = false;
         }
 
@@ -313,11 +333,11 @@ namespace MERP_MUI
                 mail.Attachments.Add(attachment);
                 //sc.Send(mail);
 
-                myConnection.Close();
+               
             }
             catch { }
 
-           
+            myConnection.Close();
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -421,9 +441,18 @@ namespace MERP_MUI
             Array.Clear(NewsumK, 0, 12);
             Array.Clear(Newodemeler, 0, 12);
 
+            Array.Clear(NewAlOdemeler, 0, 12);
+            Array.Clear(NewYapOdemeler, 0, 12);
+            Array.Clear(alOdemeler, 0, 2000);
+            Array.Clear(yapOdemeler, 0, 2000);
+            Array.Clear(monthAlOdemeler, 0, 2000);
+            Array.Clear(monthYapOdemeler, 0, 2000);
+
             index = 0;
             elemanSayisiG = 0;
             elemanSayisiK = 0;
+            elemanSayisiYap = 0;
+            elemanSayisiAl = 0;
 
             myConnection.Open();
             try
@@ -459,6 +488,48 @@ namespace MERP_MUI
                     sumK[index] = (float)Convert.ToDouble(myReader.GetString(1));
                     index++;
                     elemanSayisiK++;
+                }
+                myReader.Close();
+            }
+            catch
+            {
+                myReader.Close();
+            }
+
+            try
+            {
+                index = 0;
+                komut = "SELECT fatura_tarih AS Month, fatura_euro AS EURO FROM db_faturalar WHERE fatura_tipi='G' and fatura_proje_no ='" + cmb_proje.Text + "' and fatura_durum='ODENMEDI'";
+                da = new MySqlDataAdapter(komut, connection);
+                myCommand = new MySqlCommand(komut, myConnection);
+                myReader = myCommand.ExecuteReader();
+                while (myReader.Read())
+                {
+                    monthYapOdemeler[index] = Convert.ToDateTime(myReader.GetString(0));
+                    yapOdemeler[index] = (float)Convert.ToDouble(myReader.GetString(1));
+                    index++;
+                    elemanSayisiYap++;
+                }
+                myReader.Close();
+            }
+            catch
+            {
+                myReader.Close();
+            }
+
+            try
+            {
+                index = 0;
+                komut = "SELECT fatura_tarih AS Month, fatura_euro AS EURO FROM db_faturalar WHERE fatura_tipi='K' and fatura_proje_no ='" + cmb_proje.Text + "' and fatura_durum='ODENMEDI'";
+                da = new MySqlDataAdapter(komut, connection);
+                myCommand = new MySqlCommand(komut, myConnection);
+                myReader = myCommand.ExecuteReader();
+                while (myReader.Read())
+                {
+                    monthAlOdemeler[index] = Convert.ToDateTime(myReader.GetString(0));
+                    alOdemeler[index] = (float)Convert.ToDouble(myReader.GetString(1));
+                    index++;
+                    elemanSayisiAl++;
                 }
                 myReader.Close();
             }
@@ -579,30 +650,96 @@ namespace MERP_MUI
                     Newodemeler[Int32.Parse(monthOdemeler[month].ToString("MM")) - 1] += odemeler[month];
             }
 
+            for (month = 0; month < elemanSayisiYap; month++)
+            {
+                if (Int32.Parse(monthYapOdemeler[month].ToString("yyyy")) == Convert.ToInt32(cmb_yil.Text))
+                    NewYapOdemeler[Int32.Parse(monthYapOdemeler[month].ToString("MM")) - 1] += yapOdemeler[month];
+            }
+
+            for (month = 0; month < elemanSayisiAl; month++)
+            {
+                if (Int32.Parse(monthAlOdemeler[month].ToString("yyyy")) == Convert.ToInt32(cmb_yil.Text))
+                    NewAlOdemeler[Int32.Parse(monthAlOdemeler[month].ToString("MM")) - 1] += alOdemeler[month];
+            }
+
             myConnection.Close();
 
             chart1.Series["Gelen Faturalar"].Points.Clear();
             chart1.Series["Kesilen Faturalar"].Points.Clear();
             chart1.Series["Öngörülen Ödemeler"].Points.Clear();
+            chart1.Series["Alınan Ödemeler"].Points.Clear();
+            chart1.Series["Yapılan Ödemeler"].Points.Clear();
 
-         
+
 
             for (int Month = 0; Month < 12 ; Month++)
             {
-                chart1.Series["Gelen Faturalar"].Points.AddXY(Convert.ToString((Month + 1) + ". ay"), NewsumG[Month]);
-                chart1.Series["Gelen Faturalar"].Points[Month].Label = string.Format(new CultureInfo("de-DE"), "{0:C2}", Convert.ToDecimal(NewsumG[Month]));
-            }
-            for (int Month = 0; Month < 12; Month++)
-            {
-                chart1.Series["Kesilen Faturalar"].Points.AddXY(Convert.ToString((Month + 1) + ". ay"), NewsumK[Month]);
-                chart1.Series["Kesilen Faturalar"].Points[Month].Label = string.Format(new CultureInfo("de-DE"), "{0:C2}", Convert.ToDecimal(NewsumK[Month]));
-            }
-            for (int Month = 0; Month < 12; Month++)
-            {
-                chart1.Series["Öngörülen Ödemeler"].Points.AddXY(Convert.ToString((Month + 1) + ". ay"), Newodemeler[Month]);
-                chart1.Series["Öngörülen Ödemeler"].Points[Month].Label = string.Format(new CultureInfo("de-DE"), "{0:C2}", Convert.ToDecimal(Newodemeler[Month]));
-            }
+                if(NewsumG[Month] == 0)
+                {
+                    chart1.Series["Gelen Faturalar"].Points.AddXY(Convert.ToString((Month + 1) + ". ay"), NewsumG[Month]);
+                }
+                else
+                {
+                    chart1.Series["Gelen Faturalar"].Points.AddXY(Convert.ToString((Month + 1) + ". ay"), NewsumG[Month]);
+                    chart1.Series["Gelen Faturalar"].Points[Month].Label = string.Format(new CultureInfo("de-DE"), "{0:C2}", Convert.ToDecimal(NewsumG[Month]));
+                }
 
+               
+            }
+            for (int Month = 0; Month < 12; Month++)
+            {
+                if(NewsumK[Month] == 0)
+                {
+                    chart1.Series["Kesilen Faturalar"].Points.AddXY(Convert.ToString((Month + 1) + ". ay"), NewsumK[Month]);
+                }
+                else
+                {
+                    chart1.Series["Kesilen Faturalar"].Points.AddXY(Convert.ToString((Month + 1) + ". ay"), NewsumK[Month]);
+                    chart1.Series["Kesilen Faturalar"].Points[Month].Label = string.Format(new CultureInfo("de-DE"), "{0:C2}", Convert.ToDecimal(NewsumK[Month]));
+                }
+
+                
+            }
+            for (int Month = 0; Month < 12; Month++)
+            {
+                if(Newodemeler[Month] == 0)
+                {
+                    chart1.Series["Öngörülen Ödemeler"].Points.AddXY(Convert.ToString((Month + 1) + ". ay"), Newodemeler[Month]);
+                }
+                else
+                {
+                    chart1.Series["Öngörülen Ödemeler"].Points.AddXY(Convert.ToString((Month + 1) + ". ay"), Newodemeler[Month]);
+                    chart1.Series["Öngörülen Ödemeler"].Points[Month].Label = string.Format(new CultureInfo("de-DE"), "{0:C2}", Convert.ToDecimal(Newodemeler[Month]));
+                }
+
+                
+            }
+            for (int Month = 0; Month < 12; Month++)
+            {
+                if (NewYapOdemeler[Month] == 0)
+                {
+                    chart1.Series["Yapılan Ödemeler"].Points.AddXY(Convert.ToString((Month + 1) + ". ay"), NewYapOdemeler[Month]);
+                }
+                else
+                {
+                    chart1.Series["Yapılan Ödemeler"].Points.AddXY(Convert.ToString((Month + 1) + ". ay"), NewYapOdemeler[Month]);
+                    chart1.Series["Yapılan Ödemeler"].Points[Month].Label = string.Format(new CultureInfo("de-DE"), "{0:C2}", Convert.ToDecimal(NewYapOdemeler[Month]));
+                }
+
+                
+            }
+            for (int Month = 0; Month < 12; Month++)
+            {
+                if(NewAlOdemeler[Month] == 0)
+                {
+                    chart1.Series["Alınan Ödemeler"].Points.AddXY(Convert.ToString((Month + 1) + ". ay"), NewAlOdemeler[Month]);
+                }
+                else
+                {
+                    chart1.Series["Alınan Ödemeler"].Points.AddXY(Convert.ToString((Month + 1) + ". ay"), NewAlOdemeler[Month]);
+                    chart1.Series["Alınan Ödemeler"].Points[Month].Label = string.Format(new CultureInfo("de-DE"), "{0:C2}", Convert.ToDecimal(NewAlOdemeler[Month]));
+                }
+            }
         }
 
         private void btnAktivite_Click(object sender, EventArgs e)
@@ -639,12 +776,14 @@ namespace MERP_MUI
                 splitContainer12.Visible = false;
                 pnlFilter.Dock = DockStyle.Fill;
                 pnlFilter.Visible = true;
+                gb_filter.Visible = true;
                 btn3_Flag = 1;
             }
             else
             {
                 splitContainer12.Visible = true;
                 pnlFilter.Visible = false;
+                gb_filter.Visible = false;
                 btn3_Flag = 0;
             }
             if (pnlAcil.Visible == true)
@@ -824,6 +963,51 @@ namespace MERP_MUI
         private void cmb_sehir_SelectedIndexChanged(object sender, EventArgs e)
         {
             GetWeather(cmb_sehir.Text);
+        }
+
+        private void cmb_Barprojeler_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            myConnection.Open();
+            komut = "SELECT proje_baslangic,proje_bitis,proje_butce,harcama_toplam FROM db_projeler where proje_no='" + cmb_Barprojeler.Text + "'";
+            da = new MySqlDataAdapter(komut, connection);
+            myCommand = new MySqlCommand(komut, myConnection);
+            MySqlDataReader myReader;
+            myReader = myCommand.ExecuteReader();
+            while (myReader.Read())
+            {
+                var start = Convert.ToDateTime(myReader.GetString(0));
+                var end = Convert.ToDateTime(myReader.GetString(1));
+                proje_butce = myReader.GetString(2);
+                harcama_toplam = myReader.GetString(3);
+                var total = (end - start).TotalSeconds;
+                mpb_zaman.Value = Convert.ToInt32(Math.Truncate((DateTime.Now - start).TotalSeconds * 100 / total));
+            }
+            myReader.Close();
+
+            komut = "SELECT sum(fatura_euro) FROM db_faturalar where fatura_tipi='G' and fatura_proje_no='"+cmb_Barprojeler.Text+"'";
+            da = new MySqlDataAdapter(komut, connection);
+            myCommand = new MySqlCommand(komut, myConnection);
+            myReader = myCommand.ExecuteReader();
+            while (myReader.Read())
+            {
+                gelenFtr = myReader.GetString(0);
+            }
+            myReader.Close();
+
+            komut = "SELECT sum(fatura_euro) FROM db_faturalar where fatura_tipi='K' and fatura_proje_no='" + cmb_Barprojeler.Text + "'";
+            da = new MySqlDataAdapter(komut, connection);
+            myCommand = new MySqlCommand(komut, myConnection);
+            myReader = myCommand.ExecuteReader();
+            while (myReader.Read())
+            {
+                kesilenFtr = myReader.GetString(0);
+            }
+            myReader.Close();
+
+           // MessageBox.Show(Convert.ToString(Convert.ToInt32(Convert.ToDouble(gelenFtr))));
+            mpb_butce.Value = Convert.ToInt32(((100) * (Convert.ToInt32(gelenFtr)) / (Convert.ToInt32(harcama_toplam))));
+            mpb_kesilenFtr.Value = Convert.ToInt32(((100 - 0) * (Convert.ToInt32(kesilenFtr) - 0) / (Convert.ToInt32(proje_butce) - 0)) + 0);
+            myConnection.Close();
         }
     }
 }

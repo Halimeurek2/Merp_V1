@@ -72,7 +72,7 @@ namespace MERP_MUI
         private void OdenecekFaturalar_Load(object sender, EventArgs e)
         {
             server = "localhost";
-            database = "uretimplanlama_2";
+            database = "merp_dbv1";
             uid = "root";
             password = "root";
             //string connectionString;
@@ -82,6 +82,8 @@ namespace MERP_MUI
 
             chart1.Series["Gelen"].Points.Clear();
             chart2.Series["Kesilen"].Points.Clear();
+
+            metroGrid1.ClearSelection();
 
             Array.Clear(monthNewG, 0, 12);
             Array.Clear(month_sumNewG, 0, 12);
@@ -279,6 +281,11 @@ namespace MERP_MUI
             metroGrid1.Rows.Add();
             metroGrid1.Rows.Add();
             metroGrid1.Rows.Add();
+            metroGrid1.Rows.Add();
+            metroGrid1.Rows.Add();
+
+            float kumulatif_tutar = 100;
+            float a;
 
             for (int i = 0; i < 12; i++)
             {
@@ -290,6 +297,20 @@ namespace MERP_MUI
                     metroGrid1.Rows[2].Cells[i + 1].Value = string.Format(new CultureInfo("de-DE"), "{0:C2}", Convert.ToDecimal(yapilmisOdemeler[i]));
                     metroGrid1.Rows[3].Cells[i + 1].Value = string.Format(new CultureInfo("de-DE"), "{0:C2}", Convert.ToDecimal(alOdemeler[i]));
                     metroGrid1.Rows[4].Cells[i + 1].Value = string.Format(new CultureInfo("de-DE"), "{0:C2}", Convert.ToDecimal(alinmisOdemeler[i]));
+                    metroGrid1.Rows[5].Cells[i + 1].Value = string.Format(new CultureInfo("de-DE"), "{0:C2}", Convert.ToDecimal(alinmisOdemeler[i]-yapOdemeler[i]-yapilmisOdemeler[i]+alOdemeler[i]));
+
+                    if (i == 0)
+                    {
+                        metroGrid1.Rows[6].Cells[i + 1].Value = string.Format(new CultureInfo("de-DE"), "{0:C2}", Convert.ToDecimal(kumulatif_tutar + alinmisOdemeler[i] - yapOdemeler[i] - yapilmisOdemeler[i] + alOdemeler[i]));
+                        kumulatif_tutar = kumulatif_tutar + alinmisOdemeler[i] - yapOdemeler[i] - yapilmisOdemeler[i] + alOdemeler[i];
+                    }
+                    else
+                    {
+                        metroGrid1.Rows[6].Cells[i + 1].Value = string.Format(new CultureInfo("de-DE"), "{0:C2}", Convert.ToDecimal(kumulatif_tutar + alinmisOdemeler[i] - yapOdemeler[i] - yapilmisOdemeler[i] + alOdemeler[i]));
+                        kumulatif_tutar = kumulatif_tutar + alinmisOdemeler[i] - yapOdemeler[i] - yapilmisOdemeler[i] + alOdemeler[i];
+                    }
+            
+
                 }
                 catch { }
             }
@@ -299,7 +320,8 @@ namespace MERP_MUI
             metroGrid1.Rows[2].Cells[0].Value = Convert.ToString("Tedarikçilere Yapılmış Ödemeler");
             metroGrid1.Rows[3].Cells[0].Value = Convert.ToString("Alınacak Ödemeler");
             metroGrid1.Rows[4].Cells[0].Value = Convert.ToString("Alınmış Ödemeler");
-
+            metroGrid1.Rows[5].Cells[0].Value = Convert.ToString("Aylık Toplam");
+            metroGrid1.Rows[6].Cells[0].Value = Convert.ToString("Kümülatif Toplam");
             Firmalar();
         }
 

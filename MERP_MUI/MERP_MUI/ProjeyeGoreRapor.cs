@@ -31,6 +31,7 @@ namespace MERP_MUI
         MySqlDataReader myReader;
         DataTable dt = new DataTable();
         HelperFunctions hf;
+        Sorgular Sorgular;
 
         public decimal TOPLAM = 0;
         public string BIRIM;
@@ -94,12 +95,13 @@ namespace MERP_MUI
         {
             InitializeComponent();
             hf = new HelperFunctions();
+            Sorgular = new Sorgular();
         }
 
         private void ProjeyeGoreRapor_Load(object sender, EventArgs e)
         {
             server = "localhost";
-            database = "uretimplanlama_2";
+            database = "merp_dbv1";
             uid = "root";
             password = "root";
             //string connectionString;
@@ -466,6 +468,7 @@ namespace MERP_MUI
             myConnection.Open();
             try
             {
+                // TOPLAM = Convert.ToDecimal(Sorgular.FaturaTutar(cmb_projeler.Text, "G", TOPLAM));
                 komut = "SELECT sum(fatura_euro) FROM db_faturalar WHERE fatura_proje_no ='" + cmb_projeler.Text + "' AND fatura_tipi='G'";
                 da = new MySqlDataAdapter(komut, connection);
                 myCommand = new MySqlCommand(komut, myConnection);

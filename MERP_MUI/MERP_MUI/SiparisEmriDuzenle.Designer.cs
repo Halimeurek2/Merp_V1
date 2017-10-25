@@ -45,13 +45,15 @@
             this.txt_vade = new MetroFramework.Controls.MetroTextBox();
             this.txt_talepKisi = new MetroFramework.Controls.MetroTextBox();
             this.txt_siparisNo = new MetroFramework.Controls.MetroTextBox();
-            this.date_teslim = new MetroFramework.Controls.MetroTextBox();
             this.date_temin = new MetroFramework.Controls.MetroDateTime();
             this.cmb_paraBirimi = new MetroFramework.Controls.MetroComboBox();
             this.pbClose = new System.Windows.Forms.PictureBox();
             this.lbl_id = new MetroFramework.Controls.MetroLabel();
             this.cmb_tedarikci = new System.Windows.Forms.ComboBox();
             this.cmb_prjno = new System.Windows.Forms.ComboBox();
+            this.date_teslim = new MetroFramework.Controls.MetroDateTime();
+            this.rb_gelen = new MetroFramework.Controls.MetroRadioButton();
+            this.rb_verilen = new MetroFramework.Controls.MetroRadioButton();
             ((System.ComponentModel.ISupportInitialize)(this.pbClose)).BeginInit();
             this.SuspendLayout();
             // 
@@ -369,41 +371,6 @@
             this.txt_siparisNo.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.txt_siparisNo.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
             // 
-            // date_teslim
-            // 
-            // 
-            // 
-            // 
-            this.date_teslim.CustomButton.Image = null;
-            this.date_teslim.CustomButton.Location = new System.Drawing.Point(134, 1);
-            this.date_teslim.CustomButton.Name = "";
-            this.date_teslim.CustomButton.Size = new System.Drawing.Size(21, 21);
-            this.date_teslim.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
-            this.date_teslim.CustomButton.TabIndex = 1;
-            this.date_teslim.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
-            this.date_teslim.CustomButton.UseSelectable = true;
-            this.date_teslim.CustomButton.Visible = false;
-            this.date_teslim.Lines = new string[0];
-            this.date_teslim.Location = new System.Drawing.Point(193, 215);
-            this.date_teslim.MaxLength = 32767;
-            this.date_teslim.Name = "date_teslim";
-            this.date_teslim.PasswordChar = '\0';
-            this.date_teslim.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.date_teslim.SelectedText = "";
-            this.date_teslim.SelectionLength = 0;
-            this.date_teslim.SelectionStart = 0;
-            this.date_teslim.ShortcutsEnabled = true;
-            this.date_teslim.Size = new System.Drawing.Size(156, 23);
-            this.date_teslim.Style = MetroFramework.MetroColorStyle.Red;
-            this.date_teslim.TabIndex = 104;
-            this.date_teslim.Theme = MetroFramework.MetroThemeStyle.Dark;
-            this.date_teslim.UseCustomBackColor = true;
-            this.date_teslim.UseCustomForeColor = true;
-            this.date_teslim.UseSelectable = true;
-            this.date_teslim.UseStyleColors = true;
-            this.date_teslim.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.date_teslim.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
-            // 
             // date_temin
             // 
             this.date_temin.Location = new System.Drawing.Point(193, 289);
@@ -486,12 +453,51 @@
             this.cmb_prjno.Size = new System.Drawing.Size(156, 21);
             this.cmb_prjno.TabIndex = 129;
             // 
+            // date_teslim
+            // 
+            this.date_teslim.Location = new System.Drawing.Point(193, 217);
+            this.date_teslim.MinimumSize = new System.Drawing.Size(0, 29);
+            this.date_teslim.Name = "date_teslim";
+            this.date_teslim.Size = new System.Drawing.Size(156, 29);
+            this.date_teslim.TabIndex = 130;
+            // 
+            // rb_gelen
+            // 
+            this.rb_gelen.AutoSize = true;
+            this.rb_gelen.Location = new System.Drawing.Point(39, 71);
+            this.rb_gelen.Name = "rb_gelen";
+            this.rb_gelen.Size = new System.Drawing.Size(53, 15);
+            this.rb_gelen.Style = MetroFramework.MetroColorStyle.Red;
+            this.rb_gelen.TabIndex = 131;
+            this.rb_gelen.Text = "Gelen";
+            this.rb_gelen.UseCustomBackColor = true;
+            this.rb_gelen.UseCustomForeColor = true;
+            this.rb_gelen.UseSelectable = true;
+            this.rb_gelen.UseStyleColors = true;
+            // 
+            // rb_verilen
+            // 
+            this.rb_verilen.AutoSize = true;
+            this.rb_verilen.Location = new System.Drawing.Point(134, 71);
+            this.rb_verilen.Name = "rb_verilen";
+            this.rb_verilen.Size = new System.Drawing.Size(59, 15);
+            this.rb_verilen.Style = MetroFramework.MetroColorStyle.Red;
+            this.rb_verilen.TabIndex = 132;
+            this.rb_verilen.Text = "Verilen";
+            this.rb_verilen.UseCustomBackColor = true;
+            this.rb_verilen.UseCustomForeColor = true;
+            this.rb_verilen.UseSelectable = true;
+            this.rb_verilen.UseStyleColors = true;
+            // 
             // SiparisEmriDuzenle
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(396, 604);
             this.ControlBox = false;
+            this.Controls.Add(this.rb_verilen);
+            this.Controls.Add(this.rb_gelen);
+            this.Controls.Add(this.date_teslim);
             this.Controls.Add(this.cmb_prjno);
             this.Controls.Add(this.cmb_tedarikci);
             this.Controls.Add(this.lbl_id);
@@ -512,7 +518,6 @@
             this.Controls.Add(this.txt_vade);
             this.Controls.Add(this.txt_talepKisi);
             this.Controls.Add(this.txt_siparisNo);
-            this.Controls.Add(this.date_teslim);
             this.Controls.Add(this.date_temin);
             this.Controls.Add(this.cmb_paraBirimi);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -549,11 +554,13 @@
         public MetroFramework.Controls.MetroTextBox txt_vade;
         public MetroFramework.Controls.MetroTextBox txt_talepKisi;
         public MetroFramework.Controls.MetroTextBox txt_siparisNo;
-        public MetroFramework.Controls.MetroTextBox date_teslim;
         public MetroFramework.Controls.MetroDateTime date_temin;
         public MetroFramework.Controls.MetroComboBox cmb_paraBirimi;
         public MetroFramework.Controls.MetroLabel lbl_id;
         public System.Windows.Forms.ComboBox cmb_tedarikci;
         public System.Windows.Forms.ComboBox cmb_prjno;
+        public MetroFramework.Controls.MetroDateTime date_teslim;
+        public MetroFramework.Controls.MetroRadioButton rb_gelen;
+        public MetroFramework.Controls.MetroRadioButton rb_verilen;
     }
 }

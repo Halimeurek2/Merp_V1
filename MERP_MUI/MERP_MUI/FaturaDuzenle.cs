@@ -38,7 +38,7 @@ namespace MERP_MUI
         private void FaturaDuzenle_Load(object sender, EventArgs e)
         {
             server = "localhost";
-            database = "uretimplanlama_2";
+            database = "merp_dbv1";
             uid = "root";
             password = "root";
             //string connectionString;
@@ -68,13 +68,27 @@ namespace MERP_MUI
             }
             myReader.Close();
 
-            if(lbl_tip.Text=="K")
+            komut = "SELECT DISTINCT satinalma_no FROM db_siparis_emri where siparis_tipi='Gelen'";
+            da = new MySqlDataAdapter(komut, connection);
+
+            myCommand = new MySqlCommand(komut, myConnection);
+            myReader = myCommand.ExecuteReader();
+            while (myReader.Read())
+            {
+                cmb_se.Items.Add(myReader["satinalma_no"]);
+            }
+            myReader.Close();
+
+            if (lbl_tip.Text=="K")
             {
                 ck_kesilen.Checked = true;
+                cmb_se.Visible = true;
             }
             else
             {
                 ck_gelen.Checked = true;
+                cmb_se.Visible = false;
+                cmb_se.Text = " ";
             }
         }
 
@@ -135,13 +149,13 @@ namespace MERP_MUI
                         if (cb_durum.Checked)
                         {
                             db = new DBConnect();
-                            db.UpdateFaturalar(Convert.ToInt32(lbl_id.Text), Convert.ToString(txt_fatura_no.Text), Convert.ToString(cmb_projeNo.Text), Convert.ToString(cmb_firma.Text), Convert.ToInt32(txt_ftr_vade.Text), bitis, Convert.ToString(rcb_acıklama.Text), Convert.ToDateTime(txt_ftr_tarih.Text), ck_alarm.Checked, Convert.ToDecimal(txt_ftr_tutar.Text), Convert.ToString(cmb_birim.Text), Convert.ToInt32(txt_avans.Text), fatura_euro, Convert.ToString(lbl_tip.Text), Convert.ToString(cmb_ftr_tip.Text), Convert.ToString("ODENDI"));
+                            db.UpdateFaturalar(Convert.ToInt32(lbl_id.Text), Convert.ToString(txt_fatura_no.Text), Convert.ToString(cmb_projeNo.Text), Convert.ToString(cmb_firma.Text), Convert.ToInt32(txt_ftr_vade.Text), bitis, Convert.ToString(rcb_acıklama.Text), Convert.ToDateTime(txt_ftr_tarih.Text), ck_alarm.Checked, Convert.ToDecimal(txt_ftr_tutar.Text), Convert.ToString(cmb_birim.Text), Convert.ToInt32(txt_avans.Text), fatura_euro, Convert.ToString(lbl_tip.Text), Convert.ToString(cmb_ftr_tip.Text), Convert.ToString("ODENDI"), Convert.ToString(cmb_se.Text));
                             this.Close();
                         }
                         else
                         {
                             db = new DBConnect();
-                            db.UpdateFaturalar(Convert.ToInt32(lbl_id.Text), Convert.ToString(txt_fatura_no.Text), Convert.ToString(cmb_projeNo.Text), Convert.ToString(cmb_firma.Text), Convert.ToInt32(txt_ftr_vade.Text), bitis, Convert.ToString(rcb_acıklama.Text), Convert.ToDateTime(txt_ftr_tarih.Text), ck_alarm.Checked, Convert.ToDecimal(txt_ftr_tutar.Text), Convert.ToString(cmb_birim.Text), Convert.ToInt32(txt_avans.Text), fatura_euro, Convert.ToString(lbl_tip.Text), Convert.ToString(cmb_ftr_tip.Text), Convert.ToString("ODENMEDI"));
+                            db.UpdateFaturalar(Convert.ToInt32(lbl_id.Text), Convert.ToString(txt_fatura_no.Text), Convert.ToString(cmb_projeNo.Text), Convert.ToString(cmb_firma.Text), Convert.ToInt32(txt_ftr_vade.Text), bitis, Convert.ToString(rcb_acıklama.Text), Convert.ToDateTime(txt_ftr_tarih.Text), ck_alarm.Checked, Convert.ToDecimal(txt_ftr_tutar.Text), Convert.ToString(cmb_birim.Text), Convert.ToInt32(txt_avans.Text), fatura_euro, Convert.ToString(lbl_tip.Text), Convert.ToString(cmb_ftr_tip.Text), Convert.ToString("ODENMEDI"), Convert.ToString(cmb_se.Text));
                             this.Close();
                         }
                     }
@@ -167,6 +181,19 @@ namespace MERP_MUI
         private void cmb_firma_SelectedIndexChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void ck_kesilen_CheckedChanged(object sender, EventArgs e)
+        {
+            if (ck_kesilen.Checked)
+            {
+                cmb_se.Visible = true;
+            }
+            else
+            {
+                cmb_se.Visible = false;
+                cmb_se.Text = "";
+            }
         }
     }
 }

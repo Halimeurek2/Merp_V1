@@ -41,6 +41,7 @@ namespace MERP_MUI
         string tip;
         string cins;
         string durum;
+        string satinalma_no;
 
         DataTable datatable = new DataTable();
 
@@ -54,7 +55,7 @@ namespace MERP_MUI
             pb_loading.Visible = true;
 
             server = "localhost";
-            database = "uretimplanlama_2";
+            database = "merp_dbv1";
             uid = "root";
             password = "root";
             //string connectionString;
@@ -132,6 +133,7 @@ namespace MERP_MUI
                 obj.txt_avans.Text = avans;
                 obj.lbl_tip.Text = tip;
                 obj.cmb_ftr_tip.Text = cins;
+                obj.cmb_se.Text = satinalma_no;
                 if (durum == "ODENDI")
                 {
                     obj.cb_durum.Checked = true;
@@ -212,6 +214,7 @@ namespace MERP_MUI
                 tip = dgw_ftr_list.Rows[e.RowIndex].Cells[13].Value.ToString();
                 cins = dgw_ftr_list.Rows[e.RowIndex].Cells[14].Value.ToString();
                 durum = dgw_ftr_list.Rows[e.RowIndex].Cells[15].Value.ToString();
+                satinalma_no = dgw_ftr_list.Rows[e.RowIndex].Cells[16].Value.ToString();
             }
             catch { }
         }
@@ -388,6 +391,7 @@ namespace MERP_MUI
                 tip = dgw_ftr_list.Rows[e.RowIndex].Cells[13].Value.ToString();
                 cins = dgw_ftr_list.Rows[e.RowIndex].Cells[14].Value.ToString();
                 durum = dgw_ftr_list.Rows[e.RowIndex].Cells[15].Value.ToString();
+                satinalma_no = dgw_ftr_list.Rows[e.RowIndex].Cells[16].Value.ToString();
             }
             catch { }
         }

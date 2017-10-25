@@ -28,7 +28,7 @@ namespace MERP_MUI
         private void DigerIsler_Load(object sender, EventArgs e)
         {
             server = "localhost";
-            database = "uretimplanlama_2";
+            database = "merp_dbv1";
             uid = "root";
             password = "root";
             //string connectionString;

@@ -21,6 +21,7 @@ namespace MERP_MUI
         DBConnect db;
         HelperFunctions hf;
         decimal fatura_euro;
+        MySqlDataReader myReader;
 
         Boolean FaturaNoPair = false;
 
@@ -39,7 +40,7 @@ namespace MERP_MUI
         private void FaturaGiris_Load(object sender, EventArgs e)
         {
             server = "localhost";
-            database = "uretimplanlama_2";
+            database = "merp_dbv1";
             uid = "root";
             password = "root";
             string connectionString;
@@ -70,6 +71,17 @@ namespace MERP_MUI
             while (myReader.Read())
             {
                 cmb_firma.Items.Add(myReader["fatura_firma"]);
+            }
+            myReader.Close();
+
+            komut = "SELECT DISTINCT satinalma_no FROM db_siparis_emri where siparis_tipi='Gelen'";
+            da = new MySqlDataAdapter(komut, connection);
+
+            myCommand = new MySqlCommand(komut, myConnection);
+            myReader = myCommand.ExecuteReader();
+            while (myReader.Read())
+            {
+                cmb_se.Items.Add(myReader["satinalma_no"]);
             }
             myReader.Close();
         }
@@ -131,13 +143,13 @@ namespace MERP_MUI
                                 if (rbGelen.Checked)
                                 {
                                     db = new DBConnect();
-                                    db.InsertFaturaGiris(Convert.ToString(txt_fatura_no.Text), Convert.ToString(cmb_projeNo.Text), Convert.ToString(cmb_firma.Text), Convert.ToInt32(txt_ftr_vade.Text), bitis, Convert.ToString(rcb_acıklama.Text), Convert.ToDateTime(txt_ftr_tarih.Text), ck_alarm.Checked, Convert.ToDecimal(txt_ftr_tutar.Text), Convert.ToString(cmb_birim.Text), Convert.ToInt32(txt_avans.Text), fatura_euro, Convert.ToString('G'), Convert.ToString(cmb_ftr_tip.Text), Convert.ToString("ODENDI"));
+                                    db.InsertFaturaGiris(Convert.ToString(txt_fatura_no.Text), Convert.ToString(cmb_projeNo.Text), Convert.ToString(cmb_firma.Text), Convert.ToInt32(txt_ftr_vade.Text), bitis, Convert.ToString(rcb_acıklama.Text), Convert.ToDateTime(txt_ftr_tarih.Text), ck_alarm.Checked, Convert.ToDecimal(txt_ftr_tutar.Text), Convert.ToString(cmb_birim.Text), Convert.ToInt32(txt_avans.Text), fatura_euro, Convert.ToString('G'), Convert.ToString(cmb_ftr_tip.Text), Convert.ToString("ODENDI"), Convert.ToString(cmb_se.Text));
                                     // this.Close();
                                 }
                                 if (rbKesilen.Checked)
                                 {
                                     db = new DBConnect();
-                                    db.InsertFaturaGiris(Convert.ToString(txt_fatura_no.Text), Convert.ToString(cmb_projeNo.Text), Convert.ToString(cmb_firma.Text), Convert.ToInt32(txt_ftr_vade.Text), bitis, Convert.ToString(rcb_acıklama.Text), Convert.ToDateTime(txt_ftr_tarih.Text), ck_alarm.Checked, Convert.ToDecimal(txt_ftr_tutar.Text), Convert.ToString(cmb_birim.Text), Convert.ToInt32(txt_avans.Text), fatura_euro, Convert.ToString('K'), Convert.ToString(cmb_ftr_tip.Text), Convert.ToString("ODENDI"));
+                                    db.InsertFaturaGiris(Convert.ToString(txt_fatura_no.Text), Convert.ToString(cmb_projeNo.Text), Convert.ToString(cmb_firma.Text), Convert.ToInt32(txt_ftr_vade.Text), bitis, Convert.ToString(rcb_acıklama.Text), Convert.ToDateTime(txt_ftr_tarih.Text), ck_alarm.Checked, Convert.ToDecimal(txt_ftr_tutar.Text), Convert.ToString(cmb_birim.Text), Convert.ToInt32(txt_avans.Text), fatura_euro, Convert.ToString('K'), Convert.ToString(cmb_ftr_tip.Text), Convert.ToString("ODENDI"), Convert.ToString(cmb_se.Text));
                                     // this.Close();
                                 }
                             }
@@ -146,13 +158,13 @@ namespace MERP_MUI
                                 if (rbGelen.Checked)
                                 {
                                     db = new DBConnect();
-                                    db.InsertFaturaGiris(Convert.ToString(txt_fatura_no.Text), Convert.ToString(cmb_projeNo.Text), Convert.ToString(cmb_firma.Text), Convert.ToInt32(txt_ftr_vade.Text), bitis, Convert.ToString(rcb_acıklama.Text), Convert.ToDateTime(txt_ftr_tarih.Text), ck_alarm.Checked, Convert.ToDecimal(txt_ftr_tutar.Text), Convert.ToString(cmb_birim.Text), Convert.ToInt32(txt_avans.Text), fatura_euro, Convert.ToString('G'), Convert.ToString(cmb_ftr_tip.Text), Convert.ToString("ODENMEDI"));
+                                    db.InsertFaturaGiris(Convert.ToString(txt_fatura_no.Text), Convert.ToString(cmb_projeNo.Text), Convert.ToString(cmb_firma.Text), Convert.ToInt32(txt_ftr_vade.Text), bitis, Convert.ToString(rcb_acıklama.Text), Convert.ToDateTime(txt_ftr_tarih.Text), ck_alarm.Checked, Convert.ToDecimal(txt_ftr_tutar.Text), Convert.ToString(cmb_birim.Text), Convert.ToInt32(txt_avans.Text), fatura_euro, Convert.ToString('G'), Convert.ToString(cmb_ftr_tip.Text), Convert.ToString("ODENMEDI"), Convert.ToString(cmb_se.Text));
                                     // this.Close();
                                 }
                                 if (rbKesilen.Checked)
                                 {
                                     db = new DBConnect();
-                                    db.InsertFaturaGiris(Convert.ToString(txt_fatura_no.Text), Convert.ToString(cmb_projeNo.Text), Convert.ToString(cmb_firma.Text), Convert.ToInt32(txt_ftr_vade.Text), bitis, Convert.ToString(rcb_acıklama.Text), Convert.ToDateTime(txt_ftr_tarih.Text), ck_alarm.Checked, Convert.ToDecimal(txt_ftr_tutar.Text), Convert.ToString(cmb_birim.Text), Convert.ToInt32(txt_avans.Text), fatura_euro, Convert.ToString('K'), Convert.ToString(cmb_ftr_tip.Text), Convert.ToString("ODENMEDI"));
+                                    db.InsertFaturaGiris(Convert.ToString(txt_fatura_no.Text), Convert.ToString(cmb_projeNo.Text), Convert.ToString(cmb_firma.Text), Convert.ToInt32(txt_ftr_vade.Text), bitis, Convert.ToString(rcb_acıklama.Text), Convert.ToDateTime(txt_ftr_tarih.Text), ck_alarm.Checked, Convert.ToDecimal(txt_ftr_tutar.Text), Convert.ToString(cmb_birim.Text), Convert.ToInt32(txt_avans.Text), fatura_euro, Convert.ToString('K'), Convert.ToString(cmb_ftr_tip.Text), Convert.ToString("ODENMEDI"), Convert.ToString(cmb_se.Text));
                                     // this.Close();
                                 }
                             }
@@ -172,7 +184,9 @@ namespace MERP_MUI
                                 cmb_firma.Text = "";
                                 cmb_ftr_tip.Text = "";
                                 cmb_projeNo.Text = "";
+                                rcb_acıklama.Text = "";
                                 date_alarm.Value = DateTime.Now;
+                                myReader.Close();
                             }
                             else
                             {
@@ -190,7 +204,6 @@ namespace MERP_MUI
                     da = new MySqlDataAdapter(komut, connection);
 
                     myCommand = new MySqlCommand(komut, myConnection);
-                    MySqlDataReader myReader;
                     myReader = myCommand.ExecuteReader();
                     while (myReader.Read())
                     {
@@ -246,13 +259,13 @@ namespace MERP_MUI
                                         if (rbGelen.Checked)
                                         {
                                             db = new DBConnect();
-                                            db.InsertFaturaGiris(Convert.ToString(txt_fatura_no.Text), Convert.ToString(cmb_projeNo.Text), Convert.ToString(cmb_firma.Text), Convert.ToInt32(txt_ftr_vade.Text), bitis, Convert.ToString(rcb_acıklama.Text), Convert.ToDateTime(txt_ftr_tarih.Text), ck_alarm.Checked, Convert.ToDecimal(txt_ftr_tutar.Text), Convert.ToString(cmb_birim.Text), Convert.ToInt32(txt_avans.Text), fatura_euro, Convert.ToString('G'), Convert.ToString(cmb_ftr_tip.Text), Convert.ToString("ODENDI"));
+                                            db.InsertFaturaGiris(Convert.ToString(txt_fatura_no.Text), Convert.ToString(cmb_projeNo.Text), Convert.ToString(cmb_firma.Text), Convert.ToInt32(txt_ftr_vade.Text), bitis, Convert.ToString(rcb_acıklama.Text), Convert.ToDateTime(txt_ftr_tarih.Text), ck_alarm.Checked, Convert.ToDecimal(txt_ftr_tutar.Text), Convert.ToString(cmb_birim.Text), Convert.ToInt32(txt_avans.Text), fatura_euro, Convert.ToString('G'), Convert.ToString(cmb_ftr_tip.Text), Convert.ToString("ODENDI"), Convert.ToString(cmb_se.Text));
                                             // this.Close();
                                         }
                                         if (rbKesilen.Checked)
                                         {
                                             db = new DBConnect();
-                                            db.InsertFaturaGiris(Convert.ToString(txt_fatura_no.Text), Convert.ToString(cmb_projeNo.Text), Convert.ToString(cmb_firma.Text), Convert.ToInt32(txt_ftr_vade.Text), bitis, Convert.ToString(rcb_acıklama.Text), Convert.ToDateTime(txt_ftr_tarih.Text), ck_alarm.Checked, Convert.ToDecimal(txt_ftr_tutar.Text), Convert.ToString(cmb_birim.Text), Convert.ToInt32(txt_avans.Text), fatura_euro, Convert.ToString('K'), Convert.ToString(cmb_ftr_tip.Text), Convert.ToString("ODENDI"));
+                                            db.InsertFaturaGiris(Convert.ToString(txt_fatura_no.Text), Convert.ToString(cmb_projeNo.Text), Convert.ToString(cmb_firma.Text), Convert.ToInt32(txt_ftr_vade.Text), bitis, Convert.ToString(rcb_acıklama.Text), Convert.ToDateTime(txt_ftr_tarih.Text), ck_alarm.Checked, Convert.ToDecimal(txt_ftr_tutar.Text), Convert.ToString(cmb_birim.Text), Convert.ToInt32(txt_avans.Text), fatura_euro, Convert.ToString('K'), Convert.ToString(cmb_ftr_tip.Text), Convert.ToString("ODENDI"), Convert.ToString(cmb_se.Text));
                                             // this.Close();
                                         }
                                     }
@@ -261,13 +274,13 @@ namespace MERP_MUI
                                         if (rbGelen.Checked)
                                         {
                                             db = new DBConnect();
-                                            db.InsertFaturaGiris(Convert.ToString(txt_fatura_no.Text), Convert.ToString(cmb_projeNo.Text), Convert.ToString(cmb_firma.Text), Convert.ToInt32(txt_ftr_vade.Text), bitis, Convert.ToString(rcb_acıklama.Text), Convert.ToDateTime(txt_ftr_tarih.Text), ck_alarm.Checked, Convert.ToDecimal(txt_ftr_tutar.Text), Convert.ToString(cmb_birim.Text), Convert.ToInt32(txt_avans.Text), fatura_euro, Convert.ToString('G'), Convert.ToString(cmb_ftr_tip.Text), Convert.ToString("ODENMEDI"));
+                                            db.InsertFaturaGiris(Convert.ToString(txt_fatura_no.Text), Convert.ToString(cmb_projeNo.Text), Convert.ToString(cmb_firma.Text), Convert.ToInt32(txt_ftr_vade.Text), bitis, Convert.ToString(rcb_acıklama.Text), Convert.ToDateTime(txt_ftr_tarih.Text), ck_alarm.Checked, Convert.ToDecimal(txt_ftr_tutar.Text), Convert.ToString(cmb_birim.Text), Convert.ToInt32(txt_avans.Text), fatura_euro, Convert.ToString('G'), Convert.ToString(cmb_ftr_tip.Text), Convert.ToString("ODENMEDI"), Convert.ToString(cmb_se.Text));
                                             // this.Close();
                                         }
                                         if (rbKesilen.Checked)
                                         {
                                             db = new DBConnect();
-                                            db.InsertFaturaGiris(Convert.ToString(txt_fatura_no.Text), Convert.ToString(cmb_projeNo.Text), Convert.ToString(cmb_firma.Text), Convert.ToInt32(txt_ftr_vade.Text), bitis, Convert.ToString(rcb_acıklama.Text), Convert.ToDateTime(txt_ftr_tarih.Text), ck_alarm.Checked, Convert.ToDecimal(txt_ftr_tutar.Text), Convert.ToString(cmb_birim.Text), Convert.ToInt32(txt_avans.Text), fatura_euro, Convert.ToString('K'), Convert.ToString(cmb_ftr_tip.Text), Convert.ToString("ODENMEDI"));
+                                            db.InsertFaturaGiris(Convert.ToString(txt_fatura_no.Text), Convert.ToString(cmb_projeNo.Text), Convert.ToString(cmb_firma.Text), Convert.ToInt32(txt_ftr_vade.Text), bitis, Convert.ToString(rcb_acıklama.Text), Convert.ToDateTime(txt_ftr_tarih.Text), ck_alarm.Checked, Convert.ToDecimal(txt_ftr_tutar.Text), Convert.ToString(cmb_birim.Text), Convert.ToInt32(txt_avans.Text), fatura_euro, Convert.ToString('K'), Convert.ToString(cmb_ftr_tip.Text), Convert.ToString("ODENMEDI"), Convert.ToString(cmb_se.Text));
                                             // this.Close();
                                         }
                                     }
@@ -287,7 +300,9 @@ namespace MERP_MUI
                                         cmb_firma.Text = "";
                                         cmb_ftr_tip.Text = "";
                                         cmb_projeNo.Text = "";
+                                        rcb_acıklama.Text = "";
                                         date_alarm.Value = DateTime.Now;
+                                        myReader.Close();
                                     }
                                     else
                                     {
@@ -307,7 +322,7 @@ namespace MERP_MUI
                 }
                 catch
                 {
-
+                    myReader.Close();
                 }
             }
         }
@@ -336,6 +351,18 @@ namespace MERP_MUI
             else
             {
                 CokluFatura = false;
+            }
+        }
+
+        private void rbKesilen_CheckedChanged(object sender, EventArgs e)
+        {
+            if(rbKesilen.Checked)
+            {
+                cmb_se.Visible = true;
+            }
+            else
+            {
+                cmb_se.Visible = false;
             }
         }
     }

@@ -33,7 +33,7 @@ namespace MERP_MUI
         private void SiparisEmriDuzenle_Load(object sender, EventArgs e)
         {
             server = "localhost";
-            database = "uretimplanlama_2";
+            database = "merp_dbv1";
             uid = "root";
             password = "root";
             //string connectionString;
@@ -92,7 +92,7 @@ namespace MERP_MUI
             }
             else
             {
-               // txt_mlz_brmFiyat.Text = hf.Comma2Dot(txt_mlz_brmFiyat.Text);
+                txt_mlz_brmFiyat.Text = hf.Comma2Dot(txt_mlz_brmFiyat.Text);
 
                 DateTime dt = Convert.ToDateTime(date_teslim.Text);
 
@@ -109,7 +109,15 @@ namespace MERP_MUI
                     siparis_euro = hf.EuroCalculation(date_teslim.Text, txt_mlz_brmFiyat.Text, cmb_paraBirimi.Text, siparis_euro);
 
                     db = new DBConnect();
-                    db.UpdateSE(Convert.ToInt32(lbl_id.Text), Convert.ToString(cmb_prjno.Text), Convert.ToString(txt_siparisNo.Text), Convert.ToString(cmb_tedarikci.Text), Convert.ToString(txt_talepKisi.Text), Convert.ToDateTime(date_teslim.Text), Convert.ToInt32(txt_vade.Text), Convert.ToDateTime(date_temin.Text), Convert.ToDecimal(txt_mlz_brmFiyat.Text), Convert.ToString(cmb_paraBirimi.Text), Convert.ToDecimal(siparis_euro), Convert.ToString(rcb_aciklama.Text));
+                    if(rb_gelen.Checked)
+                    {
+                        db.UpdateSE(Convert.ToInt32(lbl_id.Text), Convert.ToString(cmb_prjno.Text), Convert.ToString(txt_siparisNo.Text), Convert.ToString(cmb_tedarikci.Text), Convert.ToString(txt_talepKisi.Text), Convert.ToDateTime(date_teslim.Text), Convert.ToInt32(txt_vade.Text), Convert.ToDateTime(date_temin.Text), Convert.ToDecimal(txt_mlz_brmFiyat.Text), Convert.ToString(cmb_paraBirimi.Text), Convert.ToDecimal(siparis_euro), Convert.ToString(rcb_aciklama.Text), Convert.ToString("Gelen"));
+                    }
+                    if(rb_verilen.Checked)
+                    {
+                        db.UpdateSE(Convert.ToInt32(lbl_id.Text), Convert.ToString(cmb_prjno.Text), Convert.ToString(txt_siparisNo.Text), Convert.ToString(cmb_tedarikci.Text), Convert.ToString(txt_talepKisi.Text), Convert.ToDateTime(date_teslim.Text), Convert.ToInt32(txt_vade.Text), Convert.ToDateTime(date_temin.Text), Convert.ToDecimal(txt_mlz_brmFiyat.Text), Convert.ToString(cmb_paraBirimi.Text), Convert.ToDecimal(siparis_euro), Convert.ToString(rcb_aciklama.Text), Convert.ToString("Verilen"));
+                    }
+                   
                     this.Close();
                 }
             }

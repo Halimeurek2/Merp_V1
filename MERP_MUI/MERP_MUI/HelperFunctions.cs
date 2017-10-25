@@ -24,7 +24,7 @@ namespace MERP_MUI
         public void Initialize()
         {
             server = "localhost";
-            database = "uretimplanlama_2";
+            database = "merp_dbv1";
             uid = "root";
             password = "root";
             //string connectionString;
@@ -34,14 +34,14 @@ namespace MERP_MUI
         }
         public string Comma2Dot(string text)
         {
-            text = text.Replace(',', '.');
+            text = text.Replace('.', ',');
             return text;
         }
         public string EuroCalculation(string tarih, string tutar, string birim, string euro)
         {
             DateTime dt = Convert.ToDateTime(tarih);
             tarih = dt.ToString("dd/MM/yyyy");
-            string[] tr = tarih.Split('-');
+            string[] tr = tarih.Split('.');
             tarih = Convert.ToString(tr[0] + tr[1] + tr[2]);
             tarih2 = Convert.ToString(tr[2] + tr[1]);
             string anyDays = "http://www.tcmb.gov.tr/kurlar/" + tarih2 + "/" + tarih + ".xml";

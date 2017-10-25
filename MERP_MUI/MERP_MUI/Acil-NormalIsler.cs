@@ -30,7 +30,7 @@ namespace MERP_MUI
             server = "localhost";
             server = "localhost";
             server = "localhost";
-            database = "uretimplanlama_2";
+            database = "merp_dbv1";
             uid = "root";
             password = "root";
             //string connectionString;

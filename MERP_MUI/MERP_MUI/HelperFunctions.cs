@@ -41,7 +41,7 @@ namespace MERP_MUI
         {
             DateTime dt = Convert.ToDateTime(tarih);
             tarih = dt.ToString("dd/MM/yyyy");
-            string[] tr = tarih.Split('.');
+            string[] tr = tarih.Split('-');
             tarih = Convert.ToString(tr[0] + tr[1] + tr[2]);
             tarih2 = Convert.ToString(tr[2] + tr[1]);
             string anyDays = "http://www.tcmb.gov.tr/kurlar/" + tarih2 + "/" + tarih + ".xml";
@@ -73,9 +73,10 @@ namespace MERP_MUI
                 }
                 else if (birim == "TRY")
                 {
-                    double X = Convert.ToDouble(tutar);
-                    double Y = Convert.ToDouble(EURO.Replace('.', ','));
-                    euro = Convert.ToString(X/Y);
+                    euro = Convert.ToString(Convert.ToDecimal(tutar) / Convert.ToDecimal(EURO));
+                    //double X = Convert.ToDouble(tutar);
+                    //double Y = Convert.ToDouble(EURO.Replace('.', ','));
+                    //euro = Convert.ToString(X/Y);
                 }
                 else if (birim == "GBP")
                 {

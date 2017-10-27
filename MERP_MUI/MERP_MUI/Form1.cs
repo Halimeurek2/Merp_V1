@@ -926,42 +926,46 @@ namespace MERP_MUI
 
         public void GetWeather(string sehir)
         {
-            const string api = "bafa10c3a0987fafa61257b03821b835";
-            string baglanti = "http://api.openweathermap.org/data/2.5/weather?q=Turkey," + sehir + "&mode=xml&units=metric&APPID=" + api;
-
-            XDocument hava = XDocument.Load(baglanti);
-            var sicaklik = hava.Descendants("temperature").ElementAt(0).Attribute("value").Value.Replace(".",",");
-            sicaklik = Convert.ToString(Math.Truncate(Convert.ToDouble(sicaklik)));
-            lbl_derece.Text = sicaklik.ToString()+ "°";
-
-            var durum = hava.Descendants("clouds").ElementAt(0).Attribute("name").Value;
-            lbl_durum.Text = durum.ToString();
-
-            if(durum.Contains("clear sky") == true)
+            try
             {
-                pictureBox4.Image = Properties.Resources.clear_sky;
-            }
-            else if(durum.Contains("few clouds") == true)
-            {
-                pictureBox4.Image = Properties.Resources.few_clouds;
-            }
-            else if(durum.Contains("broken clouds") == true || durum.Contains("scattered clouds") == true)
-            {
-                pictureBox4.Image = Properties.Resources.broken_clouds;
-            }
-            else if(durum.Contains("shower rain") == true || durum.Contains("rain") == true || durum.Contains("thunderstorm") == true)
-            {
-                pictureBox4.Image = Properties.Resources.rain;
-            }
-            else
-            {
-                pictureBox4.Image = Properties.Resources.snow;
-            }
+                const string api = "bafa10c3a0987fafa61257b03821b835";
+                string baglanti = "http://api.openweathermap.org/data/2.5/weather?q=Turkey," + sehir + "&mode=xml&units=metric&APPID=" + api;
+
+                XDocument hava = XDocument.Load(baglanti);
+                var sicaklik = hava.Descendants("temperature").ElementAt(0).Attribute("value").Value.Replace(".", ",");
+                sicaklik = Convert.ToString(Math.Truncate(Convert.ToDouble(sicaklik)));
+                lbl_derece.Text = sicaklik.ToString() + "°";
+
+                var durum = hava.Descendants("clouds").ElementAt(0).Attribute("name").Value;
+                lbl_durum.Text = durum.ToString();
+
+                if (durum.Contains("clear sky") == true)
+                {
+                    pictureBox4.Image = Properties.Resources.clear_sky;
+                }
+                else if (durum.Contains("few clouds") == true)
+                {
+                    pictureBox4.Image = Properties.Resources.few_clouds;
+                }
+                else if (durum.Contains("broken clouds") == true || durum.Contains("scattered clouds") == true)
+                {
+                    pictureBox4.Image = Properties.Resources.broken_clouds;
+                }
+                else if (durum.Contains("shower rain") == true || durum.Contains("rain") == true || durum.Contains("thunderstorm") == true)
+                {
+                    pictureBox4.Image = Properties.Resources.rain;
+                }
+                else
+                {
+                    pictureBox4.Image = Properties.Resources.snow;
+                }
 
 
-            //var yer = hava.Descendants("city").ElementAt(0).Attribute("name").Value;
-            //lbl_yer.Text = yer.ToString();
-            lbl_yer.Text = sehir;
+                //var yer = hava.Descendants("city").ElementAt(0).Attribute("name").Value;
+                //lbl_yer.Text = yer.ToString();
+                lbl_yer.Text = sehir;
+            }
+            catch { }
         }
 
         private void cmb_sehir_SelectedIndexChanged(object sender, EventArgs e)

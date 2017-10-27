@@ -42,12 +42,12 @@
             this.metroLabel1 = new MetroFramework.Controls.MetroLabel();
             this.metroLabel2 = new MetroFramework.Controls.MetroLabel();
             this.metroLabel3 = new MetroFramework.Controls.MetroLabel();
-            this.metroLabel4 = new MetroFramework.Controls.MetroLabel();
+            this.lbl_tutar = new MetroFramework.Controls.MetroLabel();
             this.metroLabel5 = new MetroFramework.Controls.MetroLabel();
             this.metroLabel6 = new MetroFramework.Controls.MetroLabel();
-            this.metroLabel7 = new MetroFramework.Controls.MetroLabel();
+            this.lbl_tarih = new MetroFramework.Controls.MetroLabel();
             this.metroLabel9 = new MetroFramework.Controls.MetroLabel();
-            this.metroLabel10 = new MetroFramework.Controls.MetroLabel();
+            this.lbl_tip = new MetroFramework.Controls.MetroLabel();
             this.ck_alarm = new MetroFramework.Controls.MetroCheckBox();
             this.date_alarm = new MetroFramework.Controls.MetroDateTime();
             this.rcb_acıklama = new System.Windows.Forms.RichTextBox();
@@ -58,6 +58,7 @@
             this.cmb_firma = new System.Windows.Forms.ComboBox();
             this.ck_cokluftr = new MetroFramework.Controls.MetroCheckBox();
             this.cmb_se = new System.Windows.Forms.ComboBox();
+            this.cb_avanGiris = new MetroFramework.Controls.MetroCheckBox();
             ((System.ComponentModel.ISupportInitialize)(this.pbClose)).BeginInit();
             this.SuspendLayout();
             // 
@@ -373,20 +374,20 @@
             this.metroLabel3.UseCustomForeColor = true;
             this.metroLabel3.UseStyleColors = true;
             // 
-            // metroLabel4
+            // lbl_tutar
             // 
-            this.metroLabel4.AutoSize = true;
-            this.metroLabel4.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.metroLabel4.Location = new System.Drawing.Point(23, 303);
-            this.metroLabel4.Name = "metroLabel4";
-            this.metroLabel4.Size = new System.Drawing.Size(90, 19);
-            this.metroLabel4.Style = MetroFramework.MetroColorStyle.Red;
-            this.metroLabel4.TabIndex = 37;
-            this.metroLabel4.Text = "Fatura Tutarı :";
-            this.metroLabel4.Theme = MetroFramework.MetroThemeStyle.Dark;
-            this.metroLabel4.UseCustomBackColor = true;
-            this.metroLabel4.UseCustomForeColor = true;
-            this.metroLabel4.UseStyleColors = true;
+            this.lbl_tutar.AutoSize = true;
+            this.lbl_tutar.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.lbl_tutar.Location = new System.Drawing.Point(23, 303);
+            this.lbl_tutar.Name = "lbl_tutar";
+            this.lbl_tutar.Size = new System.Drawing.Size(90, 19);
+            this.lbl_tutar.Style = MetroFramework.MetroColorStyle.Red;
+            this.lbl_tutar.TabIndex = 37;
+            this.lbl_tutar.Text = "Fatura Tutarı :";
+            this.lbl_tutar.Theme = MetroFramework.MetroThemeStyle.Dark;
+            this.lbl_tutar.UseCustomBackColor = true;
+            this.lbl_tutar.UseCustomForeColor = true;
+            this.lbl_tutar.UseStyleColors = true;
             // 
             // metroLabel5
             // 
@@ -418,20 +419,20 @@
             this.metroLabel6.UseCustomForeColor = true;
             this.metroLabel6.UseStyleColors = true;
             // 
-            // metroLabel7
+            // lbl_tarih
             // 
-            this.metroLabel7.AutoSize = true;
-            this.metroLabel7.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.metroLabel7.Location = new System.Drawing.Point(399, 205);
-            this.metroLabel7.Name = "metroLabel7";
-            this.metroLabel7.Size = new System.Drawing.Size(89, 19);
-            this.metroLabel7.Style = MetroFramework.MetroColorStyle.Red;
-            this.metroLabel7.TabIndex = 40;
-            this.metroLabel7.Text = "Fatura Tarihi :";
-            this.metroLabel7.Theme = MetroFramework.MetroThemeStyle.Dark;
-            this.metroLabel7.UseCustomBackColor = true;
-            this.metroLabel7.UseCustomForeColor = true;
-            this.metroLabel7.UseStyleColors = true;
+            this.lbl_tarih.AutoSize = true;
+            this.lbl_tarih.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.lbl_tarih.Location = new System.Drawing.Point(399, 205);
+            this.lbl_tarih.Name = "lbl_tarih";
+            this.lbl_tarih.Size = new System.Drawing.Size(89, 19);
+            this.lbl_tarih.Style = MetroFramework.MetroColorStyle.Red;
+            this.lbl_tarih.TabIndex = 40;
+            this.lbl_tarih.Text = "Fatura Tarihi :";
+            this.lbl_tarih.Theme = MetroFramework.MetroThemeStyle.Dark;
+            this.lbl_tarih.UseCustomBackColor = true;
+            this.lbl_tarih.UseCustomForeColor = true;
+            this.lbl_tarih.UseStyleColors = true;
             // 
             // metroLabel9
             // 
@@ -448,20 +449,20 @@
             this.metroLabel9.UseCustomForeColor = true;
             this.metroLabel9.UseStyleColors = true;
             // 
-            // metroLabel10
+            // lbl_tip
             // 
-            this.metroLabel10.AutoSize = true;
-            this.metroLabel10.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.metroLabel10.Location = new System.Drawing.Point(399, 352);
-            this.metroLabel10.Name = "metroLabel10";
-            this.metroLabel10.Size = new System.Drawing.Size(78, 19);
-            this.metroLabel10.Style = MetroFramework.MetroColorStyle.Red;
-            this.metroLabel10.TabIndex = 43;
-            this.metroLabel10.Text = "Fatura Tipi :";
-            this.metroLabel10.Theme = MetroFramework.MetroThemeStyle.Dark;
-            this.metroLabel10.UseCustomBackColor = true;
-            this.metroLabel10.UseCustomForeColor = true;
-            this.metroLabel10.UseStyleColors = true;
+            this.lbl_tip.AutoSize = true;
+            this.lbl_tip.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.lbl_tip.Location = new System.Drawing.Point(399, 352);
+            this.lbl_tip.Name = "lbl_tip";
+            this.lbl_tip.Size = new System.Drawing.Size(78, 19);
+            this.lbl_tip.Style = MetroFramework.MetroColorStyle.Red;
+            this.lbl_tip.TabIndex = 43;
+            this.lbl_tip.Text = "Fatura Tipi :";
+            this.lbl_tip.Theme = MetroFramework.MetroThemeStyle.Dark;
+            this.lbl_tip.UseCustomBackColor = true;
+            this.lbl_tip.UseCustomForeColor = true;
+            this.lbl_tip.UseStyleColors = true;
             // 
             // ck_alarm
             // 
@@ -597,12 +598,30 @@
             this.cmb_se.TabIndex = 70;
             this.cmb_se.Visible = false;
             // 
+            // cb_avanGiris
+            // 
+            this.cb_avanGiris.AutoSize = true;
+            this.cb_avanGiris.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.cb_avanGiris.Location = new System.Drawing.Point(138, 77);
+            this.cb_avanGiris.Name = "cb_avanGiris";
+            this.cb_avanGiris.Size = new System.Drawing.Size(81, 15);
+            this.cb_avanGiris.Style = MetroFramework.MetroColorStyle.Red;
+            this.cb_avanGiris.TabIndex = 71;
+            this.cb_avanGiris.Text = "Avans Giriş";
+            this.cb_avanGiris.Theme = MetroFramework.MetroThemeStyle.Dark;
+            this.cb_avanGiris.UseCustomBackColor = true;
+            this.cb_avanGiris.UseCustomForeColor = true;
+            this.cb_avanGiris.UseSelectable = true;
+            this.cb_avanGiris.UseStyleColors = true;
+            this.cb_avanGiris.CheckedChanged += new System.EventHandler(this.ck_avanGiris_CheckedChanged);
+            // 
             // FaturaGiris
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(671, 510);
             this.ControlBox = false;
+            this.Controls.Add(this.cb_avanGiris);
             this.Controls.Add(this.cmb_se);
             this.Controls.Add(this.ck_cokluftr);
             this.Controls.Add(this.cmb_firma);
@@ -613,12 +632,12 @@
             this.Controls.Add(this.rcb_acıklama);
             this.Controls.Add(this.date_alarm);
             this.Controls.Add(this.ck_alarm);
-            this.Controls.Add(this.metroLabel10);
+            this.Controls.Add(this.lbl_tip);
             this.Controls.Add(this.metroLabel9);
-            this.Controls.Add(this.metroLabel7);
+            this.Controls.Add(this.lbl_tarih);
             this.Controls.Add(this.metroLabel6);
             this.Controls.Add(this.metroLabel5);
-            this.Controls.Add(this.metroLabel4);
+            this.Controls.Add(this.lbl_tutar);
             this.Controls.Add(this.metroLabel3);
             this.Controls.Add(this.metroLabel2);
             this.Controls.Add(this.metroLabel1);
@@ -662,12 +681,12 @@
         private MetroFramework.Controls.MetroLabel metroLabel1;
         private MetroFramework.Controls.MetroLabel metroLabel2;
         private MetroFramework.Controls.MetroLabel metroLabel3;
-        private MetroFramework.Controls.MetroLabel metroLabel4;
+        private MetroFramework.Controls.MetroLabel lbl_tutar;
         private MetroFramework.Controls.MetroLabel metroLabel5;
         private MetroFramework.Controls.MetroLabel metroLabel6;
-        private MetroFramework.Controls.MetroLabel metroLabel7;
+        private MetroFramework.Controls.MetroLabel lbl_tarih;
         private MetroFramework.Controls.MetroLabel metroLabel9;
-        private MetroFramework.Controls.MetroLabel metroLabel10;
+        private MetroFramework.Controls.MetroLabel lbl_tip;
         private MetroFramework.Controls.MetroCheckBox ck_alarm;
         private MetroFramework.Controls.MetroDateTime date_alarm;
         private System.Windows.Forms.RichTextBox rcb_acıklama;
@@ -678,5 +697,6 @@
         public System.Windows.Forms.ComboBox cmb_firma;
         private MetroFramework.Controls.MetroCheckBox ck_cokluftr;
         private System.Windows.Forms.ComboBox cmb_se;
+        private MetroFramework.Controls.MetroCheckBox cb_avanGiris;
     }
 }

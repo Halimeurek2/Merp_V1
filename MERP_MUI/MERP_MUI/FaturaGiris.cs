@@ -365,5 +365,41 @@ namespace MERP_MUI
                 cmb_se.Visible = false;
             }
         }
+
+        private void ck_avanGiris_CheckedChanged(object sender, EventArgs e)
+        {
+            if(cb_avanGiris.Checked)
+            {
+                cb_durum.Checked = true;
+                txt_fatura_no.Text = "A111";
+                cmb_ftr_tip.Text = "Kesilen";
+                txt_ftr_vade.Enabled = false;
+                ck_cokluftr.Enabled = false;
+                date_alarm.Enabled = false;
+                ck_alarm.Enabled = false;
+                txt_avans.Enabled = false;
+                lbl_tarih.Text = "Avans Tarihi :";
+                lbl_tip.Text = "Avans Tipi :";
+                lbl_tutar.Text = "Avans Tutarı :";
+                rbGelen.Text = "Gelen Avans";
+                rbKesilen.Text = "Kesilen Avans";
+            }
+            else
+            {
+                cb_durum.Checked = false;
+                txt_fatura_no.Text = "";
+                cmb_ftr_tip.Text = "";
+                txt_ftr_vade.Enabled = true;
+                ck_cokluftr.Enabled = true;
+                date_alarm.Enabled = true;
+                ck_alarm.Enabled = true;
+                txt_avans.Enabled = true;
+                lbl_tarih.Text = "Fatura Tarihi :";
+                lbl_tip.Text = "Fatura Tipi :";
+                lbl_tutar.Text = "Fatura Tutarı :";
+                rbGelen.Text = "Gelen Fatura";
+                rbKesilen.Text = "Kesilen Fatura";
+            }
+        }
     }
 }

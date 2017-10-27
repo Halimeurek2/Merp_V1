@@ -73,6 +73,8 @@ namespace MERP_MUI
         public static DateTime[] monthK = new DateTime[12];
         int index = 0;
 
+        double percent;
+
         private System.IO.Stream streamToPrint;
 
         string streamType;
@@ -233,7 +235,8 @@ namespace MERP_MUI
 
             try
             {
-                komut = "select sum(harcama_el_mlz) from db_projeler where proje_no in(select fatura_proje_no from db_faturalar where fatura_cinsi='Elektronik' and fatura_proje_no='" + cmb_projeler.Text + "' AND fatura_tipi='G')";
+                el_ongorulen = "0";
+                komut = "select harcama_tutar,harcama_birim,harcama_tarih from db_projeharcama where harcama_proje = (select proje_id from db_projeler where proje_no = '"+cmb_projeler.Text+"') and (harcama_tipi = 'Elektronik Std.' or harcama_tipi = 'Yedek Malz. Elek.')";
                 da = new MySqlDataAdapter(komut, connection);
 
                 myCommand = new MySqlCommand(komut, myConnection);
@@ -241,7 +244,7 @@ namespace MERP_MUI
 
                 while (myReader.Read())
                 {
-                    el_ongorulen = Convert.ToString(myReader.GetString(0));
+                    el_ongorulen = Convert.ToString(Convert.ToDecimal(hf.EuroCalculation(myReader.GetString(2), myReader.GetString(0), myReader.GetString(1),el_ongorulen))+Convert.ToDecimal(el_ongorulen));
                 }
                 myReader.Close();
             }
@@ -267,13 +270,29 @@ namespace MERP_MUI
                 el_kalan = "0";
             }
 
+
+            percent = Convert.ToDouble(el_harcanan) / Convert.ToDouble(el_ongorulen);
+
+            if (percent >= 1)
+            {
+                percent = 1;
+            }
+
             chart2.Series["Series1"].Points.Clear();
 
-            el_ongorulen = hf.DecimalToCurrency(Convert.ToDecimal(el_ongorulen), el_ongorulen);
-            chart2.Legends[0].Title = "Öngörülen Toplam" + " " + el_ongorulen;
+            if(el_ongorulen != null)
+            {
+                el_ongorulen = hf.DecimalToCurrency(Convert.ToDecimal(el_ongorulen), el_ongorulen);
+                chart2.Legends[0].Title = "Öngörülen Toplam" + " " + el_ongorulen;
+            }
+            else
+            {
+                chart2.Legends[0].Title = "Öngörülen Toplam : 0";
+            }
 
-            chart2.Series["Series1"].Points.Add(Convert.ToDouble(el_harcanan));
-            chart2.Series["Series1"].Points.Add(Convert.ToDouble(el_kalan));
+
+            chart2.Series["Series1"].Points.Add(Convert.ToDouble(Math.Truncate(Convert.ToDouble(percent * 100))));
+            chart2.Series["Series1"].Points.Add(Convert.ToDouble(Math.Truncate(Convert.ToDouble(100-percent * 100))));
 
             el_harcanan = hf.DecimalToCurrency(Convert.ToDecimal(el_harcanan), el_harcanan);
             el_kalan = hf.DecimalToCurrency(Convert.ToDecimal(el_kalan), el_kalan);
@@ -291,6 +310,21 @@ namespace MERP_MUI
             chart2.Series[0].BorderWidth = 1;
             chart2.Series[0].BorderColor = Color.FromArgb(224,224,224);
 
+            if (percent < 0.8)
+            {
+                chart2.Series[0].Points[0].Color = Color.Green;
+                chart2.Series[0].Points[1].Color = Color.Gray;
+            }
+            else if (percent < 1 && percent > 0.8)
+            {
+                chart2.Series[0].Points[0].Color = Color.Yellow;
+                chart2.Series[0].Points[1].Color = Color.Gray;
+            }
+            else
+            {
+                chart2.Series[0].Points[0].Color = Color.Red;
+            }
+
             myConnection.Close();
         }
         public void DrawChart3()
@@ -299,7 +333,8 @@ namespace MERP_MUI
 
             try
             {
-                komut = "select (sum(harcama_m_mlz)+sum(harcama_imalat)) from db_projeler where proje_no in(select fatura_proje_no from db_faturalar where fatura_cinsi='Mekanik' and fatura_proje_no='" + cmb_projeler.Text + "' AND fatura_tipi='G')";
+                mek_ongorulen = "0";
+                komut = "select harcama_tutar,harcama_birim,harcama_tarih from db_projeharcama where harcama_proje = (select proje_id from db_projeler where proje_no = '"+cmb_projeler.Text+"') and (harcama_tipi = 'Mekanik Std.' or harcama_tipi = 'Yedek Malz. Mek.' or harcama_tipi = 'Imalat')";
                 da = new MySqlDataAdapter(komut, connection);
 
                 myCommand = new MySqlCommand(komut, myConnection);
@@ -307,7 +342,7 @@ namespace MERP_MUI
 
                 while (myReader.Read())
                 {
-                    mek_ongorulen = Convert.ToString(myReader.GetString(0));
+                    mek_ongorulen = Convert.ToString(Convert.ToDecimal(hf.EuroCalculation(myReader.GetString(2), myReader.GetString(0), myReader.GetString(1), mek_ongorulen))+Convert.ToDecimal(mek_ongorulen));
                 }
                 myReader.Close();
             }
@@ -334,13 +369,28 @@ namespace MERP_MUI
 
             }
 
+
+            percent = Convert.ToDouble(mek_harcanan) / Convert.ToDouble(mek_ongorulen);
+
+            if (percent >= 1)
+            {
+                percent = 1;
+            }
+
             chart3.Series["Series1"].Points.Clear();
 
-            mek_ongorulen = hf.DecimalToCurrency(Convert.ToDecimal(mek_ongorulen), mek_ongorulen);
+            if(mek_ongorulen != null)
+            {
+                mek_ongorulen = hf.DecimalToCurrency(Convert.ToDecimal(mek_ongorulen), mek_ongorulen);
+                chart3.Legends[0].Title = "Öngörülen Toplam" + " " + mek_ongorulen;
+            }
+            else
+            {
+                chart3.Legends[0].Title = "Öngörülen Toplam : 0";
+            }
 
-            chart3.Legends[0].Title = "Öngörülen Toplam" + " " + mek_ongorulen;
-            chart3.Series["Series1"].Points.Add(Convert.ToDouble(mek_harcanan));
-            chart3.Series["Series1"].Points.Add(Convert.ToDouble(mek_kalan));
+            chart3.Series["Series1"].Points.Add(Convert.ToDouble(Math.Truncate(Convert.ToDouble(percent * 100))));
+            chart3.Series["Series1"].Points.Add(Convert.ToDouble(Math.Truncate(Convert.ToDouble(100-percent * 100))));
 
             mek_harcanan = hf.DecimalToCurrency(Convert.ToDecimal(mek_harcanan), mek_harcanan);
             mek_kalan = hf.DecimalToCurrency(Convert.ToDecimal(mek_kalan), mek_kalan);
@@ -358,6 +408,21 @@ namespace MERP_MUI
             chart3.Series[0].BorderWidth = 1;
             chart3.Series[0].BorderColor = Color.FromArgb(224,224,224);
 
+            if (percent < 0.8)
+            {
+                chart3.Series[0].Points[0].Color = Color.Green;
+                chart3.Series[0].Points[1].Color = Color.Gray;
+            }
+            else if (percent < 1 && percent > 0.8)
+            {
+                chart3.Series[0].Points[0].Color = Color.Yellow;
+                chart3.Series[0].Points[1].Color = Color.Gray;
+            }
+            else
+            {
+                chart3.Series[0].Points[0].Color = Color.Red;
+            }
+
             myConnection.Close();
         }
         public void DrawChart4()
@@ -366,7 +431,8 @@ namespace MERP_MUI
 
             try
             {
-                komut = "select (sum(harcama_risk)+sum(harcama_test)) from db_projeler where proje_no in(select fatura_proje_no from db_faturalar where fatura_cinsi='Genel Giderler' and fatura_proje_no='" + cmb_projeler.Text + "' AND fatura_tipi='G')";
+                genel_ongorulen = "0";
+                komut = "select harcama_tutar,harcama_birim,harcama_tarih from db_projeharcama where harcama_proje = (select proje_id from db_projeler where proje_no = '"+cmb_projeler.Text+"') and (harcama_tipi = 'Risk' or harcama_tipi = 'Test' or harcama_tipi = 'Lojistik' or harcama_tipi = 'Ithalat-Gumruk')";
                 da = new MySqlDataAdapter(komut, connection);
 
                 myCommand = new MySqlCommand(komut, myConnection);
@@ -374,7 +440,7 @@ namespace MERP_MUI
 
                 while (myReader.Read())
                 {
-                    genel_ongorulen = Convert.ToString(myReader.GetString(0));
+                    genel_ongorulen = Convert.ToString(Convert.ToDecimal(hf.EuroCalculation(myReader.GetString(2), myReader.GetString(0), myReader.GetString(1), genel_ongorulen))+Convert.ToDecimal(genel_ongorulen));
                 }
                 myReader.Close();
             }
@@ -401,13 +467,27 @@ namespace MERP_MUI
 
             }
 
+            percent=Convert.ToDouble(genel_harcanan)/Convert.ToDouble(genel_ongorulen);
+
+            if(percent>=1)
+            {
+                percent = 1;
+            }
+
             chart4.Series["Series1"].Points.Clear();
 
-            genel_ongorulen = hf.DecimalToCurrency(Convert.ToDecimal(genel_ongorulen), genel_ongorulen);
+            if(genel_ongorulen != null)
+            {
+                genel_ongorulen = hf.DecimalToCurrency(Convert.ToDecimal(genel_ongorulen), genel_ongorulen);
+                chart4.Legends[0].Title = "Öngörülen Toplam" + " " + genel_ongorulen;
+            }
+            else
+            {
+                chart4.Legends[0].Title = "Öngörülen Toplam : 0";
+            }
 
-            chart4.Legends[0].Title = "Öngörülen Toplam" + " " + genel_ongorulen;
-            chart4.Series["Series1"].Points.Add(Convert.ToDouble(genel_harcanan));
-            chart4.Series["Series1"].Points.Add(Convert.ToDouble(genel_kalan));
+            chart4.Series["Series1"].Points.Add(Math.Truncate(Convert.ToDouble(percent*100)));
+            chart4.Series["Series1"].Points.Add(Math.Truncate(Convert.ToDouble(100 -percent*100)));
 
             genel_harcanan = hf.DecimalToCurrency(Convert.ToDecimal(genel_harcanan), genel_harcanan);
             genel_kalan = hf.DecimalToCurrency(Convert.ToDecimal(genel_kalan), genel_kalan);
@@ -423,8 +503,22 @@ namespace MERP_MUI
             chart4.Series[0]["PieLabelStyle"] = "Outside";
 
             chart4.Series[0].BorderWidth = 1;
-            chart4.Series[0].BorderColor = Color.FromArgb(224,224,224);
-
+            chart4.Series[0].BorderColor = Color.FromArgb(224, 224, 224);
+            if(percent<0.8)
+            {
+                chart4.Series[0].Points[0].Color = Color.Green;
+                chart4.Series[0].Points[1].Color = Color.Gray;
+            }
+            else if(percent<1 && percent>0.8)
+            {
+                chart4.Series[0].Points[0].Color = Color.Yellow;
+                chart4.Series[0].Points[1].Color = Color.Gray;
+            }
+            else
+            {
+                chart4.Series[0].Points[0].Color = Color.Red;
+            }
+            
             myConnection.Close();
         }
 

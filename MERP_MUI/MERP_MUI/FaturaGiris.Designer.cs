@@ -309,7 +309,7 @@
             this.txt_ftr_tarih.CustomButton.UseSelectable = true;
             this.txt_ftr_tarih.CustomButton.Visible = false;
             this.txt_ftr_tarih.Lines = new string[0];
-            this.txt_ftr_tarih.Location = new System.Drawing.Point(495, 207);
+            this.txt_ftr_tarih.Location = new System.Drawing.Point(495, 205);
             this.txt_ftr_tarih.MaxLength = 32767;
             this.txt_ftr_tarih.Name = "txt_ftr_tarih";
             this.txt_ftr_tarih.PasswordChar = '\0';

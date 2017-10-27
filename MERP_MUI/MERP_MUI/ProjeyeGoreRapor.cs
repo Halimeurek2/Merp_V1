@@ -271,12 +271,12 @@ namespace MERP_MUI
             }
 
 
-            percent = Convert.ToDouble(el_harcanan) / Convert.ToDouble(el_ongorulen);
+            //percent = Convert.ToDouble(el_harcanan) / Convert.ToDouble(el_ongorulen);
 
-            if (percent >= 1)
-            {
-                percent = 1;
-            }
+            //if (percent >= 1)
+            //{
+            //    percent = 1;
+            //}
 
             chart2.Series["Series1"].Points.Clear();
 
@@ -291,8 +291,8 @@ namespace MERP_MUI
             }
 
 
-            chart2.Series["Series1"].Points.Add(Convert.ToDouble(Math.Truncate(Convert.ToDouble(percent * 100))));
-            chart2.Series["Series1"].Points.Add(Convert.ToDouble(Math.Truncate(Convert.ToDouble(100-percent * 100))));
+            chart2.Series["Series1"].Points.Add(Convert.ToDouble(el_harcanan));          //Math.Truncate(Convert.ToDouble(percent * 100)
+            chart2.Series["Series1"].Points.Add(Convert.ToDouble(el_kalan));          //Math.Truncate(Convert.ToDouble(100-percent * 100)
 
             el_harcanan = hf.DecimalToCurrency(Convert.ToDecimal(el_harcanan), el_harcanan);
             el_kalan = hf.DecimalToCurrency(Convert.ToDecimal(el_kalan), el_kalan);
@@ -310,20 +310,20 @@ namespace MERP_MUI
             chart2.Series[0].BorderWidth = 1;
             chart2.Series[0].BorderColor = Color.FromArgb(224,224,224);
 
-            if (percent < 0.8)
-            {
-                chart2.Series[0].Points[0].Color = Color.Green;
-                chart2.Series[0].Points[1].Color = Color.Gray;
-            }
-            else if (percent < 1 && percent > 0.8)
-            {
-                chart2.Series[0].Points[0].Color = Color.Yellow;
-                chart2.Series[0].Points[1].Color = Color.Gray;
-            }
-            else
-            {
-                chart2.Series[0].Points[0].Color = Color.Red;
-            }
+            //if (percent < 0.8)
+            //{
+            //    chart2.Series[0].Points[0].Color = Color.Green;
+            //    chart2.Series[0].Points[1].Color = Color.Gray;
+            //}
+            //else if (percent < 1 && percent > 0.8)
+            //{
+            //    chart2.Series[0].Points[0].Color = Color.Yellow;
+            //    chart2.Series[0].Points[1].Color = Color.Gray;
+            //}
+            //else
+            //{
+            //    chart2.Series[0].Points[0].Color = Color.Red;
+            //}
 
             myConnection.Close();
         }
@@ -370,12 +370,12 @@ namespace MERP_MUI
             }
 
 
-            percent = Convert.ToDouble(mek_harcanan) / Convert.ToDouble(mek_ongorulen);
+            //percent = Convert.ToDouble(mek_harcanan) / Convert.ToDouble(mek_ongorulen);
 
-            if (percent >= 1)
-            {
-                percent = 1;
-            }
+            //if (percent >= 1)
+            //{
+            //    percent = 1;
+            //}
 
             chart3.Series["Series1"].Points.Clear();
 
@@ -389,8 +389,8 @@ namespace MERP_MUI
                 chart3.Legends[0].Title = "Öngörülen Toplam : 0";
             }
 
-            chart3.Series["Series1"].Points.Add(Convert.ToDouble(Math.Truncate(Convert.ToDouble(percent * 100))));
-            chart3.Series["Series1"].Points.Add(Convert.ToDouble(Math.Truncate(Convert.ToDouble(100-percent * 100))));
+            chart3.Series["Series1"].Points.Add(Convert.ToDouble(mek_harcanan));
+            chart3.Series["Series1"].Points.Add(Convert.ToDouble(mek_kalan));
 
             mek_harcanan = hf.DecimalToCurrency(Convert.ToDecimal(mek_harcanan), mek_harcanan);
             mek_kalan = hf.DecimalToCurrency(Convert.ToDecimal(mek_kalan), mek_kalan);
@@ -408,20 +408,20 @@ namespace MERP_MUI
             chart3.Series[0].BorderWidth = 1;
             chart3.Series[0].BorderColor = Color.FromArgb(224,224,224);
 
-            if (percent < 0.8)
-            {
-                chart3.Series[0].Points[0].Color = Color.Green;
-                chart3.Series[0].Points[1].Color = Color.Gray;
-            }
-            else if (percent < 1 && percent > 0.8)
-            {
-                chart3.Series[0].Points[0].Color = Color.Yellow;
-                chart3.Series[0].Points[1].Color = Color.Gray;
-            }
-            else
-            {
-                chart3.Series[0].Points[0].Color = Color.Red;
-            }
+            //if (percent < 0.8)
+            //{
+            //    chart3.Series[0].Points[0].Color = Color.Green;
+            //    chart3.Series[0].Points[1].Color = Color.Gray;
+            //}
+            //else if (percent < 1 && percent > 0.8)
+            //{
+            //    chart3.Series[0].Points[0].Color = Color.Yellow;
+            //    chart3.Series[0].Points[1].Color = Color.Gray;
+            //}
+            //else
+            //{
+            //    chart3.Series[0].Points[0].Color = Color.Red;
+            //}
 
             myConnection.Close();
         }
@@ -467,12 +467,12 @@ namespace MERP_MUI
 
             }
 
-            percent=Convert.ToDouble(genel_harcanan)/Convert.ToDouble(genel_ongorulen);
+            //percent=Convert.ToDouble(genel_harcanan)/Convert.ToDouble(genel_ongorulen);
 
-            if(percent>=1)
-            {
-                percent = 1;
-            }
+            //if(percent>=1)
+            //{
+            //    percent = 1;
+            //}
 
             chart4.Series["Series1"].Points.Clear();
 
@@ -486,8 +486,8 @@ namespace MERP_MUI
                 chart4.Legends[0].Title = "Öngörülen Toplam : 0";
             }
 
-            chart4.Series["Series1"].Points.Add(Math.Truncate(Convert.ToDouble(percent*100)));
-            chart4.Series["Series1"].Points.Add(Math.Truncate(Convert.ToDouble(100 -percent*100)));
+            chart4.Series["Series1"].Points.Add(Convert.ToDouble(genel_harcanan));
+            chart4.Series["Series1"].Points.Add(Convert.ToDouble(genel_kalan));
 
             genel_harcanan = hf.DecimalToCurrency(Convert.ToDecimal(genel_harcanan), genel_harcanan);
             genel_kalan = hf.DecimalToCurrency(Convert.ToDecimal(genel_kalan), genel_kalan);
@@ -504,20 +504,20 @@ namespace MERP_MUI
 
             chart4.Series[0].BorderWidth = 1;
             chart4.Series[0].BorderColor = Color.FromArgb(224, 224, 224);
-            if(percent<0.8)
-            {
-                chart4.Series[0].Points[0].Color = Color.Green;
-                chart4.Series[0].Points[1].Color = Color.Gray;
-            }
-            else if(percent<1 && percent>0.8)
-            {
-                chart4.Series[0].Points[0].Color = Color.Yellow;
-                chart4.Series[0].Points[1].Color = Color.Gray;
-            }
-            else
-            {
-                chart4.Series[0].Points[0].Color = Color.Red;
-            }
+            //if(percent<0.8)
+            //{
+            //    chart4.Series[0].Points[0].Color = Color.Green;
+            //    chart4.Series[0].Points[1].Color = Color.Gray;
+            //}
+            //else if(percent<1 && percent>0.8)
+            //{
+            //    chart4.Series[0].Points[0].Color = Color.Yellow;
+            //    chart4.Series[0].Points[1].Color = Color.Gray;
+            //}
+            //else
+            //{
+            //    chart4.Series[0].Points[0].Color = Color.Red;
+            //}
             
             myConnection.Close();
         }

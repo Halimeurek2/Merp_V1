@@ -228,6 +228,8 @@ namespace MERP_MUI
 
             myConnection.Close();
 
+
+
         }
         public void DrawChart2()
         {

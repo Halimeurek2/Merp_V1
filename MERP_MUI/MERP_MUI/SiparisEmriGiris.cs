@@ -113,11 +113,11 @@ namespace MERP_MUI
                     db = new DBConnect();
                     if(rb_gelen.Checked)
                     {
-                        db.InsertSE(Convert.ToString(cmb_prjno.Text), Convert.ToString(txt_siparisNo.Text), Convert.ToString(cmb_tedarikci.Text), Convert.ToString(txt_talepKisi.Text), Convert.ToDateTime(date_teslim.Text), Convert.ToInt32(txt_vade.Text), Convert.ToDateTime(date_temin.Text), Convert.ToDecimal(txt_mlz_brmFiyat.Text), Convert.ToString(cmb_paraBirimi.Text), Convert.ToDecimal(siparis_euro), Convert.ToString(rcb_aciklama.Text), Convert.ToString("Gelen"));
+                        db.InsertSE(Convert.ToString(cmb_prjno.Text), Convert.ToString(txt_siparisNo.Text), Convert.ToString(cmb_tedarikci.Text), Convert.ToString(txt_talepKisi.Text), Convert.ToDateTime(date_teslim.Text), Convert.ToInt32(txt_vade.Text), Convert.ToDateTime(date_temin.Text), Convert.ToDecimal(txt_mlz_brmFiyat.Text), Convert.ToString(cmb_paraBirimi.Text), Convert.ToDecimal(siparis_euro), Convert.ToString(rcb_aciklama.Text), Convert.ToString("A"));
                     }
                     if(rb_verilen.Checked)
                     {
-                        db.InsertSE(Convert.ToString(cmb_prjno.Text), Convert.ToString(txt_siparisNo.Text), Convert.ToString(cmb_tedarikci.Text), Convert.ToString(txt_talepKisi.Text), Convert.ToDateTime(date_teslim.Text), Convert.ToInt32(txt_vade.Text), Convert.ToDateTime(date_temin.Text), Convert.ToDecimal(txt_mlz_brmFiyat.Text), Convert.ToString(cmb_paraBirimi.Text), Convert.ToDecimal(siparis_euro), Convert.ToString(rcb_aciklama.Text), Convert.ToString("Verilen"));
+                        db.InsertSE(Convert.ToString(cmb_prjno.Text), Convert.ToString(txt_siparisNo.Text), Convert.ToString(cmb_tedarikci.Text), Convert.ToString(txt_talepKisi.Text), Convert.ToDateTime(date_teslim.Text), Convert.ToInt32(txt_vade.Text), Convert.ToDateTime(date_temin.Text), Convert.ToDecimal(txt_mlz_brmFiyat.Text), Convert.ToString(cmb_paraBirimi.Text), Convert.ToDecimal(siparis_euro), Convert.ToString(rcb_aciklama.Text), Convert.ToString("V"));
                     }
 
                     this.Close();

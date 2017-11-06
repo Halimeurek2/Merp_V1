@@ -59,6 +59,7 @@
             this.ck_cokluftr = new MetroFramework.Controls.MetroCheckBox();
             this.cmb_se = new System.Windows.Forms.ComboBox();
             this.cb_avanGiris = new MetroFramework.Controls.MetroCheckBox();
+            this.cmb_gelense = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.pbClose)).BeginInit();
             this.SuspendLayout();
             // 
@@ -542,6 +543,7 @@
             this.rbGelen.UseCustomForeColor = true;
             this.rbGelen.UseSelectable = true;
             this.rbGelen.UseStyleColors = true;
+            this.rbGelen.CheckedChanged += new System.EventHandler(this.rbGelen_CheckedChanged);
             // 
             // rbKesilen
             // 
@@ -615,12 +617,22 @@
             this.cb_avanGiris.UseStyleColors = true;
             this.cb_avanGiris.CheckedChanged += new System.EventHandler(this.ck_avanGiris_CheckedChanged);
             // 
+            // cmb_gelense
+            // 
+            this.cmb_gelense.FormattingEnabled = true;
+            this.cmb_gelense.Location = new System.Drawing.Point(252, 117);
+            this.cmb_gelense.Name = "cmb_gelense";
+            this.cmb_gelense.Size = new System.Drawing.Size(166, 21);
+            this.cmb_gelense.TabIndex = 72;
+            this.cmb_gelense.Visible = false;
+            // 
             // FaturaGiris
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(671, 510);
             this.ControlBox = false;
+            this.Controls.Add(this.cmb_gelense);
             this.Controls.Add(this.cb_avanGiris);
             this.Controls.Add(this.cmb_se);
             this.Controls.Add(this.ck_cokluftr);
@@ -698,5 +710,6 @@
         private MetroFramework.Controls.MetroCheckBox ck_cokluftr;
         private System.Windows.Forms.ComboBox cmb_se;
         private MetroFramework.Controls.MetroCheckBox cb_avanGiris;
+        private System.Windows.Forms.ComboBox cmb_gelense;
     }
 }

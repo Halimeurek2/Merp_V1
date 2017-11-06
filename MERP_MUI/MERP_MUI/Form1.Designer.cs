@@ -29,22 +29,22 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle28 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle29 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle30 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle31 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle32 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle33 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle34 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle35 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle36 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea4 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend4 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series16 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Series series17 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Series series18 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Series series19 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Series series20 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Series series3 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Series series4 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Series series5 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.splitContainer2 = new System.Windows.Forms.SplitContainer();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnDGW = new System.Windows.Forms.Button();
@@ -57,23 +57,17 @@
             this.splitContainer12 = new System.Windows.Forms.SplitContainer();
             this.splitContainer14 = new System.Windows.Forms.SplitContainer();
             this.splitContainer15 = new System.Windows.Forms.SplitContainer();
-            this.splitContainer17 = new System.Windows.Forms.SplitContainer();
-            this.metroLabel7 = new MetroFramework.Controls.MetroLabel();
-            this.cmb_Barprojeler = new MetroFramework.Controls.MetroComboBox();
-            this.mpb_zaman = new MetroFramework.Controls.MetroProgressBar();
+            this.flw_tarih = new System.Windows.Forms.FlowLayoutPanel();
             this.splitContainer16 = new System.Windows.Forms.SplitContainer();
-            this.splitContainer18 = new System.Windows.Forms.SplitContainer();
-            this.metroLabel8 = new MetroFramework.Controls.MetroLabel();
-            this.mpb_butce = new MetroFramework.Controls.MetroProgressBar();
-            this.splitContainer19 = new System.Windows.Forms.SplitContainer();
-            this.metroLabel9 = new MetroFramework.Controls.MetroLabel();
-            this.mpb_kesilenFtr = new MetroFramework.Controls.MetroProgressBar();
+            this.flw_butce = new System.Windows.Forms.FlowLayoutPanel();
+            this.flw_fatura = new System.Windows.Forms.FlowLayoutPanel();
             this.splitContainer13 = new System.Windows.Forms.SplitContainer();
             this.panel2 = new System.Windows.Forms.Panel();
             this.lbl_yer = new System.Windows.Forms.Label();
             this.lbl_durum = new System.Windows.Forms.Label();
             this.lbl_derece = new System.Windows.Forms.Label();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.cmb_Barprojeler = new MetroFramework.Controls.MetroComboBox();
             this.cmb_sehir = new MetroFramework.Controls.MetroComboBox();
             this.pnlAcil = new MetroFramework.Controls.MetroPanel();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
@@ -153,22 +147,10 @@
             this.splitContainer15.Panel1.SuspendLayout();
             this.splitContainer15.Panel2.SuspendLayout();
             this.splitContainer15.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.splitContainer17)).BeginInit();
-            this.splitContainer17.Panel1.SuspendLayout();
-            this.splitContainer17.Panel2.SuspendLayout();
-            this.splitContainer17.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer16)).BeginInit();
             this.splitContainer16.Panel1.SuspendLayout();
             this.splitContainer16.Panel2.SuspendLayout();
             this.splitContainer16.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.splitContainer18)).BeginInit();
-            this.splitContainer18.Panel1.SuspendLayout();
-            this.splitContainer18.Panel2.SuspendLayout();
-            this.splitContainer18.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.splitContainer19)).BeginInit();
-            this.splitContainer19.Panel1.SuspendLayout();
-            this.splitContainer19.Panel2.SuspendLayout();
-            this.splitContainer19.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer13)).BeginInit();
             this.splitContainer13.Panel1.SuspendLayout();
             this.splitContainer13.Panel2.SuspendLayout();
@@ -399,7 +381,7 @@
             // 
             this.splitContainer15.Panel1.BackColor = System.Drawing.Color.White;
             this.splitContainer15.Panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.splitContainer15.Panel1.Controls.Add(this.splitContainer17);
+            this.splitContainer15.Panel1.Controls.Add(this.flw_tarih);
             // 
             // splitContainer15.Panel2
             // 
@@ -408,69 +390,13 @@
             this.splitContainer15.SplitterDistance = 41;
             this.splitContainer15.TabIndex = 0;
             // 
-            // splitContainer17
+            // flw_tarih
             // 
-            this.splitContainer17.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.splitContainer17.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.splitContainer17.Location = new System.Drawing.Point(0, 0);
-            this.splitContainer17.Name = "splitContainer17";
-            // 
-            // splitContainer17.Panel1
-            // 
-            this.splitContainer17.Panel1.BackColor = System.Drawing.Color.White;
-            this.splitContainer17.Panel1.Controls.Add(this.metroLabel7);
-            this.splitContainer17.Panel1.Controls.Add(this.cmb_Barprojeler);
-            // 
-            // splitContainer17.Panel2
-            // 
-            this.splitContainer17.Panel2.BackColor = System.Drawing.Color.White;
-            this.splitContainer17.Panel2.Controls.Add(this.mpb_zaman);
-            this.splitContainer17.Size = new System.Drawing.Size(951, 41);
-            this.splitContainer17.SplitterDistance = 164;
-            this.splitContainer17.TabIndex = 0;
-            // 
-            // metroLabel7
-            // 
-            this.metroLabel7.AutoSize = true;
-            this.metroLabel7.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.metroLabel7.FontWeight = MetroFramework.MetroLabelWeight.Regular;
-            this.metroLabel7.ForeColor = System.Drawing.Color.Red;
-            this.metroLabel7.Location = new System.Drawing.Point(0, 29);
-            this.metroLabel7.Name = "metroLabel7";
-            this.metroLabel7.Size = new System.Drawing.Size(128, 19);
-            this.metroLabel7.TabIndex = 0;
-            this.metroLabel7.Text = "Proje Zaman Aralığı";
-            this.metroLabel7.UseCustomBackColor = true;
-            this.metroLabel7.UseCustomForeColor = true;
-            this.metroLabel7.UseStyleColors = true;
-            // 
-            // cmb_Barprojeler
-            // 
-            this.cmb_Barprojeler.Dock = System.Windows.Forms.DockStyle.Top;
-            this.cmb_Barprojeler.FormattingEnabled = true;
-            this.cmb_Barprojeler.ItemHeight = 23;
-            this.cmb_Barprojeler.Location = new System.Drawing.Point(0, 0);
-            this.cmb_Barprojeler.Name = "cmb_Barprojeler";
-            this.cmb_Barprojeler.Size = new System.Drawing.Size(164, 29);
-            this.cmb_Barprojeler.Style = MetroFramework.MetroColorStyle.Red;
-            this.cmb_Barprojeler.TabIndex = 2;
-            this.cmb_Barprojeler.UseCustomBackColor = true;
-            this.cmb_Barprojeler.UseCustomForeColor = true;
-            this.cmb_Barprojeler.UseSelectable = true;
-            this.cmb_Barprojeler.UseStyleColors = true;
-            this.cmb_Barprojeler.SelectedIndexChanged += new System.EventHandler(this.cmb_Barprojeler_SelectedIndexChanged);
-            // 
-            // mpb_zaman
-            // 
-            this.mpb_zaman.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.mpb_zaman.FontWeight = MetroFramework.MetroProgressBarWeight.Bold;
-            this.mpb_zaman.HideProgressText = false;
-            this.mpb_zaman.Location = new System.Drawing.Point(0, 0);
-            this.mpb_zaman.Name = "mpb_zaman";
-            this.mpb_zaman.Size = new System.Drawing.Size(783, 41);
-            this.mpb_zaman.Style = MetroFramework.MetroColorStyle.Red;
-            this.mpb_zaman.TabIndex = 1;
-            this.mpb_zaman.UseCustomBackColor = true;
+            this.flw_tarih.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.flw_tarih.Location = new System.Drawing.Point(0, 0);
+            this.flw_tarih.Name = "flw_tarih";
+            this.flw_tarih.Size = new System.Drawing.Size(951, 41);
+            this.flw_tarih.TabIndex = 0;
             // 
             // splitContainer16
             // 
@@ -482,109 +408,31 @@
             // splitContainer16.Panel1
             // 
             this.splitContainer16.Panel1.BackColor = System.Drawing.Color.White;
-            this.splitContainer16.Panel1.Controls.Add(this.splitContainer18);
+            this.splitContainer16.Panel1.Controls.Add(this.flw_butce);
             // 
             // splitContainer16.Panel2
             // 
             this.splitContainer16.Panel2.BackColor = System.Drawing.Color.White;
-            this.splitContainer16.Panel2.Controls.Add(this.splitContainer19);
+            this.splitContainer16.Panel2.Controls.Add(this.flw_fatura);
             this.splitContainer16.Size = new System.Drawing.Size(951, 84);
             this.splitContainer16.SplitterDistance = 42;
             this.splitContainer16.TabIndex = 0;
             // 
-            // splitContainer18
+            // flw_butce
             // 
-            this.splitContainer18.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.splitContainer18.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.splitContainer18.Location = new System.Drawing.Point(0, 0);
-            this.splitContainer18.Name = "splitContainer18";
+            this.flw_butce.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.flw_butce.Location = new System.Drawing.Point(0, 0);
+            this.flw_butce.Name = "flw_butce";
+            this.flw_butce.Size = new System.Drawing.Size(951, 42);
+            this.flw_butce.TabIndex = 1;
             // 
-            // splitContainer18.Panel1
+            // flw_fatura
             // 
-            this.splitContainer18.Panel1.BackColor = System.Drawing.Color.White;
-            this.splitContainer18.Panel1.Controls.Add(this.metroLabel8);
-            // 
-            // splitContainer18.Panel2
-            // 
-            this.splitContainer18.Panel2.BackColor = System.Drawing.Color.White;
-            this.splitContainer18.Panel2.Controls.Add(this.mpb_butce);
-            this.splitContainer18.Size = new System.Drawing.Size(951, 42);
-            this.splitContainer18.SplitterDistance = 164;
-            this.splitContainer18.TabIndex = 0;
-            // 
-            // metroLabel8
-            // 
-            this.metroLabel8.AutoSize = true;
-            this.metroLabel8.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.metroLabel8.FontWeight = MetroFramework.MetroLabelWeight.Regular;
-            this.metroLabel8.ForeColor = System.Drawing.Color.Red;
-            this.metroLabel8.Location = new System.Drawing.Point(0, 23);
-            this.metroLabel8.Name = "metroLabel8";
-            this.metroLabel8.Size = new System.Drawing.Size(78, 19);
-            this.metroLabel8.TabIndex = 1;
-            this.metroLabel8.Text = "Proje Bütçe";
-            this.metroLabel8.UseCustomBackColor = true;
-            this.metroLabel8.UseCustomForeColor = true;
-            this.metroLabel8.UseStyleColors = true;
-            // 
-            // mpb_butce
-            // 
-            this.mpb_butce.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.mpb_butce.FontWeight = MetroFramework.MetroProgressBarWeight.Bold;
-            this.mpb_butce.HideProgressText = false;
-            this.mpb_butce.Location = new System.Drawing.Point(0, 0);
-            this.mpb_butce.Name = "mpb_butce";
-            this.mpb_butce.Size = new System.Drawing.Size(783, 42);
-            this.mpb_butce.Style = MetroFramework.MetroColorStyle.Red;
-            this.mpb_butce.TabIndex = 2;
-            this.mpb_butce.UseCustomBackColor = true;
-            // 
-            // splitContainer19
-            // 
-            this.splitContainer19.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.splitContainer19.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.splitContainer19.Location = new System.Drawing.Point(0, 0);
-            this.splitContainer19.Name = "splitContainer19";
-            // 
-            // splitContainer19.Panel1
-            // 
-            this.splitContainer19.Panel1.BackColor = System.Drawing.Color.White;
-            this.splitContainer19.Panel1.Controls.Add(this.metroLabel9);
-            // 
-            // splitContainer19.Panel2
-            // 
-            this.splitContainer19.Panel2.BackColor = System.Drawing.Color.White;
-            this.splitContainer19.Panel2.Controls.Add(this.mpb_kesilenFtr);
-            this.splitContainer19.Size = new System.Drawing.Size(951, 38);
-            this.splitContainer19.SplitterDistance = 164;
-            this.splitContainer19.TabIndex = 0;
-            // 
-            // metroLabel9
-            // 
-            this.metroLabel9.AutoSize = true;
-            this.metroLabel9.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.metroLabel9.FontWeight = MetroFramework.MetroLabelWeight.Regular;
-            this.metroLabel9.ForeColor = System.Drawing.Color.Red;
-            this.metroLabel9.Location = new System.Drawing.Point(0, 19);
-            this.metroLabel9.Name = "metroLabel9";
-            this.metroLabel9.Size = new System.Drawing.Size(129, 19);
-            this.metroLabel9.TabIndex = 1;
-            this.metroLabel9.Text = "Proje Kesilen Fatura";
-            this.metroLabel9.UseCustomBackColor = true;
-            this.metroLabel9.UseCustomForeColor = true;
-            this.metroLabel9.UseStyleColors = true;
-            // 
-            // mpb_kesilenFtr
-            // 
-            this.mpb_kesilenFtr.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.mpb_kesilenFtr.FontWeight = MetroFramework.MetroProgressBarWeight.Bold;
-            this.mpb_kesilenFtr.HideProgressText = false;
-            this.mpb_kesilenFtr.Location = new System.Drawing.Point(0, 0);
-            this.mpb_kesilenFtr.Name = "mpb_kesilenFtr";
-            this.mpb_kesilenFtr.Size = new System.Drawing.Size(783, 38);
-            this.mpb_kesilenFtr.Style = MetroFramework.MetroColorStyle.Red;
-            this.mpb_kesilenFtr.TabIndex = 2;
-            this.mpb_kesilenFtr.UseCustomBackColor = true;
+            this.flw_fatura.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.flw_fatura.Location = new System.Drawing.Point(0, 0);
+            this.flw_fatura.Name = "flw_fatura";
+            this.flw_fatura.Size = new System.Drawing.Size(951, 38);
+            this.flw_fatura.TabIndex = 2;
             // 
             // splitContainer13
             // 
@@ -599,9 +447,10 @@
             // 
             // splitContainer13.Panel2
             // 
+            this.splitContainer13.Panel2.Controls.Add(this.cmb_Barprojeler);
             this.splitContainer13.Panel2.Controls.Add(this.cmb_sehir);
             this.splitContainer13.Size = new System.Drawing.Size(196, 675);
-            this.splitContainer13.SplitterDistance = 231;
+            this.splitContainer13.SplitterDistance = 230;
             this.splitContainer13.TabIndex = 0;
             // 
             // panel2
@@ -613,7 +462,7 @@
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(196, 231);
+            this.panel2.Size = new System.Drawing.Size(196, 230);
             this.panel2.TabIndex = 0;
             // 
             // lbl_yer
@@ -647,7 +496,7 @@
             this.lbl_derece.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.lbl_derece.Font = new System.Drawing.Font("Century Gothic", 48F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_derece.ForeColor = System.Drawing.Color.Transparent;
-            this.lbl_derece.Location = new System.Drawing.Point(0, 75);
+            this.lbl_derece.Location = new System.Drawing.Point(0, 74);
             this.lbl_derece.Name = "lbl_derece";
             this.lbl_derece.Size = new System.Drawing.Size(274, 78);
             this.lbl_derece.TabIndex = 1;
@@ -659,10 +508,26 @@
             this.pictureBox4.Image = global::MERP_MUI.Properties.Resources.clear_sky;
             this.pictureBox4.Location = new System.Drawing.Point(0, 0);
             this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(196, 231);
+            this.pictureBox4.Size = new System.Drawing.Size(196, 230);
             this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox4.TabIndex = 0;
             this.pictureBox4.TabStop = false;
+            // 
+            // cmb_Barprojeler
+            // 
+            this.cmb_Barprojeler.Dock = System.Windows.Forms.DockStyle.Top;
+            this.cmb_Barprojeler.FormattingEnabled = true;
+            this.cmb_Barprojeler.ItemHeight = 23;
+            this.cmb_Barprojeler.Location = new System.Drawing.Point(0, 29);
+            this.cmb_Barprojeler.Name = "cmb_Barprojeler";
+            this.cmb_Barprojeler.Size = new System.Drawing.Size(196, 29);
+            this.cmb_Barprojeler.Style = MetroFramework.MetroColorStyle.Red;
+            this.cmb_Barprojeler.TabIndex = 3;
+            this.cmb_Barprojeler.UseCustomBackColor = true;
+            this.cmb_Barprojeler.UseCustomForeColor = true;
+            this.cmb_Barprojeler.UseSelectable = true;
+            this.cmb_Barprojeler.UseStyleColors = true;
+            this.cmb_Barprojeler.SelectedIndexChanged += new System.EventHandler(this.cmb_Barprojeler_SelectedIndexChanged);
             // 
             // cmb_sehir
             // 
@@ -800,23 +665,23 @@
             this.dg_cokacil.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dg_cokacil.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             this.dg_cokacil.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle28.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle28.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(17)))), ((int)(((byte)(65)))));
-            dataGridViewCellStyle28.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle28.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle28.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(19)))), ((int)(((byte)(73)))));
-            dataGridViewCellStyle28.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle28.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dg_cokacil.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle28;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(17)))), ((int)(((byte)(65)))));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(19)))), ((int)(((byte)(73)))));
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dg_cokacil.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dg_cokacil.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle29.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle29.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle29.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle29.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(136)))), ((int)(((byte)(136)))));
-            dataGridViewCellStyle29.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(19)))), ((int)(((byte)(73)))));
-            dataGridViewCellStyle29.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle29.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dg_cokacil.DefaultCellStyle = dataGridViewCellStyle29;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(136)))), ((int)(((byte)(136)))));
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(19)))), ((int)(((byte)(73)))));
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dg_cokacil.DefaultCellStyle = dataGridViewCellStyle2;
             this.dg_cokacil.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dg_cokacil.EnableHeadersVisualStyles = false;
             this.dg_cokacil.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
@@ -824,14 +689,14 @@
             this.dg_cokacil.Location = new System.Drawing.Point(3, 16);
             this.dg_cokacil.Name = "dg_cokacil";
             this.dg_cokacil.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle30.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle30.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(17)))), ((int)(((byte)(65)))));
-            dataGridViewCellStyle30.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle30.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle30.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(19)))), ((int)(((byte)(73)))));
-            dataGridViewCellStyle30.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle30.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dg_cokacil.RowHeadersDefaultCellStyle = dataGridViewCellStyle30;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(17)))), ((int)(((byte)(65)))));
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(19)))), ((int)(((byte)(73)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dg_cokacil.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.dg_cokacil.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.dg_cokacil.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dg_cokacil.Size = new System.Drawing.Size(412, 145);
@@ -897,23 +762,23 @@
             this.dg_maliyet.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dg_maliyet.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             this.dg_maliyet.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle31.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle31.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(17)))), ((int)(((byte)(65)))));
-            dataGridViewCellStyle31.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle31.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle31.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(19)))), ((int)(((byte)(73)))));
-            dataGridViewCellStyle31.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle31.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dg_maliyet.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle31;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(17)))), ((int)(((byte)(65)))));
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(19)))), ((int)(((byte)(73)))));
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dg_maliyet.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
             this.dg_maliyet.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle32.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle32.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle32.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle32.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(136)))), ((int)(((byte)(136)))));
-            dataGridViewCellStyle32.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(19)))), ((int)(((byte)(73)))));
-            dataGridViewCellStyle32.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle32.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dg_maliyet.DefaultCellStyle = dataGridViewCellStyle32;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(136)))), ((int)(((byte)(136)))));
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(19)))), ((int)(((byte)(73)))));
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dg_maliyet.DefaultCellStyle = dataGridViewCellStyle5;
             this.dg_maliyet.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dg_maliyet.EnableHeadersVisualStyles = false;
             this.dg_maliyet.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
@@ -921,14 +786,14 @@
             this.dg_maliyet.Location = new System.Drawing.Point(3, 16);
             this.dg_maliyet.Name = "dg_maliyet";
             this.dg_maliyet.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle33.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle33.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(17)))), ((int)(((byte)(65)))));
-            dataGridViewCellStyle33.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle33.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle33.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(19)))), ((int)(((byte)(73)))));
-            dataGridViewCellStyle33.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle33.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dg_maliyet.RowHeadersDefaultCellStyle = dataGridViewCellStyle33;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(17)))), ((int)(((byte)(65)))));
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(19)))), ((int)(((byte)(73)))));
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dg_maliyet.RowHeadersDefaultCellStyle = dataGridViewCellStyle6;
             this.dg_maliyet.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.dg_maliyet.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dg_maliyet.Size = new System.Drawing.Size(342, 98);
@@ -957,23 +822,23 @@
             this.dgw_faturalar.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgw_faturalar.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             this.dgw_faturalar.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle34.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle34.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(85)))), ((int)(((byte)(85)))), ((int)(((byte)(85)))));
-            dataGridViewCellStyle34.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle34.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle34.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(102)))), ((int)(((byte)(102)))));
-            dataGridViewCellStyle34.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle34.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgw_faturalar.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle34;
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(85)))), ((int)(((byte)(85)))), ((int)(((byte)(85)))));
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(102)))), ((int)(((byte)(102)))));
+            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgw_faturalar.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle7;
             this.dgw_faturalar.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle35.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle35.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle35.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle35.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(136)))), ((int)(((byte)(136)))));
-            dataGridViewCellStyle35.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(102)))), ((int)(((byte)(102)))));
-            dataGridViewCellStyle35.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle35.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgw_faturalar.DefaultCellStyle = dataGridViewCellStyle35;
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(136)))), ((int)(((byte)(136)))));
+            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(102)))), ((int)(((byte)(102)))));
+            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgw_faturalar.DefaultCellStyle = dataGridViewCellStyle8;
             this.dgw_faturalar.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgw_faturalar.EnableHeadersVisualStyles = false;
             this.dgw_faturalar.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
@@ -981,14 +846,14 @@
             this.dgw_faturalar.Location = new System.Drawing.Point(3, 16);
             this.dgw_faturalar.Name = "dgw_faturalar";
             this.dgw_faturalar.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle36.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle36.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(85)))), ((int)(((byte)(85)))), ((int)(((byte)(85)))));
-            dataGridViewCellStyle36.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle36.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle36.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(102)))), ((int)(((byte)(102)))));
-            dataGridViewCellStyle36.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle36.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgw_faturalar.RowHeadersDefaultCellStyle = dataGridViewCellStyle36;
+            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(85)))), ((int)(((byte)(85)))), ((int)(((byte)(85)))));
+            dataGridViewCellStyle9.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(102)))), ((int)(((byte)(102)))));
+            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgw_faturalar.RowHeadersDefaultCellStyle = dataGridViewCellStyle9;
             this.dgw_faturalar.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.dgw_faturalar.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgw_faturalar.Size = new System.Drawing.Size(342, 86);
@@ -1189,20 +1054,20 @@
             // 
             // chart1
             // 
-            chartArea4.Name = "ChartArea1";
-            chartArea4.Position.Auto = false;
-            chartArea4.Position.Height = 92F;
-            chartArea4.Position.Width = 94F;
-            chartArea4.Position.X = 3F;
-            this.chart1.ChartAreas.Add(chartArea4);
+            chartArea1.Name = "ChartArea1";
+            chartArea1.Position.Auto = false;
+            chartArea1.Position.Height = 92F;
+            chartArea1.Position.Width = 94F;
+            chartArea1.Position.X = 3F;
+            this.chart1.ChartAreas.Add(chartArea1);
             this.chart1.Dock = System.Windows.Forms.DockStyle.Fill;
-            legend4.Name = "Legend1";
-            legend4.Position.Auto = false;
-            legend4.Position.Height = 5F;
-            legend4.Position.Width = 50F;
-            legend4.Position.X = 50F;
-            legend4.Position.Y = 93F;
-            this.chart1.Legends.Add(legend4);
+            legend1.Name = "Legend1";
+            legend1.Position.Auto = false;
+            legend1.Position.Height = 5F;
+            legend1.Position.Width = 50F;
+            legend1.Position.X = 50F;
+            legend1.Position.Y = 93F;
+            this.chart1.Legends.Add(legend1);
             this.chart1.Location = new System.Drawing.Point(0, 0);
             this.chart1.Name = "chart1";
             this.chart1.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.None;
@@ -1212,30 +1077,30 @@
         System.Drawing.Color.DarkSeaGreen,
         System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192))))),
         System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))))};
-            series16.ChartArea = "ChartArea1";
-            series16.Legend = "Legend1";
-            series16.Name = "Gelen Faturalar";
-            series16.XValueType = System.Windows.Forms.DataVisualization.Charting.ChartValueType.Int32;
-            series17.ChartArea = "ChartArea1";
-            series17.Legend = "Legend1";
-            series17.Name = "Kesilen Faturalar";
-            series17.XValueType = System.Windows.Forms.DataVisualization.Charting.ChartValueType.Int32;
-            series18.ChartArea = "ChartArea1";
-            series18.LabelAngle = 45;
-            series18.Legend = "Legend1";
-            series18.Name = "Öngörülen Ödemeler";
-            series18.XValueType = System.Windows.Forms.DataVisualization.Charting.ChartValueType.Int32;
-            series19.ChartArea = "ChartArea1";
-            series19.Legend = "Legend1";
-            series19.Name = "Alınan Ödemeler";
-            series20.ChartArea = "ChartArea1";
-            series20.Legend = "Legend1";
-            series20.Name = "Yapılan Ödemeler";
-            this.chart1.Series.Add(series16);
-            this.chart1.Series.Add(series17);
-            this.chart1.Series.Add(series18);
-            this.chart1.Series.Add(series19);
-            this.chart1.Series.Add(series20);
+            series1.ChartArea = "ChartArea1";
+            series1.Legend = "Legend1";
+            series1.Name = "Gelen Faturalar";
+            series1.XValueType = System.Windows.Forms.DataVisualization.Charting.ChartValueType.Int32;
+            series2.ChartArea = "ChartArea1";
+            series2.Legend = "Legend1";
+            series2.Name = "Kesilen Faturalar";
+            series2.XValueType = System.Windows.Forms.DataVisualization.Charting.ChartValueType.Int32;
+            series3.ChartArea = "ChartArea1";
+            series3.LabelAngle = 45;
+            series3.Legend = "Legend1";
+            series3.Name = "Öngörülen Ödemeler";
+            series3.XValueType = System.Windows.Forms.DataVisualization.Charting.ChartValueType.Int32;
+            series4.ChartArea = "ChartArea1";
+            series4.Legend = "Legend1";
+            series4.Name = "Alınan Ödemeler";
+            series5.ChartArea = "ChartArea1";
+            series5.Legend = "Legend1";
+            series5.Name = "Yapılan Ödemeler";
+            this.chart1.Series.Add(series1);
+            this.chart1.Series.Add(series2);
+            this.chart1.Series.Add(series3);
+            this.chart1.Series.Add(series4);
+            this.chart1.Series.Add(series5);
             this.chart1.Size = new System.Drawing.Size(237, 162);
             this.chart1.TabIndex = 4;
             this.chart1.Text = "chart1";
@@ -1654,25 +1519,10 @@
             this.splitContainer15.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer15)).EndInit();
             this.splitContainer15.ResumeLayout(false);
-            this.splitContainer17.Panel1.ResumeLayout(false);
-            this.splitContainer17.Panel1.PerformLayout();
-            this.splitContainer17.Panel2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.splitContainer17)).EndInit();
-            this.splitContainer17.ResumeLayout(false);
             this.splitContainer16.Panel1.ResumeLayout(false);
             this.splitContainer16.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer16)).EndInit();
             this.splitContainer16.ResumeLayout(false);
-            this.splitContainer18.Panel1.ResumeLayout(false);
-            this.splitContainer18.Panel1.PerformLayout();
-            this.splitContainer18.Panel2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.splitContainer18)).EndInit();
-            this.splitContainer18.ResumeLayout(false);
-            this.splitContainer19.Panel1.ResumeLayout(false);
-            this.splitContainer19.Panel1.PerformLayout();
-            this.splitContainer19.Panel2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.splitContainer19)).EndInit();
-            this.splitContainer19.ResumeLayout(false);
             this.splitContainer13.Panel1.ResumeLayout(false);
             this.splitContainer13.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer13)).EndInit();
@@ -1811,18 +1661,12 @@
         private System.Windows.Forms.PictureBox pictureBox4;
         private MetroFramework.Controls.MetroComboBox cmb_sehir;
         private System.Windows.Forms.SplitContainer splitContainer14;
-        private MetroFramework.Controls.MetroProgressBar mpb_zaman;
         private System.Windows.Forms.SplitContainer splitContainer15;
-        private System.Windows.Forms.SplitContainer splitContainer17;
         private System.Windows.Forms.SplitContainer splitContainer16;
+        private System.Windows.Forms.FlowLayoutPanel flw_tarih;
+        private System.Windows.Forms.FlowLayoutPanel flw_butce;
+        private System.Windows.Forms.FlowLayoutPanel flw_fatura;
         private MetroFramework.Controls.MetroComboBox cmb_Barprojeler;
-        private MetroFramework.Controls.MetroLabel metroLabel7;
-        private System.Windows.Forms.SplitContainer splitContainer18;
-        private MetroFramework.Controls.MetroLabel metroLabel8;
-        private MetroFramework.Controls.MetroProgressBar mpb_butce;
-        private System.Windows.Forms.SplitContainer splitContainer19;
-        private MetroFramework.Controls.MetroLabel metroLabel9;
-        private MetroFramework.Controls.MetroProgressBar mpb_kesilenFtr;
     }
 }
 

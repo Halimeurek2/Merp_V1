@@ -467,10 +467,10 @@
             this.rb_gelen.AutoSize = true;
             this.rb_gelen.Location = new System.Drawing.Point(39, 67);
             this.rb_gelen.Name = "rb_gelen";
-            this.rb_gelen.Size = new System.Drawing.Size(57, 15);
+            this.rb_gelen.Size = new System.Drawing.Size(53, 15);
             this.rb_gelen.Style = MetroFramework.MetroColorStyle.Red;
             this.rb_gelen.TabIndex = 133;
-            this.rb_gelen.Text = "Alınan";
+            this.rb_gelen.Text = "Gelen";
             this.rb_gelen.UseCustomBackColor = true;
             this.rb_gelen.UseCustomForeColor = true;
             this.rb_gelen.UseSelectable = true;

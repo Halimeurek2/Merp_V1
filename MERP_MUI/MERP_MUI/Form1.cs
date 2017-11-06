@@ -1063,6 +1063,8 @@ namespace MERP_MUI
             try
             {
                 BarButce = Convert.ToInt32(Math.Truncate(((100) * (Convert.ToDecimal(gelenFtr)) / (Convert.ToDecimal(harcama_toplam)))));
+
+
                 /* if(BarButce > 80 && BarButce < 100)
                  {
                      mpb_butce.Style = MetroFramework.MetroColorStyle.Yellow;

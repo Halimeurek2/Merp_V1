@@ -31,6 +31,9 @@ namespace MERP_MUI
         MySqlConnection myConnection;
         MySqlDataReader myReader;
         DataTable dt = new DataTable();
+        HarrProgressBar pgb1 = new HarrProgressBar();
+        HarrProgressBar pgb2 = new HarrProgressBar();
+        HarrProgressBar pgb3 = new HarrProgressBar();
 
         int btn1_Flag = 0;
         int btn2_Flag = 0;
@@ -95,6 +98,7 @@ namespace MERP_MUI
         int BarButce;
 
         DBConnect db;
+        Sorgular sg;
         SmtpClient sc;
 
         public MainForm()
@@ -107,6 +111,8 @@ namespace MERP_MUI
             lbl_derece.BackColor = System.Drawing.Color.Transparent;
             lbl_durum.Parent = pictureBox4;
             lbl_yer.Parent = pictureBox4;
+
+            sg = new Sorgular();
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -126,6 +132,7 @@ namespace MERP_MUI
             connectionString = "SERVER=" + server + ";" + "DATABASE=" + database + ";" + "UID=" + uid + ";" + "PASSWORD=" + password + ";";
             myConnection = new MySqlConnection(connectionString);
             myConnection.Open();
+            // sg.Initialize();
 
             try
             {
@@ -989,7 +996,8 @@ namespace MERP_MUI
                 harcama_toplam = myReader.GetString(3);
                 var total = (end - start).TotalSeconds;
                 BarZaman = Convert.ToInt32(Math.Truncate((DateTime.Now - start).TotalSeconds * 100 / total));
-                if(BarZaman > 80 && BarZaman < 100)
+
+                /*if (BarZaman > 80 && BarZaman < 100)
                 {
                     mpb_zaman.Style = MetroFramework.MetroColorStyle.Yellow;
                     mpb_zaman.Value = BarZaman;
@@ -1003,7 +1011,17 @@ namespace MERP_MUI
                 {
                     mpb_zaman.Style = MetroFramework.MetroColorStyle.Red;
                     mpb_zaman.Value = BarZaman;
-                }
+                }*/
+                pgb1.Padding = new Padding(5);
+                pgb1.LeftText = "1";
+                pgb1.MainText = "PROJE TAKVİM DURUMU";
+                pgb1.FillDegree = BarZaman;
+                pgb1.RightText = "1";
+                pgb1.StatusText = BarZaman.ToString();
+                pgb1.StatusBarColor = 0;
+                pgb1.Size = flw_tarih.Size;
+                pgb1.Anchor = AnchorStyles.Left | AnchorStyles.Right;
+                this.flw_tarih.Controls.Add(pgb1);
             }
             myReader.Close();
 
@@ -1045,44 +1063,67 @@ namespace MERP_MUI
             try
             {
                 BarButce = Convert.ToInt32(Math.Truncate(((100) * (Convert.ToDecimal(gelenFtr)) / (Convert.ToDecimal(harcama_toplam)))));
-                if(BarButce > 80 && BarButce < 100)
-                {
-                    mpb_butce.Style = MetroFramework.MetroColorStyle.Yellow;
-                    mpb_butce.Value = BarButce;
-                }
-                else if (BarButce > 100)
-                {
-                    mpb_butce.Style = MetroFramework.MetroColorStyle.Orange;
-                    mpb_butce.Value = 100;
-                }
-                else
-                {
-                    mpb_butce.Style = MetroFramework.MetroColorStyle.Red;
-                    mpb_butce.Value = BarZaman;
-                }
+                /* if(BarButce > 80 && BarButce < 100)
+                 {
+                     mpb_butce.Style = MetroFramework.MetroColorStyle.Yellow;
+                     mpb_butce.Value = BarButce;
+                 }
+                 else if (BarButce > 100)
+                 {
+                     mpb_butce.Style = MetroFramework.MetroColorStyle.Orange;
+                     mpb_butce.Value = 100;
+                 }
+                 else
+                 {
+                     mpb_butce.Style = MetroFramework.MetroColorStyle.Red;
+                     mpb_butce.Value = BarZaman;
+                 }
+                 */
+                pgb2.Padding = new Padding(5);
+                pgb2.LeftText = "2";
+                pgb2.MainText = "PROJE BÜTÇE DURUMU";
+                pgb2.FillDegree = BarButce;
+                pgb2.RightText = "2";
+                pgb2.StatusText = BarButce.ToString();
+                pgb2.StatusBarColor = 0;
+                pgb2.Size = flw_butce.Size;
+                pgb2.Anchor = AnchorStyles.Left | AnchorStyles.Right;
+                this.flw_butce.Controls.Add(pgb2);
             }
-            catch { mpb_butce.Value = 0; }
+            catch { //mpb_butce.Value = 0;
+            }
 
             try
             {
                 BarKesilenftr = Convert.ToInt32(Math.Truncate(((100 - 0) * (Convert.ToDecimal(kesilenFtr) - 0) / (Convert.ToDecimal(proje_butce) - 0)) + 0));
-                if(BarKesilenftr > 80 && BarKesilenftr < 100)
-                {
-                    mpb_kesilenFtr.Style = MetroFramework.MetroColorStyle.Yellow;
-                    mpb_kesilenFtr.Value = BarKesilenftr;
-                }
-                else if(BarKesilenftr>100)
-                {
-                    mpb_kesilenFtr.Style = MetroFramework.MetroColorStyle.Orange;
-                    mpb_kesilenFtr.Value = 100;
-                }
-                else
-                {
-                    mpb_kesilenFtr.Style = MetroFramework.MetroColorStyle.Red;
-                    mpb_kesilenFtr.Value = BarZaman;
-                }
+                /* if(BarKesilenftr > 80 && BarKesilenftr < 100)
+                 {
+                     mpb_kesilenFtr.Style = MetroFramework.MetroColorStyle.Yellow;
+                     mpb_kesilenFtr.Value = BarKesilenftr;
+                 }
+                 else if(BarKesilenftr>100)
+                 {
+                     mpb_kesilenFtr.Style = MetroFramework.MetroColorStyle.Orange;
+                     mpb_kesilenFtr.Value = 100;
+                 }
+                 else
+                 {
+                     mpb_kesilenFtr.Style = MetroFramework.MetroColorStyle.Red;
+                     mpb_kesilenFtr.Value = BarZaman;
+                 }*/
+                pgb3.Padding = new Padding(5);
+                pgb3.LeftText = "3";
+                pgb3.MainText = "PROJE FATURA DURUMU";
+                pgb3.FillDegree = BarKesilenftr;
+                pgb3.RightText = "3";
+                pgb3.StatusText = BarKesilenftr.ToString();
+                pgb3.StatusBarColor = 0;
+                pgb3.Size = flw_fatura.Size;
+                pgb3.Anchor = AnchorStyles.Left | AnchorStyles.Right;
+                this.flw_fatura.Controls.Add(pgb3);
             }
-            catch { mpb_kesilenFtr.Value = 0; }
+            catch { //mpb_kesilenFtr.Value = 0; 
+            }
             //MessageBox.Show(Convert.ToString(Convert.ToInt32(Math.Truncate(((100 - 0) * (Convert.ToDecimal(kesilenFtr) - 0) / (Convert.ToDecimal(proje_butce) - 0)) + 0))));
             
             myConnection.Close();

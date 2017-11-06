@@ -1,17 +1,12 @@
 ﻿using MySql.Data.MySqlClient;
 using System;
 using System.Collections;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Drawing.Imaging;
 using System.Drawing.Printing;
 using System.Globalization;
 using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace MERP_MUI
@@ -31,9 +26,12 @@ namespace MERP_MUI
         MySqlDataReader myReader;
         DataTable dt = new DataTable();
         HelperFunctions hf;
-        Sorgular Sorgular;
+        Sorgular sg;
 
         public decimal TOPLAM = 0;
+        public decimal TOPLAMavans = 0;
+        public decimal TOPLAM_odeme = 0;
+        public decimal avans = 0;
         public string BIRIM;
 
         string el_mal;
@@ -66,14 +64,16 @@ namespace MERP_MUI
         bool bNewPage = false;
         int iHeaderHeight = 0;
 
-        public static float[] month_sumG = new float[12];
-        public static DateTime[] monthG = new DateTime[12];
+        public float[] month_sumG = new float[12];
+        public DateTime[] monthG = new DateTime[12];
 
-        public static float[] month_sumK = new float[12];
-        public static DateTime[] monthK = new DateTime[12];
+        public float[] month_sumK = new float[12];
+        public DateTime[] monthK = new DateTime[12];
         int index = 0;
 
         double percent;
+
+
 
         private System.IO.Stream streamToPrint;
 
@@ -97,7 +97,7 @@ namespace MERP_MUI
         {
             InitializeComponent();
             hf = new HelperFunctions();
-            Sorgular = new Sorgular();
+            sg = new Sorgular();
         }
 
         private void ProjeyeGoreRapor_Load(object sender, EventArgs e)
@@ -132,75 +132,16 @@ namespace MERP_MUI
 
         public void DrawChart1()
         {
-            myConnection.Open();
-            try
-            {
-                komut = "select sum(fatura_euro) as EURO from db_faturalar where fatura_cinsi='Elektronik' AND fatura_proje_no ='" + cmb_projeler.Text + "' AND fatura_tipi='G'";
-                da = new MySqlDataAdapter(komut, connection);
+            el_mal=Convert.ToString(sg.SumFatura(cmb_projeler.Text, "G", "Elektronik", Convert.ToDecimal(el_mal)));
+            el_mal2 = el_mal;
 
-                myCommand = new MySqlCommand(komut, myConnection);
-                myReader = myCommand.ExecuteReader();
+            mek_mal= Convert.ToString(sg.SumFatura(cmb_projeler.Text, "G", "Mekanik", Convert.ToDecimal(mek_mal)));
+            mek_mal2 = mek_mal;
 
-                while (myReader.Read())
-                {
-                    el_mal = Convert.ToString(myReader.GetString(0));
-                    el_mal2 = Convert.ToString(myReader.GetString(0));
-                }
-                myReader.Close();
-            }
-            catch
-            {
-                el_mal = "0";
-                el_mal2 = "0";
-                myReader.Close();
-            }
-            try
-            {
-                komut = "select sum(fatura_euro) as EURO from db_faturalar where fatura_cinsi='Mekanik' AND fatura_proje_no ='" + cmb_projeler.Text + "' AND fatura_tipi='G'";
-                da = new MySqlDataAdapter(komut, connection);
+            genel_mal = Convert.ToString(sg.SumFatura(cmb_projeler.Text, "G", "Genel Giderler", Convert.ToDecimal(genel_mal)));
+            genel_mal2 = genel_mal;
 
-                myCommand = new MySqlCommand(komut, myConnection);
-                myReader = myCommand.ExecuteReader();
-
-                while (myReader.Read())
-                {
-                    mek_mal = Convert.ToString(myReader.GetString(0));
-                    mek_mal2 = Convert.ToString(myReader.GetString(0));
-                }
-                myReader.Close();
-            }
-            catch
-            {
-                mek_mal = "0";
-                mek_mal2 = "0";
-                myReader.Close();
-            }
-            try
-            {
-                komut = "select sum(fatura_euro) as EURO from db_faturalar WHERE fatura_cinsi='Genel Giderler' AND fatura_proje_no ='" + cmb_projeler.Text + "' AND fatura_tipi='G'";
-                da = new MySqlDataAdapter(komut, connection);
-
-                myCommand = new MySqlCommand(komut, myConnection);
-                myReader = myCommand.ExecuteReader();
-
-                while (myReader.Read())
-                {
-                    genel_mal = Convert.ToString(myReader.GetString(0));
-                    genel_mal2 = Convert.ToString(myReader.GetString(0));
-                }
-                myReader.Close();
-            }
-            catch
-            {
-                genel_mal = "0";
-                genel_mal2 = "0";
-                myReader.Close();
-            }
             chart1.Series["pieChart"].Points.Clear();
-
-            //// el_mal = Convert.ToString(Convert.ToDouble(el_mal, CultureInfo.GetCultureInfo("en-US").NumberFormat));
-
-
             chart1.Series["pieChart"].Points.Add(Convert.ToDouble(el_mal));
             chart1.Series["pieChart"].Points.Add(Convert.ToDouble(mek_mal));
             chart1.Series["pieChart"].Points.Add(Convert.ToDouble(genel_mal));
@@ -227,32 +168,12 @@ namespace MERP_MUI
             chart1.Series[0].BorderColor = Color.FromArgb(224,224,224);//FromArgb(26, 59, 105);
 
             myConnection.Close();
-
         }
         public void DrawChart2()
         {
-            myConnection.Open();
+            el_ongorulen = "0";
+            el_ongorulen = Convert.ToString(sg.HarcamaOngoruSum(cmb_projeler.Text, "Elektronik Std", "Yedek Malz. Elek", Convert.ToDecimal(el_ongorulen)));
 
-            try
-            {
-                el_ongorulen = "0";
-                komut = "select harcama_tutar,harcama_birim,harcama_tarih from db_projeharcama where harcama_proje = (select proje_id from db_projeler where proje_no = '"+cmb_projeler.Text+"') and (harcama_tipi = 'Elektronik Std.' or harcama_tipi = 'Yedek Malz. Elek.')";
-                da = new MySqlDataAdapter(komut, connection);
-
-                myCommand = new MySqlCommand(komut, myConnection);
-                myReader = myCommand.ExecuteReader();
-
-                while (myReader.Read())
-                {
-                    el_ongorulen = Convert.ToString(Convert.ToDecimal(hf.EuroCalculation(myReader.GetString(2), myReader.GetString(0), myReader.GetString(1),el_ongorulen))+Convert.ToDecimal(el_ongorulen));
-                }
-                myReader.Close();
-            }
-            catch
-            {
-                el_ongorulen = "0";
-                myReader.Close();
-            }
             try
             {
                 el_harcanan = el_mal;
@@ -280,7 +201,7 @@ namespace MERP_MUI
 
             chart2.Series["Series1"].Points.Clear();
 
-            if(el_ongorulen != null)
+            if(el_ongorulen != null || el_ongorulen !="0")
             {
                 el_ongorulen = hf.DecimalToCurrency(Convert.ToDecimal(el_ongorulen), el_ongorulen);
                 chart2.Legends[0].Title = "Öngörülen Toplam" + " " + el_ongorulen;
@@ -329,28 +250,9 @@ namespace MERP_MUI
         }
         public void DrawChart3()
         {
-            myConnection.Open();
+            mek_ongorulen = "0";
+            mek_ongorulen = Convert.ToString(sg.HarcamaOngoruSum(cmb_projeler.Text, "Mekanik Std", "Yedek Malz. Mek", "Imalat", Convert.ToDecimal(mek_ongorulen)));
 
-            try
-            {
-                mek_ongorulen = "0";
-                komut = "select harcama_tutar,harcama_birim,harcama_tarih from db_projeharcama where harcama_proje = (select proje_id from db_projeler where proje_no = '"+cmb_projeler.Text+"') and (harcama_tipi = 'Mekanik Std.' or harcama_tipi = 'Yedek Malz. Mek.' or harcama_tipi = 'Imalat')";
-                da = new MySqlDataAdapter(komut, connection);
-
-                myCommand = new MySqlCommand(komut, myConnection);
-                myReader = myCommand.ExecuteReader();
-
-                while (myReader.Read())
-                {
-                    mek_ongorulen = Convert.ToString(Convert.ToDecimal(hf.EuroCalculation(myReader.GetString(2), myReader.GetString(0), myReader.GetString(1), mek_ongorulen))+Convert.ToDecimal(mek_ongorulen));
-                }
-                myReader.Close();
-            }
-            catch
-            {
-                mek_ongorulen = "0";
-                myReader.Close();
-            }
             try
             {
                 mek_harcanan = mek_mal;
@@ -379,7 +281,7 @@ namespace MERP_MUI
 
             chart3.Series["Series1"].Points.Clear();
 
-            if(mek_ongorulen != null)
+            if(mek_ongorulen != null || mek_ongorulen != "0")
             {
                 mek_ongorulen = hf.DecimalToCurrency(Convert.ToDecimal(mek_ongorulen), mek_ongorulen);
                 chart3.Legends[0].Title = "Öngörülen Toplam" + " " + mek_ongorulen;
@@ -427,28 +329,9 @@ namespace MERP_MUI
         }
         public void DrawChart4()
         {
-            myConnection.Open();
-
-            try
-            {
-                genel_ongorulen = "0";
-                komut = "select harcama_tutar,harcama_birim,harcama_tarih from db_projeharcama where harcama_proje = (select proje_id from db_projeler where proje_no = '"+cmb_projeler.Text+"') and (harcama_tipi = 'Risk' or harcama_tipi = 'Test' or harcama_tipi = 'Lojistik' or harcama_tipi = 'Ithalat-Gumruk')";
-                da = new MySqlDataAdapter(komut, connection);
-
-                myCommand = new MySqlCommand(komut, myConnection);
-                myReader = myCommand.ExecuteReader();
-
-                while (myReader.Read())
-                {
-                    genel_ongorulen = Convert.ToString(Convert.ToDecimal(hf.EuroCalculation(myReader.GetString(2), myReader.GetString(0), myReader.GetString(1), genel_ongorulen))+Convert.ToDecimal(genel_ongorulen));
-                }
-                myReader.Close();
-            }
-            catch
-            {
-                genel_ongorulen = "0";
-                myReader.Close();
-            }
+            genel_ongorulen = "0";
+            genel_ongorulen = Convert.ToString(sg.HarcamaOngoruSum(cmb_projeler.Text, "Risk", "Test", "Lojistik", "Ithalat-Gumruk", Convert.ToDecimal(genel_ongorulen)));
+        
             try
             {
                 genel_harcanan = genel_mal;
@@ -476,7 +359,7 @@ namespace MERP_MUI
 
             chart4.Series["Series1"].Points.Clear();
 
-            if(genel_ongorulen != null)
+            if(genel_ongorulen != null || genel_ongorulen != "0")
             {
                 genel_ongorulen = hf.DecimalToCurrency(Convert.ToDecimal(genel_ongorulen), genel_ongorulen);
                 chart4.Legends[0].Title = "Öngörülen Toplam" + " " + genel_ongorulen;
@@ -558,150 +441,96 @@ namespace MERP_MUI
             Array.Clear(month_sumG, 0, 12);
             Array.Clear(monthK, 0, 12);
             Array.Clear(month_sumK, 0, 12);
-
-            myConnection.Open();
+            
             try
             {
-                // TOPLAM = Convert.ToDecimal(Sorgular.FaturaTutar(cmb_projeler.Text, "G", TOPLAM));
-                komut = "SELECT sum(fatura_euro) FROM db_faturalar WHERE fatura_proje_no ='" + cmb_projeler.Text + "' AND fatura_tipi='G'";
-                da = new MySqlDataAdapter(komut, connection);
-                myCommand = new MySqlCommand(komut, myConnection);
-                myReader = myCommand.ExecuteReader();
-                while (myReader.Read())
-                {
-                    TOPLAM = Convert.ToDecimal(myReader.GetString(0));
-                    lbl_top_maliyet.Text = string.Format(new CultureInfo("de-DE"), "{0:C2}", Convert.ToDecimal(TOPLAM));
-                }
-                myReader.Close();
+                TOPLAM = Convert.ToDecimal(sg.FaturaTutar(cmb_projeler.Text, "G", TOPLAM));
+                lbl_top_maliyet.Text = string.Format(new CultureInfo("de-DE"), "{0:C2}", Convert.ToDecimal(TOPLAM));
             }
             catch
             {
                 lbl_top_maliyet.Text = "0";
-                myReader.Close();
             }
 
             try
             {
-                komut = "SELECT sum(fatura_euro) FROM db_faturalar WHERE fatura_durum='ODENDI' AND fatura_proje_no ='" + cmb_projeler.Text + "' AND fatura_tipi='G'";
-                da = new MySqlDataAdapter(komut, connection);
-                myCommand = new MySqlCommand(komut, myConnection);
-                myReader = myCommand.ExecuteReader();
-                while (myReader.Read())
-                {
-                    TOPLAM = Convert.ToDecimal(myReader.GetString(0));
-                    lbl_odenmisG.Text = string.Format(new CultureInfo("de-DE"), "{0:C2}", Convert.ToDecimal(TOPLAM));
-                }
-                myReader.Close();
+                TOPLAM = Convert.ToDecimal(sg.FaturaTutar(cmb_projeler.Text,"G","ODENDI",TOPLAM));
+                lbl_odenmisG.Text = string.Format(new CultureInfo("de-DE"), "{0:C2}", Convert.ToDecimal(TOPLAM));
             }
             catch
             {
                 lbl_odenmisG.Text = "0";
-                myReader.Close();
             }
 
             try
             {
-                komut = "SELECT proje_butce,proje_birim,proje_baslangic FROM db_projeler WHERE proje_no='" + cmb_projeler.Text + "'";
-                da = new MySqlDataAdapter(komut, connection);
-                myCommand = new MySqlCommand(komut, myConnection);
-                myReader = myCommand.ExecuteReader();
-                while (myReader.Read())
-                {
-                    lbl_prjEuro.Text = hf.EuroCalculation(Convert.ToString(myReader.GetString(2)), Convert.ToString(myReader.GetString(0)), Convert.ToString(myReader.GetString(1)), lbl_prjEuro.Text);
-                    lbl_prjEuro.Text = string.Format(new CultureInfo("de-DE"), "{0:C2}", Convert.ToDecimal(lbl_prjEuro.Text));
-                }
-                myReader.Close();
+                lbl_prjEuro.Text = Convert.ToString(sg.ProjeButce(cmb_projeler.Text, Convert.ToDecimal(lbl_prjEuro.Text)));
+                lbl_prjEuro.Text = string.Format(new CultureInfo("de-DE"), "{0:C2}", Convert.ToDecimal(lbl_prjEuro.Text));
             }
             catch
             {
                 lbl_prjEuro.Text = "0";
-                myReader.Close();
             }
 
             try
             {
-                komut = "SELECT sum(fatura_euro) FROM db_faturalar WHERE fatura_durum='ODENDI' AND fatura_proje_no ='" + cmb_projeler.Text + "' AND fatura_tipi='K'";
-                da = new MySqlDataAdapter(komut, connection);
-                myCommand = new MySqlCommand(komut, myConnection);
-                myReader = myCommand.ExecuteReader();
-                while (myReader.Read())
-                {
-                    TOPLAM = Convert.ToDecimal(myReader.GetString(0));
-                    lbl_odenmisK.Text = string.Format(new CultureInfo("de-DE"), "{0:C2}", Convert.ToDecimal(TOPLAM));
-                }
-                myReader.Close();
+                TOPLAM = Convert.ToDecimal(sg.FaturaTutar(cmb_projeler.Text, "K", "ODENDI", TOPLAM));
+          //      lbl_odenmisK.Text = string.Format(new CultureInfo("de-DE"), "{0:C2}", Convert.ToDecimal(TOPLAM));
+                avans = Convert.ToDecimal(sg.FaturaAvans(cmb_projeler.Text, "K", "ODENDI", avans));
+                TOPLAM = TOPLAM - avans;
+                lbl_alOdeme.Text = string.Format(new CultureInfo("de-DE"), "{0:C2}", Convert.ToDecimal(TOPLAM));
+
             }
             catch
             {
-                lbl_odenmisK.Text = "0";
-                myReader.Close();
+                // lbl_odenmisK.Text = "0";
+                lbl_alOdeme.Text = "0";
             }
 
             try
             {
-                komut = "SELECT sum(siparis_euro) FROM db_siparis_emri WHERE proje_no ='" + cmb_projeler.Text + "'";
-                da = new MySqlDataAdapter(komut, connection);
-                myCommand = new MySqlCommand(komut, myConnection);
-                myReader = myCommand.ExecuteReader();
-                while (myReader.Read())
-                {
-                    TOPLAM = Convert.ToDecimal(myReader.GetString(0));
-                    lbl_siparis.Text = string.Format(new CultureInfo("de-DE"), "{0:C2}", Convert.ToDecimal(TOPLAM));
-                }
-                myReader.Close();
+                 TOPLAM = sg.SiparisToplam(cmb_projeler.Text,TOPLAM);
+                 lbl_siparis.Text = string.Format(new CultureInfo("de-DE"), "{0:C2}", Convert.ToDecimal(TOPLAM));
             }
             catch
             {
                 lbl_siparis.Text = "0";
-                myReader.Close();
             }
 
             try
             {
-                komut = "SELECT proje_butce,proje_birim FROM db_projeler WHERE proje_no='" + cmb_projeler.Text + "'";
-                da = new MySqlDataAdapter(komut, connection);
-                myCommand = new MySqlCommand(komut, myConnection);
-                myReader = myCommand.ExecuteReader();
-                while (myReader.Read())
-                {
-                    TOPLAM = Convert.ToDecimal(myReader.GetString(0));
-                    BIRIM = Convert.ToString(myReader.GetString(1));
-
-                    if (BIRIM == "USD")
-                    {
-                        lbl_prj_butce.Text = string.Format(new CultureInfo("en-SG"), "{0:C2}", Convert.ToDecimal(TOPLAM));
-                    }
-                    else if (BIRIM == "EUR")
-                    {
-                        lbl_prj_butce.Text = string.Format(new CultureInfo("de-DE"), "{0:C2}", Convert.ToDecimal(TOPLAM));
-                    }
-                    else if (BIRIM == "TRY")
-                    {
-                        lbl_prj_butce.Text = string.Format("{0:C2}", Convert.ToDecimal(TOPLAM));
-                    }
-                    else if (BIRIM == "GBP")
-                    {
-                        lbl_prj_butce.Text = string.Format(new CultureInfo("en-GB"), "{0:C2}", Convert.ToDecimal(TOPLAM));
-                    }
-                    else
-                    {
-                        lbl_prj_butce.Text = string.Format(new CultureInfo("en-CH"), "{0:C2}", Convert.ToDecimal(TOPLAM));
-                    }
-                }
-                //lbl_prjEuro.Text = hf.EuroDonusum(BIRIM, Convert.ToString(TOPLAM));
-                //lbl_prjEuro.Text = string.Format(new CultureInfo("de-DE"), "{0:C2}", Convert.ToDecimal(lbl_prjEuro.Text));
-
-                myReader.Close();
+                lbl_prj_butce.Text = sg.ProjeButceConvert(cmb_projeler.Text, Convert.ToString(TOPLAM));
             }
             catch
             {
                 lbl_prj_butce.Text = "0";
-                //lbl_prjEuro.Text = "0";
+            }
+            //
+            // AÇIK AVANS
+            //
+            try
+            {
+                    TOPLAMavans = Convert.ToDecimal(sg.ToplamAvans(cmb_projeler.Text, "A", "ODENDI", "A111", TOPLAMavans));
+                    TOPLAMavans = TOPLAMavans - avans;
+                    lbl_avans.Text = string.Format(new CultureInfo("en-US"), "{0:C2}", Convert.ToDecimal(TOPLAMavans));
+            }
+            catch
+            {
+                lbl_avans.Text = "0";
                 myReader.Close();
             }
 
+            //------------------------------------------------------------------------------
+            TOPLAM_odeme = TOPLAM + TOPLAMavans;
+            lbl_odenmisK.Text = string.Format(new CultureInfo("en-US"), "{0:C2}", Convert.ToDecimal(TOPLAM_odeme));
+
+
+
+            myConnection.Close();
+            myConnection.Open();
             try
             {
+                index = 0;
                 komut = "SELECT DATE_FORMAT(fatura_vade_tarih,'%m-%Y') AS Month, SUM(fatura_euro) FROM db_faturalar WHERE fatura_durum='ODENMEDI' and fatura_tipi='G' and fatura_proje_no ='" + cmb_projeler.Text + "' GROUP BY DATE_FORMAT(fatura_vade_tarih, '%m-%Y')";
                 da = new MySqlDataAdapter(komut, connection);
                 myCommand = new MySqlCommand(komut, myConnection);
@@ -719,7 +548,6 @@ namespace MERP_MUI
             }
             catch
             {
-                //MessageBox.Show(Convert.ToString(DateTime.Now.AddMonths(1)));
                 myReader.Close();
             }
 
@@ -743,7 +571,6 @@ namespace MERP_MUI
             }
             catch
             {
-                //MessageBox.Show(Convert.ToString(DateTime.Now.AddMonths(1)));
                 myReader.Close();
             }
 
@@ -863,49 +690,29 @@ namespace MERP_MUI
 
         public void DGWToplam()
         {
-            myConnection.Open();
             try
             {
-                komut = "SELECT sum(fatura_euro) FROM db_faturalar WHERE fatura_durum='ODENMEDI' AND fatura_proje_no ='" + cmb_projeler.Text + "' AND fatura_tipi='G'";
-                da = new MySqlDataAdapter(komut, connection);
-                myCommand = new MySqlCommand(komut, myConnection);
-                myReader = myCommand.ExecuteReader();
-                while (myReader.Read())
-                {
-                    TOPLAM = Convert.ToDecimal(myReader.GetString(0));
-                    gb_G.Text = "Toplam Gelen : " + string.Format(new CultureInfo("de-DE"), "{0:C2}", Convert.ToDecimal(TOPLAM));
-                    lbl_odenmemisGelen.Text = string.Format(new CultureInfo("de-DE"), "{0:C2}", Convert.ToDecimal(TOPLAM));
-                }
-                myReader.Close();
+                TOPLAM = sg.FaturaTutar(cmb_projeler.Text, "G", "ODENMEDI", TOPLAM);
+                gb_G.Text = "Toplam Gelen : " + string.Format(new CultureInfo("de-DE"), "{0:C2}", Convert.ToDecimal(TOPLAM));
+                lbl_odenmemisGelen.Text = string.Format(new CultureInfo("de-DE"), "{0:C2}", Convert.ToDecimal(TOPLAM));
             }
             catch
             {
                 gb_G.Text = "0";
                 lbl_odenmemisGelen.Text = "0";
-                myReader.Close();
             }
 
             try
             {
-                komut = "SELECT sum(fatura_euro) FROM db_faturalar WHERE fatura_durum='ODENMEDI' AND fatura_proje_no ='" + cmb_projeler.Text + "' AND fatura_tipi='K'";
-                da = new MySqlDataAdapter(komut, connection);
-                myCommand = new MySqlCommand(komut, myConnection);
-                myReader = myCommand.ExecuteReader();
-                while (myReader.Read())
-                {
-                    TOPLAM = Convert.ToDecimal(myReader.GetString(0));
-                    gb_K.Text = "Toplam Kesilen : " + string.Format(new CultureInfo("de-DE"), "{0:C2}", Convert.ToDecimal(TOPLAM));
-                    lbl_odenmemisKesilen.Text = string.Format(new CultureInfo("de-DE"), "{0:C2}", Convert.ToDecimal(TOPLAM));
-                }
+                TOPLAM = sg.FaturaTutar(cmb_projeler.Text, "K", "ODENMEDI", TOPLAM);
+                gb_K.Text = "Toplam Kesilen : " + string.Format(new CultureInfo("de-DE"), "{0:C2}", Convert.ToDecimal(TOPLAM));
+                lbl_odenmemisKesilen.Text = string.Format(new CultureInfo("de-DE"), "{0:C2}", Convert.ToDecimal(TOPLAM));
             }
             catch
             {
                 gb_K.Text = "0";
                 lbl_odenmemisKesilen.Text = "0";
             }
-
-            myReader.Close();
-            myConnection.Close();
         }
 
         private void printDocument1_PrintPage(object sender, System.Drawing.Printing.PrintPageEventArgs e)

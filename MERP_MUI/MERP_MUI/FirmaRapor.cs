@@ -280,33 +280,33 @@ namespace MERP_MUI
 
         private void cmb_search_SelectedIndexChanged(object sender, EventArgs e)
         {
-            //if(metroTabControl1.SelectedTab==metroTabPage1)
-            //{
-            //    BindingSource bs = new BindingSource();
-            //    bs.DataSource = dgw_elektronik.DataSource;
+            if (metroTabControl1.SelectedTab == metroTabPage1)
+            {
+                BindingSource bs = new BindingSource();
+                bs.DataSource = dgw_elektronik.DataSource;
 
-            //    bs.Filter = string.Format(dgw_elektronik.Columns[0].HeaderText.ToString() + " LIKE '%{0}%'", cmb_search.Text);
-            //    dgw_elektronik.DataSource = bs;
-            //    dgw_elektronik.Refresh();
-            //}
-            //else if(metroTabControl1.SelectedTab == metroTabPage2)
-            //{
-            //    BindingSource bs = new BindingSource();
-            //    bs.DataSource = dgw_mekanik.DataSource;
+                bs.Filter = string.Format(dgw_elektronik.Columns[0].HeaderText.ToString() + " LIKE '%{0}%'", cmb_search.Text);
+                dgw_elektronik.DataSource = bs;
+                dgw_elektronik.Refresh();
+            }
+            else if (metroTabControl1.SelectedTab == metroTabPage2)
+            {
+                BindingSource bs = new BindingSource();
+                bs.DataSource = dgw_mekanik.DataSource;
 
-            //    bs.Filter = string.Format(dgw_mekanik.Columns[0].HeaderText.ToString() + " LIKE '%{0}%'", cmb_search.Text);
-            //    dgw_mekanik.DataSource = bs;
-            //    dgw_mekanik.Refresh();
-            //}
-            //else
-            //{
-            //    BindingSource bs = new BindingSource();
-            //    bs.DataSource = dgw_genel.DataSource;
+                bs.Filter = string.Format(dgw_mekanik.Columns[0].HeaderText.ToString() + " LIKE '%{0}%'", cmb_search.Text);
+                dgw_mekanik.DataSource = bs;
+                dgw_mekanik.Refresh();
+            }
+            else
+            {
+                BindingSource bs = new BindingSource();
+                bs.DataSource = dgw_genel.DataSource;
 
-            //    bs.Filter = string.Format(dgw_genel.Columns[0].HeaderText.ToString() + " LIKE '%{0}%'", cmb_search.Text);
-            //    dgw_genel.DataSource = bs;
-            //    dgw_genel.Refresh();
-            //}
+                bs.Filter = string.Format(dgw_genel.Columns[0].HeaderText.ToString() + " LIKE '%{0}%'", cmb_search.Text);
+                dgw_genel.DataSource = bs;
+                dgw_genel.Refresh();
+            }
         }
     }
 }

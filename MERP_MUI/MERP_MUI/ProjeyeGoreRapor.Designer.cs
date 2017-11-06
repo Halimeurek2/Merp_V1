@@ -432,7 +432,7 @@
             // 
             this.splitContainer4.Panel2.Controls.Add(this.btn_print);
             this.splitContainer4.Size = new System.Drawing.Size(1338, 54);
-            this.splitContainer4.SplitterDistance = 464;
+            this.splitContainer4.SplitterDistance = 463;
             this.splitContainer4.TabIndex = 1;
             // 
             // splitContainer5
@@ -449,7 +449,7 @@
             // splitContainer5.Panel2
             // 
             this.splitContainer5.Panel2.Controls.Add(this.metroLabel1);
-            this.splitContainer5.Size = new System.Drawing.Size(464, 54);
+            this.splitContainer5.Size = new System.Drawing.Size(463, 54);
             this.splitContainer5.SplitterDistance = 25;
             this.splitContainer5.TabIndex = 0;
             // 
@@ -492,7 +492,7 @@
             this.btn_print.Dock = System.Windows.Forms.DockStyle.Right;
             this.btn_print.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
             this.btn_print.Highlight = true;
-            this.btn_print.Location = new System.Drawing.Point(679, 0);
+            this.btn_print.Location = new System.Drawing.Point(680, 0);
             this.btn_print.Name = "btn_print";
             this.btn_print.Size = new System.Drawing.Size(191, 54);
             this.btn_print.Style = MetroFramework.MetroColorStyle.Red;

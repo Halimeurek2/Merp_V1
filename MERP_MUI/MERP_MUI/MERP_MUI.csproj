@@ -153,6 +153,7 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="GraphicsExtension.cs" />
     <Compile Include="Hakkinda.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -164,6 +165,9 @@
     </Compile>
     <Compile Include="HarcamaOngorusu.Designer.cs">
       <DependentUpon>HarcamaOngorusu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HarrProgressBar.cs">
+      <SubType>Component</SubType>
     </Compile>
     <Compile Include="HelperFunctions.cs" />
     <Compile Include="KullanıcıGirisi.cs">

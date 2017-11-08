@@ -40,6 +40,10 @@
             this.cmb_tipH = new MetroFramework.Controls.MetroComboBox();
             this.btn_ekleH = new MetroFramework.Controls.MetroButton();
             this.dgw_harcama = new System.Windows.Forms.DataGridView();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column4 = new System.Windows.Forms.DataGridViewComboBoxColumn();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.silToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.btn_ekleO = new MetroFramework.Controls.MetroButton();
@@ -52,18 +56,14 @@
             this.metroLabel7 = new MetroFramework.Controls.MetroLabel();
             this.metroLabel8 = new MetroFramework.Controls.MetroLabel();
             this.dgw_odeme = new System.Windows.Forms.DataGridView();
-            this.metroLabel9 = new MetroFramework.Controls.MetroLabel();
-            this.metroLabel10 = new MetroFramework.Controls.MetroLabel();
-            this.pbClose = new System.Windows.Forms.PictureBox();
-            this.btn_hesapla = new MetroFramework.Controls.MetroButton();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewComboBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column4 = new System.Windows.Forms.DataGridViewComboBoxColumn();
             this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column6 = new System.Windows.Forms.DataGridViewComboBoxColumn();
             this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column8 = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.metroLabel9 = new MetroFramework.Controls.MetroLabel();
+            this.metroLabel10 = new MetroFramework.Controls.MetroLabel();
+            this.pbClose = new System.Windows.Forms.PictureBox();
+            this.btn_hesapla = new MetroFramework.Controls.MetroButton();
             ((System.ComponentModel.ISupportInitialize)(this.dgw_harcama)).BeginInit();
             this.contextMenuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgw_odeme)).BeginInit();
@@ -207,8 +207,8 @@
             "Test",
             "Risk",
             "Ithalat-Gumruk",
-            "Yedek Malz. Mek.",
-            "Yedek Malz. Elek.",
+            "Yedek Malz. Mek",
+            "Yedek Malz. Elek",
             "Lojistik"});
             this.cmb_tipH.Location = new System.Drawing.Point(185, 148);
             this.cmb_tipH.Name = "cmb_tipH";
@@ -252,6 +252,52 @@
             this.dgw_harcama.Size = new System.Drawing.Size(560, 168);
             this.dgw_harcama.TabIndex = 131;
             this.dgw_harcama.RowHeaderMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgw_harcama_RowHeaderMouseClick);
+            // 
+            // Column1
+            // 
+            this.Column1.HeaderText = "TARİH";
+            this.Column1.Name = "Column1";
+            this.Column1.Width = 140;
+            // 
+            // Column2
+            // 
+            this.Column2.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.Column2.HeaderText = "TİP";
+            this.Column2.Items.AddRange(new object[] {
+            "Avans",
+            "Mekanik Std",
+            "Elektronik Std",
+            "Imalat",
+            "Test",
+            "Risk",
+            "Ithalat-Gumruk",
+            "Yedek Malz. Mek.",
+            "Yedek Malz. Elek.",
+            "Lojistik"});
+            this.Column2.Name = "Column2";
+            this.Column2.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.Column2.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.Column2.Width = 160;
+            // 
+            // Column3
+            // 
+            this.Column3.HeaderText = "TUTAR";
+            this.Column3.Name = "Column3";
+            this.Column3.Width = 130;
+            // 
+            // Column4
+            // 
+            this.Column4.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.Column4.HeaderText = "BİRİM";
+            this.Column4.Items.AddRange(new object[] {
+            "USD",
+            "EUR",
+            "TRY",
+            "CHF"});
+            this.Column4.Name = "Column4";
+            this.Column4.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.Column4.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.Column4.Width = 80;
             // 
             // contextMenuStrip1
             // 
@@ -306,6 +352,7 @@
             this.cmb_tipO.UseCustomForeColor = true;
             this.cmb_tipO.UseSelectable = true;
             this.cmb_tipO.UseStyleColors = true;
+            this.cmb_tipO.SelectedIndexChanged += new System.EventHandler(this.cmb_tipO_SelectedIndexChanged);
             // 
             // metroLabel5
             // 
@@ -446,6 +493,49 @@
             this.dgw_odeme.Size = new System.Drawing.Size(560, 168);
             this.dgw_odeme.TabIndex = 141;
             // 
+            // Column5
+            // 
+            this.Column5.HeaderText = "TARİH";
+            this.Column5.Name = "Column5";
+            this.Column5.Width = 140;
+            // 
+            // Column6
+            // 
+            this.Column6.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.Column6.HeaderText = "TİP";
+            this.Column6.Items.AddRange(new object[] {
+            "Avans",
+            "PDR",
+            "CDR",
+            "Prototip",
+            "Test",
+            "Kabul",
+            "Teslimat"});
+            this.Column6.Name = "Column6";
+            this.Column6.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.Column6.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.Column6.Width = 160;
+            // 
+            // Column7
+            // 
+            this.Column7.HeaderText = "TUTAR";
+            this.Column7.Name = "Column7";
+            this.Column7.Width = 130;
+            // 
+            // Column8
+            // 
+            this.Column8.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.Column8.HeaderText = "BİRİM";
+            this.Column8.Items.AddRange(new object[] {
+            "USD",
+            "EUR",
+            "TRY",
+            "CHF"});
+            this.Column8.Name = "Column8";
+            this.Column8.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.Column8.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.Column8.Width = 80;
+            // 
             // metroLabel9
             // 
             this.metroLabel9.AutoSize = true;
@@ -506,95 +596,6 @@
             this.btn_hesapla.UseSelectable = true;
             this.btn_hesapla.UseStyleColors = true;
             this.btn_hesapla.Click += new System.EventHandler(this.btn_hesapla_Click);
-            // 
-            // Column1
-            // 
-            this.Column1.HeaderText = "TARİH";
-            this.Column1.Name = "Column1";
-            this.Column1.Width = 140;
-            // 
-            // Column2
-            // 
-            this.Column2.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.Column2.HeaderText = "TİP";
-            this.Column2.Items.AddRange(new object[] {
-            "Avans",
-            "Mekanik Std",
-            "Elektronik Std",
-            "Imalat",
-            "Test",
-            "Risk",
-            "Ithalat-Gumruk",
-            "Yedek Malz. Mek.",
-            "Yedek Malz. Elek.",
-            "Lojistik"});
-            this.Column2.Name = "Column2";
-            this.Column2.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.Column2.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.Column2.Width = 160;
-            // 
-            // Column3
-            // 
-            this.Column3.HeaderText = "TUTAR";
-            this.Column3.Name = "Column3";
-            this.Column3.Width = 130;
-            // 
-            // Column4
-            // 
-            this.Column4.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.Column4.HeaderText = "BİRİM";
-            this.Column4.Items.AddRange(new object[] {
-            "USD",
-            "EUR",
-            "TRY",
-            "CHF"});
-            this.Column4.Name = "Column4";
-            this.Column4.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.Column4.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.Column4.Width = 80;
-            // 
-            // Column5
-            // 
-            this.Column5.HeaderText = "TARİH";
-            this.Column5.Name = "Column5";
-            this.Column5.Width = 140;
-            // 
-            // Column6
-            // 
-            this.Column6.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.Column6.HeaderText = "TİP";
-            this.Column6.Items.AddRange(new object[] {
-            "Avans",
-            "PDR",
-            "CDR",
-            "Prototip",
-            "Test",
-            "Kabul",
-            "Teslimat"});
-            this.Column6.Name = "Column6";
-            this.Column6.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.Column6.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.Column6.Width = 160;
-            // 
-            // Column7
-            // 
-            this.Column7.HeaderText = "TUTAR";
-            this.Column7.Name = "Column7";
-            this.Column7.Width = 130;
-            // 
-            // Column8
-            // 
-            this.Column8.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.Column8.HeaderText = "BİRİM";
-            this.Column8.Items.AddRange(new object[] {
-            "USD",
-            "EUR",
-            "TRY",
-            "CHF"});
-            this.Column8.Name = "Column8";
-            this.Column8.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.Column8.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.Column8.Width = 80;
             // 
             // HarcamaOngorusu
             // 

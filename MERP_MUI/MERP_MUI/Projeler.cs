@@ -61,6 +61,9 @@ namespace MERP_MUI
                     "proje_ismi as Projeİsmi," +
                     "proje_butce as Bütçe," +
                     "proje_birim as Birim," +
+                    "proje_euro as EURO," +
+                    "proje_dolar as DOLAR," +
+                    "proje_tl as TL," +
                     "proje_musteri as Müşteri," +
                     "proje_baslangic as Başlangıç," +
                     "proje_bitis as Bitiş," +
@@ -80,7 +83,10 @@ namespace MERP_MUI
 
 
             dgw_prj_list.Columns[3].DefaultCellStyle.Format = "N2";
-            dgw_prj_list.Columns[10].DefaultCellStyle.Format = "N2";
+            dgw_prj_list.Columns[13].DefaultCellStyle.Format = "N2";
+            dgw_prj_list.Columns[5].DefaultCellStyle.Format = "N2";
+            dgw_prj_list.Columns[6].DefaultCellStyle.Format = "N2";
+            dgw_prj_list.Columns[7].DefaultCellStyle.Format = "N2";
 
             komut = "SELECT DISTINCT proje_no FROM db_projeler";
             da = new MySqlDataAdapter(komut, connection);
@@ -123,7 +129,21 @@ namespace MERP_MUI
                            DataGridViewAutoSizeColumnsMode.Fill;
 
 
-                komut = "SELECT proje_id,proje_no,proje_ismi,proje_butce,proje_birim,proje_musteri,proje_baslangic,proje_bitis,proje_vade,proje_aciklama,harcama_toplam,harcama_toplam_birim,proje_tipi FROM db_projeler";
+                komut = "SELECT proje_id as ID, proje_no as ProjeNo," +
+                   "proje_ismi as Projeİsmi," +
+                   "proje_butce as Bütçe," +
+                   "proje_birim as Birim," +
+                   "proje_euro as EURO," +
+                   "proje_dolar as DOLAR," +
+                   "proje_tl as TL," +
+                   "proje_musteri as Müşteri," +
+                   "proje_baslangic as Başlangıç," +
+                   "proje_bitis as Bitiş," +
+                   "proje_vade as Vade," +
+                   "proje_aciklama as Açıklama," +
+                   "harcama_toplam as Harcama," +
+                   "harcama_toplam_birim as HarcamaBirim," +
+                   "proje_tipi as Tip FROM db_projeler";
                 myCommand = new MySqlCommand(komut, myConnection);
                 da = new MySqlDataAdapter(myCommand);
                 dt = new DataTable();
@@ -158,14 +178,14 @@ namespace MERP_MUI
                 butce = dgw_prj_list.Rows[e.RowIndex].Cells[3].Value.ToString();
                 birim = dgw_prj_list.Rows[e.RowIndex].Cells[4].Value.ToString();
 
-                musteri = dgw_prj_list.Rows[e.RowIndex].Cells[5].Value.ToString();
-                baslangic = Convert.ToDateTime(dgw_prj_list.Rows[e.RowIndex].Cells[6].Value.ToString());
-                bitis = Convert.ToDateTime(dgw_prj_list.Rows[e.RowIndex].Cells[7].Value.ToString());
-                vade = dgw_prj_list.Rows[e.RowIndex].Cells[8].Value.ToString();
-                aciklama = dgw_prj_list.Rows[e.RowIndex].Cells[9].Value.ToString();
-                harcamalar = dgw_prj_list.Rows[e.RowIndex].Cells[10].Value.ToString();
-                harcama_birim = dgw_prj_list.Rows[e.RowIndex].Cells[11].Value.ToString();
-                flag = dgw_prj_list.Rows[e.RowIndex].Cells[12].Value.ToString();
+                musteri = dgw_prj_list.Rows[e.RowIndex].Cells[8].Value.ToString();
+                baslangic = Convert.ToDateTime(dgw_prj_list.Rows[e.RowIndex].Cells[9].Value.ToString());
+                bitis = Convert.ToDateTime(dgw_prj_list.Rows[e.RowIndex].Cells[10].Value.ToString());
+                vade = dgw_prj_list.Rows[e.RowIndex].Cells[11].Value.ToString();
+                aciklama = dgw_prj_list.Rows[e.RowIndex].Cells[12].Value.ToString();
+                harcamalar = dgw_prj_list.Rows[e.RowIndex].Cells[13].Value.ToString();
+                harcama_birim = dgw_prj_list.Rows[e.RowIndex].Cells[14].Value.ToString();
+                flag = dgw_prj_list.Rows[e.RowIndex].Cells[15].Value.ToString();
 
                 myConnection.Close();
                 myConnection.Open();
@@ -273,7 +293,7 @@ namespace MERP_MUI
                 foreach (DataGridViewRow r in dgw_prj_list.Rows)
                 {
                     {
-                        a += Convert.ToDecimal(r.Cells[10].Value);
+                        a += Convert.ToDecimal(r.Cells[13].Value);
                     }
                     lbl_toplam.Text = Convert.ToString(a);
                     lbl_toplam.Text = string.Format(new CultureInfo("de-DE"), "{0:C2}", Convert.ToDecimal(lbl_toplam.Text));
@@ -290,17 +310,20 @@ namespace MERP_MUI
             if (cmb_projeNo.Text == "Hepsi")
             {
                 komut = "SELECT proje_id as ID, proje_no as ProjeNo," +
-                    "proje_ismi as Projeİsmi," +
-                    "proje_butce as Bütçe," +
-                    "proje_birim as Birim," +
-                    "proje_musteri as Müşteri," +
-                    "proje_baslangic as Başlangıç," +
-                    "proje_bitis as Bitiş," +
-                    "proje_vade as Vade," +
-                    "proje_aciklama as Açıklama," +
-                    "harcama_toplam as Harcama," +
-                    "harcama_toplam_birim as HarcamaBirim," +
-                    "proje_tipi as Tip FROM db_projeler";
+               "proje_ismi as Projeİsmi," +
+               "proje_butce as Bütçe," +
+               "proje_birim as Birim," +
+               "proje_euro as EURO," +
+               "proje_dolar as DOLAR," +
+               "proje_tl as TL," +
+               "proje_musteri as Müşteri," +
+               "proje_baslangic as Başlangıç," +
+               "proje_bitis as Bitiş," +
+               "proje_vade as Vade," +
+               "proje_aciklama as Açıklama," +
+               "harcama_toplam as Harcama," +
+               "harcama_toplam_birim as HarcamaBirim," +
+               "proje_tipi as Tip FROM db_projeler";
                 myCommand = new MySqlCommand(komut, myConnection);
                 da = new MySqlDataAdapter(myCommand);
                 dt = new DataTable();
@@ -350,17 +373,20 @@ namespace MERP_MUI
             txt_prjAdi.Text = "";
 
             komut = "SELECT proje_id as ID, proje_no as ProjeNo," +
-                   "proje_ismi as Projeİsmi," +
-                   "proje_butce as Bütçe," +
-                   "proje_birim as Birim," +
-                   "proje_musteri as Müşteri," +
-                   "proje_baslangic as Başlangıç," +
-                   "proje_bitis as Bitiş," +
-                   "proje_vade as Vade," +
-                   "proje_aciklama as Açıklama," +
-                   "harcama_toplam as Harcama," +
-                   "harcama_toplam_birim as HarcamaBirim," +
-                   "proje_tipi as Tip FROM db_projeler";
+                "proje_ismi as Projeİsmi," +
+                "proje_butce as Bütçe," +
+                "proje_birim as Birim," +
+                "proje_euro as EURO," +
+                "proje_dolar as DOLAR," +
+                "proje_tl as TL," +
+                "proje_musteri as Müşteri," +
+                "proje_baslangic as Başlangıç," +
+                "proje_bitis as Bitiş," +
+                "proje_vade as Vade," +
+                "proje_aciklama as Açıklama," +
+                "harcama_toplam as Harcama," +
+                "harcama_toplam_birim as HarcamaBirim," +
+                "proje_tipi as Tip FROM db_projeler";
             myCommand = new MySqlCommand(komut, myConnection);
             da = new MySqlDataAdapter(myCommand);
             dt = new DataTable();
@@ -390,14 +416,14 @@ namespace MERP_MUI
                 butce = dgw_prj_list.Rows[e.RowIndex].Cells[3].Value.ToString();
                 birim = dgw_prj_list.Rows[e.RowIndex].Cells[4].Value.ToString();
 
-                musteri = dgw_prj_list.Rows[e.RowIndex].Cells[5].Value.ToString();
-                baslangic = Convert.ToDateTime(dgw_prj_list.Rows[e.RowIndex].Cells[6].Value.ToString());
-                bitis = Convert.ToDateTime(dgw_prj_list.Rows[e.RowIndex].Cells[7].Value.ToString());
-                vade = dgw_prj_list.Rows[e.RowIndex].Cells[8].Value.ToString();
-                aciklama = dgw_prj_list.Rows[e.RowIndex].Cells[9].Value.ToString();
-                harcamalar = dgw_prj_list.Rows[e.RowIndex].Cells[10].Value.ToString();
-                harcama_birim = dgw_prj_list.Rows[e.RowIndex].Cells[11].Value.ToString();
-                flag = dgw_prj_list.Rows[e.RowIndex].Cells[12].Value.ToString();
+                musteri = dgw_prj_list.Rows[e.RowIndex].Cells[8].Value.ToString();
+                baslangic = Convert.ToDateTime(dgw_prj_list.Rows[e.RowIndex].Cells[9].Value.ToString());
+                bitis = Convert.ToDateTime(dgw_prj_list.Rows[e.RowIndex].Cells[10].Value.ToString());
+                vade = dgw_prj_list.Rows[e.RowIndex].Cells[11].Value.ToString();
+                aciklama = dgw_prj_list.Rows[e.RowIndex].Cells[12].Value.ToString();
+                harcamalar = dgw_prj_list.Rows[e.RowIndex].Cells[13].Value.ToString();
+                harcama_birim = dgw_prj_list.Rows[e.RowIndex].Cells[14].Value.ToString();
+                flag = dgw_prj_list.Rows[e.RowIndex].Cells[15].Value.ToString();
 
                 myConnection.Close();
                 myConnection.Open();

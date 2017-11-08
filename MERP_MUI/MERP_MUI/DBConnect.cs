@@ -80,6 +80,8 @@ namespace MERP_MUI
                                       string birim,
                                       int avans,
                                       decimal fatura_euro,
+                                      decimal fatura_dolar,
+                                      decimal fatura_tl,
                                       string tip,
                                       string cins,
                                       string durum,
@@ -97,7 +99,7 @@ namespace MERP_MUI
            "fatura_tutari," +
            "fatura_birim," +
            "fatura_avans," +
-           "fatura_euro,fatura_tipi,fatura_cinsi,fatura_durum,fatura_siparisemri) VALUES (@fatura_no," +
+           "fatura_euro,fatura_dolar,fatura_tl,fatura_tipi,fatura_cinsi,fatura_durum,fatura_siparisemri) VALUES (@fatura_no," +
            "@proje_no," +
            "@firma," +
            "@vade," +
@@ -108,7 +110,7 @@ namespace MERP_MUI
            "@tutar," +
            "@birim," +
            "@avans," +
-           "@fatura_euro,@tip,@cins,@durum,@siparisemri)", connection);
+           "@fatura_euro,@fatura_dolar,@fatura_tl,@tip,@cins,@durum,@siparisemri)", connection);
 
             cmd.Parameters.AddWithValue("@fatura_no", fatura_no);
             cmd.Parameters.AddWithValue("@proje_no", proje_no);
@@ -122,6 +124,8 @@ namespace MERP_MUI
             cmd.Parameters.AddWithValue("@birim", birim);
             cmd.Parameters.AddWithValue("@avans", avans);
             cmd.Parameters.AddWithValue("@fatura_euro", fatura_euro);
+            cmd.Parameters.AddWithValue("@fatura_dolar", fatura_dolar);
+            cmd.Parameters.AddWithValue("@fatura_tl", fatura_tl);
             cmd.Parameters.AddWithValue("@tip", tip);
             cmd.Parameters.AddWithValue("@cins", cins);
             cmd.Parameters.AddWithValue("@durum", durum);
@@ -144,6 +148,9 @@ namespace MERP_MUI
                                      string proje_ismi,
                                      Decimal butce,
                                      string birim,
+                                     decimal proje_euro,
+                                     decimal proje_dolar,
+                                     decimal proje_tl,
                                      string musteri,
                                      DateTime baslangic,
                                      DateTime bitis,
@@ -158,6 +165,9 @@ namespace MERP_MUI
            "proje_ismi," +
            "proje_butce," +
            "proje_birim," +
+           "proje_euro," +
+           "proje_dolar," +
+           "proje_tl," +
            "proje_musteri," +
            "proje_baslangic," +
            "proje_bitis," +
@@ -165,7 +175,7 @@ namespace MERP_MUI
            "proje_aciklama," +
            "harcama_toplam," +
            "harcama_toplam_birim," +
-           "proje_tipi) VALUES (@proje_no,@proje_ismi,@butce,@birim," +
+           "proje_tipi) VALUES (@proje_no,@proje_ismi,@butce,@birim,@proje_euro,@proje_dolar,@proje_tl," +
            "@musteri,@baslangic,@bitis,@vade,@aciklama," +
            "@harcama_toplam,@harcama_top_birim,"+
            "@tip)", connection);
@@ -174,6 +184,9 @@ namespace MERP_MUI
             cmd.Parameters.AddWithValue("@proje_ismi", proje_ismi);
             cmd.Parameters.AddWithValue("@butce", butce);
             cmd.Parameters.AddWithValue("@birim", birim);
+            cmd.Parameters.AddWithValue("@proje_euro", proje_euro);
+            cmd.Parameters.AddWithValue("@proje_dolar", proje_dolar);
+            cmd.Parameters.AddWithValue("@proje_tl", proje_tl);
             cmd.Parameters.AddWithValue("@musteri", musteri);
             cmd.Parameters.AddWithValue("@baslangic", baslangic);
             cmd.Parameters.AddWithValue("@bitis", bitis);
@@ -206,6 +219,8 @@ namespace MERP_MUI
                              decimal fiyat,
                              string birim,
                              decimal siparis_euro,
+                             decimal siparis_dolar,
+                             decimal siparis_tl,
                              string aciklama, string siparis_tipi)
         {
 
@@ -219,6 +234,8 @@ namespace MERP_MUI
            "fiyat," +
            "fiyat_birim," +
            "siparis_euro," +
+           "siparis_dolar," +
+           "siparis_tl," +
            "aciklama,siparis_tipi) VALUES (@proje_no," +
            "@satinalma_no," +
            "@tedarikci," +
@@ -229,6 +246,8 @@ namespace MERP_MUI
            "@fiyat," +
            "@birim," +
            "@siparis_euro," +
+           "@siparis_dolar," +
+           "@siparis_tl," +
            "@aciklama,@siparis_tipi)", connection);
 
 
@@ -242,6 +261,8 @@ namespace MERP_MUI
             cmd.Parameters.AddWithValue("@fiyat", fiyat);
             cmd.Parameters.AddWithValue("@birim", birim);
             cmd.Parameters.AddWithValue("@siparis_euro", siparis_euro);
+            cmd.Parameters.AddWithValue("@siparis_dolar", siparis_dolar);
+            cmd.Parameters.AddWithValue("@siparis_tl", siparis_tl);
             cmd.Parameters.AddWithValue("@aciklama", aciklama);
             cmd.Parameters.AddWithValue("@siparis_tipi", siparis_tipi);
 
@@ -489,6 +510,8 @@ namespace MERP_MUI
                                     string birim,
                                     int avans,
                                     decimal fatura_euro,
+                                    decimal fatura_dolar,
+                                    decimal fatura_tl,
                                     string tip,
                                     string cins,
                                     string durum, string fatura_siparisemri)
@@ -505,6 +528,8 @@ namespace MERP_MUI
            "fatura_birim=@birim," +
            "fatura_avans=@avans," +
            "fatura_euro=@fatura_euro," +
+           "fatura_dolar=@fatura_dolar," +
+           "fatura_tl=@fatura_tl," +
            "fatura_tipi=@tip," +
            "fatura_cinsi=@cins," +
            "fatura_durum=@durum, fatura_siparisemri=@fatura_siparisemri where fatura_id=@id", connection);
@@ -522,6 +547,8 @@ namespace MERP_MUI
             cmd.Parameters.AddWithValue("@birim", birim);
             cmd.Parameters.AddWithValue("avans", avans);
             cmd.Parameters.AddWithValue("@fatura_euro", fatura_euro);
+            cmd.Parameters.AddWithValue("@fatura_dolar", fatura_dolar);
+            cmd.Parameters.AddWithValue("@fatura_tl", fatura_tl);
             cmd.Parameters.AddWithValue("@tip", tip);
             cmd.Parameters.AddWithValue("@cins", cins);
             cmd.Parameters.AddWithValue("@durum", durum);
@@ -540,23 +567,29 @@ namespace MERP_MUI
         }
 
         public void UpdateProjeler(int id,
-                                   string proje_no,
-                                   string proje_ismi,
-                                   decimal butce,
-                                   string birim,
-                                   string musteri,
-                                   DateTime baslangic,
-                                   DateTime bitis,
-                                   int vade,
-                                   string aciklama,
-                                   decimal harcama_toplam,
-                                   string harcama_top_birim,
-                                   string tip)
+                                    string proje_no,
+                                    string proje_ismi,
+                                    decimal butce,
+                                    string birim,
+                                    decimal proje_euro,
+                                    decimal proje_dolar,
+                                    decimal proje_tl,
+                                    string musteri,
+                                    DateTime baslangic,
+                                    DateTime bitis,
+                                    int vade,
+                                    string aciklama,
+                                    decimal harcama_toplam,
+                                    string harcama_top_birim,
+                                    string tip)
         {
             MySqlCommand cmd = new MySqlCommand("update db_projeler set proje_no=@proje_no," +
            "proje_ismi=@proje_ismi," +
            "proje_butce=@butce," +
            "proje_birim=@birim," +
+           "proje_euro=@proje_euro," +
+           "proje_dolar=@proje_dolar," +
+           "proje_tl=@proje_tl," +
            "proje_musteri=@musteri," +
            "proje_baslangic=@baslangic," +
            "proje_bitis=@bitis," +
@@ -571,6 +604,9 @@ namespace MERP_MUI
             cmd.Parameters.AddWithValue("@proje_ismi", proje_ismi);
             cmd.Parameters.AddWithValue("@butce", butce);
             cmd.Parameters.AddWithValue("@birim", birim);
+            cmd.Parameters.AddWithValue("@proje_euro", proje_euro);
+            cmd.Parameters.AddWithValue("@proje_dolar", proje_dolar);
+            cmd.Parameters.AddWithValue("@proje_tl", proje_tl);
             cmd.Parameters.AddWithValue("@musteri", musteri);
             cmd.Parameters.AddWithValue("@baslangic", baslangic);
             cmd.Parameters.AddWithValue("@bitis", bitis);
@@ -592,17 +628,19 @@ namespace MERP_MUI
             }
         }
         public void UpdateSE(int id,
-                             string proje_no,
-                             string satinalma_no,
-                             string tedarikci,
-                             string siparisi_olusturan,
-                             DateTime siparis_tarihi,
-                             int vade,
-                             DateTime temin_tarihi,
-                             decimal fiyat,
-                             string birim,
-                             decimal siparis_euro,
-                             string aciklama, string siparis_tipi)
+                        string proje_no,
+                        string satinalma_no,
+                        string tedarikci,
+                        string siparisi_olusturan,
+                        DateTime siparis_tarihi,
+                        int vade,
+                        DateTime temin_tarihi,
+                        decimal fiyat,
+                        string birim,
+                        decimal siparis_euro,
+                        decimal siparis_dolar,
+                        decimal siparis_tl,
+                        string aciklama, string siparis_tipi)
         {
 
             MySqlCommand cmd = new MySqlCommand("update db_siparis_emri set proje_no=@proje_no," +
@@ -615,6 +653,8 @@ namespace MERP_MUI
            "fiyat=@fiyat," +
            "fiyat_birim=@birim," +
            "siparis_euro=@siparis_euro," +
+           "siparis_dolar=@siparis_dolar," +
+           "siparis_tl=@siparis_tl," +
            "aciklama=@aciklama, siparis_tipi=@siparis_tipi where siparis_id=@id", connection);
 
             cmd.Parameters.AddWithValue("@id", id);
@@ -628,6 +668,8 @@ namespace MERP_MUI
             cmd.Parameters.AddWithValue("@fiyat", fiyat);
             cmd.Parameters.AddWithValue("@birim", birim);
             cmd.Parameters.AddWithValue("@siparis_euro", siparis_euro);
+            cmd.Parameters.AddWithValue("@siparis_dolar", siparis_dolar);
+            cmd.Parameters.AddWithValue("@siparis_tl", siparis_tl);
             cmd.Parameters.AddWithValue("@aciklama", aciklama);
             cmd.Parameters.AddWithValue("@siparis_tipi", siparis_tipi);
 

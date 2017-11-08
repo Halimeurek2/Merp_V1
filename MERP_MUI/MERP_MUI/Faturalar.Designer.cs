@@ -351,7 +351,7 @@
             // 
             // cmb_firma
             // 
-            this.cmb_firma.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
+            this.cmb_firma.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
             this.cmb_firma.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
             this.cmb_firma.BackColor = System.Drawing.Color.White;
             this.cmb_firma.FlatStyle = System.Windows.Forms.FlatStyle.Popup;

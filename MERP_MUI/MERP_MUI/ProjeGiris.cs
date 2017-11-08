@@ -31,6 +31,10 @@ namespace MERP_MUI
         DateTime bitis;
         string vade;
 
+        decimal proje_euro;
+        decimal proje_dolar;
+        decimal proje_tl;
+
         HarcamaOngorusu f1 = new HarcamaOngorusu();
 
         public ProjeGiris()
@@ -79,6 +83,10 @@ namespace MERP_MUI
                 txt_butce.Text = hf.Comma2Dot(txt_butce.Text);
                 lbl_harcamalar.Text = hf.Comma2Dot(lbl_harcamalar.Text);
 
+                proje_euro = Convert.ToDecimal(hf.EuroCalculation(Convert.ToString(dtp_baslangıc.Value), txt_butce.Text, cmb_birim.Text, Convert.ToString(proje_euro)));
+                proje_dolar = Convert.ToDecimal(hf.DolarCalculation(Convert.ToString(dtp_baslangıc.Value), txt_butce.Text, cmb_birim.Text, Convert.ToString(proje_dolar)));
+                proje_tl = Convert.ToDecimal(hf.TLCalculation(Convert.ToString(dtp_baslangıc.Value), txt_butce.Text, cmb_birim.Text, Convert.ToString(proje_tl)));
+
                 vade = Convert.ToString(txt_vade.Text);
                 baslangic = Convert.ToDateTime(dtp_baslangıc.Text);
                 bitis = baslangic.AddDays(int.Parse(vade));
@@ -87,11 +95,11 @@ namespace MERP_MUI
 
                 if(ck_prj.Checked)
                 {
-                    db.InsertProjeGiris(Convert.ToString(txt_proje_no.Text), Convert.ToString(txt_proje_adı.Text), Convert.ToDecimal(txt_butce.Text), Convert.ToString(cmb_birim.Text), Convert.ToString(txt_musteri.Text), Convert.ToDateTime(dtp_baslangıc.Text), Convert.ToDateTime(bitis), Convert.ToInt32(txt_vade.Text), Convert.ToString(rcb_acıklama.Text), Convert.ToDecimal(f1.toplam), Convert.ToString("EURO"), Convert.ToString("P"));
+                    db.InsertProjeGiris(Convert.ToString(txt_proje_no.Text), Convert.ToString(txt_proje_adı.Text), Convert.ToDecimal(txt_butce.Text), Convert.ToString(cmb_birim.Text), proje_euro, proje_dolar, proje_tl, Convert.ToString(txt_musteri.Text), Convert.ToDateTime(dtp_baslangıc.Text), Convert.ToDateTime(bitis), Convert.ToInt32(txt_vade.Text), Convert.ToString(rcb_acıklama.Text), Convert.ToDecimal(f1.toplam), Convert.ToString("EURO"), Convert.ToString("P"));
                 }
                 if(ck_seri.Checked)
                 {
-                    db.InsertProjeGiris(Convert.ToString(txt_proje_no.Text), Convert.ToString(txt_proje_adı.Text), Convert.ToDecimal(txt_butce.Text), Convert.ToString(cmb_birim.Text), Convert.ToString(txt_musteri.Text), Convert.ToDateTime(dtp_baslangıc.Text), Convert.ToDateTime(bitis), Convert.ToInt32(txt_vade.Text), Convert.ToString(rcb_acıklama.Text), Convert.ToDecimal(f1.toplam), Convert.ToString("EURO"), Convert.ToString("S"));
+                    db.InsertProjeGiris(Convert.ToString(txt_proje_no.Text), Convert.ToString(txt_proje_adı.Text), Convert.ToDecimal(txt_butce.Text), Convert.ToString(cmb_birim.Text), proje_euro, proje_dolar, proje_tl, Convert.ToString(txt_musteri.Text), Convert.ToDateTime(dtp_baslangıc.Text), Convert.ToDateTime(bitis), Convert.ToInt32(txt_vade.Text), Convert.ToString(rcb_acıklama.Text), Convert.ToDecimal(f1.toplam), Convert.ToString("EURO"), Convert.ToString("S"));
                 }
 
 

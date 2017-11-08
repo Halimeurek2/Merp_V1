@@ -169,6 +169,12 @@
     <Compile Include="HarrProgressBar.cs">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="HavaDurumu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HavaDurumu.Designer.cs">
+      <DependentUpon>HavaDurumu.cs</DependentUpon>
+    </Compile>
     <Compile Include="HelperFunctions.cs" />
     <Compile Include="KullanıcıGirisi.cs">
       <SubType>Form</SubType>
@@ -239,6 +245,7 @@
       <DependentUpon>SiparisEmriGiris.cs</DependentUpon>
     </Compile>
     <Compile Include="Sorgular.cs" />
+    <Compile Include="Win32.cs" />
     <EmbeddedResource Include="Acil-NormalIsler.resx">
       <DependentUpon>Acil-NormalIsler.cs</DependentUpon>
     </EmbeddedResource>
@@ -274,6 +281,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="HarcamaOngorusu.resx">
       <DependentUpon>HarcamaOngorusu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HavaDurumu.resx">
+      <DependentUpon>HavaDurumu.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="KullanıcıGirisi.resx">
       <DependentUpon>KullanıcıGirisi.cs</DependentUpon>
@@ -436,6 +446,110 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="merp_sHq_icon.ico" />
+    <None Include="Resources\na.png" />
+    <None Include="Resources\9.png" />
+    <None Include="Resources\8.png" />
+    <None Include="Resources\7.png" />
+    <None Include="Resources\6.png" />
+    <None Include="Resources\5.png" />
+    <None Include="Resources\47.png" />
+    <None Include="Resources\46.png" />
+    <None Include="Resources\45.png" />
+    <None Include="Resources\44.png" />
+    <None Include="Resources\43.png" />
+    <None Include="Resources\42.png" />
+    <None Include="Resources\41.png" />
+    <None Include="Resources\40.png" />
+    <None Include="Resources\4.png" />
+    <None Include="Resources\39.png" />
+    <None Include="Resources\38.png" />
+    <None Include="Resources\37.png" />
+    <None Include="Resources\36.png" />
+    <None Include="Resources\35.png" />
+    <None Include="Resources\34.png" />
+    <None Include="Resources\33.png" />
+    <None Include="Resources\32.png" />
+    <None Include="Resources\31.png" />
+    <None Include="Resources\30.png" />
+    <None Include="Resources\3.png" />
+    <None Include="Resources\29.png" />
+    <None Include="Resources\28.png" />
+    <None Include="Resources\27.png" />
+    <None Include="Resources\26.png" />
+    <None Include="Resources\25.png" />
+    <None Include="Resources\24.png" />
+    <None Include="Resources\23.png" />
+    <None Include="Resources\22.png" />
+    <None Include="Resources\21.png" />
+    <None Include="Resources\20.png" />
+    <None Include="Resources\2.png" />
+    <None Include="Resources\19.png" />
+    <None Include="Resources\18.png" />
+    <None Include="Resources\17.png" />
+    <None Include="Resources\16.png" />
+    <None Include="Resources\15.png" />
+    <None Include="Resources\14.png" />
+    <None Include="Resources\13.png" />
+    <None Include="Resources\12.png" />
+    <None Include="Resources\11.png" />
+    <None Include="Resources\10.png" />
+    <None Include="Resources\1.png" />
+    <None Include="Resources\0.png" />
+    <None Include="Resources\Close.png" />
+    <None Include="Resources\BackLight.png" />
+    <None Include="Resources\Background.png" />
+    <None Include="Properties\Light\4.png" />
+    <None Include="Properties\Light\3.png" />
+    <None Include="Properties\Light\2.png" />
+    <None Include="Properties\Light\1.png" />
+    <None Include="Properties\Light\0.png" />
+    <None Include="Properties\Light\na.png" />
+    <None Include="Properties\Light\47.png" />
+    <None Include="Properties\Light\46.png" />
+    <None Include="Properties\Light\45.png" />
+    <None Include="Properties\Light\44.png" />
+    <None Include="Properties\Light\43.png" />
+    <None Include="Properties\Light\42.png" />
+    <None Include="Properties\Light\41.png" />
+    <None Include="Properties\Light\40.png" />
+    <None Include="Properties\Light\39.png" />
+    <None Include="Properties\Light\38.png" />
+    <None Include="Properties\Light\37.png" />
+    <None Include="Properties\Light\36.png" />
+    <None Include="Properties\Light\35.png" />
+    <None Include="Properties\Light\34.png" />
+    <None Include="Properties\Light\33.png" />
+    <None Include="Properties\Light\32.png" />
+    <None Include="Properties\Light\31.png" />
+    <None Include="Properties\Light\30.png" />
+    <None Include="Properties\Light\29.png" />
+    <None Include="Properties\Light\28.png" />
+    <None Include="Properties\Light\27.png" />
+    <None Include="Properties\Light\26.png" />
+    <None Include="Properties\Light\25.png" />
+    <None Include="Properties\Light\24.png" />
+    <None Include="Properties\Light\23.png" />
+    <None Include="Properties\Light\22.png" />
+    <None Include="Properties\Light\21.png" />
+    <None Include="Properties\Light\20.png" />
+    <None Include="Properties\Light\19.png" />
+    <None Include="Properties\Light\18.png" />
+    <None Include="Properties\Light\17.png" />
+    <None Include="Properties\Light\16.png" />
+    <None Include="Properties\Light\15.png" />
+    <None Include="Properties\Light\14.png" />
+    <None Include="Properties\Light\13.png" />
+    <None Include="Properties\Light\12.png" />
+    <None Include="Properties\Light\11.png" />
+    <None Include="Properties\Light\10.png" />
+    <None Include="Properties\Light\9.png" />
+    <None Include="Properties\Light\8.png" />
+    <None Include="Properties\Light\7.png" />
+    <None Include="Properties\Light\6.png" />
+    <None Include="Properties\Light\5.png" />
+    <None Include="Properties\Background.png" />
+    <None Include="Properties\Close.png" />
+    <None Include="Properties\BackLight.png" />
     <None Include="Resources\c48be530971807.563b2b13efcae.gif" />
     <None Include="Resources\c6023f30971807.563b2b13a55cc.gif" />
     <None Include="Resources\giphy %281%29.gif" />

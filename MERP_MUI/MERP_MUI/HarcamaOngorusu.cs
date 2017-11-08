@@ -77,5 +77,10 @@ namespace MERP_MUI
                 toplam = Convert.ToString(Convert.ToDecimal(toplam_euro) + Convert.ToDecimal(toplam));
             }
         }
+
+        private void cmb_tipO_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

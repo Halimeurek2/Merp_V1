@@ -98,6 +98,122 @@ namespace MERP_MUI
                 return euro;
             }
         }
+        public string DolarCalculation(string tarih, string tutar, string birim, string butce)
+        {
+            DateTime dt = Convert.ToDateTime(tarih);
+            tarih = dt.ToString("dd/MM/yyyy");
+            string[] tr = tarih.Split('.');
+            tarih = Convert.ToString(tr[0] + tr[1] + tr[2]);
+            tarih2 = Convert.ToString(tr[2] + tr[1]);
+            string anyDays = "http://www.tcmb.gov.tr/kurlar/" + tarih2 + "/" + tarih + ".xml";
+
+            try
+            {
+                var xmlDoc = new XmlDocument();
+                xmlDoc.Load(anyDays);
+
+                DateTime exchangeDate = Convert.ToDateTime(xmlDoc.SelectSingleNode("//Tarih_Date").Attributes["Tarih"].Value);
+
+                string USD = xmlDoc.SelectSingleNode("Tarih_Date/Currency[@Kod='USD']/BanknoteBuying").InnerXml;
+                string EURO = xmlDoc.SelectSingleNode("Tarih_Date/Currency[@Kod='EUR']/BanknoteBuying").InnerXml;
+                string POUND = xmlDoc.SelectSingleNode("Tarih_Date/Currency[@Kod='GBP']/BanknoteBuying").InnerXml;
+                string CHF = xmlDoc.SelectSingleNode("Tarih_Date/Currency[@Kod='CHF']/BanknoteBuying").InnerXml;
+
+                decimal EtE = Convert.ToDecimal(USD) / Convert.ToDecimal(EURO);
+                decimal EtC = Convert.ToDecimal(USD) / Convert.ToDecimal(CHF);
+                decimal EtP = Convert.ToDecimal(USD) / Convert.ToDecimal(POUND);
+
+
+                if (birim == "EUR")
+                {
+                    butce = Convert.ToString(Convert.ToDecimal(tutar) / EtE);
+                }
+                else if (birim == "CHF")
+                {
+                    butce = Convert.ToString(Convert.ToDecimal(tutar) / EtC);
+                }
+                else if (birim == "TRY")
+                {
+                    butce = Convert.ToString(Convert.ToDecimal(tutar) / Convert.ToDecimal(USD.Replace('.', ',')));
+                }
+                else if (birim == "GBP")
+                {
+                    butce = Convert.ToString(Convert.ToDecimal(tutar) / EtP);
+                }
+                else if (birim == "USD")
+                {
+                    butce = Convert.ToString(Convert.ToDecimal(tutar));
+                }
+                else
+                {
+                    butce = Convert.ToString((0000));
+                }
+                return butce;
+            }
+            catch
+            {
+                butce = Convert.ToString((0000));
+                return butce;
+            }
+        }
+        public string TLCalculation(string tarih, string tutar, string birim, string butce)
+        {
+            DateTime dt = Convert.ToDateTime(tarih);
+            tarih = dt.ToString("dd/MM/yyyy");
+            string[] tr = tarih.Split('.');
+            tarih = Convert.ToString(tr[0] + tr[1] + tr[2]);
+            tarih2 = Convert.ToString(tr[2] + tr[1]);
+            string anyDays = "http://www.tcmb.gov.tr/kurlar/" + tarih2 + "/" + tarih + ".xml";
+
+            try
+            {
+                var xmlDoc = new XmlDocument();
+                xmlDoc.Load(anyDays);
+
+                DateTime exchangeDate = Convert.ToDateTime(xmlDoc.SelectSingleNode("//Tarih_Date").Attributes["Tarih"].Value);
+
+                string USD = xmlDoc.SelectSingleNode("Tarih_Date/Currency[@Kod='USD']/BanknoteBuying").InnerXml;
+                string EURO = xmlDoc.SelectSingleNode("Tarih_Date/Currency[@Kod='EUR']/BanknoteBuying").InnerXml;
+                string POUND = xmlDoc.SelectSingleNode("Tarih_Date/Currency[@Kod='GBP']/BanknoteBuying").InnerXml;
+                string CHF = xmlDoc.SelectSingleNode("Tarih_Date/Currency[@Kod='CHF']/BanknoteBuying").InnerXml;
+
+                //decimal EtE = Convert.ToDecimal(USD) / Convert.ToDecimal(EURO);
+                //decimal EtC = Convert.ToDecimal(USD) / Convert.ToDecimal(CHF);
+                //decimal EtP = Convert.ToDecimal(USD) / Convert.ToDecimal(POUND);
+
+
+                if (birim == "EUR")
+                {
+                    butce = Convert.ToString(Convert.ToDecimal(tutar) * Convert.ToDecimal(EURO));
+                }
+                else if (birim == "CHF")
+                {
+                    butce = Convert.ToString(Convert.ToDecimal(tutar) * Convert.ToDecimal(CHF));
+                }
+                else if (birim == "TRY")
+                {
+                    butce = Convert.ToString(Convert.ToDecimal(tutar));
+                }
+                else if (birim == "GBP")
+                {
+                    butce = Convert.ToString(Convert.ToDecimal(tutar) * Convert.ToDecimal(POUND));
+                }
+                else if (birim == "USD")
+                {
+                    butce = Convert.ToString(Convert.ToDecimal(tutar) * Convert.ToDecimal(USD));
+                }
+                else
+                {
+                    butce = Convert.ToString((0000));
+                }
+                return butce;
+            }
+            catch
+            {
+                butce = Convert.ToString((0000));
+                return butce;
+            }
+        }
         public string DecimalToCurrency(decimal deger1, string deger2)
         {
             deger2 = string.Format(new CultureInfo("de-DE"), "{0:C2}", deger1);

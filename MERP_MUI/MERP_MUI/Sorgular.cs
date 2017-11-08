@@ -63,7 +63,8 @@ namespace MERP_MUI
             catch
             {
                 tutar = 0;
-                myReader.Close();
+                if (myReader != null)
+                { myReader.Close(); }
             }
             return tutar;
         }
@@ -85,7 +86,8 @@ namespace MERP_MUI
             catch
             {
                 tutar = 0;
-                myReader.Close();
+                if (myReader != null)
+                { myReader.Close(); }
             }
             return tutar;
         }
@@ -108,7 +110,8 @@ namespace MERP_MUI
             catch
             {
                 tutar = 0;
-                myReader.Close();
+                if (myReader != null)
+                { myReader.Close(); }
             }
             return tutar;
         }
@@ -130,7 +133,8 @@ namespace MERP_MUI
             catch
             {
                 tutar = 0;
-                myReader.Close();
+                if (myReader != null)
+                { myReader.Close(); }
             }
             return tutar;
         }
@@ -153,7 +157,8 @@ namespace MERP_MUI
             catch
             {
                 tutar = 0;
-                myReader.Close();
+                if (myReader != null)
+                { myReader.Close(); }
             }
             return tutar;
         }
@@ -178,7 +183,8 @@ namespace MERP_MUI
             catch
             {
                 tutar = 0;
-                myReader.Close();
+                if(myReader!=null)
+                { myReader.Close(); }
             }
             return tutar;
         }
@@ -202,7 +208,8 @@ namespace MERP_MUI
             catch
             {
                 tutar = 0;
-                myReader.Close();
+                if (myReader != null)
+                { myReader.Close(); }
             }
             return tutar;
         }
@@ -226,7 +233,8 @@ namespace MERP_MUI
             catch
             {
                 tutar = 0;
-                myReader.Close();
+                if (myReader != null)
+                { myReader.Close(); }
             }
             return tutar;
         }
@@ -246,7 +254,9 @@ namespace MERP_MUI
             }
             catch
             {
-                myReader.Close();
+                tutar = 0;
+                if (myReader != null)
+                { myReader.Close(); }
             }
             return tutar;
         }
@@ -266,7 +276,9 @@ namespace MERP_MUI
             }
             catch
             {
-                myReader.Close();
+                tutar = 0;
+                if (myReader != null)
+                { myReader.Close(); }
             }
             return tutar;
         }
@@ -311,7 +323,8 @@ namespace MERP_MUI
             catch
             {
                 tutar = "0";
-                myReader.Close();
+                if (myReader != null)
+                { myReader.Close(); }
             }
             return tutar;
         }
@@ -338,7 +351,8 @@ namespace MERP_MUI
             }
             catch
             {
-                myReader.Close();
+                if (myReader != null)
+                { myReader.Close(); }
             }
         }
     }

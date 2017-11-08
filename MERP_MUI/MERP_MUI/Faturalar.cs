@@ -79,6 +79,8 @@ namespace MERP_MUI
 
             dgw_ftr_list.Columns[12].DefaultCellStyle.Format = "N2";
             dgw_ftr_list.Columns[9].DefaultCellStyle.Format = "N2";
+            dgw_ftr_list.Columns[13].DefaultCellStyle.Format = "N2";
+            dgw_ftr_list.Columns[14].DefaultCellStyle.Format = "N2";
 
             komut = "SELECT DISTINCT proje_no FROM db_projeler";
             da = new MySqlDataAdapter(komut, connection);
@@ -211,10 +213,10 @@ namespace MERP_MUI
                 tutar = dgw_ftr_list.Rows[e.RowIndex].Cells[9].Value.ToString();
                 birim = dgw_ftr_list.Rows[e.RowIndex].Cells[10].Value.ToString();
                 avans = dgw_ftr_list.Rows[e.RowIndex].Cells[11].Value.ToString();
-                tip = dgw_ftr_list.Rows[e.RowIndex].Cells[13].Value.ToString();
-                cins = dgw_ftr_list.Rows[e.RowIndex].Cells[14].Value.ToString();
-                durum = dgw_ftr_list.Rows[e.RowIndex].Cells[15].Value.ToString();
-                satinalma_no = dgw_ftr_list.Rows[e.RowIndex].Cells[16].Value.ToString();
+                tip = dgw_ftr_list.Rows[e.RowIndex].Cells[15].Value.ToString();
+                cins = dgw_ftr_list.Rows[e.RowIndex].Cells[16].Value.ToString();
+                durum = dgw_ftr_list.Rows[e.RowIndex].Cells[17].Value.ToString();
+                satinalma_no = dgw_ftr_list.Rows[e.RowIndex].Cells[18].Value.ToString();
             }
             catch { }
         }
@@ -233,14 +235,21 @@ namespace MERP_MUI
 
         public void RefreshFilter()
         {
-            BindingSource bs = new BindingSource();
-            bs.DataSource = dgw_ftr_list.DataSource;
+            komut = "SELECT * FROM db_faturalar where fatura_no like '%"+txt_ftr_no.Text+"%' and fatura_proje_no like '%"+cmb_projeNo.Text+"%' and fatura_firma like '%"+cmb_firma.Text+"%' and fatura_tipi like '%"+txt_tip.Text+"%'";
+            myCommand = new MySqlCommand(komut, myConnection);
+            da = new MySqlDataAdapter(myCommand);
+            dt = new DataTable();
+            // myReader = myCommand.ExecuteReader();
 
-            bs.Filter = string.Format(dgw_ftr_list.Columns[1].HeaderText.ToString() + " LIKE '%{0}%' AND " + dgw_ftr_list.Columns[3].HeaderText.ToString() + " LIKE '%{1}%' AND " +
-                                      dgw_ftr_list.Columns[13].HeaderText.ToString() + " LIKE '%{2}%' AND " + dgw_ftr_list.Columns[2].HeaderText.ToString() + " LIKE '%{3}%'",
-                                                  txt_ftr_no.Text, cmb_firma.Text, txt_tip.Text, cmb_projeNo.Text);
-            dgw_ftr_list.DataSource = bs;
-            dgw_ftr_list.Refresh();
+            da.Fill(dt);
+
+            dgw_ftr_list.DataSource = dt;
+
+            dgw_ftr_list.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
+            dgw_ftr_list.AutoSizeColumnsMode =
+                       DataGridViewAutoSizeColumnsMode.Fill;
+
+            myConnection.Close();
         }
 
         public void SumDGW()
@@ -351,7 +360,7 @@ namespace MERP_MUI
             txt_ftr_no.Text = "";
             txt_tip.Text = "";
 
-            komut = "SELECT * FROM db_faturalar";
+            komut = "SELECT * FROM (SELECT * FROM db_faturalar ORDER BY fatura_id DESC LIMIT 200) as r ORDER BY fatura_id";
             myCommand = new MySqlCommand(komut, myConnection);
             da = new MySqlDataAdapter(myCommand);
             dt = new DataTable();
@@ -388,10 +397,10 @@ namespace MERP_MUI
                 tutar = dgw_ftr_list.Rows[e.RowIndex].Cells[9].Value.ToString();
                 birim = dgw_ftr_list.Rows[e.RowIndex].Cells[10].Value.ToString();
                 avans = dgw_ftr_list.Rows[e.RowIndex].Cells[11].Value.ToString();
-                tip = dgw_ftr_list.Rows[e.RowIndex].Cells[13].Value.ToString();
-                cins = dgw_ftr_list.Rows[e.RowIndex].Cells[14].Value.ToString();
-                durum = dgw_ftr_list.Rows[e.RowIndex].Cells[15].Value.ToString();
-                satinalma_no = dgw_ftr_list.Rows[e.RowIndex].Cells[16].Value.ToString();
+                tip = dgw_ftr_list.Rows[e.RowIndex].Cells[15].Value.ToString();
+                cins = dgw_ftr_list.Rows[e.RowIndex].Cells[16].Value.ToString();
+                durum = dgw_ftr_list.Rows[e.RowIndex].Cells[17].Value.ToString();
+                satinalma_no = dgw_ftr_list.Rows[e.RowIndex].Cells[18].Value.ToString();
             }
             catch { }
         }

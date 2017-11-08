@@ -441,7 +441,9 @@ namespace MERP_MUI
             Array.Clear(month_sumG, 0, 12);
             Array.Clear(monthK, 0, 12);
             Array.Clear(month_sumK, 0, 12);
-            
+
+            sg = new Sorgular();
+
             try
             {
                 TOPLAM = Convert.ToDecimal(sg.FaturaTutar(cmb_projeler.Text, "G", TOPLAM));
@@ -464,7 +466,8 @@ namespace MERP_MUI
 
             try
             {
-                lbl_prjEuro.Text = Convert.ToString(sg.ProjeButce(cmb_projeler.Text, Convert.ToDecimal(lbl_prjEuro.Text)));
+                TOPLAM = 0;
+                lbl_prjEuro.Text = Convert.ToString(sg.ProjeButce(cmb_projeler.Text, TOPLAM));
                 lbl_prjEuro.Text = string.Format(new CultureInfo("de-DE"), "{0:C2}", Convert.ToDecimal(lbl_prjEuro.Text));
             }
             catch
@@ -475,7 +478,7 @@ namespace MERP_MUI
             try
             {
                 TOPLAM = Convert.ToDecimal(sg.FaturaTutar(cmb_projeler.Text, "K", "ODENDI", TOPLAM));
-          //      lbl_odenmisK.Text = string.Format(new CultureInfo("de-DE"), "{0:C2}", Convert.ToDecimal(TOPLAM));
+              //lbl_odenmisK.Text = string.Format(new CultureInfo("de-DE"), "{0:C2}", Convert.ToDecimal(TOPLAM));
                 avans = Convert.ToDecimal(sg.FaturaAvans(cmb_projeler.Text, "K", "ODENDI", avans));
                 TOPLAM = TOPLAM - avans;
                 lbl_alOdeme.Text = string.Format(new CultureInfo("de-DE"), "{0:C2}", Convert.ToDecimal(TOPLAM));
@@ -483,7 +486,7 @@ namespace MERP_MUI
             }
             catch
             {
-                // lbl_odenmisK.Text = "0";
+                //lbl_odenmisK.Text = "0";
                 lbl_alOdeme.Text = "0";
             }
 
@@ -517,7 +520,6 @@ namespace MERP_MUI
             catch
             {
                 lbl_avans.Text = "0";
-                myReader.Close();
             }
 
             //------------------------------------------------------------------------------

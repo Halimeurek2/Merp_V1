@@ -600,11 +600,12 @@
             // cmb_se
             // 
             this.cmb_se.FormattingEnabled = true;
-            this.cmb_se.Location = new System.Drawing.Point(259, 109);
+            this.cmb_se.Location = new System.Drawing.Point(255, 103);
             this.cmb_se.Name = "cmb_se";
-            this.cmb_se.Size = new System.Drawing.Size(121, 21);
+            this.cmb_se.Size = new System.Drawing.Size(155, 21);
             this.cmb_se.TabIndex = 131;
             this.cmb_se.Visible = false;
+            this.cmb_se.SelectedIndexChanged += new System.EventHandler(this.cmb_se_SelectedIndexChanged);
             // 
             // FaturaDuzenle
             // 

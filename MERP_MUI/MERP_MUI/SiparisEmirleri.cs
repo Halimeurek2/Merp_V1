@@ -72,6 +72,8 @@ namespace MERP_MUI
 
             dgw_stf_list.Columns[8].DefaultCellStyle.Format = "N2";
             dgw_stf_list.Columns[10].DefaultCellStyle.Format = "N2";
+            dgw_stf_list.Columns[11].DefaultCellStyle.Format = "N2";
+            dgw_stf_list.Columns[12].DefaultCellStyle.Format = "N2";
 
             komut = "SELECT DISTINCT proje_no FROM db_projeler";
             da = new MySqlDataAdapter(komut, connection);
@@ -163,8 +165,8 @@ namespace MERP_MUI
                 temin_tarihi = Convert.ToDateTime(dgw_stf_list.Rows[e.RowIndex].Cells[7].Value);
                 fiyat = dgw_stf_list.Rows[e.RowIndex].Cells[8].Value.ToString();
                 fiyat_birim = dgw_stf_list.Rows[e.RowIndex].Cells[9].Value.ToString();
-                aciklama = dgw_stf_list.Rows[e.RowIndex].Cells[11].Value.ToString();
-                siparis_tipi= dgw_stf_list.Rows[e.RowIndex].Cells[12].Value.ToString();
+                aciklama = dgw_stf_list.Rows[e.RowIndex].Cells[13].Value.ToString();
+                siparis_tipi= dgw_stf_list.Rows[e.RowIndex].Cells[14].Value.ToString();
             }
             catch { }
         }
@@ -200,14 +202,21 @@ namespace MERP_MUI
 
         public void RefreshFilter()
         {
-            BindingSource bs = new BindingSource();
-            bs.DataSource = dgw_stf_list.DataSource;
-            bs.Filter = string.Format(dgw_stf_list.Columns[1].HeaderText.ToString() + " LIKE '%{0}%' AND " + dgw_stf_list.Columns[2].HeaderText.ToString() + " LIKE '%{1}%' AND " +
-                                      dgw_stf_list.Columns[3].HeaderText.ToString() + " LIKE '%{2}%'",
-                                                  cmb_projeNo.Text, txt_satınalma_no.Text, txt_tedarikci.Text);
-            dgw_stf_list.DataSource = bs;
+            komut = "SELECT * FROM db_siparis_emri where proje_no like '%" + cmb_projeNo.Text + "%' and satinalma_no like '%" + txt_satınalma_no.Text + "%' and tedarikci like '%" + txt_tedarikci.Text + "%'";
+            myCommand = new MySqlCommand(komut, myConnection);
+            da = new MySqlDataAdapter(myCommand);
+            dt = new DataTable();
+            // myReader = myCommand.ExecuteReader();
 
-            dgw_stf_list.Refresh();
+            da.Fill(dt);
+
+            dgw_stf_list.DataSource = dt;
+
+            dgw_stf_list.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
+            dgw_stf_list.AutoSizeColumnsMode =
+                       DataGridViewAutoSizeColumnsMode.Fill;
+
+            myConnection.Close();
         }
 
         private void cmb_projeNo_SelectedIndexChanged(object sender, EventArgs e)
@@ -328,8 +337,8 @@ namespace MERP_MUI
                 temin_tarihi = Convert.ToDateTime(dgw_stf_list.Rows[e.RowIndex].Cells[7].Value);
                 fiyat = dgw_stf_list.Rows[e.RowIndex].Cells[8].Value.ToString();
                 fiyat_birim = dgw_stf_list.Rows[e.RowIndex].Cells[9].Value.ToString();
-                aciklama = dgw_stf_list.Rows[e.RowIndex].Cells[11].Value.ToString();
-                siparis_tipi = dgw_stf_list.Rows[e.RowIndex].Cells[12].Value.ToString();
+                aciklama = dgw_stf_list.Rows[e.RowIndex].Cells[13].Value.ToString();
+                siparis_tipi = dgw_stf_list.Rows[e.RowIndex].Cells[14].Value.ToString();
             }
             catch { }
         }

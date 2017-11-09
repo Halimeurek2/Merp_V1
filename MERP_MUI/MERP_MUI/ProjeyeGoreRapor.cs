@@ -29,6 +29,7 @@ namespace MERP_MUI
         Sorgular sg;
 
         public decimal TOPLAM = 0;
+        public decimal TOPLAMsiparis = 0;
         public decimal TOPLAMavans = 0;
         public decimal TOPLAM_odeme = 0;
         public decimal avans = 0;
@@ -481,7 +482,7 @@ namespace MERP_MUI
               //lbl_odenmisK.Text = string.Format(new CultureInfo("de-DE"), "{0:C2}", Convert.ToDecimal(TOPLAM));
                 avans = Convert.ToDecimal(sg.FaturaAvans(cmb_projeler.Text, "K", "ODENDI", avans));
                 TOPLAM = TOPLAM - avans;
-                lbl_alOdeme.Text = string.Format(new CultureInfo("de-DE"), "{0:C2}", Convert.ToDecimal(TOPLAM));
+                lbl_alOdeme.Text = string.Format(new CultureInfo("en-US"), "{0:C2}", Convert.ToDecimal(TOPLAM));
 
             }
             catch
@@ -492,8 +493,8 @@ namespace MERP_MUI
 
             try
             {
-                 TOPLAM = sg.SiparisToplam(cmb_projeler.Text,TOPLAM);
-                 lbl_siparis.Text = string.Format(new CultureInfo("de-DE"), "{0:C2}", Convert.ToDecimal(TOPLAM));
+                 TOPLAMsiparis = sg.SiparisToplam(cmb_projeler.Text,TOPLAM);
+                 lbl_siparis.Text = string.Format(new CultureInfo("de-DE"), "{0:C2}", Convert.ToDecimal(TOPLAMsiparis));
             }
             catch
             {
